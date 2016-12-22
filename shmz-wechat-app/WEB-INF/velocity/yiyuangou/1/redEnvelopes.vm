@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/purchase.css" rel="stylesheet">
+    <title>1元购1GB</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="bg bg-0">
+    <div class="envelopes main l-r-padding2">
+        <div class="red-box hide" id="redBox">
+            <p class="defray-box">
+                来自<span class="yellow nickname"></span>的流量红包，点击拆开流量红包
+            </p>
+            <img class="openEnvelopes" id="openEnvelopes" src="img/purchaseTraffic/chai.png" alt="">
+            <p class="deadline"><span class="deadline-cont" id="getDeadline"></span>前领取有效</p>
+        </div>
+        <div class="open-red hide" id="openRedBox">
+            <div class="open-red-box">
+                <p class="get-traffic">
+                    <img src="img/purchaseTraffic/ll.png"><span class="get-traffic-num red" id="getTrafficNum"></span> MB
+                </p>
+                <p class="defray-box">
+                    恭喜抢到流量红包<br>
+                    来自好友<span class="yellow nickname"></span>
+                </p>
+                <p class="deadline"><span class="deadline-cont" id="useDeadline"></span>前使用有效</p>
+            </div>
+            <p class="open-red-box-desc">
+                <span class="get-traffic-num red"></span>流量已到<span id="phone" class="red"></span>账号<br>
+                <span class="min-font">24小时内到账，请注意查收！</span>
+            </p>
+        </div>
+        <div class="red-box expired hide" id="expiredBox">
+            <img class="openEnvelopes" src="img/purchaseTraffic/bq3.png" alt="">
+            <p class="expired-desc">流量红包已过期</p>
+
+        </div>
+
+        <div class="t-b-padding2" id="redEnvelopesRule">
+            <div class="traffic rule-info black">
+                <h2>抢流量红包规则：</h2>
+                <ol class="list">
+                    <li>可多次购买流量红包进行派发</li>
+                    <li>可多次购买流量红包可多次购买流量红包次购买流量红包次购买流量红包</li>
+                </ol>
+            </div>
+            <img class="bg-woman" src="img/purchaseTraffic/woman.png" alt="">
+        </div>
+    </div>
+    <div class="footer-alert hide" id="footerAlert">
+        <div class="alert-box">
+            <div class="alert-box-cont">
+                <div class="alert-box-headerImg"><img src="" alt=""></div>
+                <p class="red"></p>
+                <div class="box-more-btn">
+                    <a class="more-btn btn-box shadow" href="javascript:void(0);"></a>
+                </div>
+                <div class="alert-box-close" id="alertBoxClose"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="stips-mask">这是一个已抢过的红包哦~</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    //传入参数
+    var opId = "$!{openid}";
+    var nickname="$!{nickname}";
+    var getDeadline="$!{dateline}";
+    var a="$!{a}";//红包标识。
+	var status=$!{status};//红包是否已抢过,1,抢过。
+
+    //模板参数
+    var activityId=1;
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    //分享参数
+    var purchaseTitle = "流量红包";
+    var purchaseDesc = "流量红包流量红包流量红包流量红包流量红包";
+    var purchaseImg =  "pic1/share/fx01.png";	
+
+    //测试参数
+    //nickname='小明';
+    //deadline='20160102';
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/purchase.js"></script>
+<script>
+    $('.nickname').text(nickname);
+    $('#getDeadline').text(dateToStr(getDeadline));
+	if(status==1){//如果红包已抢过
+		$("#redBox").hide();
+		$("#openRedBox").show();
+	    $('#getTrafficNum').text($!{flowValue});
+        $('#useDeadline').text(dateToStr("$!{useExpiryDate}"));
+        $('#phone').text($!{tel});
+		$(".stips-mask").show();
+		setTimeout(function () {
+		$(".stips-mask").hide();
+		},2000);
+	}else if(status==0){
+		$("#redBox").show();
+	}
+
+    //分享
+    var purchaseUrl = getRootUrl()+"trafficred.do?op=index&b="+activityId;//获取首页地址
+    wxShare(purchaseTitle , purchaseDesc , purchaseImg , purchaseUrl);
+
+    // preload image
+    window.onload = function() {
+        setTimeout(function () {
+            new Image().src = "img/purchaseTraffic/ll.png";
+            new Image().src = "img/purchaseTraffic/hb_1.png";
+        }, 1000);
+    };
+
+</script>
+</body>
+</html>

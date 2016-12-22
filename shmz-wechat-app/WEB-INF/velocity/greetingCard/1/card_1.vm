@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/card/animate.css" rel="stylesheet">
+    <link href="css/card/card.css" rel="stylesheet">
+    <title>上海移动动感俱乐部</title>
+
+</head>
+<body class="sd1">
+<div class="bg">
+    <div class="bg-img-top"><img class="imgWidth100" src="#getImg()/card/sd1/top01.gif" alt=""></div>
+    <div class="bg-img-middle"><img class="imgWidth100" src="#getImg()/card/sd1/sdmb001003.jpg" alt=""></div>
+    <div class="bg-img-bottom"><img class="imgWidth100" src="#getImg()/card/sd1/sdmb001004.jpg" alt=""></div>
+</div>
+<img class="clock clock-animate" src="#getImg()/card/sdmb001001.png" alt="">
+<div class="padding-Top2 cont">
+    <div class="user fs16">
+        <img class="user-img" src="" alt=""><span class="title"></span>
+    </div>
+    <div class="message"><p class="fs12 message-cont"></p></div>
+</div>
+<div class="padding-Top4 btn-list fs14">
+    <a class="btn fs16" href="javascript:void(0);" id="openGift"><span>拆礼物</span></a>
+    <a class="btn-greeen btn fs16" id="goToShare" href="javascript:void(0);"><span> </span></a>
+</div>
+<audio src="#getImg()/card/audio/audio_sd.mp3" id="music1" loop="loop" autoplay="autoplay">
+</audio>
+<div class="share-mask"><img class="share-signImg" src="#getImg()/card/share02.png" alt=""/></div>
+#parse("/global/alert.vm")
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>	
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var openId='$!{opId}';
+    var aId='$!{aid}';
+    var activityId='$!{activityId}';
+    var cid=${cardInfo.id};
+    var nickname='$!{cardInfo.nickname}';
+    var headimgurl='$!{cardInfo.headimgurl}';
+    var blessWords='$!{cardInfo.blessWords}';
+    var role='$!{role}';// 角色，1-自己的贺卡，2-他人的贺卡
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/card/card.js"></script>
+</body>
+</html>

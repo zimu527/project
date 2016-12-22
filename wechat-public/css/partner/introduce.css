@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-29 19:58:23
+ * @version $Id$
+ */
+body{
+	background: url('../../img/partner/bg4.jpg') no-repeat;
+	background-size: 55% 55%;
+	background-size:cover;
+	z-index: 1;
+}
+
+
+.words{
+	margin-top: 26%;
+}
+/*文字*/
+p{
+	margin-left: 2%;
+	text-align: center;
+	/*line-height: 32px;*/
+}
+/*黄色*/
+.special_color{
+	color: yellow;
+}
+
+
+.pic{
+	font-size: 14px;
+}
+.pic>p{
+	margin-left: 0;
+}
+.words-name{
+	position: relative;
+	margin: 0 auto;
+	width: 260px;
+}
+.name1{
+	position: absolute;
+	left: 55px;
+	top: -24px;
+}
+.name2{
+	position: absolute;
+	right: 60px;
+	top: -24px;
+}
+.touxiang{
+	position: relative;
+	margin: 0 auto;
+	width: 260px;
+}
+.touxiang>img{
+	width: 48px;
+}
+#myTouxiang{
+	position: absolute;
+	left: 50px;
+	bottom: -53px;
+}
+#suibianTouxiang{
+	position: absolute;
+	right: 52px;
+	bottom: -53px;
+}
+.pic>img{
+	width: 260px;
+	margin: 12% auto 0;
+}
+
+
+.btn{
+	width: 100%;
+}
+.btn>a.btn_know{
+	display: block;
+	margin: 4% auto 0;
+	background: url('../../img/partner/know_n.png') no-repeat;
+	background-size: 100% 100%;
+}
+

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-27 10:21:09
+ * @version $Id$
+ */
+body{
+	background-image: none;
+	background-color: #FFC019;
+	/*background: url('../img/partner/bg3.jpg') no-repeat;
+	background-size: 100%;*/
+/*	background-size: 100% 100%;
+	background-size:cover;
+	z-index: 1;*/
+}
+#box{
+	position: relative;overflow: hidden;z-index: 1;width:96%;height:auto;padding: 2%;
+}
+/*头部用到的css样式*/
+/*文字盒子*/
+.words{
+	margin: 40% auto 7px;
+	position: relative;
+}
+/*"玩法介绍"*/
+.howtoplay{
+	position: absolute;
+	top: -70%;
+	right: 8.06%;
+	width: 27.78%;
+	background: url('../../img/partner/howtoplay.png') no-repeat;
+	background-size: cover;
+}
+/*文字*/
+p{
+	text-align: center;
+}
+/*黄色*/
+.special_color{
+	color: yellow;
+}
+
+
+
+/*画板部分*/
+#palette{
+	margin: 6% auto;
+	width: 100%;
+	font-size: 16px;
+	color: #290009;
+}
+/*画板*/
+#huakuang{
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: rgba(102, 0, 20, 0.7);
+	position: relative;
+}
+/*重画*/
+#restart{
+	width: 80px;
+	height: 40px;
+	background: url('../../img/partner/restart_left.png') no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	z-index: 1;
+}
+/*得分*/
+#palette>p.defen{
+	font-size: 14px;
+	font-weight: normal;
+}
+p.defen>.special_color{
+	color: red;
+}
+#palette>p{
+	font-weight: bold;
+}
+#palette>p>a{
+	font-weight: normal;
+	color: #290009;
+	text-decoration: underline;
+}
+
+/*底部按钮*/
+.btn{
+	width: 80%;
+	height: auto;
+	margin: -5% auto;
+}
+.btn>a{
+	float: left;
+	display: block;
+}
+.btn>a.btn_base{
+	float: left;
+	background: url('../../img/partner/hdgz_n.png') no-repeat;
+	background-size: 100% 100%;
+}
+.btn>a.btnBestPartener{
+	float: right;
+	background: url('../../img/partner/zjzh_n.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+.mbg{width: 100%;position: absolute;top:0px;z-index: -10;}

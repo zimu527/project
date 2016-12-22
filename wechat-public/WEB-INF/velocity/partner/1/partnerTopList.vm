@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>寻找你的另一半</title>
+    <link rel="stylesheet" type="text/css" href="css/partner/style.css">
+    <link rel="stylesheet" type="text/css" href="css/partner/partnerTopList.css">
+    <script type="text/javascript" src="./js/partner/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/partner/partnerTopList.js"></script>
+	<script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+<input type="hidden" id="pid" value="$!{pid}"/>
+<input type="hidden" id="openid" value="$!{openid}"/>
+<div class="container haveData">
+    <input type="button" id="mback" onclick="back()">
+    <audio src="audio/partner/daguxing.mp3" loop="loop" autoplay="autoplay"></audio>
+    <input type="button" id="music" onclick="playPause()">
+    <div id="list" class="list">
+	#*
+    	<div class="list1">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+    	 <div class="list2">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+    	<div class="list3">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+    	 <div class="list4">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+    	<div class="list4">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+    	<div class="list4">
+    		<div class="listleft">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    		<div class="listmid">
+                <span>1</span>
+            </div>
+            <span class="listscore">88.87分</span>
+    		<div class="listright">
+    			<img src="img/partner/back.png">
+    			<span>nicheng</span>
+    		</div>
+    	</div>
+	*#
+    </div>
+</div>
+<img class="mbg haveData" src="img/partner/bg2.jpg">
+<img id="lqjl" class="liuliang haveData" src="img/partner/liulianglibao.png" onclick="gotoReceive()">
+
+
+<div class="container noData">
+    <input type="button" id="music" onclick="playPause()">
+    <audio src="audio/partner/daguxing.mp3" loop="loop" autoplay="autoplay"></audio>
+    <div class="bannerIMG">
+        <img src="img/partner/hx10240014.png"  alt="">
+    </div>
+    <div class="content">
+        <div class="contentTab">
+            <p>进入"最佳拍档榜"最高有<em class="gb">1GB</em>流量可领取!<br>目前还没出现最佳拍档哦！</p>
+            <div class="joinBtn">
+                <a class="joinBtn1" onclick="drawInLeft()"><img class="qhx" src="img/partner/qhx_n.png" alt=""></a>
+                <a class="joinBtn2" onclick="gotoFX()"><img class="yqhyhbx" src="img/partner/yqhyhbx_n.png" alt=""></a>
+                <a class="joinBtn3" onclick="back()"><img class="back" src="img/partner/back_n.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 分享 -->
+<div id="boxHiddenFX" onclick="closeFX()">
+    <div class="share">
+        <img src="img/partner/hx10240019.png">
+    </div>
+</div>
+
+
+    <script>
+        window.onload = function(){
+            var qhx = document.getElementsByClassName('qhx')[0];
+            qhx.addEventListener('touchstart', function(){
+                qhx.setAttribute('src', "img/partner/qhx_p.png")
+            })
+            qhx.addEventListener('touchend', function(){
+                qhx.setAttribute('src', "img/partner/qhx_n.png")
+            })
+            var yqhyhbx = document.getElementsByClassName('yqhyhbx')[0];
+            yqhyhbx.addEventListener('touchstart', function(){
+                yqhyhbx.setAttribute('src', "img/partner/yqhyhbx_p.png")
+            })
+            yqhyhbx.addEventListener('touchend', function(){
+                yqhyhbx.setAttribute('src', "img/partner/yqhyhbx_n.png")
+            })
+            var back = document.getElementsByClassName('back')[0];
+            back.addEventListener('touchstart', function(){
+                back.setAttribute('src', "img/partner/back_p.png")
+            })
+            back.addEventListener('touchend', function(){
+                back.setAttribute('src', "img/partner/back_n.png")
+            })
+        }
+    </script>
+
+</body>
+</html>

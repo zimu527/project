@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common1.css" type="text/css" rel="stylesheet">
+<title>会员文本</title>
+<img class="hide" src="img/register/liwu.png">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<style>
+.mainBg{background:#151515;}
+.mainBg1{background:#273856;}
+.mainBgdc{background:#dcdcdc;}
+.mainBgff{background:#ff6c00;}
+.colorFF{color:#ff6c00;}
+/*底部选项卡 显示全部 活动详情*/
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:10;
+	width:100%;}
+.nav_main{
+	list-style: none;}
+.nav_main li{
+	float:left;
+	height:3rem;
+	text-align:center;
+	position:relative;}
+.navMainSpan{
+	position:absolute;
+	/*left:0;*/
+	top:-1rem;
+	z-index:5;
+	width:8rem;
+	height:8rem;
+	border-radius:50% 50% 0 0;
+	border:solid 2px #151515;}/*修改*/
+.navMainSpan img{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;}
+.nav_main li:first-child , .nav_main li:last-child{
+	color:#fff;
+	padding:0.5rem;}
+.nav_main li div{
+	width:100%;
+	height:2rem;
+	line-height:2rem;
+	margin:auto;}
+.nav_active{
+	display:inline-block;
+	background:#273856;/*点击显示全部和活动详情的效果颜色*/
+	border-radius:10px;}
+.kong{
+	clear:both;
+	height:3rem;}
+/*显示全部*/
+/*统计数据*/
+.countDiv{
+	height:5.5rem;
+	border-bottom:solid 2px #dcdcdc;}/*修改*/
+.countDiv li{
+	list-style: none;
+	float:left;
+	width:50%;
+	line-height:1.75rem;
+	text-align:center;}
+.countDiv li:first-child{
+	border-right:solid 1px #dcdcdc;}/*修改*/
+/*搜索*/
+.searchDiv{
+	padding:1rem 2rem;}
+.sear_left{
+	display:inline-block;
+	float:left;
+	width:80%;}
+.sear_right{
+	display:inline-block;
+	width:20%;}
+.sear_left input , .sear_right input{
+	width: 100%;
+    height: 2.2rem;
+	border-radius:0;
+    border: 2px solid #151515;}/*修改*/
+.sear_left input{
+	text-indent:5px;}
+.sear_right input{
+	text-align:center;
+	color:#fff;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-user-select:none;}
+/*最新照片  投票排名*/
+.nav_con{
+	padding:0 2rem;
+	height:2.7rem;
+	line-height:2.7rem;
+	border-bottom: 2px solid #273856;}/*修改*/
+.nav_con li{
+	list-style: none;
+	float:left;
+	width:50%;
+	text-align:center;
+	border-radius:5px 5px 0 0;}
+.navCon_active{
+	background:#273856;/*点击最新照片和投票排名的效果颜色*/
+	color:#fff;}
+/*最新照片*/
+.listWord{
+	padding-bottom:0.8rem;
+	border-bottom:solid 2px #dcdcdc;
+	position:relative;
+	margin-bottom:0.8rem;}
+.numCount{
+	display:inline-block;
+	width:45%;}
+.listLeft{
+	width:75%;
+	display:inline-block;}
+.listLeft a{
+	display:block;
+	width:100%;
+	height:100%;
+	color:#000;
+	}
+.listRight{
+	position:absolute;
+	top:30%;
+	right:1%;
+	width:20%;
+	height:2.5rem;
+	background:#fff;
+	line-height:2.5rem;
+	text-align:center;
+	border:solid 1px #000;
+	border-radius:5px;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-user-select:none;}
+.pp1{
+	font-weight:bold;}
+/*下一页*/
+.paging{
+	text-align:center;
+	clear:both;}
+.next , .prev{
+	display:inline-block;
+	width:7rem;
+	height:2rem;
+	line-height:2rem;
+	text-align:center;
+	border-radius:5px;
+	border:1px solid #151515;/*修改*/
+	margin:1rem;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-user-select:none;}
+/*
+.next:active , .prev:active , .voteInfo_right:active , .sear_right input:active{
+	border:1px solid #ff6c00;
+	background:#ff6c00;
+	color:#fff;
+}
+*/
+/*活动详情*/
+.detailTitle{
+	height:3.8rem;
+	line-height:3.8rem;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	background:linear-gradient(#606060 , #dcdcdc);}/*修改*/
+.conDiv{
+	background:#fff;
+	border-radius:5px;
+	line-height:2rem;
+	padding:1rem;}	
+.ul1{
+	width:93%;
+	margin-left:7%;
+	list-style:decimal;}
+.hh1{
+	/*font-weight:bold;*/
+	display:inline-block;
+	padding:0 0.5rem;
+	color:#fff;
+	border-radius:5px;}
+/*报名参加*/
+.joinTable{
+	width:100%;}
+.joinTable tr{
+	height:3rem;}
+.joinTable tr td{
+	vertical-align:top;}
+.td1{
+	width:7rem;
+	line-height:1.4rem;}	
+.joinInput{
+	width:100%;
+	height:2rem;
+	border-radius:5px;
+	border:solid 2px #CCC;}/*修改*/
+.joinText{
+	width:100%;
+	height:5rem;
+	border:solid 2px #ccc;}/*修改*/
+.showImg{
+	display:inline-block;
+	position:relative;
+	width:3rem;
+	height:3rem;
+	vertical-align:top;
+	margin-right:0.5rem;;
+	margin-bottom:0.5rem;}
+.imgX{
+	position:absolute;
+	top:0;
+	right:0;
+	width:1rem;
+	height:1rem;
+	text-align:right;}
+.joinImg{
+	width:100%;
+	height:100%;}
+/*.btnJoin{
+	background:#35A815;}*/
+#pic1 , #pic2{
+	display:none;}
+#userVoteNum{
+	display:inline-block;
+	margin-right:1rem;}
+</style>
+</head>
+
+<body>
+	<div class="bgWhite">
+		<!--显示全部-->
+		<div id="acAll" name="ac">
+			<!--主题图片-->
+			<img id="allTopImg" class="imgWidth100" src="http://wxtest.bw30.com/res_shmz/upload/vote/vote_20161129115126.jpg">
+			<!--统计数据-->
+			<ul id="countUl" class="content countDiv">
+				<li>
+					<p>已报名</p>
+					<p id="countJoin">0</p>
+				</li>
+				<li>
+					<p>投票次数</p>
+					<p id="countVote">0</p>
+				</li>
+			</ul>
+			<!--搜索-->
+			<div id="searchDiv" class="searchDiv">
+				<form>
+					<div class="sear_left">
+						<input id="contestantId" class="fs24" type="num" placeholder="请输入选手编号">
+					</div>
+					<div class="sear_right">
+						<input class="fs24 fw mainBg" type="button" value="搜索" onClick="searchVote()">
+					</div>
+				</form>
+			</div>
+			<!--最新照片和投票排名-->
+			<div class="clear">
+				<ul class="nav_con fs30">
+					<li name="new" class="navCon_active">最新</li>
+					<li name="rank" onClick="getRankList()">投票排名</li>
+				</ul>
+				<!--最新照片-->
+				<div id="new" name="list" class="content">
+					<div id="newWord">
+						<!--<div class="listWord">				
+							<div class="listLeft">
+								<p class="fs24">
+									<span class="numCount">
+										编号：
+										<span>0</span>
+									</span>
+									<span class="numCount">
+										<span class="colorFF">0</span>
+										票
+									</span>
+								</p>
+								<p class="fs28 pp1">标题</p>
+								<p class="fs24">介简介简介简介简介介简介简介简介简介简介简介简介简介简介简介</p>
+							</div>
+							<div class="listRight fs24">投票</div>
+						</div>-->
+					</div>
+					<div class="paging">
+						<div class="prev">上一页</div>
+						<div class="next">下一页</div>
+					</div>
+				</div>
+				<!--投票排名-->
+				<div id="rank" name="list" class="content hide">
+					<div id="rankWord"></div>
+					<div class="paging">
+						<div class="prev">上一页</div>
+						<div class="next">下一页</div>
+					</div>
+				</div>
+			</div>
+			<div class="kong"></div>
+		</div>
+		<!--报名参加-->
+		<div id="acJoin" name="ac" class="fs24 hide">
+			<!--主题图片-->
+			<img class="imgWidth100" src="http://wxtest.bw30.com/res_shmz/upload/vote/vote_20161129115126.jpg">
+			<!--输入信息-->
+			<div class="content">
+				<table class="joinTable">
+					<tr id="joined">
+						<td>参赛编号</td>
+						<td>
+							<span id="userVoteNum">0</span>
+							<span id="userVoteStatus"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">参赛昵称*</td>
+						<td>
+							<input id="joinName" class="joinInput" type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>联系方式*</td>
+						<td>
+							<input id="joinPhone" class="joinInput" type="tel">
+						</td>
+					</tr>
+					<tr>
+						<td>参赛宣言*</td>
+						<td>
+							<textarea id="joinDesc" class="joinText"></textarea>
+						</td>
+					</tr>
+				</table>
+				<div id="join" class="btn mainBg1" onClick="joinVote()">提交</div>
+				<div class="kong"></div>
+			</div>
+		</div>
+		<!--活动详情-->
+		<div id="acDetail" name="ac" class="hide">
+			<!--主题图片-->
+			<img class="imgWidth100" src="http://wxtest.bw30.com/res_shmz/upload/vote/vote_20161129115126.jpg">
+			<!--统计数据-->
+			<ul class="content countDiv">
+				<li>
+					<p>已报名</p>
+					<p id="acJoinIn">0</p>
+				</li>
+				<li>
+					<p>投票次数</p>
+					<p id="acVote">0</p>
+				</li>
+			</ul>
+			<!--活动说明-->
+			<div class="detailTitle fs32">投 票 活 动 说 明</div>
+			<div class="content1 mainBgdc">
+				<div class="conDiv">
+					<p class="fs24 hh1 mainBgff">活动时间</p>
+					<p class="fs24">2016年11月01日--2016年11月30日</p>
+                    <p class="fs24 hh1 mainBgff">活动规则</p>
+                    <p class="fs24">投票说明：	</p>
+                    <p class="fs24 hh1 mainBgff">投票方式</p>
+                    <p class="fs24">投票说明：	</p>
+                    <p class="fs24 hh1 mainBgff">照片要求</p>
+                    <p class="fs24">照片要求（可选填）：	</p>
+                    <p class="fs24 hh1 mainBgff">活动奖品</p>
+                    <p class="fs24">活动奖品（可选填）：	</p>
+
+					<p class="fs24 hh1 mainBgff">投票说明</p>
+					<p class="fs24">
+						<ul class="ul1">
+							投票说明：	
+						</ul>
+					</p>
+                    <p class="fs24 hh1 mainBgff">活动主办单位</p>
+                    <p class="fs24">活动主办单位（可选填）：	</p>
+
+				</div>
+			</div>
+			<div class="kong"></div>
+		</div>
+		<!--底部导航-->
+		<footer class="fs24">
+			<ul class="nav_main">
+				<li class="mainBg" name="acAll">
+					<div class="nav_active">显示全部</div>
+				</li>
+                
+				<li class="mainBg" name="acDetail">
+					<div>活动详情</div>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	
+<script>
+	var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+	var opId = "$!{openid}";
+	var voteId = 4;
+	var status = "$!{status}";
+    var ti = "${shareTilte}";//标题
+    var de = "${shareDes}";//简介
+    var im = "${shareImage}";//图片地址
+</script>
+#parse("/global/alert.vm")
+<script src="js/paging1.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/voteWord.js"></script>
+</body>
+</html>

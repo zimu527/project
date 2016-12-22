@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/rewBusiness.css" type="text/css" rel="stylesheet">
+    <title>推荐业务</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bga5c2d2-1">
+        <div class="rewardBusBox">
+            <p>你好，<span class="special" id="nickName"></span></p>
+            <p class="boxTwo">你的酬劳已进<span class="special" id="phone"></span>碗里了</p>
+            <p>成功推荐业务：<span class="special" id="busNum">0个</span></p>
+            <p>共赠送奖励：<span class="special" id="reward">0</span></p>
+        </div>
+        <div class="continueFri1"><a href="business.do?op=bizPromoteIndex&b=$!{activityId}">继续邀请好友</a></div>
+        <img class="tableTop imgWidth100" src="img/recommend/yw1024005.jpg">
+        <div class="tableDiv">
+            <table id="businessTable"></table>
+        </div>
+        <img class="imgWidth100" src="img/recommend/yw1024005_1.jpg">
+        <div class="ruleOl">
+            <p>
+                <span>1.每个业务可以重复分享，好友办理的业务互斥。</span><br>
+                <span>2.好友通过分享出来的连接成功办理业务，您将获得500M流量。</span>
+            </p>
+        </div>
+		</div>
+    #parse("/global/alert.vm")
+<script>
+    ##接口所给参数##
+    var activityId = '$!{activityId}'; ##活动ID##
+    var opId = '$!{openid}';
+    var userId = '$!{chId}';##用户id##
+    var status = '$!{status}'; ##活动是否结束  0-活动进行中，1-未开始，2-已结束##
+var aId = '$!{aId}';##微信账号id##
+    ##模板所给参数##
+    
+    var title = '';##分享标题##
+    var desc = '';##分享简介##
+    var img = '';##分享图片##
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/rewBusiness.js"></script>
+</body>
+</html>

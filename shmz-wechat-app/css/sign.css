@@ -1,0 +1,138 @@
+html , body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    padding-top: 0.5rem;
+}
+.uImg-box{
+    position: relative;
+    width: 6rem;
+    margin: 0 auto 1rem auto;
+}
+.uImgBg{
+    position: absolute;
+    width: 100%;
+}
+.uImg-div{
+    width: 4.5rem;
+    margin: auto;
+    padding-top: 1.5rem;
+}
+.userImg{
+    width: 100%;
+    border-radius: 60%;
+}
+.userName{
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+.userName img{
+    height: 1.6rem;
+    vertical-align: top;
+}
+.btnImg{
+    display: block;
+    width: 45%;
+    margin: auto;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.continueQd{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin: 0 1.5rem 0.5rem 1.5rem;
+    text-align: center;
+}
+.colorRed{
+    color: #fe3c00;
+}
+
+
+.draw-btn a{
+    display: block;
+    width: 12rem;
+    height: 3rem;
+    line-height: 2.8rem;
+    margin: 0.6rem auto 0.6rem auto;
+    text-align: center;
+    color: #fff;
+    background: url("../img/member/share-draw.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*start|活动规则*/
+.active-rule{
+    display: none;
+    /*font-family:"YouYuan","Microsoft YaHei","Arial","Arial Bold";*/
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color:#6487ad ;
+    opacity: 0.95;
+}
+.rule-btn{
+    width: 7rem;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #dd127b;
+    border-bottom: 1px solid #dd127b;
+}
+.rule-square{
+    height: 100%;
+    padding:1.5rem 2rem 1.5rem 1.5rem;
+    background:url("../img/exam/bj.png") no-repeat;
+    background-size:100% 100%;
+}
+.active-info{
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 2rem;
+    /*color: #ca223b;*/
+    color: #e6bc10;
+    overflow: hidden;
+}
+.active-info h2,.active-info-title{
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: #fff;
+    padding: 1rem 0 0 0;
+}
+.active-info-title{
+    position: relative;
+    margin-left: 1.5rem;
+    line-height: 2rem;
+}
+.active-info ol , .active-info ol li{
+    list-style: decimal;
+}
+.draw-bg a{
+    color: #fff;
+    /*background:url("../img/member/bd1017004.png") no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+.close-icon{
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    display: block;
+    width: 2.4rem;
+    height: 2rem;
+    background: url("../img/member/cha.png") no-repeat;
+    background-size: 1.5rem 1.5rem;
+    background-position: center;
+}
+/*end|活动规则*/
+
+
+
+
+

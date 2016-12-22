@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <title>注册</title>
+    <img style="display: none;">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div class="bgdcf0b2-1">
+    <a class="xs" href="member.do?op=regStuIndex&a=$!{aid}&u=$!{urlLabel}">
+        <img id="xs" src="img/member/xs1020001.png">
+    </a>
+    <a class="sh" href="member.do?op=regSocialIndex&a=$!{aid}&u=$!{urlLabel}">
+        <img id="sh" src="img/member/sh1020002.png">
+    </a>
+</div>
+
+<script>
+    //接口所给参数
+    var opId = '$!{openid}';
+    var aId = '$!{aid}';//微信账号id
+
+    var xsW = $('#xs').width();
+    var shW = $('#sh').width();
+    $('.xs').height($(window).height() / 2);
+    $('.sh').height($(window).height() / 2);
+    $('#xs').css('left' , ($(window).width() - xsW) / 2);
+    $('#sh').css('left' , ($(window).width() - shW) / 2);
+</script>
+<script src="js/common.js"></script>
+</body>
+</html>

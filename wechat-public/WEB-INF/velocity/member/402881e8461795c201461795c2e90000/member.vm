@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<link href="css/swiper-3.3.1.min.css" type="text/css" rel="stylesheet">
+<title>微会员专区</title>
+<img class="hide" src="img/register/liwu.png">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<style>
+html{
+	min-height:100%;
+}
+body{ height:100%; }
+.bgGrey{
+	width:100%;
+	height:100%;
+	position:relative;
+	background:#f2f2f2;
+}
+.content4{
+    padding-top:5px;
+}
+.content2{
+	margin:5px 10px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:10px;}
+.content3{
+	padding:10px;
+	overflow:hidden;}
+.userLeft{
+	float:left;
+	width:6.2rem;}
+.userImg{
+	width:3rem;
+	height:3rem;
+	margin-left:1.6rem;
+	vertical-align:top;
+	border:1px solid #ccc;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	}
+.userName{
+	line-height:3rem;
+	text-align:center;}
+.userRight{
+	margin-left:8rem;
+	line-height:3rem;}
+.userAc{ overflow:hidden; }
+.userAcList{overflow:hidden;
+	float:left;
+	width:25%;
+	margin:0 4.16%;
+	padding: 0;}
+.userAcTitleCont{
+    display: inline-block;
+	margin-left:3px;
+	text-indent:10px;
+	line-height:22px;
+	border-left: 3px solid #f60;
+    padding: 0px 0px 0px 3px;}
+.userAcTitle{
+	height:30px;
+  	width:100%;
+  	border-bottom:1px solid #e4e4e4;}
+.imgbg img{
+	display:inline-block;
+	width:80%;
+	margin-top:10%;
+	margin-left:10%;
+	vertical-align:middle;}
+.userAcList span{
+	display:block;
+	margin-top:-8px;
+	text-align:center;
+	line-height:1.2rem;}
+.userInfo{ padding-top:10px; }
+.footer{
+	padding:0 1rem;
+	line-height:2rem;}
+</style>
+</head>
+
+<body>
+	<div class="bgGrey">
+		<div class="header">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="http://www.baidu.com"><img class="imgWidth100" src="pic1/member/yy1.jpg"></a></div>
+					<div class="swiper-slide"><a><img class="imgWidth100" src="pic1/member/yy2.jpg"></a></div>
+					<div class="swiper-slide"><a><img class="imgWidth100" src="pic1/member/yy3.jpg"></a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="content4">
+            <div class="content2">
+                <div class="content">
+                    <div class="userLeft">
+                        <img class="userImg" id="userImg" src="img/signIn/u54.png">
+                        <p class="userName" id="userName">$!{nickname}</p>
+                    </div>
+                    <div class="userRight">
+                        <p class="userPhone">手机：<span id="userPhone">$!{phone}</span></p>
+                        <p class="userCredits">积分：<span id="userCredits">0</span></p>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="userAc content2">
+			<div class="content3">
+				<div class="userAcTitle">
+					<p class="userAcTitleCont fs28"><span></span>积分任务</p>
+				</div>
+				<a id="signIn" class="hide userAcList">
+					<div class="ac1">
+						<div class="imgbg">
+							<img src="img/member/sign.png">
+						</div>
+						<span>签到</span>
+					</div>
+				</a>
+				<a id="share" class="hide userAcList">
+					<div class="ac1">
+						<div class="imgbg">
+							<img src="img/member/share.png">
+						</div>
+						<span>分享</span>
+					</div>
+				</a>
+				<a id="draw" class="hide userAcList">
+					<div class="ac1">
+						<div class="imgbg">
+							<img src="img/member/rotate.png">
+						</div>
+						<span>积分抽奖</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="content2">
+		    <div class="content3">
+				<div class="userAcTitle">
+					<p class="userAcTitleCont fs28"><span></span>会员说明</p>
+				</div>
+				<p class="userInfo">1、注册会员享受更多优质服务<br>1、注册会员赠送流量，次月到账哈哈哈哈哈<br>1、流量，次月到账</p>
+			</div>
+		</div>
+		
+		<div class="clear footer fs24">
+			<div class="content3">
+				<p>地址：发展大道发展大道发展大道发展大道发展大道</p>
+				<p>联系方式：10086</p>
+			</div>
+		</div>
+	</div>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+	var aId = "402881e8461795c201461795c2e90000";
+	var opId = "$!{openid}";
+	var imgurl = "$!{headimgurl}";
+	if (imgurl != "") {
+		$("#userImg").attr("src" , "$!{headimgurl}");
+	}
+	var imgW = $(".userAc").width() / 4;
+	$(".imgbg").height(imgW);
+</script>
+
+#parse("/global/alert.vm")
+<script src="js/shareInfo.js"></script>	
+<script src="js/wxShare.js"></script>
+<script src="js/member.js"></script>
+</body>
+</html>

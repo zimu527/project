@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>寻找你的另一半</title>
+	<link rel="stylesheet" type="text/css" href="css/partner/style.css">
+	<script type="text/javascript" src="js/partner/jquery-1.10.2.min.js"></script>	
+	<script type="text/javascript" src="js/partner/paihangbang.js"></script>
+	<script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+	<input type="hidden" id="pid" value="$!{pid}"/>
+	<input type="hidden" id="openid" value="$!{openid}"/>
+	<div class="container">
+		<audio src="audio/partner/daguxing.mp3" loop="loop" autoplay="autoplay"></audio>
+		<input type="button" id="music" onclick="playPause()">
+		<img src="img/partner/hx10240014.png" class="bannerIMG" alt="">
+		<div class="content">
+			<div class="contentTable">
+				<table id="tableId">
+					
+				</table>
+			</div>
+		</div>
+		<div class="contentButton">
+				<input type="button" value="" id="back" onclick="back()">
+		</div>
+		<div id="bottomContent">&nbsp;</div>
+	</div>
+	<script>
+		window.onload = function(){
+			var back = document.getElementById('back');
+			back.addEventListener('touchstart', function(){
+				back.style.backgroundImage="url('img/partner/return_p.png')"
+			})
+			back.addEventListener('touchend', function(){
+				back.style.backgroundImage="url('img/partner/return_n.png')"
+			})
+
+		}
+
+		var tog = true;
+		function playPause(){
+		    if (tog) {
+		        $('audio').trigger('pause');
+		        tog = false;
+		    }else {
+		        $('audio').trigger('play');
+		        tog = true;
+		    }
+		}
+
+		function back() {
+		    var mback = document.getElementById('back');
+		    history.back();
+		}
+	</script>
+</body>
+</html>

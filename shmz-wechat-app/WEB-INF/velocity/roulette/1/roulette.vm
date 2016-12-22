@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/rotate.css" type="text/css" rel="stylesheet">
+    <title>积分抽奖</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+
+<body>
+<div class="bgWhite">
+    <div class="rotateTop">
+        <img class="imgWidth100" src="img/rotate/cj1102003.jpg">
+        <img class="roRight" id="myPrize" onClick="myPrize1()" src="img/rotate/cj1102001.png">
+    </div>
+    <div class="contentRo">
+        <div class="rotate">
+            <img class="imgWidth100" src="imgroulette/zp0606001.png">
+            <div class="lotteryBtn" id="lotteryBtn"></div>
+        </div>
+        <p class='pp1'>您今天还有<span class='colorY' id='remainRotate'>0</span>次抽奖机会</p>
+        <p class='rule' onclick="$('#activePop').removeClass('hide');">活动介绍</p>
+    </div>
+</div>
+<!--输入姓名和手机号弹窗-->
+<div class="popUp hide" id="inputData">
+    <img class="delete" src="img/rotate/x0607.png">
+    <div class="popDiv">
+        <div class="popUpBox">
+            <form class="popForm">
+                <label for="userName">
+                    <img class="popImg" src="img/rotate/hy0303005.png">
+                </label>
+                <input class="popInput" id="userName" type="text" placeholder="请输入姓名">
+            </form>
+            <form class="popForm">
+                <label for="userPhone">
+                    <img class="popImg" src="img/rotate/hy0303003.png">
+                </label>
+                <input class="popInput" id="userPhone" type="tel" placeholder="请输入手机号码">
+            </form>
+            <p class="zhu">请仔细核对您的号码，便于兑奖！</p>
+            <div class="popBtn" onClick="commitData()">提交</div>
+        </div>
+    </div>
+</div>
+<!--积分不足弹窗-->
+<div class="popUp hide" id="omg">
+    <div class="omgBox">
+        <div class="omgDiv">
+            <p>OMG！积分不足，快去挣积分吧！</p>
+            <div class="btnDiv">
+                <a class="item_left" href="member.do?op=signIndex&a=$!{aid}">签到</a>
+                <a class="item_right" href="share.do?op=index&a=$!{aid}">分享图文</a>
+            </div>
+        </div>
+        <img class="deleteRule" onclick='$("#omg").slideUp("slow")' src="img/rotate/cj1102004.png">
+    </div>
+</div>
+<!--我的奖品弹窗-->
+<div class="popUp hide" id="prizeList">
+    <div class="ruleCon">
+        <div class="popPrize">
+            <p class="popTop">我的中奖纪录</p>
+            <img class="imgWidth100" src="img/rotate/cj1102006.png">
+            <div id="prizeResult"></div>
+        </div>
+        <img class="deleteRule" onclick='$("#prizeList").slideUp("slow")' src="img/rotate/cj1102004.png">
+    </div>
+</div>
+<!--活动介绍弹窗-->
+<div class="popUp hide" id="activePop">
+    <div class="ruleCon">
+        <div class="con">
+            <h3>活动时间：</h3>
+            <p>2016年8月7日至2016年8月31日</p>
+            <h3>活动奖品：</h3>
+            <p>关注并进入“孝感移动”微信公众号→点击“乐活动”功能菜单→选择“我是火炬手 我为中国奥运加油”领取二维码→分享好友关注。</p>
+            <h3>活动规则：</h3>
+            <p>微信粉丝参与火炬传递游戏，用户领取微信识别二维码，并将该二维码分享给自己的好友，如有好友通过扫描该二维码关注孝感移动微信号，该用户则可获得一个奥运火炬，活动结束后，获得奥运火炬最多的前100名用户可获得奖品。</p>
+            <h3>活动时间：</h3>
+            <p>2016年8月7日至2016年8月31日</p>
+            <h3>活动奖品：</h3>
+        </div>
+        <img class="deleteRule" onclick="$('#activePop').addClass('hide');" src="img/rotate/cj1102004.png">
+    </div>
+</div>
+<div class='transDiv hide'></div>
+<script src="js/common.js"></script>
+<script>
+    ##接口所给参数
+    var activityId = '$!{activityId}'; ##活动ID
+    var opId = '$!{openid}';
+    var userId = '$!{chId}';##用户id
+    var status = '$!{status}'; ##活动是否结束  0-活动进行中，1-未开始，2-已结束
+    var aId = '$!{aid}';##微信账号id
+    var memberflag = "$!{memberflag}";      ##用户身份 1 粉丝  2 会员
+    ##模板所给参数
+    var title = '';    ##分享标题
+    var desc = '';     ##分享简介
+    var img = '';      ##分享图片
+
+    var rId = 1;         ##大转盘ID
+
+    var num = "${credits}";##消耗积分
+</script>
+<script src="js/common.js"></script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/rotate.js"></script>
+<script src='js/dateUtils.js'></script>
+#parse("/global/alertRotate.vm")
+</body>
+</html>

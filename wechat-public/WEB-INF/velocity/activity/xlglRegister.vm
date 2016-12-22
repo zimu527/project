@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <title>锡林郭勒移动微厅微会员专区</title>
+</head>
+<style>
+    @media screen and (min-width:240px){html,body{font-size:12px;}}
+    @media screen and (min-width:320px){html,body{font-size:12px;}} /*将12px调整到14px*/
+    @media screen and (min-width:360px){html,body{font-size:14px;}}
+    @media screen and (min-width:375px){html,body{font-size:14px;}}
+    @media screen and (min-width:414px){html,body{font-size:16px;}}
+    @media screen and (min-width:720px){html,body{font-size:18px;}}
+    @media screen and (min-width:800px){html,body{font-size:22px;}}
+    @media screen and (min-width:1024px){html,body{font-size:24px;}}
+    html , body{
+        width:100%;
+        height:100%;
+        overflow: hidden;
+        background-color: #eee;
+        font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";}
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    img{
+        border: none;
+        vertical-align: middle;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        -webkit-tap-highlight-color:transparent;
+        -webkit-user-select:none;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #01d1ff;
+    }
+    .header img{
+    }
+    .header span{
+        padding-left: 10px;
+        color: #fff;
+    }
+    .main{
+        margin-top: 120px;
+        padding: 0 1rem;
+    }
+    .cont{
+        width: 100%;
+        padding: 3rem 0;
+        line-height: 1.5rem;
+        text-align: center;
+        border: 1px solid #06a703;
+        border-radius:5px;
+        background-color: #fff;
+    }
+    .caption img{
+        height: 1.5rem;
+        padding-right: 10px;
+    }
+    .phone-num{
+        color: #e4352f;
+    }
+    .remove-bind{
+        padding: 10px 0;
+        color: #aaa;
+    }
+    .remove-bind a{
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        color: #fff;
+        background-color: #e4352f;
+        border-radius: 5px;
+        border: 1px solid #eee;
+    }
+    .remove-bind a:active,.remove-bind a:hover{
+        color: #000;
+        background-color: #c12e2a;
+    }
+    .close{
+        display: inline-block;
+        padding: 5px 20px;
+		margin-top:2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        background-color: #05b901;
+        border-radius: 5px;
+        border: 1px solid #00CC00;
+    }
+    .close:hover,.close:active{
+        background-color: #06a703;
+    }
+    .mask{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background:rgba(0,0,0,.6);
+    }
+    .mask-box{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        z-index: 3;
+        width: 95%;
+        margin-left: 2.5%;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .box-title{
+        position: relative;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #eee;
+        /*vertical-align: middle;*/
+    }
+    .attention-img{
+        height: 100%;
+        padding-right: 1rem;
+    }
+    .close-img{
+        width: 1rem;
+        position: absolute;
+        top:1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+    .box-cont{
+        padding: 1rem 1rem 2rem 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    .box-btn{
+        position: relative;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+    }
+    .btn-list{
+        position: relative;
+        height: 2.5rem;
+    }
+    .box-btn a{
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 5px;
+    }
+    .true-btn{
+        right: 4.5rem;
+        color: #fff;
+        background-color: #377eb4;
+        border: 1px solid #3274ac;
+    }
+    .true-btn:hover,.true-btn:active{
+        background-color: #3274ac;
+        color: #000;
+    }
+    .false-btn{
+        right: 0;
+        background:rgba(241,241,241,.5);
+        color: #000;
+        border: 1px solid #aaa;
+    }
+    .false-btn:hover,.false-btn:active{
+        background:rgba(241,241,241,1);
+    }
+</style>
+<body>
+<div class="header">
+    <img src="img/nmreg/ydlogo.png" alt="">
+    <span>内蒙古移动手机号码注册</span>
+</div>
+<div class="main">
+    <div class="cont">
+        <p class="caption"><img src="img/nmreg/right.png" alt="">您的手机号码已经注册，请关闭此窗口</p>
+        <p class="phone">绑定手机号：<span class="phone-num"></span></p>
+        ##<div class="remove-bind"><span>如果需要解除绑定，请点击</span> <a class="remove-bind-btn">解 绑</a></span></div>
+        <a class="close" href="javascript:void(0)" onclick="closeWindows();">关闭窗口</a>
+    </div>
+</div>
+<div class="mask">
+    <div class="mask-box">
+        <div class="box-title">
+            <img class="attention-img" src="img/nmreg/attention.png" alt=""/><span>提示</span>
+            <img class="close-img" src="img/nmreg/close-icon.png" alt="">
+        </div>
+        <div class="box-cont">确定解除绑定吗？</div>
+        <div class="box-btn">
+            <div class="btn-list">
+                <a href="javascript:void(0);" class="true-btn">确定</a>
+                <a href="javascript:void(0);" class="false-btn">关闭</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.body.addEventListener('touchstart',function(){ });
+	var phone="$!{phone}";
+    $(".phone-num").text(phone);
+    $(".remove-bind-btn").click(function(){
+        $(".mask").show();
+    });
+    $(".false-btn").click(function(){
+        $(".mask").hide();
+    });
+    $(".close-img").click(function(){
+        $(".mask").hide();
+    });
+	function closeWindows(){
+		WeixinJSBridge.invoke('closeWindow',{},function(res){
+			//alert(res.err_msg);
+		});
+	}
+</script>
+
+</body>
+</html>

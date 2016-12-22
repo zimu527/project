@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/commonBargain.css" rel="stylesheet">
+    <link href="css/bargainIndex.css" rel="stylesheet">
+    <title>圣诞手机大砍价</title>
+</head>
+<body>
+<img class="imgWidth100" src="img/bargain/top.gif" alt="">
+<!--倒计时-->
+<header class="fs12">
+    <div class="time">
+        <div class="time-top fs14"> <span class="now-time"></span>&nbsp;&nbsp;&nbsp;&nbsp;剩余时间</div>
+        <div class="time-bottom">
+			<div class="time-icon"><span class="day"></span>天</div>
+            <div class="time-icon"><span class="hour"></span>时</div>
+            <div class="time-icon"><span class="minute"></span>分</div>
+            <div class="time-icon"><span class="second"></span>秒</div>
+        </div>
+    </div>
+</header>
+<div class="goods-list fs14">
+	
+</div>
+<!--活动细则-->
+<div class="activity-box">
+    <img class="imgWidth100" src="img/bargain/kk1612070019.jpg">
+    <div class="activity-title fs14">活动细则</div>
+    <div class="activity-list fs12">
+        <ol class="activity-ol">
+            <li>活动时间：2016年12月15日00:00--2016年12月25日24:00</li>
+            <li>本活动仅<span class="red">限锡林郭勒移动</span>用户参与砍价和办理优惠价购机。</li>
+            <li>邀请好友（须关注锡林郭勒移动微厅公众号）点击进入砍价界面点击“帮ta砍一刀”。</li>
+            <li>用户砍价成功后须本人在<span class="red">次日起3日</span>之内到<span class="red">当地营业厅</span>办理购机手续，出示身份证和砍价成功页面并接受主叫号码回拨测试，在缴纳相关费用并承诺保底消费及保底时间后办理。</li>
+            <li>每个手机号只能购买一部砍价手机，砍价<span class="red">成功后不能重复参与</span>。砍价失败用户可继续重新参与其他场次的砍价，之前好友帮助砍价的额度清零。</li>
+            <li>活动最终解释权归内蒙古移动锡林郭勒分公司所有。</li>
+        </ol>
+    </div>
+    <img class="imgWidth100" src="img/bargain/kk1612070022.jpg">
+</div>
+#parse("/global/alert.vm")
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var activityId="$!{activityId}";
+    var aId = "$!{aid}";
+    var nowDate = "$!date.format('yyyy/MM/dd',$!nowDate)";
+	var startTime = "$!date.format('yyyy/MM/dd HH:mm:ss',$!nowDate)";
+	var endtime = "$!date.format('yyyy/MM/dd HH:mm:ss',$!endDate)";
+    var openid = "$!{openid}";
+    var aw = $!{aw};
+    //var realname = "$!{realname}";
+	
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/dateUtils.js"></script>
+<script src="js/bargainIndex.js"></script>
+<script>
+	var startTimer=new Date(Date.parse(startTime)).getTime();
+	var endtimer=new Date(Date.parse(endtime)).getTime();
+	var timer = window.setInterval(function(){ShowCountDown(startTimer,endtimer,0);}, interval);
+	BargainGetGoodsList();
+</script>
+</body>
+</html>

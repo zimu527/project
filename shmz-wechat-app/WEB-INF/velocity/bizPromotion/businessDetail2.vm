@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/busDetail.css" type="text/css" rel="stylesheet">
+    <title>推荐业务</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div class="bga5c2d2">
+    <img class="imgWidth100" src="img/recommend/yw1024002.jpg">
+    <form name="business" method="post" action="business.do?op=doOrderData" onsubmit="return manage()">
+        <div class="input_box">
+            手机号：<input id="phone" name="phone" type="tel" val="$!{phone}" placeholder="请输入手机号">
+        </div>
+        <input name="token" type="hidden" value="$!{token}">
+        <input name="a" type="hidden" value="$!{activityId}">
+        <input name="u" type="hidden" value="$!{gzuserId}">
+        <input name="b" type="hidden" value="$!{businessId}">
+        <input type="submit" value="去办理">
+    </form>
+</div>
+
+#parse("/global/alert.vm")
+<script src="js/common.js"></script>
+<script>
+
+
+    var aId = '$!{aId}';##微信账号id##
+
+    var title = '';##分享标题##
+    var desc = '';##分享简介##
+    var img = '';##分享图片##
+
+    function manage(){
+        var phone = $('#phone').val();
+        if(phone == "undefined" || phone == null || phone == ""){
+            popBoxAlert("" , "请输入手机号");
+            return false;
+        }
+        window.business.submit();
+    }
+
+    $(document).ready(function(){
+        //活动是否结束  0-活动进行中，1-未开始，2-已结束
+        judgeState();
+        //分享
+        var url = getShareUrl();
+        wxShare(title , desc , img , url);
+    });
+</script>
+<script src="js/wxShare.js"></script>
+</body>
+</html>

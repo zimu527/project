@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/purchase.css" rel="stylesheet">
+    <title>1元购1GB</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="bg bg-0">
+    <div class="defray main l-r-padding2">
+        <div class="red-box">
+            <p class="defray-box"><span class="congrats">恭喜您！</span>
+            成功购买<span class="yellow" id="redNum"></span>个流量红包，共<span class="yellow" id="trafficNum"></span>GB
+            </p>
+            <div class="submit-btn-bg">
+                <div class="purchase-btn shadow" id="ShareRedEnvelopes">分享好友</div>
+            </div>
+        </div>
+        <div class="t-b-padding2">
+            <div class="traffic rule-info black">
+                <h2>注：</h2>
+                <ol class="list">
+                    <li>按提示将红包链接分享给好友，好友即可收到消息抢红包。</li>
+                    <li>自己也可以抢红包。若红包过期未抢完，将自动作废。</li>
+                </ol>
+            </div>
+            <img class="bg-woman" src="img/purchaseTraffic/woman.png" alt="">
+        </div>
+    </div>
+    <div class="footer-alert hide" id="footerAlert">
+        <div class="alert-box">
+            <div class="alert-box-cont">
+                <div class="alert-box-headerImg"><img src="" alt=""></div>
+                <p class="red"></p>
+                <div class="box-more-btn">
+                    <a class="more-btn btn-box shadow" href="javascript:void(0);"></a>
+                </div>
+                <div class="alert-box-close" id="alertBoxClose"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="share-mask"><img class="share-signImg" src="img/exam/share02.png" alt=""/></div>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    //传入参数
+    var redNum="$!{redNum}";
+    var trafficNum="$!{trafficNum}";
+    var nickname="$!{nickname}";
+    var shareUrl="$!{shareUrl}";
+    var opId="$!{openid}";
+
+    //测试参数
+    //redNum=10;
+    //trafficNum=1;
+    //shareUrl='www.baidu.com';
+   // nickname='小明';
+
+    //模板参数
+    var activityId=1;
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    //分享参数
+    var redEnvelopesTitle = "流量红包";
+    var redEnvelopesDesc = "您的好友"+nickname+"分享红包了，小伙伴们快来抢流量红包吧~";
+    var redEnvelopesImg =  "pic1/share/fx01.png";
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/purchase.js"></script>
+<script>
+    $('#redNum').text(redNum);
+    $('#trafficNum').text(trafficNum);
+
+    //分享
+    wxShare(redEnvelopesTitle,redEnvelopesDesc,redEnvelopesImg,shareUrl);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/*recShare*/
+.themeBox{
+    width: 100%;
+    background: url("../img/recommend/dyr1021002.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: 'jianzhiyi';
+}
+.shareT{
+    width:76%;
+    margin: 0 0 0 12%;
+    padding-bottom: 0.5rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+.shareP{
+    width: 76%;
+    margin: -1px 0 0 12%;
+    padding-top: 0.5rem;
+    color: rgb(243 , 241 , 34);
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+}
+.two{
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+.shareHint{
+    width: 80%;
+    margin: auto;
+    padding-top: 0.5rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    /*line-height: 2.5rem;*/
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.shareHint img{
+    height: 1.1rem;
+    vertical-align: middle;
+}
+.tableBox{
+    background: url("../img/recommend/kuang.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 1rem 0;
+    margin: 0 1.5rem;
+}
+.tableBox p{
+    text-align: center;
+    padding: 0 0 0.2rem 0;
+}
+.slice{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+#recommendTable{
+    width: 80%;
+    margin: auto;
+}
+#recommendTable tr td:last-child{
+    text-align: right;
+}
+#recommendTable tr td img{
+    height: 2rem;
+}
+.nickName{
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+#nickName{
+    color: rgb(243 , 241 , 34);
+}
+.noFriend{
+    margin-top: 0.5rem;
+}

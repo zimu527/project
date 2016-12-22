@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <title>学霸成绩单</title>
+	<link href="css/common.css" rel="stylesheet">
+    <link href="css/overlordResult.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+    <img src="img/exam/kt1013004.jpg" alt="">
+    <div class="squarebox">
+        <img src="img/exam/squarebox.png" alt="">
+        <div class="score">
+            <div>答对：<span class="rightNum"></span></div>
+            <div>答错：<span class="wrongNum"></span></div>
+            <div>用时：<span class="costTime"></span></div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <form class="questionlist" id="questionlist">
+    </form>
+    <img class="buttom-img" src="img/exam/kt1013003.jpg" alt="">
+</div>
+<div class="footer">
+    <a class="submit" href="javascript:void (0);">
+    </a>
+</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var opId = "$!{openid}";
+    var activityId=1;
+	var aId = "402881e8461795c201461795c2e90000";
+	
+	//分享参数
+    var overlordTitle = "学霸大比拼";
+    var overlordDesc = "学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼";
+    var overlordImg =  "img/exam/kt1013001.jpg";
+	
+    $(document).ready(function(){
+        examGetReport();
+    });
+	$(".submit").click(function(){
+		window.location.href=getRootUrl()+"exam.do?op=index&a="+activityId;//获取首页地址
+	});
+</script>
+
+<script src="js/wxShare.js"></script>
+<script src="js/overlordQuestion.js"></script>
+<script>
+
+</script>
+</body>
+</html>

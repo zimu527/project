@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <title>上海移动动感俱乐部</title>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <style>
+        .div1{
+            position: relative;
+        }
+        .img1{
+            position: absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0.7rem auto 0 auto;
+            width: 40%;
+        }
+        .pp1{
+            margin-top: 1rem;
+            text-align: center;
+            line-height: 2rem;
+        }
+        .pp1 img{
+            height: 2rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgdcf0b2">
+        <img class="imgWidth100" src="img/guide/m1118001.jpg">
+        <img class="imgWidth100" src="img/guide/m1118002.jpg">
+        <div class="div1">
+            <img class="imgWidth100" src="img/guide/m1118003.jpg">
+            <img class="img1" src="img/guide/ewm.jpg">
+        </div>
+        <p class="pp1"><img src="img/guide/m1118004.jpg"><span>扫一扫 OR </span><img src="img/guide/m1118005.jpg"><span>长按识别二维码</span></p>
+    </div>
+</body>
+</html>

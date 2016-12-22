@@ -1,0 +1,11 @@
+ 
+<script src="resource/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="resource/js/dateUtils.js" type="text/javascript"></script>
+<script src="resource/js/DatePicker.js" type="text/javascript"></script>
+<script src="resource/js/WdatePicker.js" type="text/javascript"></script>
+<script src="resource/js/popbox.js" type="text/javascript"></script>
+<script src="resource/js/pagedModelList.js" type="text/javascript"></script>
+<script src="resource/js/checkParamValid.js" type="text/javascript"></script>
+<script src="resource/js/sessionFilter.js" type="text/javascript"></script>
+<script src="resource/js/tableStyle.js" type="text/javascript"></script>
+<link rel="stylesheet" href="resource/style/style.css" />

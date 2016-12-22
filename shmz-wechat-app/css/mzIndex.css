@@ -1,0 +1,32 @@
+.iconAll{
+    margin: 1rem 1.5rem;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.icon{
+    width: 49%;
+    height: 3rem;
+    /*line-height: 2.5rem;*/
+    background: url("../img/member/an1.png") no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.iconAll .icon:nth-child(2n-1){
+    margin-right: 2%;
+}
+.icon img{
+    display: inline-block;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+}
+.icon span{
+    line-height: 3rem;
+}
+.icon a{
+    display: block;
+    color: #FFFFFF;
+}

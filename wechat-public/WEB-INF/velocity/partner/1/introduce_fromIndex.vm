@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>玩法介绍</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="css/partner/base.css" rel="stylesheet">
+<link href="css/partner/introduce.css" rel="stylesheet">
+<script type="text/javascript" src="js/partner/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/partner/introduce-style.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+	<input type="hidden" id="pid" value="$!{pid}"/>
+    <div class="words">
+    	<p>手指滑动，在指定位置画半“<span class="special_color">心</span>”</p>
+    	<p>并邀请好友完成另外半“<span class="special_color">心</span>”。</p>
+    </div>
+    <div class="pic">
+    	<div class="words-name">
+	    	<p class="name1">自己</p>
+	    	<p class="name2">好友</p>
+    	</div>
+		<div class="touxiang">
+    		<img alt="自己的头像" id="myTouxiang">
+    		<img src="img/partner/hytx.png" alt="自己的头像" id="suibianTouxiang">
+    	</div>
+    	<img src="img/partner/jieshao.png" alt="介绍">
+    </div>
+	<div class="btn">
+		<a class="btn_base btn_know" id="DrawInLeft"></a>
+	</div>
+	<script>
+		window.onload = function(){
+			var btn_know = document.getElementsByClassName('btn_know')[0];
+			btn_know.addEventListener('touchstart', function(){
+				btn_know.style.backgroundImage="url('img/partner/know_p.png')"
+			})
+			btn_know.addEventListener('touchend', function(){
+				btn_know.style.backgroundImage="url('img/partner/know_n.png')"
+			})
+		}
+
+		// function back() {
+		//     var mback = document.getElementById('mback');
+		//     history.back();
+		// }
+		
+		var imgurl = "$!{headimgurl}";
+    	if (imgurl != "") {
+    		$("#myTouxiang").attr("src" , "$!{headimgurl}");
+    	}else{
+			$("#myTouxiang").attr("src" , "img/partner/hytx.png");
+		}
+	</script>
+</body>
+</html>

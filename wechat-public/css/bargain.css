@@ -1,0 +1,351 @@
+.bgWhite{
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    /*padding-bottom: 0.1rem;*/
+}
+header{
+    background: -webkit-linear-gradient(#ffac51, #FFFFFF); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffac51, #FFFFFF); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffac51, #FFFFFF); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffac51, #FFFFFF); /* 标准的语法 */
+    padding-top: 0.4rem;
+    padding-bottom: 0.8rem;
+}
+.time{
+    width: 90%;
+    height: 1.1rem;
+    margin: auto;
+    background: #ff6e01;
+    border: solid 0.13rem #fff;
+    border-radius: 0.5rem;
+}
+.time-top{
+    width: 60%;
+    height: 0.57rem;
+    margin: -0.32rem auto 0 auto;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 0.57rem;
+    font-weight: bold;
+}
+.time-bottom{
+    width: 80%;
+    margin: 0.1rem auto 0 auto;
+}
+.time-icon{
+    width: 1.16rem;
+    height: 1.16rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.16rem;
+}
+.time-icon span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff2402;
+}
+.flex{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+}
+/*手机信息*/
+.phone{
+    padding: 0 0.5rem 0.4rem 0.5rem;
+}
+.phone img{
+    width: 2rem;
+    margin-right: 0.36rem;
+}
+.colorG{
+    color: #005e00;
+}
+.colorR{
+    color: #ff2402;
+}
+/*进度条*/
+.rate-box{
+    position: relative;
+    padding: 0 0.5rem 0.2rem 0.5rem;
+    border-bottom: solid 0.15rem #eeeeee;
+}
+.rate{
+    width: 100%;
+    border: solid 1px #aaa;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+}
+.rate-inner{
+    width: 0;
+    height: 0.24rem;
+    background: #ff2402;
+    border-radius: 0.5rem;
+}
+.rate-div{
+    padding: 0.1rem 0.2rem;
+}
+
+/*用户信息*/
+.user-div{
+    padding:0.2rem 0.5rem;
+    border-bottom: solid 0.15rem #eeeeee;
+}
+.user-box{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: solid 0.05rem #eeeeee;
+}
+.userImg-box{
+    width: 1.17rem;
+    height: 1.17rem;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    margin-right: 0.3rem;
+}
+.userName{
+    line-height: 1.17rem;
+    font-weight: bold;
+}
+.userM{
+    width: 2.47rem;
+    height: 0.82rem;
+    background: url("../img/bargain/kk1612070026.png") no-repeat center;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    text-align: right;
+    line-height: 0.82rem;
+    padding-right: 0.2rem;
+    margin-top: 0.17rem;
+}
+.colorY{
+    color: #fff306;
+}
+.btn{
+    width: 3.04rem;
+    height: 0.95rem;
+    line-height: 0.95rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 0.2rem;
+}
+.btnFresh{
+    background: url("../img/bargain/kk1612070027.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.btnShare{
+    background: url("../img/bargain/kk1612070028.png") no-repeat center;
+    background-size: 100% 100%;
+}
+/*亲友出刀*/
+.relatives-box{
+    padding:0.2rem 0;
+    border-bottom: solid 0.15rem #eeeeee;
+    font-size: 0;
+}
+.relative-title{
+    width: 100%;
+    height: 0.63rem;
+    background: url("../img/bargain/kk1612070020_1.jpg") no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 0.63rem;
+    font-weight: bold;
+}
+.relative-list{
+    width: 100%;
+    background: url("../img/bargain/kk1612070021_1.jpg") repeat center;
+    background-size: 100% 100%;
+    padding: 0.2rem 0.99rem 0 0.99rem;
+}
+.relative{
+    padding-bottom: 0.48rem;
+}
+.relative:last-child{
+    margin-bottom: 0;
+}
+.reOne{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-right: 0.3rem;
+}
+.reTwo{
+    line-height: 0.4rem;
+    padding-top: 0.1rem;
+}
+.reThree{
+    line-height: 1rem;
+}
+.lookMore{
+    text-align: center;
+    margin-top: 0.1rem;
+}
+.lineP{
+    line-height: 0.5rem;
+}
+/*活动细则*/
+.activity-box{
+    padding:0.2rem 0;
+    font-size: 0;
+}
+.activity-title{
+    width: 100%;
+    height: 0.63rem;
+    background: url("../img/bargain/kk1612070020_2.jpg") no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 0.63rem;
+    font-weight: bold;
+}
+.activity-list{
+    width: 100%;
+    background: url("../img/bargain/kk1612070021_2.jpg") repeat center;
+    background-size: 100% 100%;
+    padding: 0.2rem 0.99rem 0 0.99rem;
+}
+.activity-ol{
+    margin-left: 0.3rem;
+}
+.activity-ol li{
+    line-height: 0.5rem;
+}
+
+
+
+
+/*成功页*/
+.success{
+    display: block;
+    width: 60%;
+    margin: -0.5rem auto 0.2rem auto;
+}
+.success-header{
+    background: -webkit-linear-gradient(#ffac51, #FFFFFF); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffac51, #FFFFFF); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffac51, #FFFFFF); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffac51, #FFFFFF); /* 标准的语法 */
+    padding-top: 0.4rem;
+}
+.userS-box{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.zhu{
+    padding: 0.2rem 0 0.1rem 0;
+}
+.cenP{
+    text-align: center;
+    padding: 0.1rem 0;
+}
+
+
+/*失败*/
+.rateF-box{
+    position: relative;
+    padding: 0 0.5rem 0.2rem 0.5rem;
+    border-bottom: solid 0.15rem #eeeeee;
+}
+.fail{
+    position: absolute;
+    top: -0.5rem;
+    left: calc(50% - 1rem);
+    /*width: 1.36rem;*/
+    width: 2rem;
+    /*height: 1.12rem;*/
+    height: 1.65rem;
+}
+
+/*分享页*/
+.userS-div{
+    padding:0 0.5rem 0 0.5rem;
+    margin-top: -0.2rem;
+}
+.btnHelp{
+    width: 3.04rem;
+    height: 0.85rem;
+    line-height: 0.85rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #853888;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto;
+    box-shadow: 0 0.1rem 0.05rem #aaa;
+}
+.btnHelp img{
+    height: 0.5rem;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+}
+.phoneShare{
+    /*margin: auto;*/
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+.phoneShare img{
+    width: 1.43rem;
+    vertical-align: middle;
+}
+.phoneInfo{
+    display: inline-block;
+    text-align: left;
+}
+.userR-div{
+    padding:0 0.5rem 0.5rem 0.5rem;
+}
+.end{
+    width: 6.3rem;
+    height: 1.29rem;
+    margin: 0.2rem auto;
+    line-height: 1.29rem;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-radius: 0.2rem;
+    font-weight: bold;
+}
+
+/*砍价成功弹窗*/
+.success-box{
+    width: 5.81rem;
+    height: 5.77rem;
+    background: #FFFFFF;
+    margin: 2rem auto 0 auto;
+    /*padding: 0.5rem 1rem;*/
+    border-radius: 0.2rem;
+}
+.success-img{
+    width: 80%;
+    font-size: 0;
+    margin-left: 10%;
+    margin-top: 0.5rem;
+    vertical-align: top;
+}
+.success-message{
+    width: 70%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    color: #ff2402;
+    text-align: center;
+    background: url("../img/bargain/kk1612070034.png") no-repeat;
+    background-size: 100% 100%;
+    margin:0 auto 0.5rem auto;
+    /*font-size: 0;*/
+}
+.btnKnow{
+    width: 4.37rem;
+    height: 0.93rem;
+    line-height: 0.93rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #853888;
+    border-radius: 0.2rem;
+    margin: auto;
+}
+#bargainPrice{
+    font-weight: bold;
+}

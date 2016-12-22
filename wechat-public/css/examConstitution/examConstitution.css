@@ -1,0 +1,222 @@
+.center{
+	text-align:center;
+	}
+.red{
+	color:red;
+}
+.answer{
+	padding-left:5px;
+}
+.wrong:after {
+	content: "X";
+	padding-left: 5px;
+	font-size: 16px;
+	color: red;
+}
+
+.right:after {
+	content: "√";
+	padding-left: 5px;
+	font-size: 16px;
+	color: red;
+}
+
+/*首页*/
+.indexBg{
+    background: url("../../img/examConstitution/xf1216002.jpg") no-repeat;
+    background-size: cover;
+}
+.index-cont{
+    position: relative;
+    top:60%;
+    left: 0;
+}
+.index-btn{
+    position: relative;
+    top:58%;
+    left: 0;
+}
+/*答题页*/
+/*start|头部*/
+body{
+    background-color: #decece;
+}
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header img{
+    width: 100%;
+}
+.active-info-box{
+    position: absolute;
+    bottom: .1rem;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    padding: 8px .4rem;
+}
+.opacityBg{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .8;
+    border-radius: 5px;
+}
+.active-info{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 61px;
+    padding:0 .6rem;
+}
+/*end|头部*/
+/*start|题目区域*/
+.main{
+    width: 100%;
+}
+.questionlist{
+    padding: 0 .4rem;
+}
+.questionlist p{
+    /*maigin: 5px 0 10px 0;*/
+    /*font-weight: bold;*/
+    line-height: 30px;
+    text-indent: 5px;
+}
+fieldset{
+    margin-bottom: 15px;
+}
+.questionlist .label1{
+    background: url(../../img/examConstitution/square2.png) no-repeat left center;
+    background-size: 20px 20px;
+    background-position: 0 5px;
+}
+.questionlist label {
+    width: 100%;
+    display: block;
+    padding-left: 25px;
+    /*margin: 10px 0;*/
+/*    height: 30px;
+    line-height: 30px;*/
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+    cursor: pointer;
+    background: url(../../img/examConstitution/square.png) no-repeat left center;
+    background-size: 20px 20px;
+    background-position: 0 5px;
+}
+.checked {
+    background-color: #90c222;
+    color: #fff;
+}
+label i{
+    /*display: inline-block;*/
+    font-style: normal;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 5px;
+    -moz-border-radius:5px; /* 老的 Firefox */
+}
+
+.buttom-img{width: 100%}
+/*end|题目区域*/
+/*接受调研者信息*/
+.userInfo label{}
+.userInfo li{ margin-bottom:10px; }
+.userInfo input{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    /*width:75%;*/
+    width: 5rem;
+    height: .53rem;
+    /*padding:0.5rem 0;*/
+    text-indent:5px;
+    border:solid 2px #CCC;
+    border-radius:5px;
+}
+.userInfo textarea {
+    font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";
+    width:75%;
+    /*height:5rem;*/
+    /*line-height:1.5rem;*/
+    text-indent:5px;
+    border:solid 2px #CCC;
+    border-radius:5px;
+}
+.note{
+    display: inline-block;
+    /*height:5rem;*/
+    /*line-height:5rem;*/
+    vertical-align: top;
+}
+.requested:before{
+    content:"*";
+    color: red;
+}
+.unnecessary:before{
+    content:"*";
+    color: #fff;
+}
+.score{
+    font-size: 22px;
+    color: #e10700;
+    font-weight: 200;
+}
+.line{
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #be8c8f;
+    margin: .1rem 0;
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+.footer{
+    width: 100%;
+    padding: 5px 0 30px 0;
+}
+.submit-btn-bg{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 6.5rem;
+    height: 1rem;
+    margin: .5rem auto 0 auto;
+    background:#fff;
+    border-radius: 10px;
+}
+.submit-btn{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 6.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    border: none;
+    margin: 0 auto;
+    /*    background: url("../img/purchaseTraffic/yy1103004.png") no-repeat;
+        background-size: 100% 100%;*/
+    padding: 0 .25rem;
+    text-align: center;
+    font-family: redocn;
+    /*font-size: 1.2rem;*/
+    z-index: 2;
+    color: #fff;
+    background-color: #e66162;
+    border-radius: 10px;
+    box-shadow: 0 3px 2px #aaa;
+}
+.submit-btn:active,.submit-btn:hover{
+    opacity: .5;
+    box-shadow: none;
+}
+.submit-btn-bg:active,.submit-btn-bg:hover{
+    background-color: #000;
+}

@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<link href="css/sign.css" type="text/css" rel="stylesheet">
+<link href="css/qiandao_style.css" rel="stylesheet" >
+<title>签到01</title>
+<!--<img class="hide" src="img/register/liwu.png">-->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+</head>
+
+<body>
+	<div class="bgdcf0b2">
+		<header>
+			<div class="uImg-box">
+				<img class="uImgBg" src="img/member/jz1018.png">
+				<div class="uImg-div">
+					<img class="userImg" id="headimgurl" src="pic/IMG_0834.JPG">
+				</div>
+			</div>
+			<p class="userName">
+				<img src="img/member/sj.png">手机：<span id="phone"></span>
+			</p>
+			<p class="userName">
+				<img id="sex">
+				<span id="nickName"></span>
+				&nbsp;&nbsp;
+				我的积分：<img src="img/member/jf.png"><span id="credits">0</span>
+			</p>
+		</header>
+		<img class="btnImg" id="btnSign" src="img/member/an2.png"  onClick="signIn()">
+		<p class="continueQd">连续签到<span class="colorRed" id="signInDay">0</span>天！</p>
+		<div class="qiandao-con clear">
+			<img class="qiandao-top" src="img/member/qiandao_con.jpg">
+				<div class="qiandao-main" id="js-qiandao-main">
+					<ul class="qiandao-list" id="js-qiandao-list"></ul>
+				</div>
+		</div>
+		<div class="draw-btn"><a class="roulette">积分抽奖</a></div>
+		<div class="rule-btn">签到规则说明</div>
+		<!--说明部分-->
+		<div class="active-rule">
+			<div class="rule-square">
+				<h2 class="active-info-title">签到获积分规则<span class="close-icon"></span></h2>
+				<div class="active-info" style="overflow: hidden">
+				    <p>1.如出现前100名得票相同情况</p>
+				    <p>2.粉丝上传照片需为本人真实照片</p>
+				    <p>3.用户核奖号码必须是孝感移动用户且关注官微</p>
+				    <p>4.本次活动最终解释权归孝感移动所有</p>
+				    <p>5.使用技术手段使票数非正常增长的行为视为自愿放弃领奖</p>
+				</div>
+				<div class="draw-btn draw-bg"><a class="roulette">积分抽奖</a></div>
+			</div>
+		</div>
+	</div>
+#parse("/global/alert.vm")
+<script>
+    ##接口所给参数##
+    var activityId = '$!{activityId}'; ##活动ID##
+    var opId = '$!{openid}';
+    var userId = '$!{chId}';##用户id##
+    var status = '$!{status}'; ##活动是否结束  0-活动进行中，1-未开始，2-已结束##
+    var aId = '$!{aid}';##微信账号id##
+    ##模板所给参数##
+    var title = '签到';##分享标题##
+    var desc = '1.如出现前100名得票相同情况，则按照粉丝手机号码网龄进行排名，先入网者排前面，核奖粉丝总数不变，每个号码限核奖一次。2.粉丝上传照片需为本人真实照片。奖。';##分享简介##
+    var img = 'http://wxtest.bw30.com/res/upload/signLogo/share_20161121112717.png';##分享图片##
+
+	$(".close-icon").click(function(){//隐藏活动规则
+		$(".active-rule").hide();
+	});
+	$(".rule-btn").click(function () {//查看活动规则
+		$(".active-rule").show();
+	});
+
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/common.js"></script>
+<script src="js/sign.js"></script>
+<script src="js/qiandao_js.js"></script>
+</body>
+</html>

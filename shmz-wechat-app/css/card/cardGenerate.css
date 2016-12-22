@@ -1,0 +1,213 @@
+.main{
+    width: 100%;
+    background: url("../../img/card/bg2.jpg") no-repeat center;
+    background-size: 100% 100%;
+    margin-top: -1px;
+    position: relative;
+    padding: 0 0 0.5rem 0;
+}
+.wishBox{
+    padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.wishTitle{
+    text-align: right;
+    color: #FFFFFF;
+}
+.limitW{
+    text-align: right;
+}
+.wishWord{
+    width: 100%;
+    /*height: 3rem;*/
+    background: rgba(255 , 255 , 255 , 0.8);
+    border-radius: 0.2rem;
+    margin-top: 0.1rem;
+    padding: 0.4rem;
+}
+.wishWord textarea{
+    width: 100%;
+    height: 2rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+.hint{
+    text-align: center;
+    color: #FFFFFF;
+}
+.hint img{
+    height: 0.6rem;
+    vertical-align: middle;
+    margin-right: 0.15rem;
+}
+.btn{
+    width: 4.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgb(255 , 78 , 0);
+    margin:0.2rem auto;
+    border-radius: 0.1rem;
+    -webkit-tap-highlight-color: transparent;
+    /*box-shadow: 0 0.1rem 0.1rem #aaa;*/
+}
+.btn:active , .btnGenerate:active{
+    background: rgb(241 , 44 , 9);
+}
+.rule{
+    text-align: center;
+    color: #FFFFFF;
+}
+.rule span{
+    padding-bottom: 0.05rem;
+    border-bottom: solid 1px #FFFFFF;
+    -webkit-tap-highlight-color: transparent;
+}
+/*活动规则*/
+.conBox{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 , 0 , 0);
+    padding: 0.5rem;
+}
+.conDiv{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/card/bj.png") no-repeat center;
+    background-size: 100% 100%;
+    padding: 0.5rem;
+}
+.con{
+    padding-right: 0.4rem;
+    line-height: 2rem;
+    color: #fff;
+    overflow: hidden;
+}
+.delete{
+    position: relative;
+    width: 100%;
+    height: 0.6rem;
+}
+.deleteIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url("../../img/card/close-icon.png") no-repeat center;
+    background-size: 100% 100%;
+}
+section h3{
+    color: #ffa300;
+    font-weight: 100;
+    line-height: 0.5rem;
+    font-family: 'jianzhiyi';
+}
+section p{
+    color: #FFFFFF;
+    line-height: 0.5rem;
+}
+.slimScrollDiv{
+    height: 85%!important;
+    top: 0;
+}
+/*预览贺卡*/
+.conBox1{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width: 100%;
+    min-height: 100%;
+    background: rgb(0 , 0 , 0);
+    padding: 0.5rem;
+}
+.cardBox{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    position: relative;
+}
+.close{
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url("../../img/card/close.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.close:active{
+    background: url("../../img/card/close_1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.card{
+    width: 100%;
+    /*height: 5rem;*/
+    border: solid 1px #aaa;
+    box-shadow: 0 0 0.15rem #aaa;
+    padding: 0.3rem;
+    position: relative;
+}
+.cardImg{
+    width: 100%;
+}
+.cardMessage{
+    position: absolute;
+    top: 3.5rem;
+    left: 1.4rem;
+    font-size: 10px;
+    /*width: 100%;*/
+}
+.userImg{
+    width: 0.5rem;
+    vertical-align: middle;
+    border-radius: 0.1rem;
+    border: solid 2px #FFFFFF;
+}
+.blessW{
+    width: 2.85rem;
+}
+.btnGenerate{
+    display: block;
+    width: 4rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgb(255 , 78 , 0);
+    margin:0.4rem auto 0.2rem auto;
+    border-radius: 0.1rem;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 0.1rem 0.1rem #aaa;
+    border: none;
+}
+
+.hand{
+    animation: hand 0.8s infinite ease;
+    -moz-animation: hand 0.8s infinite ease;
+    -webkit-animation: hand 0.8s infinite ease;
+}
+@keyframes hand {
+    0%{transform: translate(0 , 0);}
+    100%{transform: translate(0 , 5px);}
+}
+@-webkit-keyframes hand {
+    0%{transform: translate(0 , 0);}
+    100%{transform: translate(0 , 5px);}
+}
+@-moz-keyframes hand {
+    0%{transform: translate(0 , 0);}
+    100%{transform: translate(0 , 5px);}
+}

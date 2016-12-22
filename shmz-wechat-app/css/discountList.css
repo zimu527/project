@@ -1,0 +1,63 @@
+img{
+    border: none;
+    vertical-align: middle;
+}
+a{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+    color:#000;
+}
+html{height: 100%;}
+.body{min-height: 100%;}
+
+body{
+    background:#448dc0;
+}
+.header {
+    position: relative;
+    width: 100%;
+}
+.header img{
+	    width: 100%;
+}
+.cont{
+    position: relative;
+    width:100%;
+    padding:1rem;
+
+}
+.discount-list a{
+	position:relative;
+	overflow:hidden;
+	display:block;
+	width:100%;
+	margin-bottom:1rem;
+	border:1px solid #fff; 
+	border-radius:10px;
+    -webkit-box-shadow: 2px 2px 3px;  
+  	-moz-box-shadow: 2px 2px 3px;   
+  	box-shadow: 2px 2px 3px;  
+}
+.discount-list a img{
+	width:100%;
+}
+.discount-title{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:2rem;
+	line-height:2rem;
+	text-align:left;
+	text-indent:1rem;
+	filter: Alpha(Opacity=40); /* for IE */
+    background-color: rgba(0, 0, 0, 0.4); /*for FF*/
+	color:#fff;
+}
+.returnBtn{
+	text-align:center;
+	color:#fff;
+	font-size:12px;	
+	margin-bottom:2rem;
+}
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />    
+    <title>学霸排行榜</title>
+	<link href="css/common.css" rel="stylesheet">
+    <link href="css/overlordRank.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <img src="img/exam/dt1017003.jpg" alt="">
+</div>
+<div class="main">
+    <img src="img/exam/dt1017004.jpg" alt="">
+    <div class="cont">
+        <div class="rank-list">
+        </div>
+        <div class="Congratulations">
+            <p>恭喜前<span class="studentNum"></span>名同学！</p>
+            <p>其他同学也不要灰心机会常有，</p>
+            <p>下次继续努力哦！</p>
+        </div>
+        <div class="go-home">
+            <a class="startAnswer-btn" href="javascript:void(0)">去答题</a>
+        </div>
+    </div>
+</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var activityId=1;
+	var aId = "402881e8461795c201461795c2e90000";
+	
+	//分享参数
+    var overlordTitle = "学霸大比拼";
+    var overlordDesc = "学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼";
+    var overlordImg =  "img/exam/kt1013001.jpg";
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/overlordRank.js"></script>
+
+</body>
+</html>

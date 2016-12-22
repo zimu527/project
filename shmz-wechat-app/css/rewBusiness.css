@@ -1,0 +1,84 @@
+/*rewBusiness*/
+.rewardBusBox{
+    width: 100%;
+    background: url("../img/recommend/yw1024004.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: 'jianzhiyi';
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.rewardBusBox p{
+    width:76%;
+    margin: auto;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+.special{
+    color: rgb(215 , 236 , 119);
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+.continueFri1{
+    width: 90%;
+    height: 3rem;
+    margin: 0 auto 1rem auto;
+    background: url("../img/recommend/an8.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.continueFri1 a{
+    display: block;
+    color: #000000;
+}
+.tableDiv{
+    background: url("../img/recommend/kuang.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0.5rem 0;
+    margin: 0 1rem 1rem 1rem;
+}
+#businessTable{
+    width: 85%;
+    margin: auto;
+}
+.tr1{
+    height: 2rem;
+}
+.tr1 td{
+    padding-top: 1rem;
+}
+.tr2{
+    border-bottom: solid 1px #ccc;
+    height: 3rem;
+    /*padding-bottom: 1rem;*/
+}
+.tr2 td{
+    /*padding-bottom: 0.5rem;*/
+}
+.tr2 td:nth-child(2){
+    text-align: right;
+}
+#businessTable tr:last-child{
+    border-bottom: none;
+}
+#businessTable tr td img{
+    height: 3rem;
+}
+.ruleOl{
+    list-style-type: decimal;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.ruleOl li{
+    list-style-type: decimal;
+}
+.special1{
+    color: rgb(174 , 63 , 52);
+}
+.noFriend{
+    text-align: center;
+    line-height: 4rem;
+}

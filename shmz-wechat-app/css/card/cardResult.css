@@ -1,0 +1,56 @@
+.main{
+    width: 100%;
+    /*height: calc(100% - 3rem);*/
+    background: url("../../img/card/bg2.jpg") no-repeat center;
+    background-size: 100% 100%;
+    margin-top: -1px;
+    position: relative;
+    padding: 0.2rem 0.5rem;
+}
+.resultBox{
+    width: 100%;
+    /*height: 4rem;*/
+    background: rgba(255 , 255 , 255 , 0.8);
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
+    margin-bottom: 0.8rem;
+}
+.resultBox img{
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: -1rem auto 0.1rem auto;
+}
+.resultBox p{
+    text-align: center;
+    line-height: 0.5rem;
+}
+.btn{
+    width: 4.8rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    /*margin:0.2rem auto;*/
+    border-radius: 0.1rem;
+    -webkit-tap-highlight-color: transparent;
+}
+.btnR{
+    margin:0 auto 0.4rem auto;
+    background: rgb(255 , 78 , 0);
+}
+.btnR:active{
+     background: rgb(241 , 44 , 9);
+ }
+.btnG{
+    margin:0 auto 0.8rem auto;
+    background: rgb(80 , 139 , 10);
+}
+.btnG:active{
+    background: #4b6c00;
+}
+.reward{
+    color: rgb(255 , 78 , 0);
+    font-size: 30px;
+}

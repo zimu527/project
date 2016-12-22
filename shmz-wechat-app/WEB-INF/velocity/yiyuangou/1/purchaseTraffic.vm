@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/purchase.css" rel="stylesheet">
+    <title>1元购1GB</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="bg bg-0">
+    <div class="main l-r-padding2">
+        <p class="circuit"><span class="num">1</span> 选择红包
+            <span class="num">2</span> 支付生成链接 <span class="num">3</span> 转发链接</p>
+        <div class="red-box">
+            <form class="select-redEnvelopes" name="formPurchase" method="post" action="">
+                <p>请选择购买的红包类型</p>
+                <input type="radio" id="radio01" name="radio" value="1">
+                <label for="radio01">1GB流量红包，需扣话费1元</label><br>
+                <p class="hide" id="confirmBoxCont">你确定购买上海本地1GB流量，需扣话费1元</p>
+                <p class="redEnvelopes-num">个数：<input type="number" class="number" placeholder=""><span class="min-font">　(流量随机分配)</span></p>
+                <div class="submit-btn-bg">
+                    <div class="purchase-btn shadow" id="purchaseBtn">确定购买流量红包</div>
+                </div>
+            </form>
+        </div>
+        <div class="t-b-padding2">
+            <div class="traffic rule-info black">
+                <h2>购买流量红包规则：</h2>
+                <ol class="list">
+                    <li>可多次购买流量红包</li>
+                    <li>可多次购买流量红包可多次购买流量红包次购买流量红包次购买流量红包</li>
+                    <li>可多次购买流量红包v多次购买流量红包多次购买流量红包</li>
+                </ol>
+            </div>
+            <img class="bg-woman" src="img/purchaseTraffic/woman.png" alt="">
+
+        </div>
+    </div>
+    <div class="footer-alert hide" id="footerAlert">
+        <div class="alert-box">
+            <div class="alert-box-cont">
+                <div class="alert-box-headerImg"><img src="" alt=""></div>
+                <p class="red"></p>
+                <div class="box-more-btn">
+                    <a class="more-btn btn-box shadow" href="javascript:void(0);"></a>
+                </div>
+                <div class="alert-box-close" id="alertBoxClose"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--提示弹出窗口，一个按钮-->
+<div class="purchase-alert-box hide" id="purchasePopBoxAlert">
+    <div class="purchase-mask"></div>
+    <div class="purchase-dialog">
+        <div class="purchase-dialog-bd" id="purchaseAlertMessageCont"></div>
+        <div class="purchase-alert-dialog-ft">
+            <div class="purchase-alert-dialog-btn-bg">
+                <div class="purchase-alert-dialog-btn shadow" id="purchaseAlertAgreeBtn">确定</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--确认弹窗-->
+<div class="purchase-dialog-confirm hide" id="purchasePopBoxConfirm">
+    <div class="purchase-mask"></div>
+    <div class="purchase-dialog">
+        <div class="purchase-dialog-bd" id="purchaseConfirmMessageCont"></div>
+        <div class="purchase-dialog-ft btn-list">
+            <div class="purchase-dialog-btn-bg">
+                <a href="javascript:void(0);" class="purchase-dialog-btn purchase-btn-default shadow" id="purchaseConfirmCancelBtn">取消</a>
+            </div>
+            <div class="purchase-dialog-btn-bg">
+                <a href="javascript:void(0);" class="purchase-dialog-btn purchase-btn-primary shadow" id="purchaseConfirmAgreeBtn">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    //传入参数
+    var opId = "$!{openid}";
+
+    //模板参数
+    var activityId=1;
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    var redMax=12;
+    var redMin=1;
+
+    //分享参数
+    var purchaseTitle = "流量红包";
+    var purchaseDesc = "流量红包流量红包流量红包流量红包流量红包";
+    var purchaseImg =  "pic1/share/fx01.png";
+
+    //测试参数
+    //redMax=12;
+    //redMin=1;
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/purchase.js"></script>
+<script>
+    $('input[type="number"]').attr('placeholder',redMin+"-"+redMax);
+    //分享
+    var purchaseUrl = getRootUrl()+"trafficred.do?op=index&b="+activityId;//获取首页地址
+    wxShare(purchaseTitle , purchaseDesc , purchaseImg , purchaseUrl);
+</script>
+</body>
+</html>

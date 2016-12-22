@@ -1,0 +1,55 @@
+*{margin:0;padding:0}
+li{list-style:none}
+img{vertical-align:top}
+/* 以上可合并 */
+.clear:after{clear:both;display:table;content:''}
+.qiandao-con{margin:0 auto;width:300px;height:300px;}
+.clear{clear:both}
+.qiandao-top{
+    width: 100%;
+    vertical-align: top;
+}
+.current-date{float:left;padding-top:5px;color:#b25d06;font-size:18px}
+.qiandao-history{float:right;width:92px;height:36px;border-radius:4px;background-color:#b25d06;color:#fff;text-align:center;font-size:1pc;line-height:36px;cursor:pointer}
+.qiandao-history:hover{background-color:#9c4f01}
+.just-qiandao{margin:0 auto 20px;width:212px;height:67px;cursor:pointer}
+.just-qiandao.actived,.just-qiandao:active{background-position:0 -68px}
+.qiandao-notic{color:#b25d06;text-align:center;font-size:18px}
+.qiandao-rule-list{margin-bottom:35px;color:#8d8ebb;font-size:1pc;line-height:26px}
+.qiandao-rule-list h4{font-weight:bolder;font-size:1pc}
+.qiandao-main{overflow:hidden;width:100%;}
+.qiandao-list{width: 301px; height: 270px; margin: auto;}
+.qiandao-list li{position:relative;float:left;margin:0 1px 1px 0;width:42px;height:42px;background-image:url(../img/member/qiandao_day.png);background-position:0 0;}
+.qiandao-list li.date1{background-position:-215px 0}
+.qiandao-list li.date2{background-position:-258px 0}
+.qiandao-list li.date3{background-position:0 -43px}
+.qiandao-list li.date4{background-position:-43px -43px}
+.qiandao-list li.date5{background-position:-86px -43px}
+.qiandao-list li.date6{background-position:-129px -43px}
+.qiandao-list li.date7{background-position:-172px -43px}
+.qiandao-list li.date8{background-position:-215px -43px}
+.qiandao-list li.date9{background-position:-258px -43px}
+.qiandao-list li.date10{background-position:0 -86px}
+.qiandao-list li.date11{background-position:-43px -86px}
+.qiandao-list li.date12{background-position:-86px -86px}
+.qiandao-list li.date13{background-position:-129px -86px}
+.qiandao-list li.date14{background-position:-172px -86px}
+.qiandao-list li.date15{background-position:-215px -86px}
+.qiandao-list li.date16{background-position:-258px -86px}
+.qiandao-list li.date17{background-position:0 -129px}
+.qiandao-list li.date18{background-position:-43px -129px}
+.qiandao-list li.date19{background-position:-86px -129px}
+.qiandao-list li.date20{background-position:-129px -129px}
+.qiandao-list li.date21{background-position:-172px -129px}
+.qiandao-list li.date22{background-position:-215px -129px}
+.qiandao-list li.date23{background-position:-258px -129px}
+.qiandao-list li.date24{background-position:0 -172px}
+.qiandao-list li.date25{background-position:-43px -172px}
+.qiandao-list li.date26{background-position:-86px -172px}
+.qiandao-list li.date27{background-position:-129px -172px}
+.qiandao-list li.date28{background-position:-172px -172px}
+.qiandao-list li.date29{background-position:-215px -172px}
+.qiandao-list li.date30{background-position:-258px -172px}
+.qiandao-list li.date31{background-position:0 -215px}
+.qiandao-list li .qiandao-icon{position:absolute;top:0;left:0;z-index:2;display:none;width:42px;height:42px;background:url(../img/member/qiandao_icon.png) no-repeat center center;background-size: 100% 100%;}
+.qiandao-list li.qiandao .qiandao-icon{display:block}

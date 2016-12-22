@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/commonBargain.css" type="text/css" rel="stylesheet">
+    <link href="css/bargain.css" type="text/css" rel="stylesheet">
+    <title>圣诞手机大砍价</title>
+</head>
+<body>
+    <div class="bgWhite">
+        <img class="imgWidth100" src="img/bargain/kk1612070023.jpg">
+        <div class="success-header">
+            <!--手机信息-->
+            <div class="phone flex">
+                <div>
+                    <img id="goodImg">
+                </div>
+                <div class="fs12 lineP">
+                    <p><span class="fs16" id="goodsName"></span>（<span class="colorG" id="entryCount">0人参与</span>/<span class="colorR" id="successCount">0人成功</span>）</p>
+                    <p id="goodsDetail"></p>
+                    <p id="description"></p>
+                    <p>原价：￥<span class="originalPrice">0</span></p>
+                    <p>目标：<span class="fs20 colorR discountPrice">￥0</span>&nbsp;&nbsp;&nbsp;&nbsp;（<span class="fs20 colorR" id="discountRate">0</span>折）</p>
+                </div>
+            </div>
+        </div>
+        <img class="success" src="img/bargain/kk1612070035.png">
+        <!--砍价进度-->
+        <div class="rate-box">
+            <div class="rate">
+                <div class="rate-inner"></div>
+            </div>
+            <div class="rate-div fs14 flex">
+                <p>原价：￥<span class="originalPrice">0</span></p>
+                <p class="colorR">目标：￥<span class="discountPrice">0</span></p>
+            </div>
+        </div>
+        <!--用户信息-->
+        <div class="user-div fs12">
+            <div class="user-box">
+            
+                <p class="cenP fs20 colorR">恭喜您~<span id="phone"></span></p>
+                <p class="zhu fs12 lineP"><span class="colorR">注：</span>请于<span class="colorR" id="successTime"></span>在当地线下第一营业厅购买手机，过期不再享受价格优惠。</p>
+            </div>
+            <div class="userS-box flex">
+                <div class="flex">
+                    <div class="userImg-box">
+                        <img class="imgWidth100" id="userImg" src="img/bargain/gg01.jpg">
+                    </div>
+                    <span class="fs16 userName">$!{nickname}</span>
+                </div>
+                <div class="userM fs14"><span class="colorY bargainNum">0</span>人帮砍</div>
+            </div>
+        </div>
+        <!--亲友出刀-->
+        <div class="relatives-box" id="relativesBox">
+            <img class="imgWidth100" src="img/bargain/kk1612070019_1.jpg">
+            <div class="relative-title fs14">亲友出刀</div>
+            <div class="relative-list" id="relativeList">
+            <!--
+                <div class="flex relative fs12">
+                    <div class="flex">
+                        <div class="reOne">
+                            <img class="imgWidth100" src="img/bargain/gg01.jpg">
+                        </div>
+                        <p class="reTwo"><span class="colorR">wy</span>帮忙砍了<br>2016/09/02 12:20</p>
+                    </div>
+                    <p class="reThree colorR fs20">25元</p>
+                </div>
+                -->
+            </div>
+            <img class="imgWidth100" src="img/bargain/kk1612070022_1.jpg">
+
+        </div>
+        <!--活动细则-->
+        <div class="activity-box">
+            <img class="imgWidth100" src="img/bargain/kk1612070019_1.jpg">
+            <div class="activity-title fs14">活动细则</div>
+            <div class="activity-list fs12">
+                <ol class="activity-ol">
+                    <li>活动时间：2016年12月15日00:00——2016年12月25日24:00</li>
+                    <li>本活动仅限锡林郭勒移动用户参与砍价和办理优惠价购机。</li>
+                    <li>邀请好友（须关注锡林郭勒移动微厅公众号）点击进入砍价界面点击“帮忙砍一刀”。</li>
+                    <li>用户砍价成功后须本人在次日起3日之内到当地第一营业厅办理购机手续，出示身份证和砍价成功页面并接受主叫号码回拨测试，在缴纳相关费用并承诺保底消费及保底时间后办理。</li>
+                    <li>每个手机号只能购买一部砍价手机，砍价成功后不能重复参与。砍价失败用户可继续重新参与其他场次的砍价，之前好友帮助砍价的额度清零。</li>
+                    <li>本活动最终解释权归内蒙古移动锡林郭勒分公司所有。</li>
+                </ol>
+            </div>
+            <img class="imgWidth100" src="img/bargain/kk1612070022_2.jpg">
+        </div>
+    </div>
+    <script>
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    #parse("/global/alert.vm")
+    <script>
+
+        var activityId = '$!{activityId}'; ##活动ID
+        var opId = '$!{openid}';
+        var now = '$!{nowDate}';  ##当前时间
+        var aId = '$!{aid}';##微信账号id
+        var bId = '$!{bargainRecId}';##砍价报名记录id
+var aw = '$!{aw}';
+var startTime = "$!date.format('yyyy/MM/dd HH:mm:ss',$!nowDate)";
+
+
+
+        //用户头像
+        var imgurl = "$!{headimgurl}";
+        if (imgurl != "") {
+            $("#userImg").attr("src" , "$!{headimgurl}");
+        }
+    </script>
+    <script src="js/commonBargain.js"></script>
+    <script src="js/wxShare.js"></script>
+    <script src="js/bargainSuccess.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+ul,li {list-style:none;}
+.show {display:block;}
+.hide {display:none;}
+p {line-height:25px;}
+a{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+html,body{height: 100%;}
+body{
+    position: relative;
+    height: 100%;
+    /*background-color: #c8df99;*/
+    /*padding-bottom: 0.5rem;*/
+}
+
+@media screen and (min-width:239px){html,body{font-size:12px;}}
+@media screen and (min-width:319px){html,body{font-size:12px;}} /*将12px调整到12px*/
+@media screen and (min-width:359px){html,body{font-size:14px;}}
+@media screen and (min-width:374px){html,body{font-size:15px;}}
+@media screen and (min-width:413px){html,body{font-size:18px;}}
+@media screen and (min-width:719px){html,body{font-size:31px;}}
+@media screen and (min-width:799px){html,body{font-size:34px;}}
+@media screen and (min-width:1023px){html,body{font-size:45px;}}
+/*用户信息*/
+header{
+    padding-top: 0.5rem;
+}
+.uImg-box{
+    position: relative;
+    width: 6rem;
+    margin: 0 auto 1rem auto;
+}
+.uImgBg{
+    position: absolute;
+    width: 100%;
+}
+.uImg-div{
+    /*display: block;*/
+    width: 4.5rem;
+    margin: auto;
+    padding-top: 1.5rem;
+}
+.userImg{
+    width: 100%;
+    border-radius: 60%;
+}
+.userName{
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+.userName img{
+    height: 1.6rem;
+    vertical-align: top;
+}
+/*分享内容*/
+.share-content{
+    margin: 1rem;
+    padding: 1rem;
+}
+.main h1 {
+    margin-bottom:0.6rem;
+    background-color: #fff!important;
+}
+.border {
+    background: url("../img/member/share-bg.png")no-repeat;
+    background-size: 100% 100%;
+}
+.main{
+    padding: 0.6rem;
+}
+.share_pic {
+    width:100%;
+    vertical-align:top;
+}
+.main h2{
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+.share_cont {
+    display:inline-block;
+    line-height: 1.8rem;
+    color: #829754;
+}
+.articleCredits {
+    display:block;
+    margin-bottom: 0.6rem;
+    padding-top:2px;
+    font-size:0.916rem;
+    color: #829754;
+}
+/*操作按钮*/
+.btn-list{
+    width: 100%;
+    overflow: hidden;
+}
+.btn-list>div{
+    width: 9rem;
+    margin:0 auto;
+    height: 3rem;
+    line-height: 2.8rem;
+    text-align: center;
+}
+.btn-list .change-btn{
+    float: left;
+    background: url("../img/member/share-change.png") no-repeat;
+    background-size: 100% 100%;
+}
+.btn-list .share-btn{
+    float: right;
+    background: url("../img/member/share-share.png") no-repeat;
+    background-size: 100% 100%;
+}
+.draw-btn a{
+    display: block;
+    width: 12rem;
+    height: 3rem;
+    line-height: 2.8rem;
+    margin: 0.6rem auto 0.6rem auto;
+    text-align: center;
+    color: #fff;
+    background: url("../img/member/share-draw.png") no-repeat;
+    background-size: 100% 100%;
+}
+.rule-btn{
+    width: 9rem;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #dd127b;
+    border-bottom: 1px solid #dd127b;
+}
+/*活动介绍*/
+/*start|活动规则*/
+.active-rule{
+    display: none;
+    font-family:"YouYuan","Microsoft YaHei","Arial","Arial Bold";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color:#6487ad ;
+    opacity: 0.95;
+}
+.rule-square{
+    height: 100%;
+    padding:1.5rem 2rem 1.5rem 1.5rem;
+    background:url("../img/exam/bj.png") no-repeat;
+    background-size:100% 100%;
+}
+.active-info{
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 2rem;
+    /*color: #ca223b;*/
+    color: #e6bc10;
+    overflow: hidden;
+}
+.active-info h2,.active-info-title{
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: #fff;
+    padding: 1rem 0 0 0;
+}
+.active-info-title{
+    position: relative;
+    margin-left: 1.5rem;
+    line-height: 2rem;
+}
+.draw-bg a{
+    color: #fff;
+    background:url("../img/member/bd1017004.png") no-repeat;
+    background-size: 100% 100%;
+}
+.close-icon{
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    display: block;
+    width: 2.4rem;
+    height: 2rem;
+    background: url("../img/member/cha.png") no-repeat;
+    background-size: 1.5rem 1.5rem;
+    background-position: center;
+}
+/*end|活动规则*/
+
+/*start|分享引导图*/
+.share-mask {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.share-signImg{
+    position:fixed;
+    z-index:13;
+    width:50%;
+    top:0;
+    right:0;
+    text-align:center;
+    border-radius:3px
+}

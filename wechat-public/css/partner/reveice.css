@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-28 10:12:38
+ * @version $Id$
+ */
+body{
+	background: url('../../img/partner/bg3.jpg') no-repeat;
+	background-size: 100% 100%;
+	background-size:cover;
+	z-index: 1;
+}
+#box{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*文字*/
+.word_mingci{
+	margin-top: 36%;
+}
+p{
+	text-align: center;
+}
+p>.strong{
+	font-size: 24px;
+}
+.word_mingci span.special_color{
+	color: yellow;
+}
+
+/*头像*/
+.touxiang{
+	width: 66.66%;
+	margin: 2% auto 0;
+}
+.touxiang div{
+	float: left;
+	width: 50%;
+}
+.touxiang img{
+	margin: 0 30%;
+	width: 34.78%;
+}
+div.person>p{
+	margin-top: 3%;
+	font-size: 14px;
+	color: #141414;
+	text-align: center;
+}
+div.person>p>span{
+	font-size: 14px;
+	color: #141414;
+}
+div.person>p>span.special_color{
+	color: yellow;
+}
+
+
+/*清浮动*/
+.clean{
+	clear: both;
+}
+
+
+/*礼包*/
+.pic>p{
+	margin: 2% auto 0;
+	text-align: center;
+	background: url('../../img/partner/libao_wz.png') no-repeat;
+	background-size: 100% 100%;
+	color: #141414;
+}
+.pic .special_color{
+	color: red;
+}
+
+
+
+.receiveBtn{position: relative;width: 100%;text-align: center;margin-top: 4%;}
+.receiveBtn .receiveBtn1,.receiveBtn2 .receiveBtn3{position: relative;display: block;}
+.receiveBtn .receiveBtn1{margin: 0 auto;width: 80%;height: 50px;line-height: 50px;font-size: 22px;border: 1px solid #3b3b3b;color: #9b9b9b;text-align: center;border-radius: 8px;margin-bottom: 2%;}
+.receiveBtn a.receiveBtn2>img{margin: 0 auto;width: 82%;}
+.receiveBtn a.receiveBtn3 img{width:53%;margin: 6% auto 0;}
+
+.word_lqrq a.receiveBtn3 img{width:53%;margin: 6% auto 0;}
+/*返回按钮*/
+.btn{
+	width: 100%;
+}
+.btn>a.btn_know{
+	display: block;
+	margin: 4% auto 0;
+	background: url('../../img/partner/know_n.png') no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+.btn>a.receiveBtn3{
+	display: block;
+	margin: 4% auto 0;
+	background: url('../../img/partner/know_n.png') no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+}

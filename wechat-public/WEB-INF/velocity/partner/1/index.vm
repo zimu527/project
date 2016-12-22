@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>寻找你的另一半</title>
+    <link rel="stylesheet" type="text/css" href="css/partner/style.css">
+    <link rel="stylesheet" type="text/css" href="css/partner/index.css">
+    <script type="text/javascript" src="js/partner/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/partner/index.js"></script>
+	<script type="text/javascript" src="js/bwrdfr-i.js"></script>
+    <script type="text/javascript" src="js/bwrdfr.js"></script>
+    <script type="text/javascript" src="js/json-mini.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+	<input type="hidden" id="pid" value="$!{pid}"/>
+	<input type="hidden" id="openid" value="$!{openid}"/>
+	<div class="container">
+        <input type="button" id="music" onclick="playPause()">
+        <audio src="audio/partner/daguxing.mp3" loop="loop" autoplay="autoplay"></audio>
+        <img src="img/partner/index_xz.png" class="bannerIMG" alt="">
+        <!-- <div>
+            <img class="music" src="img/partner/music.png">
+        </div>
+        <div class="text">
+            <img src="img/partner/index_xz.png">
+        </div> -->
+        <div class="start" onclick="getActiveInfo()">
+            <div>
+            <span id="heartbig">开始</span>
+            <img id="heartsmall" src="img/partner/index_heart_s.png"></div>
+        </div>
+        <div class="btn">
+            <img class="btn_base btnleft" src="img/partner/hdgz_n.png" onclick="gotohdgz()">
+            <img class="btn_base btnright" src="img/partner/zjddb_n.png" onclick="gotozjddb()">
+        </div>
+    </div>
+
+    <div id="boxHidden">
+        <div class="rule">
+            <a id="ruleClose" onclick="closeRule()">&nbsp;</a>
+            <div class="ruleBlock ruleBlock-top">
+                <h1>活动时间：</h1>
+                <p>2016年11月11日--2016年11月30日</p>
+            </div>
+            <div class="ruleBlock">
+                <h1>活动奖品：</h1>
+                <p>总成绩奖励（被邀请和邀请者双方奖励）：<br>第一名：1G流量<br>第二名：500M流量<br>第三-五名：300M流量<br>第六-十名：100M流量</p>
+            </div>
+            <div class="ruleBlock ruleBlock-bottom">
+                <h1>活动规则：</h1>
+                <p>1．活动期间，邀请好友共同完成“心”形绘画就可领取相应的邀请流量奖励；<br>2．活动期间，用户可以有5次绘画机会，成功转发分享后有无限次绘画机会；<br>3．游戏积分原则为：基础积分（邀请者的绘画积分）+被邀请者的绘画积分；<br>4．活动结束后，进入“最佳拍档榜”所有作品积分排名前十的邀请者和被邀请者均可活动奖励；<br>5．获奖者必须是“孝感移动”官方微信号粉丝且为孝感移动手机号码；<br>6．活动所设的每个奖项，每个活动参与者在活动期间根据游戏规则均可获得且只能获得一次；<br>7．用户所获流量奖品将于活动结束后7个工作日内到账。</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var hdgz = document.getElementsByClassName('btnleft')[0];
+            hdgz.addEventListener('touchstart', function(){
+                hdgz.setAttribute('src', "img/partner/hdgz_p.png");
+            })
+            hdgz.addEventListener('touchend', function(){
+                hdgz.setAttribute('src', "img/partner/hdgz_n.png");
+            })
+
+            var zjddb = document.getElementsByClassName('btnright')[0];
+            zjddb.addEventListener('touchstart', function(){
+                zjddb.setAttribute('src', "img/partner/zjddb_p.png");
+            })
+            zjddb.addEventListener('touchend', function(){
+                zjddb.setAttribute('src', "img/partner/zjddb_n.png");
+            })
+        }
+    </script>
+</body>
+</html>

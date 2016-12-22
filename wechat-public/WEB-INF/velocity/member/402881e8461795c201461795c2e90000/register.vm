@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<title>注册</title>
+<img class="hide" src="img/register/liwu.png">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<style>
+html , body{
+	height:100%;}
+.bgGray{
+	width:100%;
+	min-height:100%;
+	background:#e5e5e5;}
+.inputInfo{ 
+	width:100%;
+	height:3rem;
+	margin:1rem 0;}
+.inputInfoLeft{
+	float:left;
+	width:72%;
+	height:3rem;}
+.inputInfoRight{ 
+	float:right; 
+	width:28%; 
+	height:3rem;
+	line-height:3rem;
+	border-radius:5px;}
+#acYZM{
+	font-size:14px; 
+	background:#3f68a3;
+	color:#FFF; 
+	margin:0;}
+.pn{
+	float:left;
+	width:3rem;}
+.in{ 
+	height:100%; 
+	color:rgb(58 , 57 , 62); 
+	float:left;
+	border:0;
+	text-indent:0.5rem;
+	font-size:16px;}
+.inin{
+	width:55%; 
+	width:calc(72% - 3rem); 
+	height:100%; 
+	float:left;
+	border:0;
+	text-indent:0.5rem;
+	font-size:16px; 
+	color:rgb(58 , 57 , 62);} 
+.bindMember{ 
+	margin-bottom:1rem;
+	cursor:pointer;
+	background: 	    linear-gradient(#fc8300 , #ff4800);
+	background:    -moz-linear-gradient(#fc8300 , #ff4800);
+	background: -webkit-linear-gradient(#fc8300 , #ff4800);}
+.bindMember:active{background:#7e2c0c;}
+.footer{ 
+	width:100%;
+	height:3rem; 
+	line-height:3rem; 
+	text-align:center; 
+	border-top:solid 2px #CCCCCC; 
+	color:rgb(58 , 57 , 62); 
+	font-size:14px;
+	margin-top:1rem;}
+</style>
+</head>
+
+<body>
+	<div class="bgGray">
+		<div class="content">
+			<form name="bindForm" method="post" action="member.do?op=register" onsubmit="return bindMember()">
+				<div class="inputInfo">
+					<img class="pn" src="img/register/hy0303003.png">
+					<input class="in" name="mobile" id="phoneNum" type="tel" placeholder="输入11位手机号码">
+				</div>
+				<div class="inputInfo">
+					<div class="inputInfoLeft">
+						<img class="pn" src="img/register/hy03030010.png">
+						<input class="inin" id="randCode" type="text" placeholder="输入图形验证码">
+					</div>
+					<img class="inputInfoRight" id="imgYZM" src="member.do?op=getRandCode" alt="图形验证码" onClick="refreshImg()">
+				</div>
+				<div class="inputInfo">
+					<div class="inputInfoLeft">
+						<img class="pn" src="img/register/hy0303004.png">
+						<input class="inin" name="verifyCode" id="messageText" type="tel" placeholder="输入短信验证码">
+					</div>
+					<input type="button" class="inputInfoRight btn1" id="acYZM" onClick="acquireCode()" value="获取验证码">
+					<!--<div class="inputInfoRight btn1" id="acYZM" onClick="acquireCode()">获取验证码</div>-->
+				</div>
+				<div class="inputInfo">
+					<img class="pn" src="img/register/hy0303005.png">
+					<input class="in" name="name" id="userName" type="text" placeholder="输入您的姓名">
+				</div>
+				<input type="hidden" name="openid" id="opId">
+				<input type="submit" class="bindMember btn" id="bindM" value="绑定会员">
+			</form>
+		</div>
+	</div>
+<script>
+	var aId = "402881e8461795c201461795c2e90000";
+	var opId = "$!{openid}";
+</script>
+
+#parse("/global/alert.vm")
+<script src="js/shareInfo.js"></script>	
+<script src="js/wxShare.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

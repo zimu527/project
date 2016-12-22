@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/attention.css" type="text/css" rel="stylesheet">
+    <title>关注锡林郭勒移动微厅有礼</title>
+    <img style="display:none;" src="img/attention/u=2859126491,1058633817&fm=21&gp=0.jpg">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div class="content-box">
+    <img class="imgWidth100" src="img/attention/xngl1014001.jpg">
+    <img class="imgWidth100" src="img/attention/xngl1014002_1.jpg">
+    <div class="content input-box">
+        <form class=" white-box" name="formAttention" method="post" action="nmactivity.do?op=bindTel&a=$!{aid}" onsubmit="return getData();">
+
+            <p>填写锡林郭勒移动号，领取丰富大奖~</p>
+            <input class="fs28" type="tel" name="phone" id="uTel" placeholder="请输入手机号码">
+            <input type="submit" class="btn3 btnChannel" value="拆礼包">
+        </form>
+        <p class="cutOff-rule"></p>
+        <h2 class="regulation">活动说明：</h2>
+        <ol>
+            <li>新关注锡林郭勒移动微厅的用户填写内蒙移动手机号即可领取100M流量大礼包。</li>
+            <li>兑奖对象限内蒙古移动用户，且每位用户只能领取一次，不可重复参与。</li>
+            <li>奖品为100M省内流量包，一周之内直接发放到您所提交的号码内，流量有效期90天。</li>
+        </ol>
+    </div>
+
+</div>
+#parse("/global/alert.vm")
+<script>
+    var aId = "$!{aid}";
+</script>
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var title = '关注锡林郭勒移动微厅送100M流量';
+    var desc = '即日起，新关注“锡林郭勒移动微厅”微信号的内蒙移动用户即可领取100M流量大礼包！';
+    var url = getShareUrl();
+    var img = 'img/attention/u=2859126491,1058633817&fm=21&gp=0.jpg';
+    document.body.addEventListener('touchstart', function () { });
+    wxShare(title , desc , img , url); //微信分享调用
+
+    function getData(){
+        var phone = $('input[name="phone"]').val();
+        if(phone == "undefined" || phone == null || phone == ""){
+            popBoxAlert("提示",'请填写您的手机号');
+            return false;
+        }
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            popBoxAlert("提示",'请填写正确的手机号');
+            return false;
+        }
+        window.formAttention.submit();
+    }
+</script>
+</body>
+</html>

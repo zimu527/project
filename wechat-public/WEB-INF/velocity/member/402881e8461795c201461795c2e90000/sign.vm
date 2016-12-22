@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<title>签到</title>
+<img class="hide" src="img/register/liwu.png">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+
+<style>
+.header{
+	width:100%;
+	height:7rem;
+	background:#273856;
+	color:#fff;}
+.iconUser{
+	float:left;
+	height:4.2rem;
+	border-radius:50%;
+	border:solid 1px #fff;
+	margin:1.4rem 0 0 0.75rem;}
+.headerMiddle{
+	float:left;
+	margin:1.4rem 0.75rem 0 0.75rem;
+	line-height:2rem;}
+.headerRight{
+	width:27%;
+	height:100%;
+	float:right;
+	margin-right:10px;}
+.btnSign{
+	width:100%;
+	height:2.5rem;
+	line-height:2.5rem;
+	background:#ff6c00;
+	border-radius:15px;
+	margin-top:1.9rem;
+	text-align:center;
+	box-shadow:0.2rem 0.2rem 0.5rem #000;}
+.iconSign{
+	height:1.5rem;
+	vertical-align:middle;}
+.contentFirst{
+	border-bottom:solid 3px #dcdcdc;}
+/*签到日历*/
+.calendar{
+	display:block;
+	width:17.5rem;
+	margin:auto;}
+.sign table{
+	border-collapse: separate;
+	border-spacing: 0;
+	width:100%;}
+.sign th,.sign td {
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+	line-height: 2.5rem;}
+.sign th {font-size: 16px;}
+.sign td {
+	color: #404040;
+	vertical-align: middle;}   
+.sign .on {
+	width:1rem;
+	height:1rem;
+	margin:10px auto;
+	color:#fff;
+	border-radius:50%;
+	background:#ff6c00;}
+.calendar_month_next,.calendar_month_prev{
+	width: 3rem;
+	height: 3rem;
+	line-height:3rem;
+	cursor: pointer;}
+.calendar_month_next {
+	float: right;}
+.calendar_month_span {
+	display: inline;
+	line-height: 2.5rem;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: bold;}
+.calendar_month_prev {
+	float: left;}
+.sign_succ_calendar_title {
+	text-align: center;
+	background:#666;
+	color:#fff;}
+.sign_main {
+	width: 100%;
+	font-family: "Microsoft YaHei",SimHei;
+	background:#F6F6F6;}
+/*进度条*/
+.barContro_space { 
+	margin: 10px 0;	
+	height:1.3rem;
+	background:#dcdcdc;
+	border-radius: 20px;
+	overflow:hidden;}
+.continue{
+	display: block;
+	height:1.3rem;
+	width: 0%;
+	max-width: 100%;
+	background-color: #ff6c00;}
+.zhu{
+	font-weight:bold;
+	display:inline-block;
+	float:left;
+	margin-right:10px;}
+.zhuD{
+	display:inline-block;}
+.zhuT{
+	text-align:center;
+	color:#ff6c00;}
+.contentThird{
+	line-height:1.5rem;}
+</style>
+</head>
+
+<body>
+	<div class="bgWhite">
+		<div class="header">
+			<img id="headimgurl" class="iconUser" src="img/signIn/u54.png">
+			<div class="headerMiddle fs24">
+				<span id="phone"></span>
+				<br>积分：<span id="credits">0</span>
+			</div>
+			<div class="headerRight">
+				<div class="btnSign fs24" onClick="signIn()">
+					<img class="iconSign" src="img/signIn/jt0614002.png">
+					<span id='signOver'>签到</span>
+				</div>
+			</div>
+		</div>
+		<div class="content contentFirst">
+			<div class="calendar" id="calendar"></div>
+		</div>
+		<div class="content contentFirst">
+			<p>
+				<span class="zhu fs24">小贴士:</span>
+				<span class="zhuD fs24">连续签到能得到更多积分奖励。加油哦!</span>
+			</p>
+			<div class="barContro_space clear">
+				<span class="continue" id="contin"></span>
+			</div>
+			<p class="zhuT fs24">您已连续签到<span id="signInDay">0</span>天</p>
+		</div>
+		<div class="content contentThird fs24">
+			<h4>签到活动说明：</h4>
+			<p>签到一天获得20积分，连续签到7天获得100积分奖励，连续签到。。。</p>
+		</div>
+	</div>
+	
+<script>
+	var aId = "402881e8461795c201461795c2e90000";
+	var opId = "$!{openid}";
+</script>
+
+#parse("/global/alert.vm")
+<script src="js/shareInfo.js"></script>	
+<script src="js/wxShare.js"></script>
+<script src="js/calendar.js"></script>	
+<script src="js/sign.js"></script>
+	
+</body>
+</html>

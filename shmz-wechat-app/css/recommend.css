@@ -1,0 +1,342 @@
+/*recIndex*/
+.recBox{
+    position: relative;
+    width: 100%;
+}
+.recDiv{
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    width: 50%;
+    font-family: 'jianzhiyi';
+}
+.recDiv h3 , .recDiv1 h3{
+    color: #dd127b;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.recDiv a , .recDiv1 a{
+    display: block;
+    width: 5rem;
+    height: 2.866rem;
+    background: url("../img/recommend/fl1021001.png") no-repeat;
+    background-size: 100%;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.recDiv a:active , .recDiv1 a:active{
+    background: url("../img/recommend/fl1021001_1.png") no-repeat;
+    background-size: 100%;
+}
+.recDiv1{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 55%;
+    font-family: 'jianzhiyi';
+}
+
+/*recNew*/
+.themeBox{
+    width: 100%;
+    background: url("../img/recommend/dyr1021002.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: 'jianzhiyi';
+}
+.newT{
+    width: 80%;
+    margin: -1px 0 0 12%;
+    padding: 3rem 0 2rem 0;
+    /*text-align: center;*/
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+.newP{
+    width: 80%;
+    margin: 0 0 0 12%;
+    /*text-align: center;*/
+    color: rgb(243 , 241 , 34);
+    font-size: 1.7rem;
+    padding-bottom: 3rem;
+    line-height: 2.5rem;
+}
+.friend{
+    width: 60%;
+    height: 3rem;
+    margin: 2rem auto 1rem auto;
+    background: url("../img/recommend/an7.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.check{
+    width: 60%;
+    height: 3rem;
+    margin: 0 auto 1rem auto;
+    background: url("../img/recommend/an8.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.rule{
+    width: 6rem;
+    margin: auto;
+    text-align: center;
+    color: rgb(154 , 72 , 61);
+    border-bottom: solid 1px rgb(154 , 72 , 61);
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#reward , #fansNum{
+    color: #fe6601;
+}
+
+
+
+
+
+/*recShare*/
+.shareT{
+    width:76%;
+    margin: 0 0 0 12%;
+    padding-bottom: 0.5rem;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+.shareP{
+    width: 76%;
+    margin: -1px 0 0 12%;
+    padding-top: 0.5rem;
+    color: rgb(243 , 241 , 34);
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+}
+.two{
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+.shareHint{
+    width: 80%;
+    margin: auto;
+    padding-top: 0.5rem;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.shareHint img{
+    height: 1.2rem;
+    vertical-align: middle;
+}
+.tableBox{
+    /*width: 100%;*/
+    /*height: 10rem;*/
+    background: url("../img/recommend/kuang.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+.tableBox p{
+    text-align: center;
+    padding: 0 0 0.2rem 0;
+}
+.slice{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+#recommendTable{
+    width: 80%;
+    margin: auto;
+}
+#recommendTable tr td:last-child{
+    text-align: right;
+}
+#recommendTable tr td img{
+    height: 2rem;
+}
+
+
+
+/*rewardNew*/
+.rewardP{
+    width: 76%;
+    margin: -1px 0 0 12%;
+    padding-top: 1rem;
+    color: rgb(243 , 241 , 34);
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+}
+.rewardT{
+    width:76%;
+    margin: 0 0 0 12%;
+    padding-bottom: 2rem;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+.reTitle{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.reSub{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.continueFri{
+    width: 60%;
+    height: 3rem;
+    margin: 0 auto;
+    background: url("../img/recommend/an7.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.contentBox{
+    padding: 1rem 2rem;
+}
+
+
+
+/*recBusiness*/
+.busCheck{
+    width: 100%;
+    height: 3.5rem;
+    margin: 0 auto 0.5rem auto;
+    background: url("../img/recommend/an8.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3.5rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.separate{
+    width: 100%;
+    vertical-align: top;
+    margin-top: 0.5rem;
+}
+.con{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0 0.2rem;
+}
+.conLeft{
+    float: left;
+}
+.conRight{
+    float: right;
+}
+.imgBox{
+    clear: both;
+    border: solid 2px #FFFFFF;
+}
+.busUl{
+    width: 100%;
+    height: 3.3rem;
+}
+.busUl li{
+    float: left;
+    width: 49%;
+    text-align: center;
+    height: 2.8rem;
+    line-height: 2.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.busUl li:first-child{
+    margin-right: 2%;
+    background: url('../img/recommend/an8.png') no-repeat;
+    background-size: 100% 100%;
+}
+.busUl li:last-child{
+    background: url('../img/recommend/an7.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+/*rewBusiness*/
+.rewardBusBox{
+    width: 100%;
+    background: url("../img/recommend/yw1024004.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: 'jianzhiyi';
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.rewardBusBox p{
+    width:76%;
+    margin: auto;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+.special{
+    color: rgb(215 , 236 , 119);
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+.continueFri1{
+    width: 90%;
+    height: 3rem;
+    margin: 0 auto 1rem auto;
+    background: url("../img/recommend/an8.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jianzhiyi';
+    font-size: 1.2rem;
+}
+.tableDiv{
+    background: url("../img/recommend/kuang.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0.5rem 0;
+    margin: 0 1rem 1rem 1rem;
+}
+#businessTable{
+    width: 85%;
+    margin: auto;
+}
+.tr1{
+    height: 2rem;
+}
+.tr1 td{
+    padding-top: 1rem;
+}
+.tr2{
+    border-bottom: solid 1px #ccc;
+    height: 3rem;
+    /*padding-bottom: 1rem;*/
+}
+.tr2 td{
+    /*padding-bottom: 0.5rem;*/
+}
+.tr2 td:nth-child(2){
+    text-align: right;
+}
+#businessTable tr:last-child{
+    border-bottom: none;
+}
+#businessTable tr td img{
+    height: 3rem;
+}
+.ruleOl{
+    list-style-type: decimal;
+    margin-left: 2rem;
+}
+.ruleOl li{
+    list-style-type: decimal;
+}
+.special1{
+    color: rgb(174 , 63 , 52);
+}

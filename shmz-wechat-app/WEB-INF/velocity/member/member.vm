@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/swiper-3.3.1.min.css" type="text/css" rel="stylesheet">
+    <link href="css/member.css" type="text/css" rel="stylesheet">
+    <title>个人中心</title>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bgdcf0b2">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a><img class="imgWidth100" src="pic/24544953521a224a8438a5a9f4abc30e.jpg"></a></div>
+                <div class="swiper-slide"><a><img class="imgWidth100" src="pic/bd03ce683682f8030167d4a680f969e5.jpg"></a></div>
+                <div class="swiper-slide"><a><img class="imgWidth100" src="pic/70ee5e96b48f5b24b11e28fd635ff172.jpg"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <header>
+            <div class="uImg-box">
+                <img class="uImgBg" src="img/member/jz1018.png">
+                <div class="uImg-div">
+                    <img class="userImg" src="img/member/gg01.jpg">
+                </div>
+            </div>
+            <p class="userName">
+                <img id="sex" class="twoImg" src="img/member/bd1017001.png">
+                <span id="name">$!{userInfo.nickname}</span>
+                <!--
+                &nbsp;&nbsp;
+                我的积分：
+                <img class="twoImg" src="img/member/jf.png">
+                <span id="userCredits">0</span>
+                -->
+            </p>
+        </header>
+        <!--
+        <div class="point-table">
+            <table>
+                <tr>
+                    <td>签到赚积分<img class="twoImg" src="img/member/jf.png"></td>
+                    <td><a href="member.do?op=signIndex&a=$!{aid}"><img class="twoImg" src="img/member/jt.png"></a></td>
+                </tr>
+                <tr>
+                    <td>分享赚积分<img class="twoImg" src="img/member/jf.png"></td>
+                    <td><a href="share.do?op=index&a=$!{aid}"><img class="twoImg" src="img/member/jt.png"></a></td>
+                </tr>
+            </table>
+        </div>
+        -->
+        <div class="table-box">
+            <table>
+                <tr>
+                    <td>微信号：</td>
+                    <td colspan=2>$!{userInfo.wechataccount}</td>
+                </tr>
+                <tr>
+                    <td>二维码：</td>
+                    <td id="wechat"></td>
+                    <td><a onclick="addImg()"><img class="twoImg" src="img/member/bd1017005.png"></a></td>
+                </tr>
+                <tr>
+                    <td>手机号：</td>
+                    <td>$!{userInfo.phone}</td>
+                    <td id="addPhone"></td>
+                </tr>
+                <tr>
+                    <td>学校：</td>
+                    <td colspan=2>$!{userInfo.univName}</td>
+                </tr>
+                <tr>
+                    <td>校区：</td>
+                    <td colspan=2>$!{userInfo.campusName}</td>
+                </tr>
+                <tr>
+                    <td>院系：</td>
+                    <td colspan=2>$!{userInfo.departmentName}</td>
+                </tr>
+                <tr>
+                    <td>专业：</td>
+                    <td colspan=2>$!{userInfo.specialty}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="btnM"><a href="activityConcentration.html">查看更多活动</a></div>
+        <div class="btnM hide" id="bindSchool"><a href="member.do?op=regStuIndex&a=$!{aid}&u=$!{urlLabel}">绑定学校</a></div>
+    </div>
+    #parse("/global/alert.vm")
+    <script src="js/common.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script>
+        var aId = "$!{aid}";
+        var opId = "$!{openid}";
+
+        //头像
+        var imgurl = "$!{userInfo.headimgurl}";
+        if (imgurl != "") {
+            $(".userImg").attr("src" , imgurl);
+        }
+        //性别
+        var sex = "$!{userInfo.sex}";
+        if(sex == '2'){
+            $('#sex').attr('src' , 'img/member/bd1017001.png');//女
+        }else {
+            $('#sex').attr('src' , 'img/member/bd1017002.png');//男
+        }
+        //是否需要绑定手机号按钮
+        var phone = '$!{userInfo.phone}';
+        if(phone == "" || phone == null){
+            $('#addPhone').append('<a href="member.do?op=regSocialIndex&a=$!{aid}&u=$!{urlLabel}"><img class="twoImg" src="img/member/xg.png"></a>');
+        }
+        //是否需要绑定学校按钮
+        var school = '$!{userInfo.univName}';
+        if(school == "" || school == null){
+            $('#bindSchool').removeClass('hide');
+        }
+        //二维码图片
+        var two = "$!{userInfo.personalewmurl}";
+        if(two != ""){
+            //$('#wechat').html('<img class="twoImg" id="showImg" src="$!{userInfo.personalewmurl}">');
+            $('#wechat').html('<img class="twoImg" id="showImg" src="img/member/ewm.jpg">');
+        }
+    </script>
+    <script src="js/wxShare.js"></script>
+    <script src="js/member.js"></script>
+</body>
+</html>

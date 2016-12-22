@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/recIndex.css" type="text/css" rel="stylesheet">
+    <title>我是移动代言人</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bga5c2d2">
+        <img class="imgWidth100" src="img/recommend/dyr1020001.jpg">
+        <div class="recBox">
+            <img class="imgWidth100" src="img/recommend/dyr1020002.jpg">
+            <div class="recDiv">
+                <h3>推荐新人</h3>
+                <p>每人最高领取1GB省内流量</p>
+                <a id="one" href=""></a>
+                <!--<a id="one" href="channel.do?op=createPosterSrv&p=2"></a>-->
+            </div>
+        </div>
+        <div class="recBox">
+            <img class="imgWidth100" src="img/recommend/dyr1020003.jpg">
+            <div class="recDiv1">
+                <h3>推荐办优惠业务</h3>
+                <p>每次好友成功办理可领1GB省内流量</p>
+                <a id="two" href="business.do?op=bizPromoteIndex&b=3"></a>
+            </div>
+        </div>
+        <img class="imgWidth100" src="img/recommend/dyr1020004.jpg">
+    </div>
+    #parse("/global/alert.vm")
+    <script>
+        //接口所给参数
+        var status = '$!{status}';//活动是否结束  0-活动进行中，1-未开始，2-已结束 9-未开启
+        var aId = '$!{aId}';//微信账号id
+
+        //模板所给参数
+        var title = '';//分享标题
+        var desc = '';//分享简介
+        var img = '';//分享图片
+    </script>
+    <script src="js/common.js"></script>
+    <script src="js/wxShare.js"></script>
+    <script>
+        //活动是否结束  0-活动进行中，1-未开始，2-已结束 9-未开启
+        judgeState();
+        //分享
+        var url = getShareUrl();
+        wxShare(title , desc , img , url);
+
+        //如果没有推荐新人活动
+        if($("#one").attr("href") == ""){
+            $("#one").removeAttr("href");
+	    $("#one").attr("onclick" , "popBoxAlert('','活动暂未开发，敬请期待！');");	
+	}else{
+            $("#one").removeAttr("onclick");
+        }
+
+        //如果没有推荐业务活动
+        if($("#two").attr("href") == ""){
+            $("#two").removeAttr("href");
+            $("#two").attr("onclick" , "popBoxAlert('','活动暂未开发，敬请期待！');");
+        }else{
+            $("#two").removeAttr("onclick");
+        }
+    </script>
+</body>
+</html>

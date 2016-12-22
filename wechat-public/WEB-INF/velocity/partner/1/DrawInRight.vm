@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>寻找你的另一半</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="css/partner/style.css" rel="stylesheet">
+<link href="css/partner/base.css" rel="stylesheet">
+<link href="css/partner/DrawInRight.css" rel="stylesheet">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/partner/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/partner/DrawInRight.js"></script>
+<script type="text/javascript" src="js/partner/DrawInRight-style.js"></script>
+<script type="text/javascript" src="js/bwrdfr-i.js"></script>
+<script type="text/javascript" src="js/bwrdfr.js"></script>
+<script type="text/javascript" src="js/json-mini.js"></script>
+<script type="text/javascript" src="js/partner/Base64.js"></script>
+<script type="text/javascript" src="js/partner/DES3.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+<input type="hidden" id="pid" value="$!{pid}"/>
+<input type="hidden" id="openid" value="$!{openid}"/>
+<input type="hidden" id="key" value="$!{key}"/>
+<input type="hidden" id="picidA" value="$!{picid}"/>
+<input type="hidden" id="pathidA" value="$!{pathid}"/>
+<input type="hidden" id="pathidB" value=""/>
+
+<div id="box">
+	<div>
+		#parse("/partner/music.vm")
+		<div class="words">
+			<a class="howtoplay" id="howtoplay"></a>
+			<p><span class="special_color name partnerA"></span>邀请你填半“心”，进入“最搭拍档榜”</p>
+			<p>最高有<span class="special_color">1GB</span>流量可领取</p>
+			<p>剩余次数：<span id="play_chance">5</span>&nbsp&nbsp&nbsp&nbsp分享好友解锁【无限畅玩】</p>
+		</div>
+	</div>
+	<div id="palette">
+		<div id="huakuang">
+			<canvas id="canvasLeft" style="float: left;"></canvas>
+			<canvas id="canvasRight" style="float: left;"></canvas>
+			<div id="restart"></div>
+			<p class="guiji"><span class="special_color name partnerA"></span>绘画轨迹</p>
+		</div>
+		<p class="defen"><span class="name partnerA"></span>得分：<span id="scoreBefore" class="special_color">00.00</span>&nbsp&nbsp我的得分：<span id="score" class="special_color">00.00</span>&nbsp&nbsp总得分：<span id="plus" class="special_color">00.00</span></p>
+		<p>指定区域画半心&nbsp&nbsp&nbsp&nbsp&nbsp手抖党逆袭吧</p>
+		<p><a onclick="gotoFX()">帮TA找最“搭”好友</a></p>
+	</div>
+	<div class="btn">
+		<a class="btn_base btnRule" onclick="gotohdgz()"></a>
+		<a class="btn_base btnBestPartener" id="partnerTopList"></a>
+	</div>
+</div>
+<img class="mbg" src="img/partner/bg3.jpg">
+
+<!-- 活动规则 -->
+<div id="boxHidden">
+	<div class="rule">
+		<a id="ruleClose" onclick="closeRule()">&nbsp;</a>
+		<div class="ruleBlock ruleBlock-top">
+			<h1>活动时间：</h1>
+			<p>2016年11月11日--2016年11月30日</p>
+		</div>
+		<div class="ruleBlock">
+			<h1>活动奖品：</h1>
+			<p>总成绩奖励（被邀请和邀请者双方奖励）：<br>第一名：1G流量<br>第二名：500M流量<br>第三-五名：300M流量<br>第六-十名：100M流量</p>
+		</div>
+		<div class="ruleBlock ruleBlock-bottom">
+			<h1>活动规则：</h1>
+			<p>1．活动期间，邀请好友共同完成“心”形绘画就可领取相应的邀请流量奖励；<br>2．活动期间，用户可以有5次绘画机会，成功转发分享后有无限次绘画机会；<br>3．游戏积分原则为：基础积分（邀请者的绘画积分）+被邀请者的绘画积分；<br>4．活动结束后，进入“最佳拍档榜”所有作品积分排名前十的邀请者和被邀请者均可活动奖励；<br>5．获奖者必须是“孝感移动”官方微信号粉丝且为孝感移动手机号码；<br>6．活动所设的每个奖项，每个活动参与者在活动期间根据游戏规则均可获得且只能获得一次；<br>7．用户所获流量奖品将于活动结束后7个工作日内到账。</p>
+		</div>
+	</div>
+</div>
+
+<!-- 分享 -->
+<div id="boxHiddenFX" onclick="closeFX()">
+	<div class="share">
+		<img src="img/partner/hx10240019.png" alt="">
+	</div>
+</div>
+
+<!-- 5次机会结束 -->
+<div id="boxHiddenJH" style="display: none">
+	<div class="tipsBox">
+		<div class="tipsBox-nav"><em class="tipsBox-color"><b>提示<b></em></div>
+		<div class="tipsBox-p">
+			<p><em class="tipsBox-color">5</em>次绘画次数已用完，赶紧分享好友秀成绩，解锁【<em class="tipsBox-color">无限畅玩</em>】吧！</p>
+		</div>
+		<div class="tipsBox-btn">
+			<a class="tipsBox-btnLeft" onclick="hide()"></a>
+			<a class="tipsBox-btnRight" onclick="gotoFX()"></a>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	function gotohdgz(){
+		$('#boxHidden').css('display', 'block');
+	}
+
+	function closeRule(){
+		$('#boxHidden').css('display', 'none');
+	}
+
+	function gotoFX(){
+		$('#boxHiddenJH').css('display', 'none');
+		$('#boxHiddenFX').css('display', 'block');
+	}
+
+	function closeFX(){
+		$('#boxHiddenFX').css('display', 'none');
+	}
+
+	function hide(){
+		$('#boxHiddenJH').css('display', 'none');
+	}
+</script>
+
+<script>
+	var aId = "$!{aid}";
+</script>
+
+<script src="js/shareInfo.js"></script>
+<script src="js/partner/wxSharePartnerB.js"></script>
+</body>
+</html>

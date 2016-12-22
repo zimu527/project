@@ -1,0 +1,18 @@
+<div class="music" onclick="playPause()">
+    <audio src="audio/partner/daguxing.mp3" loop="loop" autoplay="autoplay">
+    	您的浏览器不支持 audio 标签。
+    </audio>
+</div>
+	
+<script>
+	var tog = true;
+	function playPause(){
+		if (tog) {
+			$('audio').trigger('pause');
+			tog = false;
+		}else {
+			$('audio').trigger('play');
+			tog = true;
+		}
+	}
+</script>

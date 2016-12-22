@@ -1,0 +1,45 @@
+/*recIndex*/
+.recBox{
+    position: relative;
+    width: 100%;
+}
+.recDiv{
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    width: 50%;
+    font-family: 'jianzhiyi';
+}
+.recDiv h3 , .recDiv1 h3{
+    color: #dd127b;
+    font-size: 1.3rem;
+    /*margin-bottom: 0.5rem;*/
+}
+.recDiv a , .recDiv1 a{
+    display: block;
+    width: 5rem;
+    height: 2.866rem;
+    background: url("../img/recommend/fl1021001.png") no-repeat;
+    background-size: 100%;
+    margin-left: 1rem;
+    /*margin-top: 0.2rem;*/
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.recDiv1 a{
+    margin-left: 2.2rem;
+}
+.recDiv a:active , .recDiv1 a:active{
+    background: url("../img/recommend/fl1021001_1.png") no-repeat;
+    background-size: 100%;
+}
+.recDiv1{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 55%;
+    font-family: 'jianzhiyi';
+}
+#reward , #fansNum , #expirationDate , #targetNum{
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/recShare.css" type="text/css" rel="stylesheet">
+    <title>我的代言二维码</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bga5c2d2-1" id="bg">
+        <img class="imgWidth100" src="img/recommend/dyr1021001.jpg">
+        <div class="themeBox">
+            <p class="shareP">快来这里约</p>
+            <p class="shareT">免费一大波流量正在赶来的路上...<span class="nickName" id="nickName"></span>正在上海移动动感俱乐部等你一起去抢呢</p>
+            <img class="two">
+            <p class="shareHint"><img src="img/recommend/sm1021001.png"><span>扫一扫 OR </span><img src="img/recommend/zw1021001.png"><span>长按识别二维码</span></p>
+        </div>
+        <div class="tableBox">
+            <p><span class="nickName"></span>邀请的好友</p>
+            <img class="slice" src="img/recommend/x1021001.png">
+            <table id="recommendTable"></table>
+        </div>
+    </div>
+     #parse("/global/alert.vm")
+<script>
+    ##接口所给参数##
+    var activityId = '$!{activityId}'; ##活动ID##
+    var opId = '$!{openid}';
+    var userId = '$!{chId}';##用户id##
+    var status = '$!{status}'; ##活动是否结束  0-活动进行中，1-未开始，2-已结束 9-活动未启用##
+var aId = '$!{aid}';##微信账号id##
+    ##模板所给参数##
+    
+    var title = '';##分享标题##
+    var desc = '';##分享简介##
+    var img = '';##分享图片##
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/posterShare.js"></script>
+</body>
+</html>

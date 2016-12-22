@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<title>分享赚积分</title>
+<img class="hide" src="img/register/liwu.png">
+<style>
+ul,li {list-style:none;}
+.show {display:block;}
+.hide {display:none;}
+p {line-height:25px;}
+/*按钮颜色*/
+.blue {background-color:rgb(39,56,84);}
+.orange {background-color:rgb(255,109,0);}
+.changeBtn {background-color:rgb(39,56,84);}
+.changeBtn:active{background:#ff6c00;outline: none;}
+.signImg_dialog {
+    position:fixed;
+    z-index:13;
+    width:100%;
+    top:0;
+    left:0;
+    text-align:center;
+    border-radius:3px
+}
+/*用户信息*/
+.head {
+	width:100%;
+	height:8rem;
+}
+.head img {
+	height:6.5rem;
+	width:6.5rem;
+	margin-top:0.75rem;
+	float:left;
+	border:2px solid #fff;
+	border-radius:50%;
+	-moz-border-radius:50%; /* Old Firefox */
+}
+.head dt{margin-bottom:3px;}
+.user_info {
+	float:left;
+	color:#fff;
+	margin-top:0.75rem;
+	margin-left:1.2rem;
+}
+/*分享内容*/
+.main h1 {margin-bottom:10px;}
+.border {border-bottom: 3px solid #dcdcdc;}
+.share_pic {
+	width:27%;
+	vertical-align:top;
+}
+.share_cont {
+	width:70%;
+    display:inline-block;
+}
+.articleCredits {
+	display:block;
+	padding-top:1px;
+	font-size:0.916rem;
+}
+/*活动介绍*/
+.bottom {margin-bottom:2rem;}
+</style>
+</head>
+
+<body>
+<!--头部个人信息-->
+<img src="pic1/share/fx01.png" alt="" style="display:none">
+<div class="weui_mask hide" id="signImg" onclick='hiddenBox("signImg")'>
+    <img class="signImg_dialog" src="img/share/fxyd.png" alt=""/>
+</div>
+<div class="content blue">
+    <div class="head">
+        <img alt="" src="" class="imgWidth100" id="headimgurl">
+        <div class="user_info">
+            <dl>
+                <dt><span class="fs34" id="nickname"></span></dt>
+                <dd>我的电话： <span id="phone"></span></dd>
+                <dd>我的积分： <span id="credits"></span></dd>
+                <dd>分享文章： <span id="shareCount"></span></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!--可切换的分享内容-->
+<div class="content clear border">
+    <div class="main">
+        <h1 class="fs26">分享内容：</h1>
+        <ul>
+            <li class="show" id="1">
+				 			<input type="hidden" class="title" value="分享标题"/>
+				 			<input type="hidden" class="url" value="www.baidu.com.cn"/>
+              <img src="pic1/share/fx01.png" alt="" title="share_pic" class="share_pic">
+              <div class="share_cont">
+              	<p>111孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了,流量拿不停，朋友圈转疯了</p>
+              	<span class="articleCredits">积分:<span class="articleC">10</span></span>
+              </div>
+            </li>
+            <li class="hide" id="2">
+				 			<input type="hidden" class="title" value="分享标题"/>
+				 			<input type="hidden" class="url" value="www.baidu.com.cn"/>
+              <img src="pic1/share/fx02.png" alt="" title="share_pic" class="share_pic">
+              <div class="share_cont">
+              	<p>222孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了</p>
+              	<span class="articleCredits">积分:<span class="articleC">20</span></span>
+              </div>
+            </li>
+            <li class="hide" id="3">
+				 			<input type="hidden" class="title" value="分享标题"/>
+				 			<input type="hidden" class="url" value="www.baidu.com.cn"/>
+              <img src="pic1/share/fx03.png" alt="" title="share_pic" class="share_pic">
+              <div class="share_cont">
+                 <p>333孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了</p>
+                 <span class="articleCredits">积分:<span class="articleC">30</span></span>
+              </div>
+            </li>
+        </ul> 
+        <div class="btn changeBtn clear" onclick="changeShareCont()">换一个</div>
+    </div>
+</div>
+<!--说明部分-->
+<div class="content fs22">
+    <div class="caption">
+        <p>1、分享网页赚积分，积分可以在积分抽奖中进行使用参与抽奖。</p>
+        <p>2、成功分享可获得积分，每个内容只获得一次积分奖励。</p>
+        <p class="bottom">3、分享图文内容，可根据需要点击更换。</p>
+        <div onClick="_showPopBoxById('signImg')" class="btn orange">点击分享</div>
+    </div>
+</div>
+
+<script>
+	var aId = "402881e8461795c201461795c2e90000";
+	var opId = "$!{openid}";
+</script>
+<script src="js/share.js"></script>
+#parse("/global/alert.vm")
+</body>
+</html>

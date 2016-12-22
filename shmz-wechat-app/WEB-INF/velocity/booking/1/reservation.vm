@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <title>微预约</title>
+
+    <style>
+        /*通用样式*/
+        .border {
+            border-bottom: 2px solid #dcdcdc;
+        }
+        ul,li {
+            list-style:none;
+        }
+        option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0 2px 1px;
+        }
+        textarea {
+            resize:none;
+        }
+        /*颜色*/
+        .blue {
+            background-color:rgb(39,56,84);
+        }
+        .orange {color:rgb(255,109,0);}
+        /*预约说明*/
+        .headImg {
+            width:100%;
+            vertical-align: top;
+        }
+        h1 {
+            margin-bottom:10px;
+        }
+		.reservationTime {
+			display:block;
+			margin-bottom:8px;
+		}
+        .detail span{
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .detail select {
+            width: 100%;
+            height: 2rem;
+            border: solid 1px #999;
+            background:url('img/booking/zk.png'),#fff no-repeat;
+            background-repeat:no-repeat;
+            background-position:right;
+            background-origin:content-box;
+            background-size:2rem 2rem;
+            border-radius: 3px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            font-size: 16px;
+            text-indent: 1rem;
+            
+        }
+        .detail img {
+            width: 100%;
+            vertical-align: top;
+            margin: 10px 0;
+        }
+        /*预约办理*/
+
+        .transaction i {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .transaction p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .transaction p span{
+            padding-left: 5px;
+        }
+        .requested:before{
+            content:"*";
+            color: red;
+        }
+        .transaction label {
+            display: block;
+            font-weight: bold;
+        }
+        .transaction input{
+            width:100%;
+            border-radius:5px;
+            border:solid 2px #CCC;
+            height:2rem;
+            margin-bottom:10px;
+            vertical-align:middle;
+            text-indent:5px;
+        }
+        .transaction textarea {
+            height:5rem;
+            border-radius:5px;
+            line-height:1.5rem;
+            border:solid 2px #CCC;
+            text-indent:5px;
+            width:100%;
+        }
+
+    </style>
+</head>
+
+<body>
+<!--预约说明-->
+<div class="reservation">
+    <img class="headImg" src="pic1/dyzt.png" alt=""/>
+    <div class="content border">
+    <h1 class="fs26">预约说明：</h1>
+    <p>
+        <span class="reservationTime">216年5月12-216年5月22</span>
+        <span>小米新品，小米新品，小米新品，小米新品，小米新品，小米新品，小米新品，小米新品。</span>
+    </p>
+</div>
+    <div class="detail content">
+    <span>请选择预约产品：</span>
+    <form>
+        <select id="selectForReservation">
+            <option value="1" selected="selected">家庭宽带</option>
+            <option value="2">产品2</option>
+            <option value="3">产品3</option>
+            <option value="4">产品4</option>
+        </select>
+    </form>
+    <ul>
+        <li>
+            <img src="pic1/u277.png" alt="">
+            <p>1、111充话费送宽带费2年就好了！</p>
+            <p>2、预约安装宽带，送智能手机啦。粗卡！</p>
+            <p>3、首次预约宽带，最好是能够免安装费哦！</p>
+            <p>4、哈哈哈哈哈哈哈肚子饿了！</p>
+            <p>5、哈哈哈哈哈哈下班了！</p>
+        </li>
+        <li class="hide">
+            <img src="pic1/yy2.jpg" alt="">
+            <p>1、222充话费送宽带费2年就好了！</p>
+            <p>2、预约安装宽带，送智能手机啦。粗卡！</p>
+            <p>3、首次预约宽带，最好是能够免安装费哦！</p>
+            <p>4、哈哈哈哈哈哈哈肚子饿了！</p>
+            <p>5、哈哈哈哈哈哈下班了！</p>
+        </li>
+        <li class="hide">
+            <img src="pic1/yy3.jpg" alt="">
+            <p>1、333充话费送宽带费2年就好了！</p>
+            <p>2、预约安装宽带，送智能手机啦。粗卡！</p>
+            <p>3、首次预约宽带，最好是能够免安装费哦！</p>
+            <p>4、哈哈哈哈哈哈哈肚子饿了！</p>
+            <p>5、哈哈哈哈哈哈下班了！</p>
+        </li>
+        <li class="hide">
+            <img src="pic1/yy1.jpg" alt="">
+            <p>1、444充话费送宽带费2年就好了！</p>
+            <p>2、预约安装宽带，送智能手机啦。粗卡！</p>
+            <p>3、首次预约宽带，最好是能够免安装费哦！</p>
+            <p>4、哈哈哈哈哈哈哈肚子饿了！</p>
+            <p>5、哈哈哈哈哈哈下班了！</p>
+        </li>
+    </ul>
+    <div class="btn blue" onclick="gotoTransact()">去预约</div>
+</div>
+</div>
+
+<!--预约办理-->
+<div class="transaction content hide">
+    <i class="orange">注：请填写真实有效的联系方式及地址</i>
+    <p>产品名:<span id="productName"></span></p>
+    <form>
+        <label class="requested">姓名：</label><input type="text" name="name" value="">
+        <label class="requested">手机号：</label><input type="tel" name="phone" value="">
+        <label class="requested">地址：</label><input type="text" name="address" value="">
+        <label>预约时间：</label><input type="date" name="time">
+        <label class="note">备　注：</label><textarea placeholder="请输入您想要备注的内容:"></textarea>
+        <div class="btn blue transactionBtn" onclick="reservation()">预约办理</div>
+    </form>
+</div>
+
+<script>
+    var aId = "402881e8461795c201461795c2e90000";
+    var opId = "$!{openid}";
+    var requestPhone = "$!{phone}";
+    var requestRealname = "$!{realname}";
+	var status = "$!{status}";
+</script>
+<script src="js/shareInfo.js"></script>	
+<script src="js/wxShare.js"></script>
+<script src="js/reservation.js"></script>
+
+#parse("/global/alert.vm")
+
+</body>
+</html>

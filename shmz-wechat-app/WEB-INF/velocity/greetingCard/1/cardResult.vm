@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/card/common.css" type="text/css" rel="stylesheet">
+    <link href="css/card/cardResult.css" type="text/css" rel="stylesheet">
+    <title>上海移动动感俱乐部</title>
+</head>
+<body>
+<header><img class="imgWidth100" src="img/card/top.gif"></header>
+<div class="main">
+    <!--失败-->
+    <div class="fail hide">
+        <div class="resultBox fs16">
+            <img src="img/card/sdj1220004.png">
+            <p class="failWord"></p>
+        </div>
+    </div>
+    <!--成功-->
+    <div class="success hide">
+        <div class="resultBox fs16">
+            <img src="img/card/sdj1220003.png">
+            <p>哎哟(-_-)不错嘛</p>
+            <p>你已领取大师兄赠送的<br><span class="reward">520MB</span>流量</p>
+            <p>注：用户所领流量三个工作日内到账，有限期至当月底结束</p>
+        </div>
+    </div>
+    <div class="btn btnR fs16"><a href="activityConcentration.html">查看更多活动</a></div>
+    <div class="btn btnG fs16"><a href="greetingCard.do?op=index&a=$!{activityId}">我要发贺卡</a></div>
+</div>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+#parse("/global/alert.vm")
+<script>
+    var activityId = '$!{activityId}'; //##活动ID##
+    var aId = '$!{aid}';//##微信账号id
+    //var opId = '$!{openid}';
+    //var userId = '$!{chId}';//##用户id
+    var result = '$!{result}'; //##结果状态  1-成功，2-领过，3-没领到，4-领光了，5-没有资格，6-失败
+    if(result == 0){
+        $('.success').removeClass('hide');
+    }else{
+        $('.fail').removeClass('hide');
+        if(result == 2){
+            $('.failWord').html('╮(╯﹏╰)╭手下留情~<br>本次活动你已领取过流量礼物了，留点给别人吧~');
+        }else if(result == 3){
+            $('.failWord').html('╮(╯﹏╰)╭不好意思~<br>您没有抢到流量礼包，下次加油哦~');
+        }else if(result == 4){
+            $('.failWord').html('╮(╯﹏╰)╭来迟啦~<br>大师兄派发的流量被抢光了，不要灰心，下次还有机会哟~');
+        }else if(result == 5){
+            $('.failWord').html('╮(╯﹏╰)╭不好意思<br>您没有资格领取大师兄赠送的流量');
+        }else{
+            $('.failWord').html('╮(╯﹏╰)╭不好意思<br>您没有资格领取大师兄赠送的流量');
+        }
+    }
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    $(function(){
+        $('.main').css('min-height' , getClientHeight() - $('header').height());
+
+        //分享
+        var title = '大师兄在上海移动动感俱乐部派礼物啦~';//分享标题
+        var desc = '免费亲手自作你喜欢的贺卡派发给好友，TA不仅会收到你的祝福，还会有流量礼包惊喜哦~数量有限,快来哟~。';//分享简介
+        var img = getRootUrl() + 'img/card/sdj1220003.png';//分享图片
+        var url = getRootUrl() + '?op=index&a=' + activityId;
+        wxShare(title , desc , img , url);
+    });
+</script>
+</body>
+</html>

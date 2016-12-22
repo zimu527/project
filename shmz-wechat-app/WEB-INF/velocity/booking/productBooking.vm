@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <title>微预约</title>
+    <img class="hide" src="img/booking/b.jpg">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            height:100%;
+        }
+        .bgGrey{
+            width:100%;
+            min-height:100%;
+            position:relative;
+            background:#f2f2f2;
+            padding-bottom: 0.5rem;
+        }
+
+        ul,li {
+            list-style:none;
+        }
+        option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0 2px 1px;
+        }
+        textarea {
+            resize:none;
+        }
+        /*颜色*/
+        .blue {
+            /*background-color:rgb(39,56,84);*/
+        }
+        .orange {
+            color:rgb(255,109,0);
+        }
+        .color007aff{
+            color: #007aff;
+        }
+        /*预约办理*/
+        .transaction i {
+            display: block;
+            height: 3rem;
+            line-height: 3rem;
+            text-indent: 1rem;
+        }
+        .transaction p {
+            height: 3rem;
+            line-height: 3rem;
+            text-indent: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .transaction p span{
+            margin-left: 1rem;
+        }
+        .requested:before{
+            content:"*";
+            color: red;
+        }
+        .transaction label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+        }
+        .transaction input , .transaction select{
+            width:100%;
+            border-radius:5px;
+            border:solid 2px #CCC;
+            height:2rem;
+            margin-bottom:10px;
+            vertical-align:middle;
+            text-indent:5px;
+            background: #FFFFFF;
+        }
+        .transaction textarea {
+            height:5rem;
+            border-radius:5px;
+            line-height:1.5rem;
+            border:solid 2px #CCC;
+            text-indent:5px;
+            width:100%;
+        }
+        .btnTransaction{
+            background: rgb(0 , 157 , 217);
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+<div class="bgGrey">
+    <!--预约办理-->
+    <div class="transaction">
+        <i class="orange">注：请填写真实有效的联系方式及地址</i>
+        <p class="bgWhite">产品名:<span id="productName" class="color007aff">$!{productname}</span></p>
+        <div class="bgWhite content">
+            <label class="requested" for="name">姓名：</label>
+            <input type="text" name="name" value="" id="name">
+            <label class="requested" for="phone">手机号：</label>
+            <input type="tel" name="phone" value="" id="phone">
+            <div id="area">
+                <label class="requested" for="address">区域：</label>
+                <select id='areaA' onchange="addAreaB()">
+                    <option value=""></option>
+                </select>
+                <select id='areaB'>
+                    <option value=""></option>
+                </select>
+            </div>
+            <label class="requested" for="address">详细地址：</label>
+            <input type="text" name="address" value="" id="address">
+            <label for="time">预约时间：</label>
+            <input type="date" name="time" id="time">
+            <label class="note" for="zhu">备　注：</label>
+            <textarea placeholder="请输入您想要备注的内容:" id="zhu"></textarea>
+        </div>
+        <div class="content2">
+            <div class="btn btnTransaction" onclick="reservation()">预约办理</div>
+        </div>
+    </div>
+</div>
+#parse("/global/alert.vm")
+
+<script>
+    var aId = "8a2b294855f2d9010155f2ee7057004d";
+    var opId = "$!{openid}";
+    var productId = "$!{productid}";
+    var requestPhone = "$!{phone}";
+    var requestRealname = "$!{realname}";
+    var status = "$!{status}";
+</script>
+<script src="js/productBooking.js"></script>
+</body>
+</html>

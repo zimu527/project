@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>寻找你的另一半</title>
+	<link rel="stylesheet" type="text/css" href="css/partner/base.css">
+	<link rel="stylesheet" type="text/css" href="css/partner/reveice.css">
+	<script type="text/javascript" src="js/partner/jquery-1.10.2.min.js"></script>	
+	<script type="text/javascript" src="js/partner/lingquchenggong-style.js"></script>
+	<script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+</head>
+<body>
+	<div style="display:none">
+    	<img src="img/partner/hxfx320.jpg">
+    </div>
+	<input type="hidden" id="pid" value="$!{pid}"/>
+	<input type="hidden" id="openid" value="$!{openid}"/>
+    <div id="box">
+    	#parse("/partner/music.vm")
+    	<div class="word_mingci">
+	    	<p>当前名次&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="strong">第<span class="special_color" id="rankId">1</span>名</span></p>
+	    	<p>当前最高分&nbsp&nbsp&nbsp<span class="strong"><span class="special_color" id="scoreId">88.44</span>分</span></p>
+    	</div>
+    	<div class="touxiang">
+    		<div class="person">
+    			<img src="img/partner/hytx.png" alt="touxiang" id="partnerAImgId">
+    			<p><span id="partnerAId">江湛瞳</span>&nbsp&nbsp<span id="partnerAscoreId" class="special_color">39.22</span>分</p>
+    		</div>
+    		<div class="person">
+	    		<img src="img/partner/hytx.png" alt="touxiang" id="partnerBImgId">
+	    		<p><span id="partnerBId">江湛瞳</span>&nbsp&nbsp<span id="partnerBscoreId" class="special_color">39.22</span>分</p>
+    		</div>
+    	</div>
+    	<div class="clean"></div>
+    	<div class="pic">
+    		<p><strong class="special_color" id="awardId">1GB流量礼包</strong></p>
+    	</div>
+    	<div class="receiveBtn">
+    		<input type="text" class="receiveBtn1" id="mobileId" placeholder="输入孝感移动手机号">
+    		<a href="javascript:;" class="receiveBtn2" onclick="gotoLqcg()"><img src="img/partner/hx10240032.png" alt=""></a>
+    		<a id="partnerTopList" class="receiveBtn3"><img src="img/partner/hx10240031.png" alt=""></a>
+    	</div>
+		
+		<div class="word_lqrq" style="display:none">
+    		<p>&nbsp&nbsp&nbsp将于<span id="time">YY-mm-dd</span>前到<span id="tel"></span>碗里，</p>
+    		<p>注意查收~</p>
+			
+			<a id="partnerTopList" class="receiveBtn3"><img onclick="backHistroy()" src="img/partner/hx10240031.png" alt=""></a>
+    	</div>
+    	
+    </div>
+
+</body>
+</html>

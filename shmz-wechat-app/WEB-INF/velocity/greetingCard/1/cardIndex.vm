@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/card/common.css" type="text/css" rel="stylesheet">
+    <link href="css/card/cardIndex.css" type="text/css" rel="stylesheet">
+    <title>上海移动动感俱乐部</title>
+</head>
+<body>
+    <header><img class="imgWidth100" src="#getImg()/card/top.gif"></header>
+    <div class="main">
+        <div id="cardBox">
+            <ul>
+                <li id="1"><img src="#getImg()/card/01.jpg"/></li>
+                <li id="2"><img src="#getImg()/card/02.jpg"/></li>
+                <li id="3"><img src="#getImg()/card/03.jpg"/></li>
+                <li id="4"><img src="#getImg()/card/04.jpg"/></li>
+                <li id="5"><img src="#getImg()/card/05.jpg"/></li>
+                <li id="6"><img src="#getImg()/card/06.jpg"/></li>
+            </ul>
+        </div>
+        <p class="hint fs14">提示：点击图片选择祝福贺卡</p>
+        <div class="btn fs16" id="selectCard">选择贺卡&nbsp;&nbsp;&nbsp;&nbsp;发祝福！</div>
+        <p class="rule fs14" onclick="$('#activePop').removeClass('hide')"><span>活动说明</span></p>
+    </div>
+    <!--活动细则弹窗-->
+    <div class="conBox hide" id="activePop">
+        <div class="conDiv">
+            <div class="delete" onclick="$('#activePop').addClass('hide');">
+                <span class="deleteIcon"></span>
+            </div>
+            <div class="con">
+                <section>
+                    <h3 class="fs14">活动时间：</h3>
+                    <p class="fs12">2016年12月24日——2107年1月3日</p>
+                    <h3 class="fs14">活动奖品：</h3>
+                    <p class="fs12">1.500M流量大奖，共5份<br>2.1-500M随机流量抽奖红包，共15000份</p>
+                    <h3 class="fs14">活动规则：</h3>
+                    <p class="fs12">1.奖励领取仅限上海移动三大品牌真实有效的实名制登记用户领取；<br>  2. 活动期间内，用户通过贺卡生产页面，生成贺卡后进行分享，好友拆开贺卡后关注并绑定后即可拆开随机流量抽奖红包并获得本地通用流量；<br> 3.活动期间内，每位用户仅可制作1张贺卡并且仅可抽取一次流量红包；<br> 4.所赠上海本地流量24小时到账，有效期至1月月底结束；</p>
+                    <h3 class="fs14">注：</h3>
+                    <p class="fs12">1.本次活动所有奖品不设退、换、折现金服务；<br> 2.本次活动最终解释权归主办方所有；</p>
+                </section>
+            </div>
+        </div>
+    </div>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/card/ZoomPic.js"></script>
+<script src="js/card/jquery.slimscroll.min.js"></script>
+#parse("/global/alert.vm")
+<script>
+
+            var activityId = '$!{activityId}'; ##活动ID##
+            var aId = '$!{aid}';##微信账号id##
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    $(function(){
+        $('.main').css('min-height' , getClientHeight() - $('header').height());
+
+        new ZoomPic('cardBox');
+
+
+        $('#selectCard').click(function(){
+            var cId;
+            for(var i=0; i<$('li').length; i++){
+                if($('li').eq(i).css('z-index') == 4){
+                    cId = $('li').eq(i).attr('id');
+                }
+            }
+            window.location.href = 'greetingCard.do?op=generateIndex&a=' + activityId + '&tid=' + cId;
+        });
+
+        //分享
+        var title = '大师兄在上海移动动感俱乐部派礼物啦~';//分享标题
+        var desc = '免费亲手自作你喜欢的贺卡派发给好友，TA不仅会收到你的祝福，还会有流量礼包惊喜哦~数量有限,快来哟~。';//分享简介
+        var img = getRootUrl() + 'img/card/sdj1220003.png';//分享图片
+        var url = getRootUrl() + 'greetingCard.do?op=index&a=' + activityId;
+        wxShare(title , desc , img , url);
+
+        $(".con").slimScroll({
+            width: 'auto', //可滚动区域宽度
+            height: '100%', //可滚动区域高度
+            size: '8px', //组件宽度
+            color: '#e6bc10', //滚动条颜色
+            distance: '0px', //组件与侧边之间的距离
+            start: 'top', //默认滚动位置：top/bottom
+            opacity: 1, //滚动条透明度
+            alwaysVisible: true, //是否 始终显示组件
+            disableFadeOut: false, //是否 鼠标经过可滚动区域时显示组件，离开时隐藏组件
+            railVisible: true, //是否 显示轨道
+            railColor: '#fff', //轨道颜色
+            railOpacity: 1, //轨道透明度
+            railDraggable: true, //是否 滚动条可拖动
+            wrapperClass: 'slimScrollDiv', //外包div类名
+            allowPageScroll: true, //是否 使用滚轮到达顶端/底端时，滚动窗口
+            wheelStep: 50, //滚轮滚动量
+            touchScrollStep: 200, //滚动量当用户使用手势
+            borderRadius: '7px', //滚动条圆角
+            railBorderRadius: '7px' //轨道圆角
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common1.css" type="text/css" rel="stylesheet">
+<title>会员投票图文</title>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<style>
+/*投票详情页*/
+.mainBg1{background:#273856;}
+.mainBgdc{background:#dcdcdc;}/*修改*/
+.voteTitle{
+	border-bottom:solid 2px #dcdcdc;}/*修改*/
+.voteTitle p{
+	line-height:1.5rem;}
+.voteCount p{
+	display:inline-block;
+	width:49%;}
+.voteImg{
+	margin:1rem 0;
+	border:solid 2px #fff;}
+.btnVote{
+	width:70%;
+	height:2.5rem;
+	margin:1rem auto;
+	line-height:2.5rem;
+	/*background:#35A815;*/
+	color:#fff;}
+</style>
+</head>
+
+<body>
+	<!--主题图片-->
+	<img id="top" class="imgWidth100" src="http://wxtest.bw30.com/res_shmz/upload/vote/vote_20161125173155.jpg">
+	<!--信息-->
+	<div id="info" class="content voteTitle">
+		<p id="deTitle"></p>
+		<div class="voteCount">
+			<p>No:<span id="deSerialNum">0</span></p>
+			<p><span id="deVoteNum">0</span>票</p>
+		</div>
+	</div>
+	<div class="content mainBgdc conH">
+		<p id="deDesc">人生还有诗和远方~</p>
+		<div id="btnVote" class="btn1 btnVote mainBg1" onClick="vote()">投票</div>
+	</div>
+
+<script>
+	var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    var opId = "$!{openid}";
+    var voteId = 23;
+    var optionId = $!{oid};
+    var ti = "分享标题：	";//标题
+    var de = "分享描述（可选填）：	";//简介
+    var im = "http://wxtest.bw30.com/res_shmz/upload/voteLogo/vlogo_20161125173232.jpg";//图片地址
+</script>
+#parse("/global/alert.vm")
+
+<script src="js/wxShare.js"></script>
+<script src="js/voteDetail.js"></script>
+
+</body>
+</html>

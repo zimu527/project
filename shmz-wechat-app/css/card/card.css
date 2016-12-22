@@ -1,0 +1,331 @@
+@charset "utf-8";
+/*移动端*/
+html{
+    height: 100%;
+}
+html , body{
+    width:100%;
+    position:relative;
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";}
+*{
+    margin:0;
+    padding:0;
+}
+*,*:after,*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul,ol,li{list-style: none;}
+a{
+    color:#333;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+    text-decoration:none;
+    cursor:pointer;}
+select , textarea , input[type="text"] , input[type="tel"] , input[type="password"] , input[type="submit"] , input[type="button"] , input[type="date"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";}
+input[type="checkbox"]{
+    border:1px solid #ccc;}
+* input:-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}/* Mozilla Firefox 4 to 18*/
+* input::-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}/* Mozilla Firefox 19+*/
+* input::-webkit-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}
+* input:-ms-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}
+
+table{
+    border-collapse: collapse;
+    /*border-spacing:none;*/
+}
+@media screen and (max-width:321px){
+    .fs10{font-size:9px;}
+    .fs12{font-size:11px;}
+    .fs14{font-size:13px;}
+    .fs16{font-size:15px;}
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    .fs10{font-size:10px;}
+    .fs12{font-size:12px;}
+    .fs14{font-size:14px;}
+    .fs16{font-size:16px;}
+}
+@media screen and (min-width:400px){
+    .fs10{font-size:12px;}
+    .fs12{font-size:14px;}
+    .fs14{font-size:16px;}
+    .fs16{font-size:18px;}
+}
+.fs0{line-height: 0;font-size: 0}
+.fs10{line-height: 16px;}
+.fs12{line-height:20px;}
+.fs14{line-height:22px;}
+.fs16{line-height:32px;}
+.hide{display:none;}
+.clear , .clear:after{
+    clear:both;}
+img{
+    border: none;
+    vertical-align: top;
+}
+.imgWidth100{
+    width: 100%;
+}
+.highlight{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+/*@font-face {*/
+/*font-family: 'hanyi';*/
+/*src: url('../font/hanyiqingkong.eot');!* IE9 Compat Modes *!*/
+/*src: url('../font/hanyiqingkong.ttf') format('truetype'),!* Safari, Android, iOS *!*/
+/*url('../font/hanyiqingkong.woff') format('woff'),!* Modern Browsers *!*/
+/*url('../font/hanyiqingkong.svg') format('svg');!* Legacy iOS *!*/
+/*}*/
+body{
+    min-height: 100%;
+}
+.sd1{
+    background-color: #870001;
+    background-color: #fff;
+}
+.sd2{
+    background-color: #ff9aaf;
+    background-color: #fff;
+}
+.sd3{
+    background-color: #d6ceb1;
+    background-color: #fff;
+}
+.yd1{
+	
+    background-color: #fff3e3;
+    background-color: #fff;
+}
+.yd2{
+    background-color: #8c011b;
+    background-color: #fff;
+}
+.yd3{
+    background-color: #551109;
+    background-color: #fff;
+}
+
+.bg{
+    /*width: 98%;
+    margin-left: 1%;*/
+    height: 100%;
+    animation: fadeInNormal 1000ms ease 600ms both;
+    -moz-animation: fadeInNormal 1000ms ease 600ms both;
+    -webkit-animation: fadeInNormal 1000ms ease 600ms both;
+    -o-animation: fadeInNormal 1000ms ease 600ms both
+}
+.bg-img-top{
+    height: 4.3rem;
+}
+.bg-img-middle,.bg-img-bottom{
+    height: 3.9rem;
+}
+.bg-img-middle img,.bg-img-bottom img,.bg-img-top img{
+    height: 100%;
+}
+.padding-Top6{
+	padding-top:.6rem
+}
+.padding-Top4{
+	padding-top:.4rem
+}
+.padding-Top3{
+	padding-top:.3rem
+}
+.padding-Top2{
+	padding-top:.2rem
+}
+.padding-Top1{
+	padding-top:.1rem
+}
+.margin-Top3{
+	margin-top:-0.3rem
+}
+.clock{
+    position: fixed;
+    top: .3rem;
+    right: .3rem;
+    width: .83rem;
+    height: .83rem;
+}
+.clock-animate{
+    -webkit-animation:change360 2s linear infinite;
+    animation: change360 2s linear infinite;
+    -moz-animation: change360 2s linear infinite;
+    -o-animation: change360 2s linear infinite;
+}
+.cont{
+    position: absolute;
+    top: 4.8rem;
+    left: 0;
+    width: 4rem;
+    margin-left: 1.75rem;
+}
+/* .cont-sd3{
+    position: absolute;
+    top: 5.2rem;
+    left: 0;
+} */
+.user{
+	overflow:hidden;
+    z-index: 2;
+    width: 100%;
+    height: .6rem;
+    /*line-height: .6rem;*/
+    color: #000;
+    animation: fadeInUp 1000ms ease 800ms both;
+    -webkit-animation: fadeInUp 1000ms ease 800ms both;
+    -o-animation: fadeInUp 1000ms ease 800ms both;
+    -moz-animation: fadeInUp 1000ms ease 800ms both;
+}
+.user-img{
+    width: .6rem;
+    height: .6rem;
+    vertical-align: middle;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    margin-top: -0.1rem;
+}
+.title{
+    padding-left: 10px;
+}
+.message{
+    padding-top: .2rem;
+    animation: fadeInDown 1000ms 1200ms both;
+    -webkit-animation: fadeInDown 1300ms 1200ms both;
+    -o-animation: fadeInDown 1000ms 1200ms both;
+    -moz-animation: fadeInDown 1000ms 1200ms both;
+}
+.message2{
+    animation: zoomIn 1000ms 1200ms both;
+    -webkit-animation: zoomIn 1300ms 1200ms both;
+    -o-animation: zoomIn 1000ms 1200ms both;
+    -moz-animation: zoomIn 1000ms 1200ms both;
+}
+.btn-list{
+    /*display: flex;
+    display: -webkit-flex;
+    width: 90%;
+    justify-content: space-between;
+    */
+    /*margin-top: .3rem;*/
+    position: absolute;
+    top: 8.9rem;
+    left: 0;
+}
+/* .btn-list-sd2{
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+}
+.btn-list-sd3{
+    position: absolute;
+    top: 8.2rem;
+    top: 9rem;
+    left: 0;
+} */
+.btn{
+    display: inline-block;
+    width: 40%;
+    width:6rem;
+    margin-top: .2rem;
+    margin-left: 0.75rem;
+    padding: .1rem 0;
+    background-color: #FF4e00;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #333;
+    animation: fadeInUp 1000ms ease 1600ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
+    -o-animation: fadeInUp 1000ms ease 1600ms both;
+    -moz-animation: fadeInUp 1000ms ease 1600ms both;
+}
+.btn:hover,.btn:active{
+	box-shadow:none;
+}
+.btn-greeen{
+    background-color: #508b0a;
+    animation: fadeInUp 1000ms ease 1900ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
+    -o-animation: fadeInUp 1000ms ease 1900ms both;
+    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+}
+.btn-card2-1{
+    background-color: #d61820;
+    animation: fadeInUp 1000ms ease 1600ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
+    -o-animation: fadeInUp 1000ms ease 1600ms both;
+    -moz-animation: fadeInUp 1000ms ease 1600ms both;
+}
+.btn-card2-2{
+    background-color: #2b345d;
+    animation: fadeInUp 1000ms ease 1900ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
+    -o-animation: fadeInUp 1000ms ease 1900ms both;
+    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+}
+.btn-card4-1{
+    background-color: #e48f00;
+    animation: fadeInUp 1000ms ease 1600ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
+    -o-animation: fadeInUp 1000ms ease 1600ms both;
+    -moz-animation: fadeInUp 1000ms ease 16 00ms both;
+}
+.btn-card4-2{
+    background-color: #6d5140;
+    animation: fadeInUp 1000ms ease 1900ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
+    -o-animation: fadeInUp 1000ms ease 1900ms both;
+    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+}
+.btn-card5-1{
+    background-color: #f8386f;
+    animation: fadeInUp 1000ms ease 1600ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
+    -o-animation: fadeInUp 1000ms ease 1600ms both;
+    -moz-animation: fadeInUp 1000ms ease 1600ms both;
+}
+.btn-card5-2{
+    background-color: #e08e00;
+    animation: fadeInUp 1000ms ease 1900ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
+    -o-animation: fadeInUp 1000ms ease 1900ms both;
+    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+}
+.btn-card6-2{
+    background-color: #340d06;
+    animation: fadeInUp 1000ms ease 1900ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
+    -o-animation: fadeInUp 1000ms ease 1900ms both;
+    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+}
+
+/*分享弹窗*/
+.share-mask {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.share-signImg {
+    position:fixed;
+    z-index:13;
+    width:50%;
+    top:0;
+    right:0;
+    text-align:center;
+    border-radius:3px
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <title>优惠活动列表</title>
+    <link href="css/discountList.css" rel="stylesheet">
+    </head>
+<body>
+	<div class="header">
+    <img class="headerImg" src="img/discount/xyyh1018004.jpg" alt="">
+</div>
+<div class="cont">
+    <div class="discount-list"></div>
+</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var campusCode="$!{campusCode}";
+    var aId = "402881e8461795c201461795c2e90000";
+	var activityId=1;  
+
+    //分享参数
+    var discountTitle = "校园优惠";
+    var discountDesc = "校园优惠校园优惠校园优惠校园优惠校园优惠校园优惠";
+    var discountImg =  "img/exam/kt1013001.jpg";
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/discountList.js"></script>
+
+</body>
+</html>

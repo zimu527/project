@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/purchase.css" rel="stylesheet">
+    <title>1元购1GB</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="bg bg-0">
+    <div class="header t-b-padding1">
+        <img class="avatar" src=''>
+        <p class="red-desc t-b-padding2"><span class="red" id="nickname"></span>共收到<span class="red" id="trafficNum"></span>MB</p>
+    </div>
+    <div class="main l-r-padding2">
+    </div>
+    <img class="bg-man hide show-man" src="img/purchaseTraffic/man.png" alt="">
+    <img class="bg-woman2 hide show-man" src="img/purchaseTraffic/woman.png" alt="">
+</div>
+#parse("/global/alert.vm")
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    //传入参数
+    var opId = "$!{openid}";
+    var avatar = "$!{headimgurl}";
+    var nickname = "$!{nickname}";
+
+    //模板参数
+    var activityId=1;
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    //分享参数
+    var purchaseTitle = "流量红包";
+    var purchaseDesc = "流量红包流量红包流量红包流量红包流量红包";
+    var purchaseImg =  "pic1/share/fx01.png";
+
+    //测试参数
+    //avatar='pic1/share/toux.png';
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/purchase.js"></script>
+<script>
+    if(avatar!=''){
+        $('.avatar').attr('src',avatar);
+    }else{
+        $('.avatar').attr('src',"img/gg01.jpg");
+    }
+    $('#nickname').text(nickname);
+    getGrapRedList();//获取列表
+    //分享
+    var purchaseUrl = getRootUrl()+"trafficred.do?op=index&b="+activityId;//获取首页地址
+    wxShare(purchaseTitle , purchaseDesc , purchaseImg , purchaseUrl);
+
+    // preload image
+    window.onload = function() {
+        setTimeout(function () {
+            new Image().src = "img/purchaseTraffic/ll.png";
+            new Image().src = "img/purchaseTraffic/hb_1.png";
+        }, 1000);
+    };
+
+</script>
+</body>
+</html>

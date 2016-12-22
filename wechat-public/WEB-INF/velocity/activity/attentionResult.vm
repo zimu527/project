@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/attention.css" type="text/css" rel="stylesheet">
+    <title>关注锡林郭勒移动微厅有礼</title>
+    <img style="display:none;" src="img/attention/u=2859126491,1058633817&fm=21&gp=0.jpg">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div class="content-box">
+    <img class="imgWidth100" src="img/attention/xngl1014001.jpg">
+    <img class="imgWidth100" src="img/attention/xngl1014002_1.jpg">
+    <div class="content input-box">
+        <div class=" white-box">
+            <img class="gift" src="img/attention/xn1014009.png">
+            <p class="success">恭喜您<br>流量领取成功！</p>
+        </div>
+        <p class="zhu"><span class="colorRed">注：</span>流量将在一周之内到账，敬请查收！</p>
+    </div>
+
+</div>
+<script>
+    var aId = "$!{aid}";
+</script>
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var title = '关注锡林郭勒移动微厅送100M流量';
+    var desc = '即日起，新关注“锡林郭勒移动微厅”微信号的内蒙移动用户即可领取100M流量大礼包！';
+    var url = getShareUrl();
+    var img = 'img/attention/u=2859126491,1058633817&fm=21&gp=0.jpg';
+    wxShare(title , desc , img , url); //微信分享调用
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑";background-color: #FFC019;}
+.container{position: relative;z-index: 100;width:96%;height:auto;padding: 2%;}
+#music{position: absolute;top: 2%;right: 5%;background: url(../../img/partner/music.png) no-repeat;width: 30px;height:30px;background-size:cover;z-index: 100;border-style: none;}
+#mback{position: absolute;top: 2%;right: 15%;background: url(../../img/partner/back.png) no-repeat;width: 30px;height:30px;background-size:cover;z-index: 100;border-style: none;}
+.list{width: 90%;position: relative;padding: 25% 5% 0% 5%;}
+.list1{background: url(../../img/partner/pdlist1.png) no-repeat;background-size: 100% 100%;height: 8rem;/*width: 100%;*/}
+.list2{background: url(../../img/partner/pdlist2.png) no-repeat;background-size: 100% 100%;height: 8rem;/*width: 100%;*/}
+.list3{background: url(../../img/partner/pdlist3.png) no-repeat;background-size: 100% 100%;height: 8rem;/*width: 100%;*/}
+.list4{background: url(../../img/partner/pdlist4.png) no-repeat;background-size: 100% 100%;height: 8rem;}
+.listleft{display: inline-block;margin-top: 3rem;width: 38%;text-align: center;}
+.listleft span{display: block;font-size: 1rem;}
+.listleft img{width: 3rem;}
+.listright{float: right;display: inline-block;margin-top: 3rem;width: 38%;text-align: center;}
+.listright span{display: block;font-size: 1rem;}
+.listright img{width: 3rem;}
+.listmid{display: inline-block;width: 22%;text-align: center;position: absolute;}
+.listmid span{display: inline-block;width: 5rem;height: 5rem;font-size:1.2rem;font-weight: bold;text-indent: -1px;}
+.list1 .listmid span{background: url(../../img/partner/jiangbei.png) no-repeat;background-size: 100% 100%;line-height: 3.9rem;}
+.list2 .listmid span{background: url(../../img/partner/jiangbei.png) no-repeat;background-size: 100% 100%;line-height: 3.9rem;}
+.list3 .listmid span{background: url(../../img/partner/jiangbei.png) no-repeat;background-size: 100% 100%;line-height: 3.9rem;}
+.list4 .listmid span{background: url(../../img/partner/jiangpai.png) no-repeat;background-size: 100% 100%;line-height: 5rem;}
+.listscore{position: absolute;left: 0px;width: 100%;text-align: center;font-size: 1rem;margin-top: 3.8rem;font-weight: bold;color: red;text-indent: 0.7rem;}
+/*.list4 div.listleft{margin-top: 2rem;}
+.list4 div.listright{margin-top: 2rem;}*/
+.mbg{width: 100%;position: absolute;top:0px;}
+img.liuliang {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 200;
+    width: 19%;
+}

@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+	<link href="css/common.css" type="text/css" rel="stylesheet">
+    <img class="hide" src="img/register/liwu.png">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <title>微调研</title>
+
+    <style>
+        /*通用样式*/
+        .border { border-bottom: 2px solid #dcdcdc; }
+        .thinBorder2 { border-top: 1px solid #dcdcdc; }
+        ul,li { list-style:none; }
+        textarea { resize:none; }
+        .hide{ display:none; }
+
+        /*颜色*/
+        .blue { background-color:#273854; }
+        .red { color: red; }
+		.grey { background-color:#8c9899; }
+
+        /*调研说明*/
+        .headImg {
+            width:100%;
+            vertical-align: top;
+        }
+        h1 { margin-bottom:10px; }
+				
+		.surveyTime {
+			display:block;
+			margin-bottom:8px;
+		}
+
+        /*调研题目*/
+        .question { line-height:25px; }
+        .question p{ font-weight:bold; }
+        .questionNum { padding-bottom:10px; }
+        .questionNo{
+            display:inline-block;
+            width:1.5rem;
+            height:1.5rem;
+            line-height: 1.5rem;
+            margin-right:5px;
+            text-align: center;
+            color:#fff;
+            background: red;
+            border-radius: 50%;
+        }
+        .content2 { padding: 1rem 1rem 1rem 0; }
+        .option {
+            display:block;
+            margin: 2px 0;
+            padding-left:1rem;
+        }
+
+        /*接受调研者信息*/
+        .userInfo label{font-weight: bold;}
+		.userInfo li{ margin-bottom:10px; }
+        .userInfo input{
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+            width:75%;
+            height:13.3333px;
+            padding:0.5rem 0;
+            text-indent:5px;
+            border:solid 2px #CCC;
+            border-radius:5px;
+        }
+        .userInfo textarea {
+			font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";
+            width:75%;
+            height:5rem;
+            line-height:1.5rem;
+            text-indent:5px;
+            border:solid 2px #CCC;
+            border-radius:5px;
+        }
+        .note{
+            display: inline-block;
+            height:5rem;
+            line-height:5rem;
+            vertical-align: top;
+        }
+        .requested:before{
+            content:"*";
+            color: red;
+        }
+        .unnecessary:before{
+            content:"*";
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--调研说明-->
+<img class="headImg" src="pic1/yy1.jpg" alt=""/>
+<div class="content border">
+    <h1 class="fs26">调研说明：</h1>
+    <p><span class="surveyTime">2016年5月12-2016年5月22</span>
+        <span>今天主要是天气好，遇到了几个熟人，心情也好，出门寒暄，多问了几个问题，顺便八卦一下最近的生活！</span>
+    </p>
+</div>
+
+<form>
+    <!--调研题目-->
+    <div class="question content  border">
+        <p class="questionNum">共<span>6</span>题</p>
+        <ul>
+            <!--<li class="content2 thinBorder2" qId="1">
+                <p><span class="questionNo"></span><span>你吃饭了嘛？</span><span>（单选）</span></p>
+                <div>
+                    <span class="option"><input type="radio" name="question1" value="1" />吃了</span>
+                    <span class="option"><input type="radio" name="question1" value="2" />没吃</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2" qId="2">
+                <p><span class="questionNo"></span><span>你要出去吗？</span><span>（单选）</span></p>
+                <div>
+                    <span class="option"><input type="radio" name="question2" value="1" />去</span>
+                    <span class="option"><input type="radio" name="question2" value="2" />不去</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2" qId="3">
+                <p><span class="questionNo"></span><span>你的性别？</span><span>（单选）</span></p>
+                <div>
+                    <span class="option"><input type="radio" name="question3" value="1" />男</span>
+                    <span class="option"><input type="radio" name="question3" value="2" />女</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2" qId="4">
+                <p><span class="questionNo"></span><span>你喜欢什么书？</span><span>（多选）</span></p>
+                <div>
+                    <span class="option"><input type="checkbox" value="1" />安徒生童话</span>
+                    <span class="option"><input type="checkbox" value="2" />柳林风声</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2" qId="5">
+                <p><span class="questionNo"></span><span>你喜欢什么颜色？</span><span>（多选）</span></p>
+                <div>
+                    <span class="option"><input type="checkbox" value="1" />red</span>
+                    <span class="option"><input type="checkbox" value="2" />green</span>
+                    <span class="option"><input type="checkbox" value="3" />yellow</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2"  qId="6">
+                <p><span class="questionNo"></span><span>你喜欢什么运动？</span><span>（多选）</span></p>
+                <div>
+                    <span class="option"><input type="checkbox" value="1" />跑步</span>
+                    <span class="option"><input type="checkbox" value="2" />羽毛球</span>
+                    <span class="option"><input type="checkbox" value="3" />篮球</span>
+                    <span class="option"><input type="checkbox" value="4" />乒乓</span>
+                </div>
+            </li>-->
+            <li class="content2 thinBorder2" qId="3">
+                <p><span class="questionNo"></span><span>你要出去吗？</span><span>（单选）</span></p>
+                <div>
+                    <span class="option"><input type="radio" name="question3" value="9" />去</span>
+                    <span class="option"><input type="radio" name="question3" value="10" />不去</span>
+                    <span class="option"><input type="radio" name="question3" value="11" />呵呵</span>
+                </div>
+            </li>
+            <li class="content2 thinBorder2"  qId="5">
+                <p><span class="questionNo"></span><span>你喜欢什么运动？</span><span>（多选）</span></p>
+                <div>
+                    <span class="option"><input type="checkbox" value="18" />跑步</span>
+                    <span class="option"><input type="checkbox" value="19" />羽毛球</span>
+                    <span class="option"><input type="checkbox" value="20" />篮球</span>
+                    <span class="option"><input type="checkbox" value="21" />乒乓</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--接受调研者信息-->
+    <div class="userInfo content fs24">
+        <ul>
+            <li>
+                <label class="requested">姓　名：</label><input type="text" value="" name="name" placeholder="请输入姓名">
+            </li>
+            <li>
+                <label class="requested">手机号：</label><input type="tel" value="" name="phone" placeholder="请输入手机号">
+            </li>
+            <li>
+                <label class="requested">地　址：</label><input type="text" value="" name="address" placeholder="请输入联系地址">
+            </li>
+            <li>
+                <label class="note requested">备　注：</label><textarea name="note" placeholder="请输入您想要备注的内容:"></textarea>
+            </li>
+        </ul>
+        <div class="transactionBtn btn grey">提交</div>
+    </div>
+</form>
+
+<script>
+	var aId = "402881e8461795c201461795c2e90000";
+    var opId = "$!{openid}";
+    var researchId=4;
+    var status = "$!{status}";
+</script>
+
+#parse("/global/alert.vm")
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/survey.js"></script>
+
+</body>
+</html>

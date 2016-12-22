@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/recBusiness.css" type="text/css" rel="stylesheet">
+    <title>推荐业务</title>
+    <!--<img class="hide" src="img/channel/u.jpg">-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bga5c2d2-1">
+        <img class="imgWidth100" src="img/recommend/yw1024001.jpg">
+        <div class="content2" id="bus">
+            <div class="busCheck" id="myReward">查看我的代言酬劳</div>
+            <p class="rule" onclick="$('#activePop').removeClass('hide');">任务说明</p>
+        </div>
+    </div>
+    <!--分享弹窗-->
+    <div class="popUp hide" id="sharePop" onclick="$('#sharePop').addClass('hide');">
+        <img class="shareImg" src="img/common/hx10240019.png">
+    </div>
+    <!--活动说明弹窗-->
+    <div class="conBox hide" id="activePop">
+        <div class="conDiv">
+            <div class="con">
+                <div class="delete" onclick="$('#activePop').addClass('hide');">
+                    <img src="img/common/bg01.png">
+                </div>
+                <section>
+                    <h3>活动时间：</h3>
+                    <p>2016年8月7日至2016年8月31日</p>
+                    <h3>活动奖品：</h3>
+                    <p>关注并进入“孝感移动”微信公众号→点击“乐活动”功能菜单→选择“我是火炬手 我为中国奥运加油”领取二维码→分享好友关注。</p>
+                    <h3>活动规则：</h3>
+                    <p>微信粉丝参与火炬传递游戏，用户领取微信识别二维码，并将该二维码分享给自己的好友，如有好友通过扫描该二维码关注孝感移动微信号，该用户则可获得一个奥运火炬，活动结束后，获得奥运火炬最多的前100名用户可获得奖品。</p>
+                    <h3>活动时间：</h3>
+                    <p>2016年8月7日至2016年8月31日</p>
+                    <h3>活动奖品：</h3>
+                    <p>关注并进入“孝感移动”微信公众号→点击“乐活动”功能菜单→选择“我是火炬手 我为中国奥运加油”领取二维码→分享好友关注。</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    #parse("/global/alert.vm")
+    <script>
+        ##接口所给参数##
+        var activityId = '$!{activityId}'; ##活动ID##
+        var userId = '$!{gzuserId}'; ##用户ID##
+        var status = '$!{status}'; ##活动是否结束  0-活动进行中，1-未开始，2-已结束 9-未开启##
+        var aId = '$!{aId}';##微信账号id##
+
+        ##模板所给参数##
+        var title = '';##分享标题##
+        var desc = '';##分享简介##
+        var img = '';##分享图片##
+    </script>
+    <script src="js/common.js"></script>
+
+    <script src="js/recBusiness.js"></script>
+</body>
+</html>

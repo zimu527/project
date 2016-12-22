@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link href="css/queryTraffic.css" rel="stylesheet">
+    <title>查流量</title>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+
+</head>
+<body>
+<div class="header hide">
+    <p class="phone-box"><img src="img/queryTraffic/ll1028002.png" alt=""><span class="phone"></span></p>
+    <div class="header-cont">
+        <div class="left">剩余流量<span class="left-flow red"></span></div>
+        <div class="proportion proportion-width" id="line-all">
+            <img class="black-line" src="img/queryTraffic/ll1028003.png" alt="">
+            <div class="red-line-box">
+                <img class="proportion-width" src="img/queryTraffic/ll1028003_1.png" alt="">
+            </div>
+        </div>
+        <p>已用<span class="used-flow red"></span>总计<span class="total-flow"></span></p>
+    </div>
+</div>
+<div class="main">
+    <div class="cont-list"></div>
+</div>
+
+
+<!-- 滚动图 -->
+<section class="module hide">
+    <div class="swiper-container" id="home-swiper">
+        <div class="swiper-wrapper home-banner">
+            <div class="swiper-slide">
+                <a href="#"><img src="pic1/slider/1.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="pic1/slider/2.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="pic1/slider/3.png" alt=""></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<script>
+    var opId = "$!{openid}";
+	//var result =$!{result};
+	var result={"dataList":[{"code":"6000031","name":"国内通用流量        ","resList":[{"freeResFlag":"3000","measureId":"103","productName":"神州行轻松卡(生活版)","remainValue":1.048576E7,"usedValue":0}]}],"leftData":1.048576E7,"measureId":"103","phone":"15721453843","resultInfo":{"code":0,"details":"成功","msg":"成功"},"usedData":0}
+</script>
+
+<script src="js/wxShare.js"></script>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/queryTraffic.js"></script>
+<script>
+	queryTraffic(result);
+</script>
+</body>
+</html>

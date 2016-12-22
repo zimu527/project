@@ -1,0 +1,126 @@
+html,body{min-height: 100%;background-color: #dcf0b1;}
+body{
+	position:relative;
+	top:0;
+	left:0;
+	}
+img{
+    vertical-align: top;
+    border:none;
+}
+*{margin: 0;padding: 0}
+.red{color: red;}
+.hide{display: none}
+/*common*/
+.proportion-width{
+    width: 16rem;
+}
+.proportion{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin:.5rem auto .5rem auto;
+}
+.black-line{
+    width: 100%;
+}
+.red-line-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+}
+/*header*/
+.header{
+    padding: 1rem 1rem 0 1rem;
+}
+.phone-box{
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.phone-box img{
+    height: 2rem;
+}
+.phone{
+    padding-left: .5rem;
+}
+.header-cont{
+    padding: 1.5rem 1rem;
+    background: url("../img/queryTraffic/ll1028001.png") no-repeat;
+    background-size: 100% 100%;
+}
+.used-flow{
+    padding-right: 2rem;
+}
+/*main*/
+.main{
+    padding: 0 2rem 1rem 2rem;
+}
+.product-value,.home-tip{
+    font-size: 0.8rem;
+}
+.business-name{
+    padding: 1rem 0 0 0;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bottom-line{
+    width: 100%;
+    margin-top: .5rem;
+}
+.product-info{
+    margin-top: .5rem;
+}
+.product-name{
+    display: inline-block;
+    width: 70%;
+    font-size: .8rem;
+    white-space:nowrap;/*不换行*/
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.product-left-flow{
+    width: 30%;
+    font-size: .8rem;
+    text-align: right;
+    white-space:nowrap;/*不换行*/
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.product-value{
+    display: block;
+    color: #666;
+}
+.product-left-flow,.used-value{
+    display: inline-block;
+    float: right;
+}
+.div404{
+	position:absolute;
+	left:0;
+	top:25%;	
+	width:100%;
+}
+.img404{
+	width:50%;
+	margin-left:25%;
+}
+.info404{
+		text-align:center;
+		line-height:5rem;
+		height:5rem;
+}
+/*start|滚图区*/
+.module a{
+    display: block;
+    width: 100%;
+}
+.module img {
+    width: 100%;
+}
+/*end|滚图区*/

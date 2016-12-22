@@ -1,0 +1,102 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑";}
+ul li{list-style:none;}
+img{border:none;width: 100%;vertical-align: bottom;}
+i,em{font-style: normal;}
+
+body{background: url(../../img/partner/hx102400281.jpg) no-repeat;background-size:cover;/*background-position: 50% 30%;*/}
+.container{position: relative;overflow: hidden;z-index: 1;width:96%;height:auto;padding: 2%;}
+#music{position: absolute;top: 2%;right: 5%;background: url(../../img/partner/hx1024005.png) no-repeat;background-size:cover;width: 30px;height:30px;z-index: 100;border-style: none;}
+.container .bannerIMG{position: relative;text-align: center;margin: 15% auto 5%;width: 90%;padding: 0 5%;}
+/* div.content css start*/
+.container .content{position: relative;padding: 0 5%;height: auto;}
+.container .content .contentTable{position: relative;background-color:rgba(0, 0, 0, 0.5);border-radius: 4px;width: 96%;padding: 2%;height: 390px;overflow:scroll;}
+.container .content .contentTable table{position: relative;width: 100%;}
+.container .content .contentTable  table tr{width: 100%;height: 40px;line-height: 30px;padding-bottom: 10px;}
+.container .content .contentTable  table tr td{margin-bottom: 10px;color: #fff;}
+.container .content .contentTable  table tr td.td1{width: 10%;text-align: center;}
+.container .content .contentTable  table tr td.td2{width: 20%;text-align: center;}
+.container .content .contentTable  table tr td.td3{width: 45%;padding-left: 5%;}
+.container .content .contentTable  table tr td.td4{width: 20%;text-align: center;}
+#trB{display: block;width: 30px;height:30px;background-color:#fff;border-radius: 5px;text-align: center;margin: 0 auto; }
+.container .contentButton{position: relative;width: 100%;margin-top: 10px;}
+.container .contentButton input#back{position: relative;padding: 0 5%;width: 90%;height: 40px;line-height: 40px;/*background-color:#c7014e;*/border-radius: 4px;color: #fff;font-size: 18px;font-weight: bold;text-align: center;border-style: none;margin: 0 auto;
+display: block;background: url('../../img/partner/return_n.png') no-repeat;background-size: 100% 100%;}
+/* div#bottomContent css start*/
+#bottomContent{position: relative;height: 50px;width: 100%}
+
+/* tips.html css start*/
+#playFuncyion{position: absolute;right: 5%;top: 70%;width: 30%;}
+.contentTab{position: relative;/*background-color:rgba(0, 0, 0, 0.5);border-radius: 4px;*/width: 96%;padding: 2%;}
+.contentTab p{font-size: 14px;line-height: 22px;color: #fff;}
+.contentTab p em.gb{color: #ffde00;}
+.contentDrow{position: relative;width: 94%;padding: 7% 3% 5% 3%;/*background: url(../img/partner/hx10240010.png) no-repeat;background-size: cover;*/}
+#reDrow{position: absolute;left: 3%;bottom: 2%;width: 30%}
+.contentH{position: relative;width: 94%;padding: 0% 3% 5% 3%;}
+.contentH h1{font-size: 16px;line-height: 24px;color: #290009;text-align: center;font-weight: normal;}
+.contentH h1.getR{font-size: 14px !important;}
+.contentH h1.getR em{color:#ff0029;}
+.contentBtn{position: relative;text-align: center;margin: 0 auto 5%;}
+.contentBtn .contentBtn-left{position: relative;display: inline-block;width: 45%;height:70px;/*background: url(../img/partner/hx1024003.png) no-repeat;background-size: cover;*/}
+.contentBtn .contentBtn-right{position: relative;display: inline-block;width: 45%;height:70px;/*background: url(../img/partner/hx1024004.png) no-repeat;background-size: cover;*/}
+a.contentBtn-leftA{position: relative;display: block;width: 100%;height:70px;background: url(../../img/partner/hx1024003.png) no-repeat;background-size: cover;}
+a.contentBtn-rightA{position: relative;display: block;width: 100%;height:70px;background: url(../../img/partner/hx1024004.png) no-repeat;background-size: cover;}
+/* div#boxHidden css start */
+#boxHidden{display: none;position: fixed;top: 0;width: 100%;height: 500px;min-height:100%;background-color: rgba(0, 0, 0, 0.8);z-index: 1000;overflow: scroll}
+#boxHiddenFX{display: none;position: fixed;top: 0;width: 100%;height: auto;min-height:100%;background-color: rgba(0, 0, 0, 0.8);z-index: 1000;}
+#boxHiddenJH{display: none;position: fixed;top: 0;width: 100%;height: auto;min-height:100%;background-color: rgba(0, 0, 0, 0.8);z-index: 1000;}
+/*#boxHidden{position: absolute;top: 0;width: 100%;height: auto;min-height:700px;background-color: rgba(0, 0, 0, 0.8);z-index: 1000;}*/
+#boxHiddenJH div.tipsBox{position: relative;width: 65%;height: 150px;background-color: #fff;margin: 50% auto 0;border-radius: 5px;font-size: 16px;}
+#boxHiddenJH div.tipsBox .tipsBox-nav{position: relative;width: 100%;height: 38px;line-height: 40px;border-bottom:2px solid #cb1e57;text-align: center; }
+#boxHiddenJH div.tipsBox em.tipsBox-color{color: #cb1e57;}
+#boxHiddenJH div.tipsBox .tipsBox-p{width: 92%;padding:5% 4%;font-size: 12px;color: #141414;}
+#boxHiddenJH div.tipsBox .tipsBox-btn{width: 92%;padding:0% 4%;}
+#boxHiddenJH div.tipsBox .tipsBox-btn a.tipsBox-btnLeft{display: inline-block;width: 48%;height: 40px;/*width: 125px;height: 47.5px;*/line-height: 35px;/*background-color: #cb1e57;color: #fff; */background: url('../../img/partner/cancel_n.png');background-size: 100% 100%;/*border: 1px solid #cb1e57;border-radius: 5px;text-align: center;*/}
+#boxHiddenJH div.tipsBox .tipsBox-btn a.tipsBox-btnRight{display: inline-block;width: 48%;height: 40px;/*width: 125px;height: 47.5px;*/line-height: 35px;/*background-color: #fff;color: #cb1e57; border: 1px solid #cb1e57;border-radius: 5px;text-align: center;*/background: url('../../img/partner/xcj_n.png');background-size: 100% 100%;}
+#boxHiddenJH div.tipsBox .tipsBox-btn a.tipsBox-btnLeft:hover{background-color: #fff;color: #cb1e57;}
+#boxHiddenJH div.tipsBox .tipsBox-btn a.tipsBox-btnRight:hover{background-color: #cb1e57;color: #fff;}
+/* tips.html css end*/
+
+/* share.html css start*/
+div#boxHidden div.share{position: relative;width: 100%;}
+div#boxHiddenFX>div.share>img{position: absolute;width: 50%;top: 3%;right: 4%;}
+/* share.html css end*/
+
+/* rule.html css start*/
+div#boxHidden div.rule{position: relative;width: 82%;margin: 6% auto 0;background-color: #c7014e;height: auto;border-radius: 10px;}
+#ruleClose{position: absolute;display: block;background: url(../../img/partner/hx10240020.png) no-repeat;background-size:cover;width: 25px;height: 25px;right: 2%;top: 1%; z-index: 2;}
+.ruleBlock{position: relative;width: 88%;padding: 4% 6% 0 6%;}
+.ruleBlock-top{padding-top: 12% ;}
+.ruleBlock-bottom{padding-bottom: 14% ;}
+.ruleBlock h1{color: #fff600;font-size: 16px}
+.ruleBlock p{line-height: 18px;color: #fff;font-size: 14px;}
+
+/*join.html css start*/
+.joinBtn{position: relative;width: 100%;text-align: center;margin-top: 16%;}
+.joinBtn a.joinBtn1,a.joinBtn2,a.joinBtn3{position: relative;display: block;}
+.joinBtn a.joinBtn1{width: 100%;}
+.joinBtn a.joinBtn2{width: 100%;margin-top: 2%;}
+.joinBtn a.joinBtn3{width:53%;margin: 16% auto 0;}
+/*join.html css end*/
+
+/*join.html css start*/
+.ranking,.score{position: relative;color: #fff;font-size: 16px;width: 65%;margin: 0 auto;line-height: 28px;font-weight: normal;}
+.ranking b,.score b{font-size: 20px;}
+.ranking b i,.score b i{color:#fcff00;}
+.scoreList{position: relative;width: 85%;margin: 2% auto;height: auto;min-height: 110px;}
+.scoreList .scoreList1{position: relative;width: 50%;float: left;text-align: center;}
+.scoreList1 img{position: relative;width: 50%;margin: 10% auto;}
+.scoreList1 h1{position: relative;font-size: 14px;line-height: 20px;}
+.scoreList1 h1 em{position: relative;color:#fcff00;}
+.gift{position: relative;width: 100%;margin: 5% auto 2%;text-align: center;height: 115px}
+.gift h1{background: url(../img..//partner/hx10240033.png) no-repeat;background-size: 100% 90%;width: 100%;height: 100%;line-height: 125px;font-weight: normal;}
+.gift h1 em{color:#ff010a;}
+.receiveBtn{position: relative;width: 100%;text-align: center;}
+.receiveBtn .receiveBtn1,.receiveBtn2 .receiveBtn3{position: relative;display: block;}
+.receiveBtn .receiveBtn1{width: 99%;height: 50px;line-height: 50px;font-size: 22px;border: 1px solid #3b3b3b;color: #9b9b9b;text-align: center;border-radius: 8px;margin-bottom: 2%;}
+.receiveBtn a.receiveBtn2{width: 100%;}
+.receiveBtn a.receiveBtn3 img{width:53%;margin: 12% auto 5%;}
+/*join.html css end*/
+
+div.noData{display: none;}

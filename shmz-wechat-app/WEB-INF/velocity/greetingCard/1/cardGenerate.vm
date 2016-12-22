@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/card/common.css" type="text/css" rel="stylesheet">
+    <link href="css/card/cardGenerate.css" type="text/css" rel="stylesheet">
+    <title>上海移动动感俱乐部</title>
+</head>
+<body>
+<header><img class="imgWidth100" src="img/card/top.gif"></header>
+<div class="main">
+    <div class="wishBox fs14">
+        <p class="wishTitle">$!{nickname}送祝福：</p>
+        <div class="wishWord">
+            <textarea maxlength="35">$!{blessWord}</textarea>
+            <p class="limitW"><span id="word">35</span>/35</p>
+        </div>
+    </div>
+    <p class="hint fs14"><img class="hand" src="img/card/sdj1220002.png">可自己写祝福语哦~</p>
+    <div class="btn fs16" onclick="preview()">预览贺卡</div>
+    <p class="rule fs14" onclick="$('#activePop').removeClass('hide')"><span>活动说明</span></p>
+</div>
+<!--活动细则弹窗-->
+<div class="conBox hide" id="activePop">
+    <div class="conDiv">
+        <div class="delete" onclick="$('#activePop').addClass('hide');">
+            <span class="deleteIcon"></span>
+        </div>
+        <div class="con">
+            <section>
+                <h3 class="fs14">活动时间：</h3>
+                <p class="fs12">2016年12月24日——2107年1月3日</p>
+                <h3 class="fs14">活动奖品：</h3>
+                <p class="fs12">1.500M流量大奖，共5份<br>2.1-500M随机流量抽奖红包，共15000份</p>
+                <h3 class="fs14">活动规则：</h3>
+                <p class="fs12">1.奖励领取仅限上海移动三大品牌真实有效的实名制登记用户领取；<br>  2. 活动期间内，用户通过贺卡生产页面，生成贺卡后进行分享，好友拆开贺卡后关注并绑定后即可拆开随机流量抽奖红包并获得本地通用流量；<br> 3.活动期间内，每位用户仅可制作1张贺卡并且仅可抽取一次流量红包；<br> 4.所赠上海本地流量24小时到账，有效期至1月月底结束；</p>
+                <h3 class="fs14">注：</h3>
+                <p class="fs12">1.本次活动所有奖品不设退、换、折现金服务；<br> 2.本次活动最终解释权归主办方所有；</p>
+            </section>
+        </div>
+    </div>
+</div>
+<!--预览贺卡-->
+<div class="conBox1 hide" id="cardBox">
+    <div class="cardBox">
+        <div class="close" onclick="$('#cardBox').addClass('hide');"></div>
+        <div class="card">
+            <img class="cardImg" class="imgWidth100" src="img/card/1.jpg">
+            <div class="cardMessage">
+                <p><img class="userImg" src="img/card/head.jpg">$!{nickname}</p>
+                <p class="blessW"></p>
+            </div>
+        </div>
+        <form name="generateForm" action="greetingCard.do?op=doGenerate" method="post" onsubmit="generate()">
+            <input name="tid" type="hidden" value="$!{cardTemplateId}">
+            <input name="msg" type="hidden">
+            <input type="submit" class="btnGenerate fs16" value="生成贺卡">
+        </form>
+
+    </div>
+</div>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/card/jquery.slimscroll.min.js"></script>
+#parse("/global/alert.vm")
+<script>
+    var activityId = '$!{activityId}'; ##活动ID##
+    var cardId = '$!{cardTemplateId}';##模板id
+    var aId = '$!{aid}';##微信账号id##
+    var uImg = '$!{headimgurl}';
+    if(uImg != "")$('.userImg').attr('src' , uImg);
+    var cImg = '$!{previewImg}';
+    if(cImg != "")$('.cardImg').attr('src' , cImg);
+
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    $(function(){
+        $('.main').css('min-height' , getClientHeight() - $('header').height());
+        $(window).on('resize',function(){
+            $('.main').css('min-height' , getClientHeight() - $('header').height());
+        });
+
+        //分享
+        var title = '大师兄在上海移动动感俱乐部派礼物啦~';//分享标题
+        var desc = '免费亲手自作你喜欢的贺卡派发给好友，TA不仅会收到你的祝福，还会有流量礼包惊喜哦~数量有限,快来哟~。';//分享简介
+        var img = getRootUrl() + 'img/card/sdj1220003.png';//分享图片
+        var url = getRootUrl() + '?op=index&a=' + activityId;
+        wxShare(title , desc , img , url);
+
+        $(".con").slimScroll({
+            width: 'auto', //可滚动区域宽度
+            height: '100%', //可滚动区域高度
+            size: '8px', //组件宽度
+            color: '#e6bc10', //滚动条颜色
+            distance: '0px', //组件与侧边之间的距离
+            start: 'top', //默认滚动位置：top/bottom
+            opacity: 1, //滚动条透明度
+            alwaysVisible: true, //是否 始终显示组件
+            disableFadeOut: false, //是否 鼠标经过可滚动区域时显示组件，离开时隐藏组件
+            railVisible: true, //是否 显示轨道
+            railColor: '#fff', //轨道颜色
+            railOpacity: 1, //轨道透明度
+            railDraggable: true, //是否 滚动条可拖动
+            wrapperClass: 'slimScrollDiv', //外包div类名
+            allowPageScroll: true, //是否 使用滚轮到达顶端/底端时，滚动窗口
+            wheelStep: 50, //滚轮滚动量
+            touchScrollStep: 200, //滚动量当用户使用手势
+            borderRadius: '7px', //滚动条圆角
+            railBorderRadius: '7px' //轨道圆角
+        });
+
+        $('#word').text(35 - textbox.val().length);
+        if((35 - textbox.val().length) < 0) $('#word').text('0');
+    });
+    // 限制输入字数
+    var textbox = $('textarea');
+    function hander(){
+        $('#word').text(35 - textbox.val().length);
+    }
+    textbox.bind("input propertychage",hander);
+    textbox.keydown(function(){
+        var len = $(this).val().length;
+        if(len > 35){
+            $(this).val($(this).val().substring(0 , 35));
+        }
+        var num = 35 - len;
+        if(num < 0) $('#word').text('0');
+        else $('#word').text(num);
+    });
+
+    function preview(){
+        $('#cardBox').removeClass('hide');
+        var blessWord = $('textarea').val();//获取写好的祝福语
+        $('.blessW').text('发来祝福：' + blessWord);
+    }
+    function generate(){
+        _showPopBoxById("loadingToast");//loading
+        var blessWord = $('textarea').val();//获取写好的祝福语
+        $('input[name="msg"]').val(blessWord);
+        if(blessWord == ""){
+            popBoxAlert('' , '请填写你的祝福语哟~');
+            return false;
+        }
+        window.generateForm.submit();
+        hiddenBox("loadingToast");//loading
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+html , body{
+    width: 100%;
+    height: 100%;
+}
+
+.uImg-box{
+    position: relative;
+    width: 6rem;
+    margin: 0 auto 1rem auto;
+    padding-top: 0.5rem;
+}
+.uImgBg{
+    position: absolute;
+    width: 100%;
+}
+.uImg-div{
+    /*display: block;*/
+    width: 4.5rem;
+    margin: auto;
+    padding-top: 1.5rem;
+}
+.userImg{
+    width: 100%;
+    border-radius: 60%;
+}
+.userName{
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'jianzhiyi';
+}
+.userName img{
+    height: 1.6rem;
+    vertical-align: top;
+}
+#name , #userCredits{
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+.table-box , .point-table{
+    width: 100%;
+    border-top: solid 1px #CCCCCC;
+    border-bottom: solid 1px #CCCCCC;
+    padding: 0 1rem;
+    background: #FFFFFF;
+}
+.point-table{
+    margin-bottom: 0.5rem;
+    font-family: 'jianzhiyi';
+}
+.point-table table tr td:first-child{
+    padding-left: 1rem;
+}
+table{
+    width: 100%;
+}
+.table-box table tr , .point-table table tr{
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.table-box table tr td , .point-table table tr td{
+    border-bottom: solid 1px #CCCCCC;
+    font-family: 'jianzhiyi';
+}
+.table-box table tr td:first-child , .table-box table tr td:nth-child(3) , .point-table table tr td:last-child{
+    text-align: right;
+    width: 5rem;
+}
+.table-box table tr:first-child td , .table-box table tr:last-child td , .point-table table tr:last-child td{
+    border-bottom: none;
+}
+.table-box table tr td:nth-child(2){
+    padding-left: 1rem;
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+.table-box table tr td:last-child a , .point-table table tr td:last-child a , .btnM a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+}
+
+
+
+.twoImg{
+    width: 1.5rem;
+    vertical-align: middle;
+}
+.btnM{
+    width: 50%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    text-align: center;
+    background: url("../img/member/share-draw.png") no-repeat;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    font-family: 'jianzhiyi';
+    margin: 1rem auto 0 auto;
+}

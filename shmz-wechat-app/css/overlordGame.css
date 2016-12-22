@@ -1,0 +1,237 @@
+html,body{height: 100%;overflow: hidden}
+@media screen and (min-width:239px){html,body{font-size:12px;}}
+@media screen and (min-width:319px){html,body{font-size:12px;}} /*将12px调整到13px*/
+@media screen and (min-width:359px){html,body{font-size:14px;}}
+@media screen and (min-width:374px){html,body{font-size:15px;}}
+@media screen and (min-width:413px){html,body{font-size:16px;}}
+@media screen and (min-width:719px){html,body{font-size:31px;}}
+@media screen and (min-width:799px){html,body{font-size:34px;}}
+@media screen and (min-width:1023px){html,body{font-size:45px;}}
+.header,.main {
+    position: relative;
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+img,fieldset {
+    border: none;
+    vertical-align: top;
+}
+a{
+	-webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.rotate{
+    transform: rotate(-3.5deg);
+    -ms-transform: rotate(-3.5deg);		/* IE 9 */
+    -webkit-transform: rotate(-3.5deg);	/* Safari and Chrome */
+    -o-transform: rotate(-3.5deg);		/* Opera */
+    -moz-transform: rotate(-3.5deg);		/* Firefox */
+}
+.cont{
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    margin-left: 8%;
+}
+.rank-btn{
+    display: block;
+    margin: 1rem auto 0 auto;
+    padding-left: 5px;
+    width: 8.5rem;
+    height: 2.3rem;
+    background: url("../img/exam/dt1017005.png") no-repeat;
+    background-size: 100% 100%;
+
+ }
+.rank-btn:active{
+    background: url("../img/exam/dt1017005_1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.proportion-width{
+    width: 16rem;
+}
+.proportion{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin:1rem auto 0 auto;
+}
+.proportion-blue{
+    width: 100%;
+}
+.proportion-red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    overflow: hidden;
+}
+.people-num,.link{
+/*    display: -webkit-box;      !* OLD - iOS 6-, Safari 3.1-6 *!
+    display: -moz-box;         !* OLD - Firefox 19- (buggy but mostly works) *!
+    display: -ms-flexbox;      !* TWEENER - IE 10 *!
+    display: -webkit-flex;     !* NEW - Chrome *!
+    display: flex;*/
+    display: flex;
+    display:-webkit-box;
+    width: 100%;
+    margin: 1rem auto 0 auto;
+}
+.people-num p,.link a{
+    /*display: inline-block;*/
+    text-align: center;
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;
+}
+.people-num p{
+    font-weight: bold;
+}
+.people-num p span{
+    display: block;
+    padding-top: 1rem;
+}
+.people-num .student{
+    color: #dd127b;
+}
+.people-num .social{
+    color: #90c222;
+}
+.link{margin-top: 0.8rem}
+.link a{
+    display: block;
+    margin: 0  1.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding-left: 1.2rem;
+    background-size: 100% 100%;
+}
+.startAnswer-btn{
+    background: url("../img/exam/dt1017006.png") no-repeat;
+    color: #fff;
+}
+.share-btn{
+    background: url("../img/exam/dt1017007.png") no-repeat;
+    /*color:#90c222 ;*/
+    color:#000 ;
+}
+.view-rule{
+    width: 100%;
+    margin-top: 1.2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #dd127b;
+}
+.rule-btn{
+    width: 8.2rem;
+    margin: 5px auto 0 auto;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #515151;
+}
+.rule-btn span{
+    display: inline-block;
+    margin-right: 5px;
+    color: #515151;
+}
+.arrow{
+    display: inline-block;
+    position: relative;
+    top:3px;
+    width: 10px;
+    height: 10px;
+    margin-left: -3px;
+}
+.arrow-i-1{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 8px solid #000;
+    border-bottom: 3px solid transparent;
+}
+.arrow-i-2{
+    top: 0px;
+    left: -2px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 8px solid #fff;
+    border-bottom: 3px solid transparent;
+}
+/*start|活动规则*/
+.active-rule{
+    display: none;
+    font-family:"YouYuan","Microsoft YaHei","Arial","Arial Bold";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width:100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color:#000 ;
+}
+.rule-square{
+    position: relative;
+	height:100%;
+	padding:1.5rem 2rem 1.5rem 1.5rem;
+	background:url("../img/exam/bj.png") no-repeat;
+	background-size:100% 100%;
+}
+.slimScrollDiv{
+    height: 85%!important;
+    top: 2.5rem;
+}
+.active-info{
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 2rem;
+    color: #fff;
+    overflow: hidden;
+}
+.active-info h2{
+    font-weight: normal;
+    font-size: 1rem;
+    color: #e6bc10;
+    padding: 1rem 0 0 0;
+}
+.close-icon{
+    position: absolute;
+    top: 2rem;
+    right: 3.5rem;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/exam/close-icon.png") no-repeat;
+}
+/*end|活动规则*/
+.share-mask {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.share-signImg {
+    position:fixed;
+    z-index:13;
+    width:50%;
+    top:0;
+    right:0;
+    text-align:center;
+    border-radius:3px
+}

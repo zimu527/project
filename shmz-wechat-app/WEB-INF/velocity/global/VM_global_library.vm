@@ -1,0 +1,37 @@
+##----------------------------------------------------------------------------------------------------##
+#macro (getJs)resource/js#end
+##----------------------------------------------------------------------------------------------------##
+#macro( getPic )resource/images#end
+##----------------------------------------------------------------------------------------------------##
+#macro( getStyle )resource/style#end
+##----------------------------------------------------------------------------------------------------##
+#macro( getImg )http://172.19.100.162:8080/shmz-wechat-app/img#end
+
+##----------------------------------------------------------------------------------------------------##
+##-----------------------URI-------------------------------------------##
+#macro( loginURI $methodname )login.do?op=$methodname#end
+#macro( userURI $methodname )userManage.do?op=$methodname#end
+#macro( accountURI $methodname )accountManage.do?op=$methodname#end
+#macro( roleManageURI $methodname )roleManage.do?op=$methodname#end
+#macro( personalAccountURI $methodname )personalAccount.do?op=$methodname#end
+	
+
+
+#macro( smsTemplateURI $methodname )smsTemplate.do?op=$methodname#end
+#macro( smsDraftURI $methodname )smsDraft.do?op=$methodname#end
+#macro( sendTaskURI $methodname )sendTask.do?op=$methodname#end
+#macro( taskManageURI $methodname )taskManage.do?op=$methodname#end
+	
+#macro( personalLogURI $methodname )personalLog.do?op=$methodname#end
+#macro( systemLogURI $methodname )systemLog.do?op=$methodname#end
+#macro( blackListURI $methodname )blackList.do?op=$methodname#end
+#macro( sensitiveWordsURI $methodname )sensitiveWords.do?op=$methodname#end
+#macro( forbiddenPeriodURI $methodname )forbiddenPeriod.do?op=$methodname#end
+	
+##-----------------------PAGER-------------------------------------------##
+#macro( renderPageInfo $searchFuncName )
+共<span id="recCount"></span>条记录　　第<span id="pageIndex"></span>/<span id="pageCount"></span>页　　<a href="javascript:first();" >首页</a> <a href="javascript:prev();">←</a> <span></span> <a href="javascript:next();">→</a> <a href="javascript:last();">尾页</a>　　跳转至 <input type="text" class="superShortInput" id="pageInput"> 页　　每页展示 <input type="text" class="superShortInput" id="rowsInput"> 行　　<a href="javascript:submitPaged();" class="btnSmall">跳转</a>
+<input type="hidden" id="page" name="page" value="1" />
+<input type="hidden" id="rows" name="rows" value="10" />
+<input type="hidden" id="searchFunc" name="searchFunc" value="$!{searchFuncName}" />
+#end

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/purchase.css" rel="stylesheet">
+    <title>1元购1GB</title>
+    <style>
+	.bg-3 {
+    background: url("img/purchaseTraffic/bg_3.jpg") no-repeat;
+    background-size: cover;
+}
+	</style>
+    </style>
+</head>
+<body>
+<img class="preloading hide" src="" alt="">
+<div class="index-purchase bg bg-3">
+    <div class="cont l-r-padding2">
+        <div class="index-purchase-box">
+            <a class="index-purchase-btn" id="indexPurchaseBtn" href="javascript:void(0);">购买并赠送流量红包</a>
+        </div>
+        <img class="headerImg t-b-padding2" src="img/purchaseTraffic/line.png">
+        <div class="btn-list">
+            <div class="purchase-list-btn" id="purchaseListBtn"></div>
+            <div class="grab-list-btn" id="grabListBtn"></div>
+        </div>
+        <div class="all-padding2">
+            <div class="show-rule-btn red" id="showRuleBtn">活动规则说明</div>
+        </div>
+    </div>
+    <div class="footer-rule hide" id='activeRule'>
+        <div class="rule bg bg-0 all-padding2 hide">
+            <div class="rule-cont">
+                <div class="rule-box">
+                    <div class="rule-info">
+                        <h2>活动时间</h2>
+                        <p>2016-10-10至2016-12-12</p>
+                        <h2>活动规则</h2>
+                        <p>1.超值旅游意外险产品详情请在扫描二维码后，进入投保详情页进行了解。</p>
+                        <p>2.活动期间，用户通过周年庆活动专属页面在网上投保太平洋私家车商业险，即可获得好礼4选2。</p>
+                        <p>4详情请致电太平洋直销车险（网销热线）：10108888-2</p>
+                    </div>
+                </div>
+                <div class="rule-box-close" id="ruleBoxClose"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-alert hide" id="footerAlert">
+        <div class="alert-box">
+            <div class="alert-box-cont">
+                <div class="alert-box-headerImg"><img src="" alt=""></div>
+                <p class="red"></p>
+                <div class="box-more-btn">
+                    <a class="more-btn btn-box shadow" href="javascript:void(0);"></a>
+                </div>
+                <div class="alert-box-close" id="alertBoxClose"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    //传入参数
+    var status = "$!{status}";//活动是否正在进行
+    var member = "$!{member}";//是否为注册会员,1,是
+    var opId = "$!{openid}";
+
+
+    //模板参数
+    var activityId=1;
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    //分享参数
+    var purchaseTitle = "流量红包";
+    var purchaseDesc = "流量红包流量红包流量红包流量红包流量红包";
+    var purchaseImg =  "pic1/share/fx01.png";
+
+    //测试参数
+    member = 0;//是否为注册会员,1,是
+    status = 0;//活动是否正在进行
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/purchase.js"></script>
+<script>
+    //分享
+    var purchaseUrl = getRootUrl()+"trafficred.do?op=index&b="+activityId;//获取首页地址
+    //wxShare(purchaseTitle , purchaseDesc , purchaseImg , purchaseUrl);
+
+    // preload image
+    window.onload = function() {
+        setTimeout(function () {
+            new Image().src = "img/purchaseTraffic/zs_btn_1.png";
+            new Image().src = "img/purchaseTraffic/qd_btn_1.png";
+            new Image().src = "img/purchaseTraffic/hb_2.png";
+            new Image().src = "img/purchaseTraffic/bg.jpg";
+            new Image().src = "img/purchaseTraffic/man.png";
+            new Image().src = "img/purchaseTraffic/woman.png";
+        }, 1000);
+    };
+</script>
+</body>
+</html>

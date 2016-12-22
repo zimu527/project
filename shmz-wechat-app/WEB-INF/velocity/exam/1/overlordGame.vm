@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <title>学霸大比拼</title>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/overlordGame.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <img src="img/exam/dt1017001.jpg" alt="">
+</div>
+<div class="main">
+    <img src="img/exam/dt1017002.jpg" alt="">
+    <div class="cont">
+        <a class="rank-btn" href="javascript:void(0)">
+        </a>
+        <div class="proportion proportion-width">
+            <img class="proportion-blue" src="img/exam/dt1017009.png" alt="">
+            <div class="proportion-red">
+                <img class="proportion-width" src="img/exam/dt1017008.png" alt="">
+            </div>
+        </div>
+        <div class="people-num">
+            <p class="student">学生分子：<span id="studentNum"></span></p>
+            <p class="social">社会分子：<span id="socialNum"></span></p><br>
+        </div>
+        <div class="link">
+            <a class="startAnswer-btn" href="javascript:void(0)">开始答题</a>
+            <a class="share-btn" href="javascript:void(0)">邀请好友</a>
+        </div>
+        <div class="view-rule">
+            <p>每天仅可参与一次终极殿试</p>
+            <div class="rule-btn">
+                <span>查看活动规则</span>
+                <div class="arrow">
+                    <i class="arrow-i-1"></i><i class="arrow-i-2"></i>
+                </div>
+                <div class="arrow">
+                    <i class="arrow-i-1"></i><i class="arrow-i-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="active-rule">
+	<div class="rule-square">
+        <div><span class="close-icon"></span></div>
+        <div class="active-info" style="overflow: hidden">
+            <h2>活动时间</h2>
+            <p>活动期间，用户扫描【超值旅游险二维码】，并微信支付购买成功，即可参加1元抵100元的抽奖活动，即：从每10名投保超值旅游险的客户中抽出2名，获赠 www.601601.com 提供的100元产品抵用券，中奖概率高达20%哦！</p>
+            <h2>活动奖品</h2>
+            <p>活动期间，用户扫描【超值旅游险二维码】，并微信支付购买成功，即可参加1元抵100元的抽奖活动，即：从每10名投保超值旅游险的客户中抽出2名，获赠 www.601601.com 提供的100元产品抵用券，中奖概率高达20%哦！</p>
+            <h2>活动规则</h2>
+            <p>1.超值旅游意外险产品详情请在扫描二维码后，进入投保详情页进行了解。</p>
+            <p>2.活动期间，用户通过周年庆活动专属页面在网上投保太平洋私家车商业险，即可获得好礼4选2。</p>
+            <p>3选2礼品为：酒后代驾/健康礼包+多功能逃生锤/云南白药/灭火器。仅限通过周年庆活动投保专属页面（www.ecpic.com.cn/2years/toubao）进行投保的客户</p>
+            <p>4详情请致电太平洋直销车险（网销热线）：10108888-2</p>
+        </div>
+    </div>
+</div>
+<div class="share-mask"><img class="share-signImg" src="img/exam/share02.png" alt=""/></div>
+#parse("/global/alert.vm")
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var opId = "$!{openid}";
+		var status="$!{status}";
+    var studentNum = "$!{studentNum}";
+    var socialNum = "$!{socialNum}";
+		var aId = "402881e8461795c201461795c2e90000";
+    var activityId=1;
+
+	//分享参数
+    var overlordTitle = "学霸大比拼";
+    var overlordDesc = "学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼学霸大比拼";
+    var overlordImg =  "img/exam/kt1013001.jpg";
+</script>
+<script src="js/wxShare.js"></script>
+<script src="js/overlordGame.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+</body>
+</html>

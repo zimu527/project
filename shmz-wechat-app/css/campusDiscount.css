@@ -1,0 +1,136 @@
+img{
+    width: 100%;
+    border: none;
+    vertical-align: middle;
+}
+a{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+    color:#000;
+}
+html,body{height: 100%;overflow: hidden}
+html {
+    -ms-touch-action: none;
+}
+body{
+    background:#69abdb;
+}
+.header,.main {
+    position: relative;
+    width: 100%;
+}
+.cont{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /*padding:1.5rem 2rem 1.5rem 1.5rem;*/
+
+}
+.contImg{
+	height:100%;
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    height:45%;
+    overflow: hidden;
+}
+.campus-list{
+    padding:0 2rem;
+}
+.campus-list li{
+    width:100%;
+}
+.campus-list li a{
+    position:relative;
+    display:block;
+    height:5rem;
+    width:100%;
+    margin-bottom:1rem;
+    padding:0.2rem;
+    line-height:4rem;
+    text-align:left;
+    border:1px solid #fff;
+    border-radius:10px;
+    background:#fff;
+}
+.campus-list .campus-logo{
+    width:3rem;
+    height:3rem;
+    margin-right:1rem;
+    padding:5px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+.goDiscountList{
+	position:absolute;
+    top:1.25rem;
+    right:1.5rem;
+	height:2.5rem;
+	width:5rem;
+}
+.campus-list p{
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+}
+.campus-list .stip{
+    font-size:1.2rem;
+    margin-top: 8rem;
+}
+/*返回顶部*/
+.m-sideBar {
+    right: 6px;
+    bottom: .8rem;
+    z-index: 1001;
+}
+.po-fixed {
+    position: fixed;
+}
+.m-sideBar .m-goTop {
+    display: block;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.7);
+}
+.m-sideBar .m-goTop .c-glyphicon-arrowUp {
+    top: 2px;
+    padding-top: 6px;
+}
+@font-face {
+    font-family: 'iconography';
+    src: url('http://static.iqiyi.com/ext/common/iconography/iconfont.eot');
+    src: url('http://static.iqiyi.com/ext/common/iconography/iconfont.ttf') format('truetype'), url('http://static.iqiyi.com/ext/common/iconography/iconfont.svg#iconfont') format('svg')
+}
+.c-glyphicon {
+    position: relative;
+    display: inline-block;
+    font-size: .13rem;
+    font-family: 'iconography';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    color: #20bc22;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.c-glyphicon-arrowUp:before{
+    content: "\e60c";
+    color: #fff;
+    font-size: 20px;
+}
+.m-sideBar span {
+    margin-top: -5px;
+    font-size: 10px;
+    display: block;
+}
+

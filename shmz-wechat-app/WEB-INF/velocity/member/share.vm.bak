@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/share.css" rel="stylesheet">
+    <title>分享赚积分</title>
+
+</head>
+
+<body>
+<!--头部个人信息-->
+<header>
+    <div class="uImg-box">
+        <img class="uImgBg" src="img/member/jz1018.png">
+        <div class="uImg-div">
+            <img class="userImg" src="pic1/share/fx01.png">
+        </div>
+    </div>
+    <p class="userName">
+        <img src="img/member/sj.png">
+        手机：
+        <span class="phone"></span>
+    </p>
+    <p class="userName">
+        <img id="sex" src="img/member/bd1017001.png">
+        <span class="nickname"></span>
+        &nbsp;&nbsp;
+        我的积分：
+        <img src="img/member/jf.png">
+        <span class="credits"></span>
+    </p>
+</header>
+
+<!--可切换的分享内容-->
+<div class="share-content clear border">
+    <div class="main">
+        <ul>
+            <li class="show" id="1">
+                <input type="hidden" class="url" value="www.baidu.com.cn"/>
+                <img src="pic1/share/fx01.png" alt="" title="share_pic" class="share_pic">
+                <h2 class="title">分享标题1</h2>
+                <p class="share_cont">111孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了,流量拿不停，朋友圈转疯了</p>
+                <span class="articleCredits">积分:<span class="articleC">10</span></span>
+            </li>
+            <li class="hide" id="2">
+                <input type="hidden" class="url" value="www.baidu.com.cn"/>
+                <img src="pic1/share/fx02.png" alt="" title="share_pic" class="share_pic">
+                <h2 class="title">分享标题1分享标题1分享标题1分享标题1分享标题1分享标题1</h2>
+                <p class="share_cont">222孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了</p>
+                <span class="articleCredits">积分:<span class="articleC">20</span></span>
+            </li>
+            <li class="hide" id="3">
+                <input type="hidden" class="url" value="www.baidu.com.cn"/>
+                <img src="pic1/share/fx03.png" alt="" title="share_pic" class="share_pic">
+                <h2 class="title">分享标题1</h2>
+                <p class="share_cont">333孝感移动发福利啦，推荐好友，送积分，抽大奖，话费流量拿不停，朋友圈转疯了</p>
+                <span class="articleCredits">积分:<span class="articleC">30</span></span>
+            </li>
+        </ul>
+        <div class="btn-list clear">
+            <div class="change-btn" onclick="changeShareCont()">换一个</div>
+            <div class="share-btn">分享领积分</div>
+        </div>
+    </div>
+</div>
+<div class="draw-btn"><a href="javascript:void(0)">积分抽奖</a></div>
+<div class="rule-btn">查看分享获积分规则</div>
+<!--说明部分-->
+<div class="active-rule">
+    <div class="rule-square">
+        <h2 class="active-info-title">分享获积分规则<span class="close-icon"></span></h2>
+        <div class="active-info" style="overflow: hidden">
+            <p>1、分享网页赚积分，积分可以在积分抽奖中进行使用参与抽奖。</p>
+            <p>2、成功分享可获得积分，每个内容只获得一次积分奖励。</p>
+            <p class="bottom">3、分享图文内容，可根据需要点击更换。</p>
+        </div>
+        <div class="draw-btn draw-bg"><a href="javascript:void(0)">积分抽奖</a></div>
+    </div>
+</div>
+<div class="share-mask"><img class="share-signImg" src="img/exam/share02.png" alt=""/></div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script>
+    var aId = "2c93e4b857a2f5fe0157a2f8e4f80001";
+    var opId = "$!{openid}";
+</script>
+<script src="js/share.js"></script>
+#parse("/global/alert.vm")
+</body>
+</html>

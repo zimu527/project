@@ -1,0 +1,258 @@
+.bgBlue{
+    width:100%;
+    min-height:100%;}
+.rotateTop{
+    position:relative;}
+.roRight{
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    z-index:1;
+    width:4rem;
+    /*height:3.5rem;*/
+    /*line-height:1.5rem;*/
+    /*padding:0.25rem;*/
+    /*border-radius:5px;*/
+    /*background:#213953;*/
+
+    /*text-align:center;*/
+    /*color:#fff;*/
+}
+.contentRo{
+    position:relative;
+    margin-top: -9rem;
+    /*background:linear-gradient(#A50E2F , #213953);*/
+    /*background:-webkit-linear-gradient(#A50E2F , #213953);*/
+    /*background:-moz-linear-gradient(#A50E2F , #213953);*/
+    /*background:-o-linear-gradient(#A50E2F , #213953);*/
+}
+.rotate{
+    width:19.5rem;
+    margin:0 auto 0.5rem auto;
+    position:relative;}
+.lotteryBtn{
+    position:absolute;
+    top:6rem;
+    left:6rem;
+    z-index:1;
+    width:8rem;
+    height: 8rem;
+    background: url("../img/rotate/cj1102002.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-tap-highlight-color:transparent;
+}
+.lotteryBtn:active{
+    background: url("../img/rotate/cj1102002_1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.conDiv{
+    line-height:2rem;
+    color:#fff;
+}
+.hh1{
+    display:inline-block;
+    padding:0 0.5rem;
+    color:#fff;
+    border-radius:5px;
+    background:#ff6c00;}
+.pp1{
+    width: 13rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 10px;
+    background: #09d8f7;
+    text-align:center;
+    color:#fff;
+    margin: auto;
+}
+.colorY{
+    color:red;
+}
+.content2{
+    padding:0 1rem;
+}
+.rule{
+    width:10rem;
+    margin:0.5rem auto;
+    text-decoration:underline;
+    text-align:center;
+    color:red;
+    -webkit-tap-highlight-color:transparent;
+}
+.delete{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    width:2.5rem;
+}
+/*弹出框*/
+.popUp{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    width:100%;
+    height:100%;
+    background:rgba(0 , 0 , 0 , 0.8);
+    overflow:auto;
+}
+.popDiv{
+    padding-top:calc((100% - 11rem) / 2);}
+.popUpBox{
+    width:80%;
+    background:#fff;
+    border-radius:5px;
+    margin:auto;
+    padding:1rem;
+}
+.popForm{
+    margin-bottom:1rem;}
+.popImg{
+    height:2.5rem;
+    vertical-align:middle;
+    float:left;}
+.popInput{
+    width:calc(100% - 2.7rem);
+    height:2.5rem;
+    line-height:2.5rem\9;
+    *line-height:2.5rem;
+    border:solid 1px #CCC;
+    border-radius:0;
+    text-indent:0.5rem;
+    font-size:1rem;
+}
+.popBtn{
+    width:100%;
+    line-height:2.5rem;
+    text-align:center;
+    color:#fff;
+    clear:both;
+    background:#ff6c00;
+    border-radius:5px;
+    font-size:1.2rem;
+}
+.zhu{
+    text-align:center;
+    color:red;
+    margin-bottom:0.5rem;
+}
+/*我的奖品*/
+.popPrize{
+    color: #FFFFFF;
+    width:100%;
+    height:80%;
+    background:#09d8f7;
+    border-radius:5px;
+    padding:1rem;
+    line-height:2rem;
+    overflow: auto;
+}
+.popTop{
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+.prizeNo{
+    line-height: 3rem;
+}
+#prizeResult{
+    height:82%;
+    margin-top:-1rem;
+}
+.prizeTable{
+    width: 100%;
+    /*border: solid 1px #FFFFFF;*/
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding: 0 1rem;
+
+    color:#000;
+}
+.prizeTable tr{
+    height: 3rem;
+    text-align:center;
+}
+.prizeTable tr th{
+    border-bottom:solid 1px #fff;
+}
+.td1{
+    width: 4rem;
+}
+.td2{
+    width: 6rem;
+}
+/*透明层*/
+.transDiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/*活动规则*/
+.ruleCon{
+    padding:2rem 1rem 0 1rem;
+    height:100%;
+}
+.con{
+    width:100%;
+    height: 80%;
+    background:#09d8f7;
+    border-radius:5px;
+    padding:1rem;
+    line-height:2rem;
+    overflow: auto;
+}
+.con h3{
+    color:#fff;
+    font-size: 1.2rem;
+}
+.con p{
+    font-size: 1rem;
+}
+.deleteRule{
+    display:block;
+    width:3rem;
+    margin:auto;
+}
+
+
+/*积分不足*/
+.omgBox{
+    padding:8rem 2rem 0 2rem;
+    height:100%;
+}
+.omgDiv{
+    width:100%;
+    background:url("../img/rotate/cj1102005.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius:5px;
+    padding:2rem;
+    line-height:2rem;
+    overflow: auto;
+}
+.btnDiv{
+    display:-webkit-flex;
+    display:flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.btnDiv a{
+    display: block;
+    width: 45%;
+    text-align: center;
+    border-radius: 5px;
+}
+.item_left{
+    background: #ff7e4c;
+    color: #FFFFFF;
+}
+.item_right{
+    background: #fff;
+    color: #000;
+}

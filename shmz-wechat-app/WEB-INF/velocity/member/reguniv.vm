@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <title>注册</title>
+    <img style="display: none;">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div class="bgdcf0b2">
+    <img class="themeImg" src="img/member/bd1017003.png">
+    <h1>个人信息绑定</h1>
+    <form id="schoolForm" name="bindForm" method="post" action="member.do?op=bindUniv&a=$!{aid}"  onsubmit="return bindMember()">
+        <table>
+            <tr>
+                <td class="must">昵称：</td>
+                <td><input name="nickName" id="nickName" type="text" value="$!{nickname}" disabled></td>
+            </tr>
+            <tr>
+                <td class="must">性别：</td>
+                <td>
+                    <input id="male" name="sex" type="radio" value="1" checked="checked">
+                    <label for="male"><img class="sexImg1" src="img/member/bd1017002.png"></label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="female" name="sex" type="radio" value="2">
+                    <label for="female"><img class="sexImg2" src="img/member/bd1017001.png"></label>
+                </td>
+            </tr>
+            <tr>
+                <td class="must">入校时间：</td>
+                <td>
+                    <select name="schoolTime" id="enterTime"><option value="">选择入校时间</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="must">学校：</td>
+                <td>
+                    <select name="univ" id="school" onchange="selectA()"><option value="">选择学校</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="must">校区：</td>
+                <td>
+                    <select name="campus" id="campus"><option value="">选择校区</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="must">院系：</td>
+                <td>
+                    <select name="department" id="department"><option value="">选择院系</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td>专业：</td>
+                <td><input name="major" id="major" type="text" placeholder="输入您的专业"></td>
+            </tr>
+            <tr>
+                <td class="must">微信号：</td>
+                <td><input name="wechatId" type="text" id="chatName" placeholder="输入您的微信号"></td>
+            </tr>
+            <tr class="tr1">
+                <td></td>
+                <td><p class="must">有可能是手机号或QQ号</p></td>
+            </tr>
+            <tr>
+                <td>二维码：</td>
+                <td>
+                    <div class="inputDiv">
+                        <input name="qrcode" type="hidden" value="">
+                        <span id="showImg"></span>
+                        <img class="addImg" src="img/member/bd1017005.png" style="width:2rem;" onclick="addImg()">
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td></td>
+                <td><p class="must">请上传个人微信二维码</p></td>
+            </tr>
+        </table>
+        <input name="openid" type="hidden" value="$!{openid}">
+        <input name="urlLabel" type="hidden" value="$!{urlLabel}">
+        <input class="register" type="submit" value="立即绑定">
+    </form>
+</div>
+#parse("/global/alert.vm")
+<script>
+    //接口所给参数
+    var opId = '$!{openid}';
+    var aId = '$!{aid}';//微信账号id
+</script>
+<script src="js/common.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/regSchool.js"></script>
+</body>
+</html>

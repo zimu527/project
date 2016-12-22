@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <title>锡盟移动宪法答题竞赛</title>
+	<link href="css/examConstitution/commonExam.css" rel="stylesheet">
+    <link href="css/examConstitution/examConstitution.css" rel="stylesheet">
+</head>
+<body class="indexBg">
+<div class="index-cont">
+    <div class="active-info-box">
+        <div class="opacityBg"></div>
+        <div class="active-info fs12">
+            <h4>活动说明：</h4>
+            <p>1.答题截止时间：2016年12月21日23:59:59。<br>2.每位参与用户只能答题一次，提交后不可更改。</p>
+        </div>
+    </div>
+</div>
+<div class="index-btn footer">
+    <div class="submit-btn-bg fs16">
+        <a class="submit-btn startAnswer-btn highlight" href="javascript:void(0)">开始答题</a>
+    </div>
+</div>
+
+#parse("/global/alert.vm")
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+
+<script>
+    var activityId = '$!{activityId}';
+    var opId = '$!{openid}';
+    var aId = '$!{aid}';
+    var aw = '$!{aw}';
+    var status = '$!{status}';
+
+    //分享参数
+    var overlordTitle = "锡盟移动宪法答题竞赛";
+    var overlordDesc = "快来参与宪法答题竞赛，看看你对宪法知识了解多少！";
+    var overlordImg =  "img/examConstitution/shareImg.jpg";
+</script>  
+<script src="js/wxShare.js"></script>
+<script src="js/examConstitution/examConstitution.js"></script> 
+<script>
+    $(document).ready(function(){
+    	checkExamStatus();   
+        
+    });
+</script>
+</body>
+</html>

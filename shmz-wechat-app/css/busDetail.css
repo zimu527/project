@@ -1,0 +1,23 @@
+.input_box{
+    text-align: center;
+    margin-top: 1rem;
+}
+input[name="phone"]{
+    width: 60%;
+    height: 2.5rem;
+    background: #FFFFFF;
+    font-size: 1rem;
+    text-indent: 10px;
+    border: none;
+    border-radius: 5px;
+}
+input[name="manage"]{
+    display: block;
+    width: 60%;
+    line-height: 3rem;
+    margin: 1rem auto;
+    background: url("../img/recommend/an8.png") no-repeat;
+    background-size: 100% 100%;
+    font-size: 1rem;
+    border: none;
+}

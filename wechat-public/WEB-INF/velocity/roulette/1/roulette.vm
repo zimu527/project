@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name = "format-detection" content="telephone = no" />
+<meta name = "format-detection" content="email = no" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<title>幸运大抽奖</title>
+<img class="hide" src="img/register/liwu.png">
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/json-mini.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<style>
+.bgBlue{
+	width:100%;
+	min-height:100%;}
+.rotateTop{
+	position:relative;}
+.roRight{
+	position:absolute;
+	top:1rem;
+	right:1rem;
+	z-index:1;
+	width:3.5rem;
+	height:3.5rem;
+	line-height:1.5rem;
+	padding:0.25rem;
+	border-radius:5px;
+	background:#213953;
+	text-align:center;
+	color:#fff;}
+.contentRo{
+	position:relative;
+	background:linear-gradient(#A50E2F , #213953);
+	background:-webkit-linear-gradient(#A50E2F , #213953);
+	background:-moz-linear-gradient(#A50E2F , #213953);
+	background:-o-linear-gradient(#A50E2F , #213953);}
+.rotate{
+	width:19.5rem;
+	margin:0 auto 1rem auto;
+	position:relative;}
+.lotteryBtn{
+	width:8rem;
+	position:absolute;
+	top:6rem;
+	left:6rem;
+	z-index:1;}
+.conDiv{
+	line-height:2rem;
+	color:#fff;
+}
+.hh1{
+	display:inline-block;
+	padding:0 0.5rem;
+	color:#fff;
+	border-radius:5px;
+	background:#ff6c00;}
+.pp1{
+    text-align:center;
+    color:#fff;
+    margin-bottom:0.5rem;
+}
+.colorY{
+    color:rgb(239 , 209 , 56);
+}
+.content2{
+    padding:0 1rem;
+}
+/*弹出框*/
+.popUp{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:2;
+	width:100%;
+	height:100%;
+	background:rgba(0 , 0 , 0 , 0.8);
+	overflow:auto;
+}
+.popDiv{
+	padding-top:calc((100% - 11rem) / 2);}
+.popUpBox{
+	width:80%;
+	height:13rem;
+	background:#fff;
+	border-radius:5px;
+	margin:auto;
+	padding:1rem;}
+.popForm{
+	margin-bottom:1rem;}
+.popImg{
+	width:2.2rem;
+	vertical-align:middle;
+	float:left;}
+.popInput{
+	width:calc(100% - 2.2rem);
+	height:2.2rem;
+	line-height:2.2rem\9;
+	*line-height:2.2rem;
+	border:solid 1px #CCC;
+	border-radius:0;
+	text-indent:0.5rem;}
+.popBtn{
+	clear:both;
+	background:#ff6c00;
+}
+.zhu{
+    text-align:center;
+    color:red;
+}
+/*我的奖品*/
+.popPrize{
+	color: #FFFFFF;
+}
+	.popTop{
+		width: 100%;
+		height: 4rem;
+		color: #FFFFFF;
+		text-align: center;
+		line-height: 4rem;
+		border-bottom: solid 1px #FFFFFF;
+	}
+	.delete{
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 2rem;
+	}
+	.prizeNo{
+		line-height: 3rem;
+	}
+	.prizeTable{
+		width: 100%;
+		border: solid 1px #FFFFFF;
+		border-radius: 5px;
+		border-collapse: separate;
+		padding: 0 1rem;
+		margin-bottom: 1rem;
+	}
+	.prizeTable tr{
+		height: 3rem;
+	}
+	.td1{
+		width: 4rem;
+	}
+	.td2{
+		width: 6rem;
+	}
+	/*透明层*/
+	.transDiv{
+	    width: 100%;
+	    height: 100%;
+	    
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 100;
+	}
+</style>
+</head>
+
+<body>
+	<div class="bgBlue">
+		<div class="rotateTop">
+			<img class="imgWidth100" src="img/rotate/cj0622001.jpg">
+			<div class="roRight fs24" id="myPrize" onclick="myPrize()">我的<br>奖品</div>
+		</div>
+		<div class="contentRo">
+		    <p class='pp1'>您今天还有<span class='colorY' id='remainRotate'>0</span>次抽奖机会</p>
+			<div class="rotate">
+				<img class="imgWidth100" src="imgroulette/zp0606003.png">
+				<img class="lotteryBtn" src="imgroulette/arrow_green.png" id="lotteryBtn">
+			</div>
+			<div class="content2">
+				<div class="conDiv">
+					<p class="fs24 hh1">活动时间</p>
+					<p class="fs24">2016年6月2日--6月31日</p>
+					<p class="fs24 hh1">奖品设置</p>
+					<p class="fs24">凡孝感移动微信粉丝用户当月运动</p>
+					<p class="fs24 hh1">活动说明</p>
+					<p class="fs24">凡孝感移动微信粉丝用户当月运动</p>
+					<p class="fs24 hh1">主办单位</p>
+					<p class="fs24">运动成绩截图，活动结束后针对成功参</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--输入姓名和手机号弹窗-->
+	<div class="popUp hide" id="inputData">
+		<img class="delete" src="img/vote/x0607.png">
+		<div class="popDiv">
+			<div class="popUpBox">
+				<form class="popForm">
+					<label for="userName">
+						<img class="popImg" src="img/register/hy0303005.png">
+					</label>
+					<input class="popInput fs24" id="userName" type="text" placeholder="请输入姓名">
+				</form>
+				<form class="popForm">
+					<label for="userPhone">
+						<img class="popImg" src="img/register/hy0303003.png">
+					</label>
+					<input class="popInput fs24" id="userPhone" type="tel" placeholder="请输入手机号码">
+				</form>
+				<p class="zhu fs22">请仔细核对您的号码，便于兑奖！</p>
+				<div class="btn popBtn" onClick="commitData()">提交</div>
+			</div>
+		</div>
+	</div>
+	<!--我的奖品弹窗-->
+	<div class="popUp hide" id="prizeList">
+		<img class="delete" src="img/vote/x0607.png">
+
+		<div class="popPrize">
+            <p class="popTop fs30">我的奖品</p>
+			<div class="content" id="prizeResult"></div>
+		</div>
+	</div>
+	<div class='transDiv hide'></div>
+<script>
+var aId = "402881e8461795c201461795c2e90000";
+var rId = 1;//大转盘ID
+var opId = "$!{openid}";
+//var memberflag = 1;
+var memberflag = "$!{memberflag}";//用户身份 1 粉丝  2 会员
+var status = "$!{status}";
+var num = "$!{credits}";
+</script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src='js/dateUtils.js'></script>
+#parse("/global/alert.vm")
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script src="js/rotate.js"></script>
+</body>
+</html>

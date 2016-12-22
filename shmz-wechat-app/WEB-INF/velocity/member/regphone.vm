@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <title>注册</title>
+    <img style="display: none;">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="bgdcf0b2">
+        <img class="imgWidth100" src="img/register/dl1118001.jpg">
+        <form  id="phoneForm" name="bindForm" method="post" action="member.do?op=register"  onsubmit="return bindMember()">
+            <table>
+                <tr class="tr3">
+                    <td>手机号：</td>
+                    <td><input name="phone" id="phone" type="tel" value=""></td>
+                </tr>
+                <tr class="tr3">
+                    <td>图形验证：</td>
+                    <td class="tdBox">
+                        <input id="randCode" type="text">
+                        <img id="imgYZM" src="member.do?op=getRandCode" alt="图形验证码" onClick="refreshImg()">
+                    </td>
+                </tr>
+                <tr class="tr3">
+                    <td>验证码：</td>
+                    <td class="tdBox">
+                        <input id="yzm" type="text" name="verifyCode">
+                        <span class="btnYzm" id="acYzm" onclick="acquireYzm()">获取验证码</span>
+                    </td>
+                </tr>
+                <tr class="tr2">
+                    <td>
+                        <input id="agree" type="checkbox">
+                    </td>
+                    <td class="agree" onclick="$('#agreeBox').removeClass('hide');">我已经阅读并接受《上海移动微信会员绑定免责说明》</td>
+                </tr>
+            </table>
+            <input name="callbackurl" type="hidden" value="$!{callbackurl}">
+            <input id="register" class="registerNo" type="submit" value="立即绑定" disabled="disabled">
+        </form>
+    </div>
+    <!--免责说明-->
+    <div class="agreeBox hide" id="agreeBox">
+        <img class="delete" src="img/register/bc5bdee.png" onclick="$('#agreeBox').addClass('hide');">
+        <h1>用户协议</h1>
+        <ol>
+            <li>上海移动动感俱乐部微信平台上的部分活动需要用户绑定信息后才可参与；</li>
+            <li>用户绑定后自动授权上海移动动感俱乐部微信号获取个人微信的基本信息；</li>
+            <li>用户上传的个人信息必须真实有效，否则后果自负；</li>
+            <li>用户上传的头像及个人信息中不得带有暴力、色情等非法内容，否则予以屏蔽，情节严重者追究法律责任；</li>
+            <li>移动虚拟类奖品均默认赠送至用户已绑定的手机号码；</li>
+            <li>绑定用户必须为上海移动三大品牌真实有效的实名制登记客户，无限量套餐客户暂不可以参与；</li>
+            <li>对此微信平台上的所有活动及内容，上海移动动感俱乐部拥有最终解释权；</li>
+        </ol>
+    </div>
+    #parse("/global/alert.vm")
+    <script>
+        //接口所给参数
+//        var opId = '$!{openid}';
+        var aId = '$!{aid}';//微信账号id
+    </script>
+    <script src="js/common.js"></script>
+    <script src="js/wxShare.js"></script>
+    <script src="js/registerPhone.js"></script>
+</body>
+</html>

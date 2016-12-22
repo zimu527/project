@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/discountList.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <title>活动集中营</title>
+</head>
+<body style="background-color: #dcf0b0">
+<div class="header">
+    <img class="headerImg" src="img/activityConcentration/hdjzy10202.jpg" alt="">
+</div>
+<div class="cont">
+    <div class="discount-list">
+        <ul>
+            <li>
+                <a href=""><span class=discount-title>话说天下三分，分久必合，合久必分</span><img class="discount" src="pic1/23c26cd.jpg" alt=\"logo\"></a>
+            </li>
+            <li>
+                <a  href=""><span class=discount-title>古今多少事，都付笑谈中</span><img src="pic1/532c5d24.jpg" alt=\"logo\"></a>
+            </li>
+            <li>
+                <a href=""><span class=discount-title>太阳当空照，花儿对我笑</span><img src="pic1/565781b.jpg" alt=\"logo\"></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+        <div class="m-sideBar po-fixed">
+            <div data-component="page.home.fragment.backTop" data-id="page.home.fragment.backTop_45">
+                <a data-node="nodeLink" href="javascript:void(0);" class="m-goTop hide" id="m-goTop">
+                    <i class="c-glyphicon c-glyphicon-arrowUp"></i>
+                    <span>顶部</span>
+                </a>
+            </div>
+        </div>
+    -->
+
+</div>
+<script>
+    //分享参数
+    var activityConcentrationTitle = "活动集中营分享标题";
+    var activityConcentrationDesc = "活动集中营活动集中营活动集中营活动集中营活动集中营的分享描述";
+    var activityConcentrationImg =  "img/exam/kt1013001.jpg";
+    //分享
+    var activityConcentrationUrl = getShareUrl();//获取当前页面地址
+    wxShare(activityConcentrationTitle , activityConcentrationDesc , activityConcentrationImg , activityConcentrationUrl);
+</script>
+<script src="js/wxShare.js"></script>
+</body>
+</html>

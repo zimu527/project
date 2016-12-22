@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/swiper-3.3.1.min.css" type="text/css" rel="stylesheet">
+    <title>产品秀</title>
+    <img class="hide" src="img/booking/b.jpg">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <style>
+        html{
+            height:100%;
+        }
+        body{ height:100%; }
+        .bg{
+            padding-bottom:0.5rem;
+        }
+        .header{
+            margin-bottom: 0.5rem;
+        }
+        table{
+            width: 100%;
+        }
+        table tr td{
+            width: 33.33%;
+            width: calc(100% / 3);
+            border: solid 1px rgb(229 , 229 , 229);
+            padding: 0.5rem 0.8rem;
+        }
+        .productA{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #000;
+        }
+        .productA p{
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="bgWhite bg">
+    <div class="header">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="http://www.baidu.com"><img class="imgWidth100" src="pic1/member/yy1.jpg"></a></div>
+                <div class="swiper-slide"><a><img class="imgWidth100" src="pic1/member/yy2.jpg"></a></div>
+                <div class="swiper-slide"><a><img class="imgWidth100" src="pic1/member/yy3.jpg"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <a class="productA" href="booking.do?op=prodDetail&b=1&p=1">
+                    <img class="imgWidth100" src="pic1/1.jpg">
+                    <p>校园宽带</p>
+                </a>
+
+            </td>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/2.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/4.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/1.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/5.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/6.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/7.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+            <td>
+                <a class="productA">
+                    <img class="imgWidth100" src="pic1/1.jpg">
+                    <p>校园宽带</p>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var aId = "402881e8461795c201461795c2e90000";
+    wxShare(bookTitle , bookDesc , bookImg , bookUrl);
+    $('.productA').find('.imgWidth100').height($('.productA').find('img').width());
+    $(document).ready(function() {
+        var mySwiper = new Swiper('.swiper-container',{
+            autoplay: 3000,
+            loop: true,
+            pagination : '.swiper-pagination'
+        });
+    });
+</script>
+</body>
+</html>

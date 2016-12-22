@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <title>校园宽带</title>
+    <img class="hide" src="img/booking/b.jpg">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/bwrdfr-i.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/json-mini.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            height:100%;
+        }
+        h3{
+            text-align: center;
+            margin: 1rem auto 0 auto;
+        }
+        .btnBook{
+            display: block;
+            background: rgb(0 , 157 , 217);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="fs32">校园宽带</h3>
+    <!--详情编辑-->
+    <div class="content"></div>
+    <!--预约按钮-->
+    <div class="content">
+        <a class="btn btnBook" href="booking.do?op=booking&p=1">去预约</a>
+    </div>
+<script src="js/shareInfo.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var aId = "402881e8461795c201461795c2e90000";
+    wxShare(bookTitle , bookDesc , bookImg , bookUrl);
+</script>
+</body>
+</html>

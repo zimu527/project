@@ -89,28 +89,21 @@ body{
 }
 .sd1{
     background-color: #870001;
-    background-color: #fff;
 }
 .sd2{
     background-color: #ff9aaf;
-    background-color: #fff;
 }
 .sd3{
     background-color: #d6ceb1;
-    background-color: #fff;
 }
 .yd1{
-	
     background-color: #fff3e3;
-    background-color: #fff;
 }
 .yd2{
     background-color: #8c011b;
-    background-color: #fff;
 }
 .yd3{
     background-color: #551109;
-    background-color: #fff;
 }
 
 .bg{
@@ -131,24 +124,6 @@ body{
 .bg-img-middle img,.bg-img-bottom img,.bg-img-top img{
     height: 100%;
 }
-.padding-Top6{
-	padding-top:.6rem
-}
-.padding-Top4{
-	padding-top:.4rem
-}
-.padding-Top3{
-	padding-top:.3rem
-}
-.padding-Top2{
-	padding-top:.2rem
-}
-.padding-Top1{
-	padding-top:.1rem
-}
-.margin-Top3{
-	margin-top:-0.3rem
-}
 .clock{
     position: fixed;
     top: .3rem;
@@ -164,18 +139,17 @@ body{
 }
 .cont{
     position: absolute;
-    top: 4.8rem;
+    top: 4.68rem;
     left: 0;
     width: 4rem;
     margin-left: 1.75rem;
 }
-/* .cont-sd3{
+.cont-sd3{
     position: absolute;
     top: 5.2rem;
     left: 0;
-} */
+}
 .user{
-	overflow:hidden;
     z-index: 2;
     width: 100%;
     height: .6rem;
@@ -201,37 +175,26 @@ body{
     padding-top: .2rem;
     animation: fadeInDown 1000ms 1200ms both;
     -webkit-animation: fadeInDown 1300ms 1200ms both;
-    -o-animation: fadeInDown 1000ms 1200ms both;
-    -moz-animation: fadeInDown 1000ms 1200ms both;
-}
-.message2{
-    animation: zoomIn 1000ms 1200ms both;
-    -webkit-animation: zoomIn 1300ms 1200ms both;
-    -o-animation: zoomIn 1000ms 1200ms both;
-    -moz-animation: zoomIn 1000ms 1200ms both;
+    -o-animation: flipInY 1000ms 1200ms both;
+    -moz-animation: flipInY 1000ms 1200ms both;
 }
 .btn-list{
-    /*display: flex;
+    /*
+    display: flex;
     display: -webkit-flex;
     width: 90%;
     justify-content: space-between;
     */
     /*margin-top: .3rem;*/
     position: absolute;
-    top: 8.9rem;
-    left: 0;
-}
-/* .btn-list-sd2{
-    position: absolute;
-    top: 7.5rem;
-    left: 0;
-}
-.btn-list-sd3{
-    position: absolute;
-    top: 8.2rem;
     top: 9rem;
     left: 0;
-} */
+}
+.btn-list-sd2{
+    position: absolute;
+    top: 7.2rem;
+    left: 0;
+}
 .btn{
     display: inline-block;
     width: 40%;
@@ -244,71 +207,89 @@ body{
     border-radius: 5px;
     text-align: center;
     box-shadow: 2px 2px 5px #333;
-    animation: fadeInUp 1000ms ease 1600ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
-    -o-animation: fadeInUp 1000ms ease 1600ms both;
-    -moz-animation: fadeInUp 1000ms ease 1600ms both;
-}
-.btn:hover,.btn:active{
-	box-shadow:none;
+    animation: fadeInUp 1000ms ease 1500ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1500ms both;
+    -o-animation: fadeInUp 1000ms ease 1500ms both;
+    -moz-animation: fadeInUp 1000ms ease 1500ms both;
 }
 .btn-greeen{
     background-color: #508b0a;
-    animation: fadeInUp 1000ms ease 1900ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
-    -o-animation: fadeInUp 1000ms ease 1900ms both;
-    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card2-1{
     background-color: #d61820;
-    animation: fadeInUp 1000ms ease 1600ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
-    -o-animation: fadeInUp 1000ms ease 1600ms both;
-    -moz-animation: fadeInUp 1000ms ease 1600ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card2-2{
     background-color: #2b345d;
-    animation: fadeInUp 1000ms ease 1900ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
-    -o-animation: fadeInUp 1000ms ease 1900ms both;
-    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card4-1{
     background-color: #e48f00;
-    animation: fadeInUp 1000ms ease 1600ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
-    -o-animation: fadeInUp 1000ms ease 1600ms both;
-    -moz-animation: fadeInUp 1000ms ease 16 00ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card4-2{
     background-color: #6d5140;
-    animation: fadeInUp 1000ms ease 1900ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
-    -o-animation: fadeInUp 1000ms ease 1900ms both;
-    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card5-1{
     background-color: #f8386f;
-    animation: fadeInUp 1000ms ease 1600ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1600ms both;
-    -o-animation: fadeInUp 1000ms ease 1600ms both;
-    -moz-animation: fadeInUp 1000ms ease 1600ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card5-2{
     background-color: #e08e00;
-    animation: fadeInUp 1000ms ease 1900ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
-    -o-animation: fadeInUp 1000ms ease 1900ms both;
-    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
 .btn-card6-2{
     background-color: #340d06;
-    animation: fadeInUp 1000ms ease 1900ms both;
-    -webkit-animation: fadeInUp 1000ms ease 1900ms both;
-    -o-animation: fadeInUp 1000ms ease 1900ms both;
-    -moz-animation: fadeInUp 1000ms ease 1900ms both;
+    margin-bottom: .3rem;
+    animation: fadeInUp 1000ms ease 1700ms both;
+    -webkit-animation: fadeInUp 1000ms ease 1700ms both;
+    -o-animation: fadeInUp 1000ms ease 1700ms both;
+    -moz-animation: fadeInUp 1000ms ease 1700ms both;
 }
-
+.rotate{
+    animation:grow 0.7s 0.4s 1 ease, music-move 1s 3.3s infinite alternate ease-in-out;
+    -webkit-animation:grow 0.7s 0.4s 1 ease, music-move 1s 3.3s infinite alternate ease-in-out;
+    transform-origin: top;
+    -webkit-transform-origin: top;
+}
+.swing{
+    -webkit-animation:swinging 10s ease-in-out 0s infinite;
+    -moz-animation:swinging 10s ease-in-out 0s infinite;
+    animation:swinging 10s ease-in-out 0s infinite;
+    -webkit-transform-origin:50% 0;
+    -moz-transform-origin:50% 0;
+    transform-origin:50% 0;
+}
 /*分享弹窗*/
 .share-mask {
     display: none;

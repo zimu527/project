@@ -1,3 +1,86 @@
+@-webkit-keyframes swinging{
+  0%{ -webkit-transform: rotate(0deg); }
+  5% { -webkit-transform: rotate(10deg); }
+  10% { -webkit-transform: rotate(-9deg); }
+  15% { -webkit-transform: rotate(8deg); }
+  20% { -webkit-transform: rotate(-7deg); }
+  25% { -webkit-transform: rotate(6deg); }
+  30% { -webkit-transform: rotate(-5deg); }
+  35% { -webkit-transform: rotate(4deg); }
+  40% { -webkit-transform: rotate(-3deg); }
+  45% { -webkit-transform: rotate(2deg); }
+  50% { -webkit-transform: rotate(0deg); } /* Come to rest at 50%. The rest is just stillness */
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+@-moz-keyframes swinging{
+  0% { -moz-transform: rotate(0deg); }
+  5% { -moz-transform: rotate(10deg); }
+  10% { -moz-transform: rotate(-9deg); }
+  15% { -moz-transform: rotate(8deg); }
+  20% { -moz-transform: rotate(-7deg); }
+  25% { -moz-transform: rotate(6deg); }
+  30% { -moz-transform: rotate(-5deg); }
+  35% { -moz-transform: rotate(4deg); }
+  40% { -moz-transform: rotate(-3deg); }
+  45% { -moz-transform: rotate(2deg); }
+  50% { -moz-transform: rotate(0deg); } /* Come to rest at 50%. The rest is just stillness */
+  100% { -moz-transform: rotate(0deg); }
+}
+
+@keyframes swinging{
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(10deg); }
+  10% { transform: rotate(-9deg); }
+  15% { transform: rotate(8deg); }
+  20% { transform: rotate(-7deg); }
+  25% { transform: rotate(6deg); }
+  30% { transform: rotate(-5deg); }
+  35% { transform: rotate(4deg); }
+  40% { transform: rotate(-3deg); }
+  45% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); } /* Come to rest at 50%. The rest is just stillness */
+  100% { transform: rotate(0deg); }
+}
+@keyframes music-move
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  66% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes music-move /* Safari and Chrome */
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  66% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
 @keyframes change360
 {
   0%,100%   {
@@ -463,7 +546,7 @@ fadeIn
     transform: translate3d(0, 0, 0);
   }
 }
-.animated.fadeInUp {/* 从下往上 */
+.animated.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -o-animation-name: fadeInUp;

@@ -2,11 +2,11 @@
 document.body.addEventListener('touchstart', function () { });
 $(".conH").css("min-height" , ($("html").height() - $("#top").height() - $("#info").height()) + "px");
 var voteUrl = getRootUrl() + "vote.do?op=index&v=" + voteId;//获取当前页面地
-//if(ti == 'undefined' || ti == null || ti == "" || de == 'undefined' || de == null || de == "" || im == 'undefined' || im == null || im == ""){
-//	wxShare(voteTitle , voteDesc , voteImg , voteUrl); //微信分享调用
-//}else{
+if(ti == 'undefined' || ti == null || ti == "" || de == 'undefined' || de == null || de == "" || im == 'undefined' || im == null || im == ""){
+	wxShare(voteTitle , voteDesc , voteImg , voteUrl); //微信分享调用
+}else{
 	wxShare(ti , de , im , voteUrl);
-//}
+}
 
 
 $(document).ready(function(){

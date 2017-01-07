@@ -28,6 +28,9 @@ $(document).ready(function() {
     }else {
         $('#sex').attr('src' , 'img/member/bd1017002.png');//男
     }
+    $(".goToDraw").click(function(){
+    		window.location.href="http://wxtest.bw30.com/shmz-wechat-app/lucky.do?op=roulette&r="+;
+    	});
 });
 //削字
 function GetLength(str,x){
@@ -143,9 +146,7 @@ function ShareStatisticoOnResult(result){
     	popBoxAlert("","不给力！刷新重试");
     }else{
         if(result.data.result==0){
-            var newCredits = parseInt($("#credits").text()) + parseInt($(".articleC:visible").text());
-            //alert(parseInt($("#credits").text()));
-            //alert(parseInt($(".articleC:visible").text()));
+            var newCredits = parseInt($("#credits").text())+parseInt($(".articleC:visible").text());
             //alert(newCredits);
             $("#credits").text(newCredits);
             $("#shareCount").text(parseInt($("#shareCount").text())+1);

@@ -1,4 +1,4 @@
-html,body{color: #f20000;font-weight: bold;}
+html,body{min-height: 100%;color: #f20000;font-weight: bold;}
 @media screen and (min-width:239px){html,body{font-size:12px;}}
 @media screen and (min-width:319px){html,body{font-size:12px;}} /*将12px调整到12px*/
 @media screen and (min-width:359px){html,body{font-size:14px;}}
@@ -7,7 +7,6 @@ html,body{color: #f20000;font-weight: bold;}
 @media screen and (min-width:719px){html,body{font-size:31px;}}
 @media screen and (min-width:799px){html,body{font-size:34px;}}
 @media screen and (min-width:1023px){html,body{font-size:45px;}}
-
 .header,.main {
     position: relative;
     width: 100%;
@@ -27,14 +26,14 @@ a{
     top: 0;
     left: 0;
     */
-
+    min-height: 60%;
     padding-bottom: 20px;
     background: url("../img/exam/dt1017004.jpg") no-repeat;
     background-size: 100% 100%;
 }
-/*.main img{
+.main img{
     height: 100%;
-}*/
+}
 .cont{
     /*
     position: absolute;

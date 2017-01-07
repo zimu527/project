@@ -43,6 +43,7 @@ wx.ready(function(){
 	shareFriend();
 	//获取“分享到QQ”按钮点击状态及自定义分享内容接口
 	shareQQ();
+	//图像接口 
 });
 //步骤五：通过error接口处理失败验证
 wx.error(function(res){
@@ -59,7 +60,7 @@ function shareFriend(){
 		dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 		success: function () { 
 			// 用户确认分享后执行的回调函数
-			//alert('33'+wxUrl + wxTitle + wxDesc + wxImg);
+			//alert(wxUrl + wxTitle + wxDesc + wxImg);
 		},
 		cancel: function () { 
 			// 用户取消分享后执行的回调函数

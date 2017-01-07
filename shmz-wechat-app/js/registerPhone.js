@@ -1,8 +1,14 @@
-﻿
+
 //wxShare(registerTitle , registerDesc , registerImg , registerUrl);
+
+document.body.addEventListener('touchstart', function () { });
+
+//$('.loginInput > input').width($('.loginInput').width() - $('.loginInput >label').width() - 10);
+//$('.yzmInput > input').width($('.yzmInput').width() - $('.yzmInput > label').width() - $('.yzmInput > div').width()*13/12 - 10);
 
 //点击获取短信验证码
 function acquireYzm(){
+	//var name = $("#name").val();//姓名
 	var phone = $("#phone").val();//号码
 	var randCode = $("#randCode").val();//图形验证码
 	var judgeResult = judgeInput();
@@ -17,8 +23,7 @@ function acquireYzm(){
 		url:"member.do?op=sendVerifyCode",
 		data:{
 			mobile:phone,
-			randCode:randCode,
-			a:aId
+			randCode:randCode
 			//name:name
 		},
 		dataType:"json",
@@ -56,6 +61,7 @@ function acquireYzm(){
 }
 //点击注册
 function bindMember(){
+	//var name = $("#name").val();//姓名
 	var phone = $("#phone").val();//号码
 	var randCode = $("#randCode").val();//图形验证码
 	var yzmCode = $('#yzm').val();//短信验证码
@@ -116,7 +122,6 @@ function bindMember(){
 }
 //刷新图形验证码
 function refreshImg(){
-	//alert('11111');
 	var timestamp = (new Date()).valueOf();
 	$("#imgYZM").attr("src" , "member.do?op=getRandCode&t=" + timestamp);
 	$("#randCode").val("");
@@ -136,8 +141,13 @@ function countDown(){
 }
 //判断除了短信验证码之外其他的输入框
 function judgeInput(){
+	//var name = $("#name").val();//姓名
 	var phone = $("#phone").val();//号码
 	var randCode = $("#randCode").val();//图形验证码
+	//if(name == "undefined" || name == null || name == ""){
+	//	$('.nameP').text("请输入姓名");
+	//	return false;
+	//}
 	if(!(/^1[34578]\d{9}$/.test(phone))){
 		popBoxAlert("" , "请输入正确的手机号");
 		return false;
@@ -151,7 +161,6 @@ function judgeInput(){
 
 
 $(document).ready(function(){
-	$('#agree').removeAttr('checked');
 	//切换勾选，勾选则可以点击注册，
 	$('#agree').click(function(){
 		var re = $('#register');
@@ -163,6 +172,8 @@ $(document).ready(function(){
 			re.removeClass('register');
 			re.addClass('registerNo');
 			re.attr('disabled' , 'disabled');
+
 		}
 	});
+
 });

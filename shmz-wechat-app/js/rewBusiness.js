@@ -14,8 +14,7 @@ function BusinessDataOnResult(result){
         popBoxAlert('' , '不给力，刷新重试~');
     }else {
         $('#nickName').text(result.data.nickname);
-        $('#phone').text(result.data.phone);
-        var oTableDiv = $('.tableDiv');
+        $('#phone').attr('src' , result.data.phone);
         var oTable = $('#businessTable');
         if(result.data.promotionList.length > 0){
             $('#busNum').text(result.data.promotionList.length + "个");//成功推荐业务数
@@ -25,14 +24,10 @@ function BusinessDataOnResult(result){
                 var type = result.data.promotionList[i].rewardType;
                 var value = result.data.promotionList[i].rewardValue;
                 var reward;
-                if(type == 1){//奖励是流量 MB
-                    if(value >= 1024){
-                        reward = (value/1024).toFixed(2) + "GB流量";
-                    }else {
-                        reward = value + "MB流量";
-                    }
-                }else{//奖励是话费  分
-                    reward = value/100 + "元话费";
+                if(type == 1){//奖励  1是流量  2是话费
+                    reward = value;
+                }else {
+                    reward = value + "元";
                 }
                 var time = formatDate(result.data.endTime);//时间
                 var oTr1 = $('<tr class="tr1"><td rowspan="2"><img src="'+ result.data.promotionList[i].headimgurl +'"></td><td colspan="2">'+ result.data.promotionList[i].nickname +'&nbsp;&nbsp;'+ result.data.promotionList[i].businessName+'</td></tr>');
@@ -40,25 +35,21 @@ function BusinessDataOnResult(result){
                 oTable.append(oTr1).append(oTr2);
             }
         }else {
-            oTableDiv.append('<p class="noFriend">暂无好友</p>');
-            $('.boxTwo').addClass('hide');
-            //$('.tableTop').addClass('hide');
+            $('.tableDiv').addClass('hide');
+            $('.tableTop').addClass('hide');
         }
         if(result.data.rewardList.length > 0){
             var sumType = result.data.rewardList[0].rewardType;
             var sumValue = result.data.rewardList[0].rewardValue;
             var sumReward;
-            if(sumType == 1){//奖励是流量 MB
-                if(sumValue >= 1024){
-                    sumReward = (sumValue/1024).toFixed(2) + "GB流量";
-                }else {
-                    sumReward = sumValue + "MB流量";
-                }
-            }else{//奖励是话费  分
-                sumReward = sumValue/100 + "元话费";
+            if(sumType == 1){//奖励  1是流量  2是话费
+                sumReward = sumValue;
+            }else {
+                sumReward = sumValue + "元";
             }
             $('#reward').text(sumReward);//奖励
         }
+
     }
 }
 

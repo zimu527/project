@@ -1,0 +1,302 @@
+//话题信息查询
+var TopicServiceResult={data:{//openid,peroid,
+    'rs':0,
+    'topicinfo':{
+        'peroid':'20161212',
+        'title':'这里是话题的标题哦',
+        'content':'哈喽大家好这里是话题的内容哦~哈喽大家好这里是话题的内容哦~哈喽大家好这里是话题的内容哦~哈喽大家好这里是话题的内容哦~哈喽大家好这里是话题的内容哦~',
+        'images':'pic1/topic/topicImg.jpg',
+        'btime':1403931367000,
+        'etime':1403931597000,
+        'rtime':1403931897000,
+        'atime':1403931997000,
+        'prize':'1G流量',
+        'rule':'规则规则规则规则规则规则规则规则规则',
+        'threadsnum':100
+    }
+},'code':0};
+//帖子首页查询2.16
+var TopicThreadListServiceResult={data:{//openid,peroid,
+    'rs':0,//结果: 0 成功 1 当前期次不存在 其他 错误代码
+    'pages':3,
+    'list':[
+        {
+        'user':{
+            'openid':'1',
+            'nickname':'我是小明',
+            'image':''
+        },
+        'tid':1,
+        'time':1481784073048,
+        'content':'哈喽大家好这里是帖子的内容哦~只显示三行哈喽大家好这里是帖子的内容哦~只显示三行只显示三行只显示三显示三行只显示三行只显示三行行',
+        'images':'',
+        'likenum':1000,
+        'replynum':106600,
+        'rank':1
+        //'haveliked':false
+    },
+        {
+        'user':{
+            'openid':'2',
+            'nickname':'我是小明',
+            'image':''
+        },
+        'tid':1,
+        'time':1481784109143,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'images':'pic1/topic/dyzt.png',
+        'likenum':1000,
+        'replynum':106600,
+        'rank':2
+        //'haveliked':false
+    },
+        {
+        'user':{
+            'openid':'3',
+            'nickname':'我是小明',
+            'image':''
+        },
+        'tid':1,
+        'time':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容哦~哈喽大家好这里是帖子的内容哦~哈喽大家好这里是帖子的内容哦~哈喽大家好这里是帖子的内容哦~哈喽大家好这里是帖子的内容哦~哈喽大家好这里是帖子的内容哦~',
+        'images':'pic1/topic/a.jpg||pic1/topic/4.jpg',
+        'likenum':1000,
+        'replynum':106600,
+        'rank':2
+        //'haveliked':false
+    },
+        {
+        'user':{
+            'openid':'4',
+            'nickname':'我是小明',
+            'image':''
+        },
+        'tid':1,
+        'time':1403931567000,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'images':'pic1/topic/dyzt.png',
+        'likenum':1000,
+        'replynum':106600,
+        'rank':2
+        //'haveliked':false
+    },
+        {
+        'user':{
+            'openid':'5',
+            'nickname':'我是小明',
+            'image':''
+        },
+        'tid':1,
+        'time':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'images':'pic1/topic/dyzt.png',
+        'likenum':1000,
+        'replynum':106600,
+        'rank':2
+        //'haveliked':false
+    },
+        {
+        'user':{
+            'openid':'6',
+            'nickname':'我是小明2',
+            'image':'pic1/topic/a.jpg'
+        },
+        'tid':1,
+        'time':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容2哦~',
+        'images':'pic1/topic/a.jpg||pic1/topic/4.jpg||pic1/topic/dyzt.png',
+        'likenum':1000,
+        'replynum':106600,
+        //'rank':
+        //'haveliked':''
+    }
+    ]
+},'code':0};
+//帖子指定页查询2.15
+var TopicThreadListPageServiceResult={data:{//openid,peroid,page
+    'rs':0,//结果: 0 成功 1 指定期次不存在 2 指定页不存在 其他错误代码。
+    'page':2,
+    'list':[
+        {
+            'user':{
+                'openid':1,
+                'nickname':'我是小明',
+                'image':'pic1/topic/a.jpg'
+            },
+            'tid':1,
+            'time':1403931367000,
+            'content':'哈喽大家好这里是帖子的内容哦~',
+            'images':'pic1/topic/a.jpg||pic1/topic/4.jpg||pic1/topic/dyzt.png',
+            'likenum':1000,
+            'replynum':106600,
+            'rank':1,
+            'haveliked':true
+        }
+    ]
+},'code':0};
+//帖子详情查询2.18
+var TopicThreadOneServiceResult={data:{//openid,tid
+    'rs':0,//结果: 0 成功 1 指定帖子id不存在 其他
+    'pages':2,//评论页数。
+    'commentlist':[
+        {
+            'cid':1,
+            'user':{
+                'openid':1,
+                'nickname':'我是小明',
+                'image':'pic1/topic/a.jpg'
+            },
+            'commentflag':1,//评论标志: 1 评论 2 回复。
+            'replycid':12,//回复: 原评论id/回复id。
+            'replyuser':{//回复目标用户资料
+                'openid':1,
+                'nickname':'我是小红',
+                'image':'pic1/topic/a.jpg'
+            },
+            'rtime':1403931897000,
+            'content':'哈喽大家好这里是回复的内容哦~'
+        },
+        {
+            'cid':1,
+            'user':{
+                'openid':1,
+                'nickname':'我是小明',
+                'image':'pic1/topic/a.jpg'
+            },
+            'commentflag':2,//评论标志: 1 评论 2 回复。
+            'replycid':15,//回复: 原评论id/回复id。
+            'replyuser':{//回复目标用户资料
+                'openid':1,
+                'nickname':'我是小红',
+                'image':'pic1/topic/a.jpg'
+            },
+            'rtime':1403931897000,
+            'content':'哈喽大家好这里是回复的内容哦~'
+        }
+    ],
+    'threadinfo': {
+            'user':{
+                'openid':1,
+                'nickname':'我是小明',
+                'image':'pic1/topic/a.jpg'
+            },
+            'tid':1,
+            'time':1403931367000,
+            'content':'哈喽大家好这里是帖子的内容哦~',
+            'images':'pic1/topic/a.jpg||pic1/topic/4.jpg||pic1/topic/dyzt.png',
+            'likenum':1000,
+            'replynum':106600,
+            'rank':1,
+            'haveliked':false
+
+        }
+},'code':0};
+//评论查询
+var TopicThreadOneCommentPageService={data:{//openid,tid,page
+    'rs':0,//结果: 0 成功 1 指定帖子id不存在 2 指定页不存在 其他 错误代码。
+    'page':2,
+    'commentlist':[
+    {
+        'user':{//评论人/回复人用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        },
+        'cid':1,
+        'rtime':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'commentflag':1,//评论标志: 1 评论 2 回复
+        'replycid':1,//回复: 原评论id/回复id。
+        'replyuser':{//目标用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        }
+    },
+    {
+        'user':{//评论人/回复人用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        },
+        'cid':1,
+        'rtime':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'commentflag':1,//评论标志: 1 评论 2 回复
+        'replycid':2,//回复: 原评论id/回复id。
+        'replyuser':{//目标用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        }
+    },
+    {
+        'user':{//评论人/回复人用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        },
+        'cid':1,
+        'rtime':1403931367000,
+        'content':'哈喽大家好这里是帖子的内容哦~',
+        'commentflag':1,//评论标志: 1 评论 2 回复
+        'replycid':3,//回复: 原评论id/回复id。
+        'replyuser':{//目标用户资料
+            'openid':1,
+            'nickname':'我是小明',
+            'image':'pic1/topic/a.jpg'
+        }
+    }
+    ]
+},'code':0};
+//排行榜查询
+var TopicRankServiceResult={data:{//openid,peroid,
+    'rs':0,// 0 成功 1 当前期次不存在 其他
+    'rankinfo':{
+        'peroid':'20161212',
+        'showrs':false,//是否已经放榜: true 已经放榜 false 未放榜。
+        'content':'哈喽大家好这里是话题的内容哦~',
+        'time':1403931367000,//放榜时间。
+        'awardtime':1403931997000,//奖品发放时间
+        'list':[
+            {
+                'user':{
+                    'openid':1,
+                    'nickname':'我是小明',
+                    'image':'pic1/topic/a.jpg'
+                },
+                'tid':1,
+                'content':'哈喽大家好这里是帖子的内容哦~',
+                'rank':1
+            },
+            {
+                'user':{
+                    'openid':1,
+                    'nickname':'我是小明',
+                    'image':'pic1/topic/a.jpg'
+                },
+                'tid':1,
+                'content':'哈喽大家好这里是帖子的内容哦~',
+                'rank':1
+            },
+            {
+                'user':{
+                    'openid':1,
+                    'nickname':'我是小明',
+                    'image':'pic1/topic/a.jpg'
+                },
+                'tid':1,
+                'content':'哈喽大家好这里是帖子的内容哦~',
+                'rank':1
+            }
+        ]
+    }
+},'code':0};
+//点赞
+var TopicThreadLikeSubmitResult={data:{//openid,peroid,
+    'rs':0,// 0 成功 1 当前期次不存在 其他
+    'likenum':'1001'
+},'code':0};
+
+//
+

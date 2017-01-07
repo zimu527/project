@@ -8,7 +8,7 @@
 .newT{
     width: 80%;
     margin: -1px 0 0 12%;
-    padding: 2rem 0 1rem 0;
+    padding: 3rem 0 2rem 0;
     /*text-align: center;*/
     color: #FFFFFF;
     font-size: 1.2rem;
@@ -18,7 +18,7 @@
     margin: 0 0 0 12%;
     /*text-align: center;*/
     color: rgb(243 , 241 , 34);
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     padding-bottom: 3rem;
     line-height: 2.5rem;
 }
@@ -54,7 +54,7 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-#reward , #fansNum , #currentNum , .newP #targetNum{
+#reward , #fansNum , #currentNum{
     color: #fe6601;
 }
 #myReward a{
@@ -63,7 +63,7 @@
     height: 100%;
     color: #000000;
 }
-#reward , #fansNum , .newP #targetNum{
+#reward , #fansNum{
     font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
 }
 

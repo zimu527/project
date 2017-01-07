@@ -83,7 +83,7 @@ function bindMember(){
 	var department = $('#department option:selected').val();//院系
 	var major = $('#major').val();
 	var chatName = $('#chatName').val();//微信号
-	var qrCode = images.serverId[images.serverId.length-1];//二维码
+	var qrCode = images.serverId[0];//二维码
 	$('[name="qrcode"]').val(qrCode);
 
 	if(enterTime == "undefined" || enterTime == null || enterTime == ""){
@@ -145,8 +145,8 @@ function addImg(){
 					success: function (res) {
 						images.serverId.push(res.serverId);
 
-						//$('.addImg').before('<img id="showImg" src="'+ images.localId[0] +'" style="width:2rem;">');
-						$('#showImg').html('<img src="'+ images.localId[0] +'" style="height:1.6rem;">');
+						$('.addImg').before('<img id="showImg" src="'+ images.localId[0] +'" style="width:2rem;">');
+
 						//$("#showImg").attr('src' , );
 
 						//i++;

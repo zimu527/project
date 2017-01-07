@@ -6,15 +6,14 @@ var list=[
         "name":"校园八卦",
         "data":
             [
-                {"title":"东华大学缘分墙","cont":"通过上传照片和评价等帮认识的人找对象","url":"http://welife001.com/create/dhu/photo_guess","time":"长期","place":"东华微生活微信线上","img":"1.1.png"},
-                {"title":"东华大学千千阙歌十大歌手","cont":"校园十大歌手大赛，迎来总决赛","url":"http://mp.weixin.qq.com/s/LGCcn7fsJ0COoz_wRkykvQ","time":"12月4日 18:00","place":"锦绣会堂","img":"1.2.png"},
-                {"title":"上海外国语大学2016年校友返校日","cont":"各种活动签到游戏演出等","url":"http://mp.weixin.qq.com/s/59wB4zSoZTJoflI5g60pzA","time":"12月3日 10:00","place":"松江校区","img":"1.3.png"},
-                {"title":"上海大学留学生年度人物评选","cont":"在全体留学生中评选各种优秀人物","url":"http://mp.weixin.qq.com/s/ifKERSFvf6-KMpVcoEvyxw","time":"12月2日-9日投票阶段","place":"v","img":"1.4.png"}
-                {"title":"玩乐勇士年末狂澜","cont":"松江的朋友们和同学们还记得6月时的重击松江城么？那次是魔都老牌重型Chaos Mind携手硬核新贵Fighting Back的造访，在临走前我们向观众许诺我们年底还会再来！没错！时到年底我们又回来了！这次我们除了有大哥Chaos Mind以外还带来了厂牌的旋律金属核乐队Pray For Awakening，主唱妹纸年仅18岁。更是为大家带来了这几年在国内非常受关注的金属女神Moli和她的乐队Before The Daylight。","url":"https://www.douban.com/event/27832094/","time":"12月08日 周四 20:30-23:00","place":"上海 松江区 上海市松江区文汇路二期338弄211号","img":"1.5.jpg"},
-                {"title":"上外外交外事主题月活动第三届模拟新闻发言人大赛总决赛","cont":" 飞那儿话剧团倾情演出","url":"http://mp.weixin.qq.com/s/1BnhhMRjFpnrlSXgoKFIcg","time":"2016年12月8日（周四）17:30","place":"上外松江校区图文西厅","img":"1.6.jpg"},
-                {"title":"飞那儿成立十五周年系列演出 原创话剧《书中人》","cont":"今年11月至12月，学生工作部（处）将开展 “砥砺青春，筑梦青春”外交外事主题月活动，激发上外学子报效祖国的热情和投身外交事业的决心，提升上外学子在外交外事外宣方面的能力。","url":"http://mp.weixin.qq.com/s/XatE4KwZ2lPqBD0UVfkP6w","time":"12月4、5日 18:00-20:00","place":"上外松江校区3456小剧场","img":"1.7.jpg"},
-                {"title":"东华大学体育节闭幕式","cont":"体育节就快要结束啦，快来评选心目中的最美经理","url":"http://mp.weixin.qq.com/s/iOwLev68x0oAhXA6F4fGsA","time":"12月6日 15:30","place":"东华大学（松江）体育馆","img":"1.8.jpg"},
-                {"title":"高雅艺术进校园：Vocal Force力量之声高校巡回演唱会","cont":"力量之声（Vocal Force）作为上海打造的跨界演唱组合，三位成员同是毕业于上海音乐学院声乐歌剧系的硕士，现就职于高校担任声乐教师。他们不仅是唱功过硬的青年歌唱家，同时也是底蕴丰厚而为人亲和的传道者。","url":"http://mp.weixin.qq.com/s/Y1TWmNroJMHtb6gZuMAFpA","time":"12月7日（周三）18:00","place":"东华大学松江校区锦绣会堂","img":"1.9.jpg"}
+                {"title":"《大河之舞》2016升级版|上海站","cont":"全球第一踢踏舞剧,连续十七年欧美巡回票房排行榜冠军,荣膺格莱美“年度最佳音乐剧”大奖","url":"https://www.douban.com/event/27557430/","time":"01月10日 周二 19:15-21:15","place":"上海 黄浦区 人民大道300号","img":"1.1.png"},
+                {"title":"自然阅读七：怎样观察一棵树","cont":"本期讲座将重点讲解叶片的形态和构造以及上海地区常见30种树木的叶形特征","url":"https://www.douban.com/event/28075340/","time":"1月4日~1月15日每周六,日10:00-21:00","place":"上海 闵行区 虹桥天地购物中心G层","img":"1.2.png"},
+                {"title":"80后经典动漫演唱会II（圣斗士星矢、龙珠等）","cont":"这次演出除了保留之前的几个大块的经典作品部分外，如加入了新的《东京食尸鬼》的部分，还有车田正美老师《BT’X》小川老师的《中华小当家》等，经典的东西，永远都是经典的","url":"https://www.douban.com/event/27960906/","time":"2016年12月8日（周四）17:30","place":"上海黄浦区重庆南路308号3楼MAO Livehouse ","img":"1.3.png"},
+                {"title":"迎新春市集 New Year Bazaar @虹桥天地","cont":"2016倒计时，2017元旦迎新，每个周末虹桥天地等你来。","url":"https://www.douban.com/event/28039425/","time":"1月4日~1月15日 每周六,日 10:00 - 21:00","place":"上海 闵行区 虹桥天地购物中心G层","img":"1.4.png"},
+                {"title":"2017年上海新年模型交流展及比赛","cont":"2007年创办至今走过了从民间自发组织到由上海市群众艺术馆牵头主办的正式比赛。预计2017年的比赛当日将迎接超过3000人次的模型爱好者能齐聚一堂，展示作品、分享经验","url":"https://www.douban.com/event/28000307/","time":"1月4日~01月15日 每天 09:00 - 17:00","place":"上海徐汇区上海市群众艺术馆古宜路125号","img":"1.5.png"},
+                {"title":"再见2016！你好2017，新年狂欢派对报名开启！","cont":" 今年的跨年趴，可以做个不同的选择 :宅在家里看着无聊的跨年晚会？ or 和朋友一起欢脱的扭一扭！","url":"https://www.douban.com/event/28064997/","time":"1月4日~1月14日 每天13:30-18:30","place":"上海黄浦区黄浦区人民广场南京西路","img":"1.6.png"},
+                {"title":"全上海最靠谱的口语小组，你还在等什么？","cont":"由原新东方海归Tony Rong老师独创，专为时下繁忙的职场人士打造。","url":"https://www.douban.com/event/28044463/","time":"1月4日~01月12日 每天11:00-21:00","place":"上海 浦东新区 浦电路400号兴业嘉园B座1501室","img":"1.7.png"},
+      
             ]
     },
     {

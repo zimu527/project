@@ -10,8 +10,7 @@ html,body{height: 100%;}
 body{
     position: relative;
     height: 100%;
-    /*background-color: #c8df99;*/
-    /*padding-bottom: 0.5rem;*/
+    background-color: #c8df99;
 }
 
 @media screen and (min-width:239px){html,body{font-size:12px;}}
@@ -127,7 +126,7 @@ header{
 }
 .rule-btn{
     width: 9rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     padding-bottom: 2px;
     text-align: center;
     color: #dd127b;

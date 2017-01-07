@@ -7,11 +7,11 @@ var images = {
 document.body.addEventListener('touchstart', function () { });//解决:active的问题
 var voteUrl = getRootUrl() + "vote.do?op=index&v=" + voteId;//获取当前页面地址
 
-//if(ti == 'undefined' || ti == null || ti == "" || de == 'undefined' || de == null || de == "" || im == 'undefined' || im == null || im == ""){
-//	wxShare(voteTitle , voteDesc , voteImg , voteUrl); //微信分享调用
-//}else{
+if(ti == 'undefined' || ti == null || ti == "" || de == 'undefined' || de == null || de == "" || im == 'undefined' || im == null || im == ""){
+	wxShare(voteTitle , voteDesc , voteImg , voteUrl); //微信分享调用
+}else{
 	wxShare(ti , de , im , voteUrl);
-//}
+}
 
 var HEIGHT = $('#acJoin').height();
 $(window).resize(function() {
@@ -21,7 +21,7 @@ $(window).resize(function() {
 $(document).ready(function(){
 	//判断活动是否已结束或未开始
 	if(status == 1){
-		popBoxAlert("","亲，投票尚未开始！你可于现在上传你的美美哒照片哟~");
+		popBoxAlert("","来早啦！活动还未开始呢！");
 	}else if(status == 2){
 		popBoxAlert("","来迟了！活动结束，下次再来吧");
 	}

@@ -8,21 +8,18 @@ var url = getShareUrl();
 wxShare(title , desc , img , url);
 
 $(document).ready(function() {
-    if($('.swiper-slide').length > 1){
-        var mySwiper = new Swiper('.swiper-container',{
-            autoplay: 3000,
-            loop: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            pagination : '.swiper-pagination'
-        });
-    }
-
-    //2.14. 获取会员积分
+    var mySwiper = new Swiper('.swiper-container',{
+        autoplay: 3000,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination : '.swiper-pagination'
+    });
+    //2.3. 获取会员积分
     getCredit();
 });
 
-//2.14. 获取会员积分
+//2.3. 获取会员积分
 function getCredit(){
     var onResult = getCreditOnResult;
     var resultProcessor = {
@@ -83,7 +80,7 @@ function addImg(){
                         //}
                     },
                     fail: function () {
-                        popBoxAlert("" , "上传失败");
+                        popBoxAlert("提示" , "上传失败");
                     }
                 });
             };
@@ -97,12 +94,12 @@ function uploadImg(serverId){
     var resultProcessor = {
         'onResult':onResult
     };
-    BWFRI.MemberUploadQrcodeService ({'openid':opId , 'qrcodeMediaId':serverId[serverId.length-1]} , resultProcessor);
+    BWFRI.MemberUploadQrcodeService ({'openid':opId , 'qrcodeMediaId':serverId[0]} , resultProcessor);
 }
 function uploadImgOnResult(result){
     if(result.code != 0){
         popBoxAlert("",'不给力 刷新重试');
     }else{
-        popBoxAlert("" , "上传成功");
+        popBoxAlert("提示" , "上传成功");
     }
 }

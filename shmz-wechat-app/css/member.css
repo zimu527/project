@@ -6,8 +6,7 @@ html , body{
 .uImg-box{
     position: relative;
     width: 6rem;
-    margin: 0 auto 1rem auto;
-    padding-top: 0.5rem;
+    margin: 0.5rem auto 1rem auto;
 }
 .uImgBg{
     position: absolute;
@@ -62,7 +61,7 @@ table{
     border-bottom: solid 1px #CCCCCC;
     font-family: 'jianzhiyi';
 }
-.table-box table tr td:first-child , .table-box table tr td:nth-child(3) , .point-table table tr td:last-child{
+.table-box table tr td:first-child , .table-box table tr td:last-child , .point-table table tr td:last-child{
     text-align: right;
     width: 5rem;
 }

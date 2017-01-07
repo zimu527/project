@@ -1,0 +1,549 @@
+.highlight{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+
+body{
+    min-height: 100%;
+}
+a{
+    color:#333;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.blue{
+    color: #317ef3;
+}
+.yellow{
+    color: #ff5900;
+}
+img{
+    border: none;
+    vertical-align: bottom;
+}
+.green{
+    color: #4b611f;
+}
+.hide{
+    display: none;
+}
+.nowrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.whiteBlock{
+    padding: .1rem 0;
+}
+.main{
+    padding: 0 .2rem .2rem .2rem ;
+}
+.fs0{line-height: 0;font-size: 0}
+.fs10{line-height: 16px;}
+.fs12{line-height:20px;}
+.fs14{line-height:22px;}
+.fs16{line-height:32px;}
+
+.parent-flex{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    justify-content:space-between;
+    -webkit-justify-content: space-between;
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+}
+.parent-flex3{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+}
+.posts-num-img{
+    height: 24px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+.topic-posts-num{
+    display: inline-block;
+    height: 32px;
+}
+.topic-title{
+    text-align: center;
+}
+/*列表*/
+.topic-posts-list{
+}
+.post-div{
+    padding: .4rem;
+    background: url("../../img/topic/share-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.post-header{
+    height: 32px;
+    line-height: 32px;
+}
+.post-user{
+    display: block;
+    height: 32px;
+}
+.post-user img,.topic-more-btn img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    border-radius: 5px;
+}
+.post-main{
+    display: block;
+}
+.post-main-cont{
+    /*padding: 0 34px;*/
+}
+.post-line{
+    font-size: 0;
+    line-height: 0;
+}
+.post-line img{
+    width: 100%;
+}
+.post-line-min{
+    padding: .2rem 0;
+}
+.post-footer{
+    height: 20px;
+}
+.post-message img{
+    height: 20px;
+    width: 20px;
+}
+.post-message span{
+    display: inline-block;
+    height: 20px;
+}
+.add-like{
+    display: inline-block;
+    padding-left: 5px;
+}
+.more-list>div{
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;
+    width: 33.333%;
+    height: 22px;
+    text-align: center;
+    color: #ff2a00;
+}
+.more-list>div img{
+    padding-top: 10px;
+    width: 100%;
+    vertical-align: middle;
+}
+.noPost{
+    padding-top:.8rem ;
+    /*font-size: 20px;*/
+    line-height: 30px;
+    text-align: center;
+    /*color: #fff;*/
+}
+/*下一页*/
+.waterfllow-loading{
+    /*z-index: 2000;*/
+    display:none;
+}
+.waterfllow-loading.active{
+    display:block;
+}
+.loading-progress{
+    width: 20px;
+    height: 20px;
+}
+.waterfllow-loading img.loading-progress{
+    /*            position: fixed;
+                !*设置等待条水平居于窗口正中*!
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+
+                !*不能设置margin-top:auto和margin-bottom:auto否则IE下bottom就不顶用了*!
+                bottom: 30px;*/
+}
+
+/*帖子里的图片*/
+.post-img-list{
+    padding-top: .2rem;
+    /*overflow: hidden;*/
+}
+.post-img-box{
+    overflow: hidden;
+    width: 2rem;
+    height: 2rem;
+}
+.post-img-box:nth-child(2){
+    margin: 0 3px;
+}
+.post-img{
+    display: block;
+}
+.post-img-long{
+    width: 2rem;
+}
+.post-img-wide{
+    height: 2rem;
+}
+/*下拉操作按钮*/
+.action-btn-list{
+    padding: .4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+}
+.action-btn-list img{
+    width: 100%;
+}
+/*发帖按钮*/
+.parent-flex2{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction:column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+.write-post{
+    position: fixed;
+    bottom: .8rem;
+    right: 0;
+    width: 100%;
+    padding: 0 .2rem;
+    font-size: 0;
+    z-index: 2;
+    opacity: .8;
+}
+.write-post img{
+    width: 42px;
+    float: right;
+    margin-bottom: .2rem;
+}
+/*发帖窗口*/
+.post-window{
+    min-height: 100%;
+    padding: .2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.post-window-header{
+    height: .7rem;
+    line-height: .7rem;
+}
+.post-window-header span{
+    width: 2rem;
+    text-align: center;
+    height: .7rem;
+}
+.release-btn{
+    /*height: .5rem;*/
+    width: 2rem;
+}
+.post-window-main{
+    width: 100%;
+    /*height: 5rem;*/
+    background: url("../../img/topic/share-bg.png") no-repeat;
+    background-size:100% 100%;
+    padding: .5rem .5rem;
+}
+.post-areas{
+    resize:none;
+    border: none;
+    width: 100%;
+    height: 4rem;
+}
+.textarea-cont{
+    font-size: 14px;
+    line-height: 22px;
+    /*text-indent: 28px;*/
+}
+.words-num{
+    text-align: right;
+}
+.post-img-list2{
+    /*padding-top: .2rem;*/
+    padding: 0;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.post-img-list2>div:nth-child(2){
+    margin:0 .2rem;
+}
+.add-picture-box{
+    margin-top: .2rem;
+}
+.add-picture{
+    display: inline-block;
+}
+.addImg{
+    height: 22px;
+    padding-left: .2rem;
+}
+/*
+.showImg {
+    !*display: inline-block;*!
+    position: relative;
+    margin-left: .2rem
+    !*
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: top;
+    margin-left: .2rem;
+    *!
+}
+*/
+.imgX{
+    position:absolute;
+    top:0;
+    right:0;
+    width:15px;
+    height:15px;
+    text-align:right;}
+/*
+.joinImg{
+    width:100%;
+    height:100%;}
+*/
+
+/*帖子详情*/
+.post-detail{
+    padding-bottom: 1.5rem;
+}
+.relative{
+    position: relative;
+}
+.post-detail-user{
+    width: 100%;
+    padding-top: .4rem;
+    display: flex;
+    display: -webkit-flex;
+}
+.user-img{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-right: .2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.user-img img{
+    width: 100%;
+}
+.post-detail-user-name{
+    flex: 1;
+    -webkit-flex: 1;
+    font-size: 14px;
+    line-height: 18px;
+}
+.post-detail-user-name img{
+    width: 12px;
+    height: 12px;
+    margin-bottom: 4px;
+}
+.like-bg{
+    position: relative;
+    top:0;
+    left:0;
+    margin-top: .6rem;
+    margin-left: 1.31rem;
+    /*width: 2.5rem;*/
+    padding-bottom: .4rem;
+
+}
+.like-bg-img{
+    width: 3.48rem;
+    height: 1.08rem
+}
+.like-bg-cont{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 3.48rem;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    text-align: center;
+
+    /*
+    background: url("../../img/topic/like2.png") no-repeat;
+    background-size: .8rem .8rem;
+    background-position: left center;
+    */
+}
+.like-bg-cont span{
+    display: inline-block;
+}
+.like-bg-cont img{
+    height: .6rem;
+    vertical-align:-0.18rem;
+}
+/*
+.like-bg img{
+    height: 1.2rem;
+}
+.like-num{
+    position: absolute;
+    top:0;
+    left: 2rem;
+    height: .9rem;
+    line-height: .9rem;;
+}
+*/
+/*评论列表*/
+.name-time{
+   width: 100%;
+}
+.comment-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.1rem;
+    background-color: #fff;
+    z-index: 11;
+    opacity: .8;
+    width:100%;
+    /*margin: 0 auto;*/
+    /*padding: .8rem 0;*/
+}
+.comment-btn-img{
+    margin-left: 1.5rem;
+    /*padding-right: 2.25rem;*/
+    width:4.5rem;
+
+}
+.comment-btn img{
+    width: 100%;
+}
+/*显示预览大图*/
+.cloes-tag {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    z-index: 200;
+}
+.cloes-tag:before,
+.cloes-tag:after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+.cloes-tag:before {
+    left: 45%;
+    top: -10%;
+    width: 10%;
+    height: 120%;
+}
+.cloes-tag:after {
+    top: 45%;
+    left: -10%;
+    width: 120%;
+    height: 10%;
+}
+
+.min-img{
+    cursor: pointer;
+}
+.window{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #000;
+    z-index: 20;
+    -webkit-transition: all 0.3s;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
+}
+.window img{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.window-show{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+}
+/*评论窗口*/
+.comment-box{
+    z-index: 12;
+}
+/*排行榜*/
+.post-rank{
+    min-height: 100%;
+    padding: .2rem;
+}
+.post-rank-title{
+    text-align: center;
+    font-size: 18px;
+    padding-top: .5rem;
+}
+.post-rank-title-period{
+    padding-right: .3rem;
+}
+.rank-list-div{
+    display: block;
+}
+.rank-info{
+    padding: .3rem;
+}
+.rank-btn-list{
+    margin-top: .2rem;
+}
+.rank-btn{
+    display: block;
+    padding: 0 1rem;
+    margin-bottom: .2rem;
+}
+.rank-btn img{
+    width: 100%;
+}
+/*无排行*/
+.post-none-rank{
+    padding: 0!important;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    width:100%;
+    background: url("../../img/topic/rankBg.jpg") no-repeat;
+    background-size: cover;
+}
+.post-none-rank-main{
+    padding: .5rem 0 .3rem 0;
+    width:80%;
+    position: absolute;
+    top:50%;
+    left: 10%;
+    margin-top:-2.5rem;
+}
+.rank-btn-img{
+    width: 60%!important;
+}

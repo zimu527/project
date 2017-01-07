@@ -13,8 +13,6 @@ $(document).ready(function() {
 	MemberGetInfo();
 	//2.4获取签到记录
 	getSignIn();
-	//是否配置积分抽奖
-	memberSwitch();
 });
 //获取会员信息
 function MemberGetInfo(){
@@ -102,31 +100,12 @@ function signInOnResult(result){
 		popBoxAlert("","恭喜您！签到成功，奖励" + result.data.creditsIncrease + "积分");
 		$("#btnSign").attr("src" , "img/member/an4.png");
 		$("#btnSign").removeAttr("onClick");//已签到按钮 不能点击
-		var curCre;//积分
-		curCre = Number($("#credits").html()) + Number(result.data.creditsIncrease);
-		$("#credits").text(curCre);
+		var curCre = Number($("#credits").html());//积分
+		curCre = curCre + Number(result.data.creditsIncrease);
+		$("#credits").html(curCre);
 		var signInDay = result.data.signInDays;
 		$("#signInDay").html(signInDay);//连续签到天数
 		signList.push(parseInt(result.data.currDate) - 1);
 		signFun(signList);
-	}
-}
-//2.7. 是否配置积分抽奖
-function memberSwitch(){
-	var onResult = memberSwitchOnResult;
-	var resultProcessor = {
-		'onResult':onResult
-	};
-	BWFRI.MemberSwitchConfigService ({'aid':aId} , resultProcessor);
-}
-function memberSwitchOnResult(result){
-	if(result.code != 0){
-		popBoxAlert("",'不给力 刷新重试');
-	}else{
-		if(result.data.drawSwitch == 1){
-			$(".roulette").attr("href" , "lucky.do?op=roulette&r=" + result.data.luckyId);
-		}else{
-			$(".roulette").attr("onclick" , "popBoxAlert('','活动暂未开放');");
-		}
 	}
 }

@@ -4,9 +4,18 @@
 var overlordUrl = getRootUrl()+"exam.do?op=index&a="+activityId;//获取首页地址
 wxShare(overlordTitle , overlordDesc , overlordImg , overlordUrl);
 $(document).ready(function(){
-	  examGetLastTop();
+    examGetLastTop();
     var getHomeUrl='exam.do?op=index&a='+activityId;
     $('.startAnswer-btn').attr('href',getHomeUrl);
+	var mainHeight=$('.main').height();
+	var w_s_width = window.screen.width ;
+	var w_s_height = window.screen.height ;
+	var headerImg_height=448/720*w_s_width;
+	var mainImg_height=w_s_height-headerImg_height;
+	if(mainHeight<mainImg_height){
+		$('.main').height((mainImg_height+10)+'px');
+		$('html,body').css('overflow','hidden');
+	}
 });
 //学霸排行榜
 function examGetLastTop(){
@@ -38,14 +47,4 @@ function examGetLastTopOnResult(result) {
       		$('.go-home').css('padding-top','2rem');
       	}
     }
-  var mainHeight=$('.main').height();
-	var w_s_width = window.screen.width ;
-	var w_s_height = window.screen.height ;
-	var headerImg_height=448/720*w_s_width;
-	var mainImg_height=w_s_height-headerImg_height;
-
-	if(mainHeight<mainImg_height){
-		$('.main').height((mainImg_height+50)+'px');
-		$('html,body').css('overflow','hidden');
-	}
 }

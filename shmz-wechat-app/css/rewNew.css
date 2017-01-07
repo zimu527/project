@@ -46,11 +46,8 @@
 .contentBox{
     padding: 1rem 2rem;
 }
-#reward , #fansNum , #expirationDate , #targetNum , #currentNum , #rewardTime , #name , #phone , .nickName{
+#reward , #fansNum , #expirationDate , #targetNum , #currentNum , #rewardTime , #name , #phone{
     font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
-}
-#targetNum , #reward{
-    color: #fe6601;
 }
 .tableBox{
     /*width: 100%;*/
@@ -81,7 +78,4 @@
 }
 .colorfe6601{
     color: #fe6601;
-}
-.noFriend{
-    margin-top: 0.5rem;
 }

@@ -12,7 +12,7 @@
     margin: auto;
     line-height: 2rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #FFFFFF;
 }
 .special{
@@ -29,10 +29,6 @@
     line-height: 3rem;
     font-family: 'jianzhiyi';
     font-size: 1.2rem;
-}
-.continueFri1 a{
-    display: block;
-    color: #000000;
 }
 .tableDiv{
     background: url("../img/recommend/kuang.png") no-repeat;
@@ -70,15 +66,10 @@
 .ruleOl{
     list-style-type: decimal;
     margin-left: 2rem;
-    margin-right: 2rem;
 }
 .ruleOl li{
     list-style-type: decimal;
 }
 .special1{
     color: rgb(174 , 63 , 52);
-}
-.noFriend{
-    text-align: center;
-    line-height: 4rem;
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <title>精品推荐</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-color">
+<img class="imgWidth100 fs0" src="img/kn1229001.jpg" alt="">
+<!--内容区域-->
+<div class="fs0"><img class="imgWidth100 fs0" src="img/kn1229002.jpg" alt=""></div>
+<div class="main content2 fs0">
+    <div class="live-show content">
+    </div>
+    <div class="film content">
+    </div>
+    <div class="TV-series content center">
+    </div>
+    <div class="star content">
+    </div>
+    <div class="rule">
+        <img class="imgWidth100 fs0" src="img/kn1229008.jpg" alt="">
+        <div class="rule-cont"></div>
+        <img class="imgWidth100 fs0" src="img/kn1229009.jpg" alt="">
+    </div>
+    <a class="go-home fs16" href="#"><img src="img/sd1219008.png " alt="" class="fs0"><span>返回首页</span></a>
+</div>
+<a class="pic" href=""><img src="img/piao1229.gif" alt=""></a>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+<script>
+/*    showList1();
+    showList2();
+    showList3();*/
+addTopCont(data,'live-show','title1');
+    showRule(rule,'rule-cont');
+showListTwo(list1,'film','title2');
+showListTwo(list3,'TV-series','title3');
+showListThree(list4,'star','title4');
+</script>
+</body>
+</html>

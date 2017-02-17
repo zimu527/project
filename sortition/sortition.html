@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/sortition/sortition.css" rel="stylesheet">
+    <title>孝感移动抽新年签，送100M流量</title>
+    <style>
+    .sortition{
+        width: 100%;
+        height: 100%;
+        padding: 0.2rem 0.5rem 0 0.5rem;
+        background: url("img/sortition/cq170110007.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    .sortition-cont{
+        /*margin-top: .42rem;*/
+    }
+    .sortition-cont-box{
+        width: 100%;
+        padding: 0 .22rem 0 .22rem;
+        background: url("img/sortition/cq170110006_1.png");
+        background-size: 100% 100%;
+    }
+        .sortition-cont-box img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="sortition fs0">
+    <div class="padding">
+        <div class="sortition-cont imgWidth100">
+            <img class="imgWidth100" src="img/sortition/cq170110006.png" alt="">
+            <div class="sortition-cont-box">
+                <p class="fs12">16666666666 恭喜您抽到的是：</p>
+                <img src="img/sortition/640-1.jpg">
+            </div>
+            <img class="imgWidth100" src="img/sortition/cq170110006_2.png" alt="">
+        </div>
+    </div>
+    <div class="sortition-flux">
+        <span class="yellow-line1"></span>
+        <div class="sortition-flux-cont">送您<span class="white">100M</span>本地流量（次月发放）</div>
+        <span class="yellow-line1"></span>
+    </div>
+    <div class="yellow-line2"></div>
+    <div class="active">
+        <h4 class="fs14">活动说明</h4>
+        <ol class="fs12">
+            <li>本活动仅限孝感移动实名制手机号且关注“孝感移动”官微的用户参与和兑奖；</li>
+            <li>每个微信号只能参与一次，且报名成功后无法修改；</li>
+            <li>参与抽新年签的用户可获得100M省内流量，中奖率100%，流量于2月15月前发放；</li>
+            <li>本活动最终解释权归湖北移动孝感分公司所有。</li>
+        </ol>
+    </div>
+</div>
+<div class="share-mask hide"><img class="share-signImg" src="img/sortition/share02.png" alt=""/></div>
+<!--#parse("/global/alert.vm")-->
+<script>
+
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    /*var openId='$!{opId}';
+    var aId='$!{aid}';
+    var activityId='$!{activityId}';
+    var cid=${cardInfo.id};
+    var nickname='$!{cardInfo.nickname}';
+    var headimgurl='$!{cardInfo.headimgurl}';
+    var blessWords='$!{cardInfo.blessWords}';
+    var role='$!{role}';// 角色，1-自己的贺卡，2-他人的贺卡
+
+    var headImg='#getImg()/sortition/head.jpg'
+*/
+</script>
+<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var shareIndexUrl=getRootUrl()+'greetingCard.do?op=index&a='+activityId;//首页地址
+    var ShareInfo=[
+        {
+            'shareTitle':'抽新年幸运签，送100MB',
+            'shareCont':'来“孝感移动”抽取新年幸运签，看看您今年的运势如何~',
+            'shareImg':'#getImg()/sortition/shareImg.jpg',
+            'shareUrl':shareIndexUrl
+        }
+    ];
+    wxShare(ShareInfo[0].shareTitle,ShareInfo[0].shareCont,ShareInfo[0].shareImg,ShareInfo[0].shareUrl);
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sortition/sortition.js"></script>
+</body>
+</html>

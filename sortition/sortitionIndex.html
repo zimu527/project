@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/sortition/sortition.css" rel="stylesheet">
+    <title>孝感移动抽新年签，送100M流量</title>
+    <style>
+        .user-info-form .btn{
+            display: inline-block;
+            width: 100%;
+            height: .93rem;
+            margin-top: .15rem;
+            background: url("img/sortition/cq170110005.png");
+            background-size: 100% 100%;
+        }
+        .user-info-form .btn:hover,.user-info-form .btn:active{
+            display: inline-block;
+            width: 100%;
+            height: .93rem;
+            margin-top: .15rem;
+            background: url("img/sortition/cq170110005_1.png");
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="index">
+    <img class="bg-img-top imgWidth100" src="img/sortition/cq170110001.jpg" alt="">
+    <img class="bg-img-middle imgWidth100" src="img/sortition/yq.gif" alt="">
+    <img class="bg-img-bottom imgWidth100" src="img/sortition/cq170110004.jpg" alt="">
+</div>
+<div class="index-cont">
+    <form class="user-info-form fs0" name="formAttention" method="post" action="">
+        <input type="text" name="username" placeholder="请输入您的姓名">
+        <input type="text" name="tel" placeholder="请输入您的手机号">
+        <a  class="btn" href="javascript:void(0);"></a>
+    </form>
+</div>
+
+<div class="share-mask hide"><img class="share-signImg" src="img/sortition/share02.png" alt=""/></div>
+<!--#parse("/global/alert.vm")-->
+<script>
+
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    /*var openId='$!{opId}';
+    var aId='$!{aid}';
+    var activityId='$!{activityId}';
+    var cid=${cardInfo.id};
+    var nickname='$!{cardInfo.nickname}';
+    var headimgurl='$!{cardInfo.headimgurl}';
+    var blessWords='$!{cardInfo.blessWords}';
+    var role='$!{role}';// 角色，1-自己的贺卡，2-他人的贺卡
+
+    var headImg='#getImg()/sortition/head.jpg'
+*/
+</script>
+<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<script src="js/json-mini.js"></script>
+<script src="js/bwrdfr.js"></script>
+<script src="js/bwrdfr-i.js"></script>
+<script src="js/wxShare.js"></script>
+<script>
+    var shareIndexUrl=getRootUrl()+'greetingCard.do?op=index&a='+activityId;//首页地址
+    var ShareInfo=[
+        {
+            'shareTitle':'抽新年幸运签，送100MB',
+            'shareCont':'来“孝感移动”抽取新年幸运签，看看您今年的运势如何~',
+            'shareImg':'#getImg()/sortition/shareImg.jpg',
+            'shareUrl':shareIndexUrl
+        }
+    ];
+    wxShare(ShareInfo[0].shareTitle,ShareInfo[0].shareCont,ShareInfo[0].shareImg,ShareInfo[0].shareUrl);
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sortition/sortition.js"></script>
+<script>
+    // preload image
+    window.onload = function() {
+        setTimeout(function () {
+            new Image().src = "img/sortition/cq170110005_1.png";
+            new Image().src = "img/sortition/cq170110006.png";
+            new Image().src = "img/sortition/cq170110006_1.png";
+            new Image().src = "img/sortition/cq170110006_2.png";
+            new Image().src = "img/sortition/cq170110007.jpg";
+            new Image().src = "img/sortition/cq170110008.png";
+            new Image().src = "img/sortition/cq170110009.png";
+            new Image().src = "img/sortition/cq1701100010.png";
+            new Image().src = "img/sortition/cq1701100011.png";
+            new Image().src = "img/sortition/QRcode.jpg";
+        }, 3000);
+    };
+</script>
+</body>
+</html>

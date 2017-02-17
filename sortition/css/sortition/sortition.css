@@ -1,0 +1,193 @@
+@charset "utf-8";
+/*移动端*/
+html{
+    height: 100%;
+}
+html , body{
+    width:100%;
+    position:relative;
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";
+}
+body{
+    height: 100%;
+    overflow: hidden;
+}
+*{
+    margin:0;
+    padding:0;
+}
+*,*:after,*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{
+    color:#333;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+    text-decoration:none;
+    cursor:pointer;}
+select , textarea , input[type="text"] , input[type="tel"] , input[type="password"] , input[type="submit"] , input[type="button"] , input[type="date"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    font-family:"Microsoft YaHei", "Arial", "YouYuan", "Arial Bold";}
+input[type="checkbox"]{
+    border:1px solid #ccc;}
+* input:-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}/* Mozilla Firefox 4 to 18*/
+* input::-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}/* Mozilla Firefox 19+*/
+* input::-webkit-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}
+* input:-ms-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei","Helvetica","Arial","YouYuan","sans-serif";}
+
+table{
+    border-collapse: collapse;
+    /*border-spacing:none;*/
+}
+@media screen and (max-width:321px){
+    .fs10{font-size:9px;}
+    .fs12{font-size:11px;}
+    .fs14{font-size:13px;}
+    .fs16{font-size:15px;}
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    .fs10{font-size:10px;}
+    .fs12{font-size:12px;}
+    .fs14{font-size:14px;}
+    .fs16{font-size:16px;}
+}
+@media screen and (min-width:400px){
+    .fs10{font-size:12px;}
+    .fs12{font-size:14px;}
+    .fs14{font-size:16px;}
+    .fs16{font-size:18px;}
+}
+.fs0{line-height: 0;font-size: 0}
+.fs10{line-height: 16px;}
+.fs12{line-height:20px;}
+.fs14{line-height:22px;}
+.fs16{line-height:32px;}
+.hide{display:none;}
+.clear , .clear:after{
+    clear:both;}
+img{
+    border: none;
+    vertical-align: top;
+}
+.imgWidth100{
+    width: 100%;
+}
+.imgHeight100{
+    height: 100%;
+}
+.highlight{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;
+}
+.flex{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+/*首页*/
+.index{
+
+}
+.index-cont{
+    position: absolute;
+    bottom: .6rem;
+    left: 0;
+}
+.user-info-form{
+    width: 100%;
+    padding: 0 1.53rem;
+}
+.user-info-form input{
+    width: 100%;
+    height: .91rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-bottom: .15rem;
+    font-size: 14px;
+    line-height: .91rem;
+    text-indent: 5px;
+}
+/*抽签页*/
+.sortition{
+    height: 100%;
+    width: 100%;
+}
+.padding{
+    padding: 0 1.2rem;
+}
+.sortition-flux{
+    margin: .12rem 0;
+    color: #f4d668;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    height: 30px;
+}
+.yellow-line1{
+    display: inline-block;
+    width: .8rem;
+    height: .1rem;
+    border-radius: 10px;
+    background-color: #f4d668;
+}
+.sortition-flux-cont{
+    display: inline-block;
+    width: 4.9rem;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+.white{
+    color: #fff;
+}
+.yellow-line2{
+    height: .05rem;
+    border-radius: 2px;
+    background-color: #f4d668;
+}
+.active{
+    margin-top: .12rem;
+    color: #f4d668;
+}
+.active h4{
+    color: #fff;
+}
+.active ol{
+    padding-left: 16px;
+}
+/*二维码页*/
+.QR-title{
+    text-align: center;
+    margin: .3rem 0;
+}
+.QR-cont{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 0.935rem;
+    /*
+    left: 0.635rem;
+    width: 5.83rem;
+    */
+}
+.QR-img{
+    position: absolute;
+    top: 0.865rem;
+    left: 1.75rem;
+    width: 3.5rem;
+}
+.footer{
+    margin-top: .5rem;
+    padding: 0 1rem;
+}
+.footer>div{
+    text-indent: 25px;
+}

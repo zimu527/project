@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/sortition/sortition.css" rel="stylesheet">
+    <title>孝感移动抽新年签，送100M流量</title>
+    <style>
+        .user-info-form .btn{
+            display: inline-block;
+            width: 100%;
+            height: .93rem;
+            margin-top: .15rem;
+            background: url("#getImg()/sortition/cq170110005.png");
+            background-size: 100% 100%;
+        }
+        .user-info-form .btn:hover,.user-info-form .btn:active{
+            display: inline-block;
+            width: 100%;
+            height: .93rem;
+            margin-top: .15rem;
+            background: url("#getImg()/sortition/cq170110005_1.png");
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="hide"><img src="#getImg()/sortition/shareImg.jpg"></div>
+<div class="index">
+    <img class="bg-img-top imgWidth100" src="#getImg()/sortition/cq170110001.jpg" alt="">
+    <img class="bg-img-middle imgWidth100" src="#getImg()/sortition/yq.gif" alt="">
+    <img class="bg-img-bottom imgWidth100" src="#getImg()/sortition/cq170110004.jpg" alt="">
+</div>
+<div class="index-cont">
+    <form class="user-info-form fs0" name="formAttention" method="post" action="">
+        <input type="text" name="username" placeholder="请输入您的姓名">
+        <input type="text" name="tel" placeholder="请输入您的手机号">
+        <a  class="btn" href="javascript:void(0);"></a>
+    </form>
+</div>
+
+<div class="share-mask hide"><img class="share-signImg" src="#getImg()/sortition/share02.png" alt=""/></div>
+#parse("/global/alert.vm")
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    var activityId='$!{activityId}';
+</script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sortition/sortition.js"></script>
+<script>
+    // preload image
+    window.onload = function() {
+        setTimeout(function () {
+            new Image().src = "#getImg()/sortition/cq170110005_1.png";
+            new Image().src = "#getImg()/sortition/cq170110006.png";
+            new Image().src = "#getImg()/sortition/cq170110006_1.png";
+            new Image().src = "#getImg()/sortition/cq170110006_2.png";
+            new Image().src = "#getImg()/sortition/cq170110007.jpg";
+            new Image().src = "#getImg()/sortition/cq170110008.png";
+            new Image().src = "#getImg()/sortition/cq170110009.png";
+            new Image().src = "#getImg()/sortition/cq1701100010.png";
+            new Image().src = "#getImg()/sortition/cq1701100011.png";
+            new Image().src = "#getImg()/sortition/QRcode.jpg";
+        }, 3000);
+    };
+</script>
+</body>
+</html>

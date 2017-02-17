@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min14ed.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<style type="text/css">
+			.mask{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				display: none;
+				width: 100%;
+				height: 100%;
+				
+				background-color: #333; 
+				opacity: .15;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="metismenu" id="menu">
+			<li class="active">
+				<a class="has-arrow" href="#" aria-expanded="true">Menu 1</a>
+				<ul aria-expanded="true">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" aria-expanded="false">Menu 2</a>
+				<ul aria-expanded="false">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<div id="iframe">
+			<iframe src="iframe.html" width="800" height="300"></iframe>
+			
+		</div>
+		<div class="mask" id="mask"></div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+		<script type="text/javascript">
+//			$("#menu").metisMenu();
+		</script>
+	</body>
+</html>

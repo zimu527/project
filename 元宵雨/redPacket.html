@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>抢汤圆</title>
+<style>
+@charset "utf-8";
+/* reset for html5 css3*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,section,article,aside,header,footer,nav,dialog,figure,hgroup{margin:0; padding:0;}
+table {border-collapse:collapse; border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol,li{list-style:none;}
+em,i{font-style:normal;}
+img{border:none;}
+html,body{height:100%; box-sizing:border-box;}
+body{background:url(stuff/bj170124.jpg) no-repeat center top #FDF3BE; font-family:"微软雅黑",Arial,sans-serif; font-size:14px; line-height:1.0;}
+
+.hidden{display:none;}
+.rel{position:relative;}
+.container{width:100%; margin:0 auto;}
+#IronLoading{display:none; width:100%; height:100%; background:#000; -moz-opacity:0.2; opacity:0.2; filter:alpha(opacity=20); position:fixed; top:0%; left:0%; z-index:9000;}
+#IronLoading p{display:block; width:150px; height:150px; line-height:150px; text-align:center; background:#900; color:#000; border-radius:100px; position:fixed; top:50%; left:50%; margin-left:-75px; margin-top:-75px;}
+.begin{width:80px; height:80px; line-height:80px; text-align:center; font-size:20px; font-weight:bold; border-radius:40px; background:#900; color:#FFF; position:absolute; left:50%; top:50%; margin-left:-40px; margin-top:-40px;}
+.content-init{display:none;}
+.content-init .countdown3{width:50px; height:50px; margin:40% auto 0; text-align:center; line-height:50px; font-size:20px; font-weight:bold; border-radius:25px; background:#900; color:#FFF;}
+.content-ing{display:none;}
+.content-ing .countdown10{position:absolute; width:20%; top:10px; left:45%; padding:10px 0; background:#900; border-radius:5px; color:#FFF; text-align:center;}
+.content-ing .countdown10:after{content:' s';}
+.content-ing .number{position:absolute; width:50px; height:50px; bottom:16px; right:16px; font-size:16px; font-weight:bold; text-align:center; color:#900; background:url(stuff/bq08.png) no-repeat; background-size:contain;}
+.content-ing .canvas{position:relative; overflow:hidden;}
+.content-ing .canvas .item{position:absolute; width:80px; height:80px; top:-80px; background-size:contain; background-repeat:no-repeat;}
+.content-ing .canvas .item.bg01{background-image:url(stuff/bq01.png);}
+.content-ing .canvas .item.bg02{background-image:url(stuff/bq02.png);}
+.content-ing .canvas .item.bg03{background-image:url(stuff/bq03.png);}
+.content-ing .canvas .item.bg04{background-image:url(stuff/bq04.png);}
+.content-ing .canvas .item.bg05{background-image:url(stuff/bq05.png);}
+.content-ing .canvas .item.bg06{background-image:url(stuff/bq06.png);}
+.content-ing .canvas .item.bg07{background-image:url(stuff/bq07.png);}
+.content-ing .canvas .item.falling{top:1200px;}
+.content-result{display:none; width:240px;; min-height:300px; padding:10px 0; background:#FFF; border-radius:10px; position:absolute; top:50%; left:50%; margin-left:-120px; margin-top:-160px; box-shadow:2px 2px 6px rgba(54,64,76,0.1), -2px 2px 6px rgba(54,64,76,0.1);}
+.content-result p{padding:0 10px; text-align:center; line-height:20px; font-size:14px; color:#333;}
+.content-result p span{color:#900;}
+.content-result div{text-align:center; padding-top:30px; font-size:16px;}
+</style>
+</head>
+<body>
+<div class="container">
+    <!--抢红包-->
+    <section>
+        <div id="IronLoading"><p>loading...</p></div>
+        <div class="begin">开始</div>
+        <div class="content-init rel">
+            <div class="countdown3">3</div>
+        </div>
+        <div class="content-ing rel">
+            <div class="countdown10">10</div>
+            <div class="number">0</div>
+            <div class="canvas"></div>
+        </div>
+        <div class="content-result"></div>
+    </section>
+</div>
+</body>
+</html>
+<script src="stuff/bwrdfr.js"></script>
+<script src="stuff/bwrdfr-i.js"></script>
+<script src="stuff/json-mini.js"></script>
+<script src="stuff/jquery-3.0.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(function(){
+		'use strict';
+		var shocked=0;
+		bindEvents();//事件
+		function init(){
+			countdown(2,'nozero',function(){//倒计时
+				redRainInit();
+			});
+		}
+		function bindEvents(){
+			$('body').on('click','.begin',function(){
+				$(this).hide();
+				$(".content-init").show();
+				init();
+			});
+			// 红包被点击
+			$('.canvas').on('click','.item',function(){
+				shocked++;
+				$('.number').text('+'+shocked);
+				$(this).stop().animate({left:"100%",top:"100%",opacity:0},500);
+			});
+		}
+		function countdown(second,demand,callback){
+			if (typeof demand== 'function'){
+				callback=demand;
+				demand='';
+			}
+			var i=second;
+			var point=demand=='nozero'?0:-1;
+			var timer=setInterval(function(){
+				if(i==point){
+					clearInterval(timer);
+					if(callback){
+						callback();
+					}
+				}else{
+					var $countdown=$('.countdown'+(second+1));
+					if($countdown.hasClass('hidden')){
+						$countdown.removeClass('hidden');
+					}
+					$countdown.text(i);
+					i--;
+				}
+			},1000);
+		}
+		function redRainInit(){
+			$('.content-init').hide();
+			$('.content-ing').fadeIn();
+			//抢红包
+			var windowWidth=$(window).width()-80,
+				windowHeight=$(window).height();
+			var $canvas=$('.canvas');
+			$canvas.css({
+				height:windowHeight
+			});
+			// 添加红包
+			for(var i=0;i<10;i++){
+				var num=Math.ceil(Math.random()*10);
+				var $item=$('<div class="item bg0'+(num>7?7:num)+'">');
+				$item.css({
+					'left':Math.random()*windowWidth
+				});
+				$canvas.append($item);
+			}
+			// 红包动画 定时执行
+			var idx=0;
+			var moveTimer=setInterval(function(){
+				moveHandler(idx);
+				idx++;
+				if(idx==10){
+					idx=0;
+				}
+			},500);
+			countdown(9,function(){
+				clearInterval(moveTimer);
+				renderResult();
+			})
+		};
+		// 红包动画 下落效果
+		function moveHandler(idx){
+			var speed=Math.random()*(8000-3000)+3000;//下落速度
+			var $item=$('.canvas .item').eq(idx);
+			$item.animate({
+				top:$(window).height()
+			},speed,function(){
+				$(this).css({
+					top:-80
+				})
+			});
+		};
+		function renderResult(){
+			$('.content-ing').hide();
+			getLuckyRainDrawService(shocked);
+		};
+		//红包请求
+		function getLuckyRainDrawService(num){
+			$("#IronLoading").show();
+			BWFRI.LuckyRainDrawService({"activityId":activityId,"periodId":periodId,"openid":openid,"num":num,"token":randToken},{'onResult':function(result){
+				$("#IronLoading").hide();
+				if(result.code!=0){
+					alert("请稍后再试");
+					console.log(result.code+","+result.msg);
+				}else{
+					var obj={
+						"0":"成功",
+						"1":"活动还没开始",
+						"2":"所有场次已结束",
+						"3":"本场次已结束",
+						"4":"黑名单用户",
+						"5":"奖品赠送累计达到上限",
+						"6":"本场次已参加过",
+						"7":"今天参与次数达到上限"
+					}
+					if(result.data.result!=0){
+						$('.content-result').html('<div>'+obj[result.data.result]+'</div>').fadeIn();
+					}else{
+						var p=result.data.prizeInfo,
+							str="<p>";
+						str+="获得以下物品<br>"+p.totalDataVal+"个流量，"+p.couponCnt+"张折扣券，"+p.freeServiceCnt+"个免费业务<br>";
+						for(var i=0;i<p.prizeFlux.length;i++){
+							str+=p.prizeFlux[i].name+" X "+p.prizeFlux[i].count+(p.prizeFlux[i].type==3?("<br><span>"+p.prizeFlux[i].detail+"</span><br>"):"<br>");
+						}
+						if(p.isDataMax==1){
+							str+="<span>您已达到流量赠送上限</span>";
+						}
+						$('.content-result').html(str+'</p>').fadeIn();
+					}
+				}
+			}})
+		};
+	});
+});
+</script>

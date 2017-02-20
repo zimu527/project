@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+<meta charset="UTF-8">
+<title>奥运会活动页</title>
+
+<style>
+html, body, article, h1, h2, h3, h4, h5, h6, p, ol, ul, li{
+position: relative;
+padding: 0px;
+margin: 0px;
+font-size: 100%;
+font-family: "Microsoft YaHei","STHeiti";
+font-weight: normal;
+}
+body {
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+background: #FFF none repeat scroll 0% 0%;
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+/*通用标题*/
+.o_title{
+font: bold 16px/30px "微软雅黑","黑体";
+color: #444;
+margin-left: 3%;
+}
+/*滚图区*/
+.swiper1 img{
+	border-radius: 8px;
+}
+/*直播区块*/
+.zb_row{
+border-bottom: 0px solid #B2B2B2;
+height: 40px;
+padding-left: 5px;
+line-height: 40px;
+margin-top: 2px;
+}
+.zb_row .zb_img{
+height: 40px;
+width: 25%;
+}
+.zb_row .zb_a{
+font-size: 15px;
+line-height: 40px;
+color: #000;
+padding: 0px 0px 0px 8px;
+position: relative;
+bottom: 15px;
+}
+.zb_row .zb_gd{
+color: red;
+font-size: 15px;
+margin-left: 20px;
+position: relative;
+float: right;
+}
+/*奥运热门话题*/
+.oyrmht_fb{
+margin-left: 3%;
+}
+.oyrmht_fb a{
+text-decoration: none;
+font-size: 15px;
+color: #383838;
+}
+.oyrmht_fb .oyrmht_fb_1{
+color: red;
+}
+/*图文区块*/
+.tw_containers{
+overflow: hidden;
+width: 100%;
+background-color: #FFF;
+margin-top: 3px;
+}
+.tw_containers ul li{
+width: 46.7%;
+margin-left: 2.2%;
+float: left;
+overflow: hidden;
+position: relative;
+margin-top: 7px;
+}
+.tw_containers ul li a{
+text-decoration: none;
+color: #383838;
+}
+.tw_containers ul li a img{
+height: 120px;
+border-radius: 5px;
+width: 100%;
+opacity: 1;
+}
+/*奖牌榜*/
+.medal_dh{
+background: transparent url(img/medal_dh_t.png) no-repeat scroll;
+height: 45px;
+overflow: hidden;
+color: white;
+margin-top: 3px;
+}
+.medal_dh h2{
+font: bold 18px/40px "微软雅黑","黑体";
+color: white;
+padding-left: 10px;
+float: left;
+}
+.medal_dh b{
+color: white;
+line-height: 45px;
+font-size: 11px;
+float: right;
+margin-right: 3%;
+}
+.medal_ta{
+	width: 100%;
+}
+.medal_ta_tb .medal_tb_tr_one{
+	background: transparent url(../img/london_zxh_0706_02.png) repeat-x scroll 0px -250px;
+	line-height: 25px;
+	font-size: 11px;
+	border: 0.5px solid #E6E6E6;
+	text-align: center;
+}
+.medal_ta_tb tr{
+	background-color: white;
+	line-height: 20px;
+	font-size: 11px;
+	border: 0.5px solid #E6E6E6;
+	text-align: center;
+}
+.medal_ta_tb tr img{
+vertical-align: -2px;
+margin-left: 2px;
+border: 1px solid #808080;
+}
+/*中国备战*/
+.zgbz_btn ul li{
+text-align: center;
+bottom: 1px;
+line-height: 20px;
+width: 46.7%;
+margin-left: 2.2%;
+float: left;
+overflow: hidden;
+position: relative;
+margin-top: 7px;
+}
+.zgbz_btn ul li a:hover{
+	background-color: #75A5F4;
+}
+.zgbz_btn ul li a{
+margin-top: 1px;
+line-height: 25px;
+height: 25px;
+width: 100%;
+color: #FFF;
+background-color: #538FF0;
+font-size: 16px;
+font-weight: normal;
+font-family: Arial;
+border: 0px solid #DCDCDC;
+border-radius: 3px;
+box-shadow: 0px 0px 0px 0px #FFF inset;
+text-align: center;
+display: inline-block;
+text-decoration: none;
+}
+/*奥运名人*/
+.swiper2{
+	width: 100%;
+	/*height: 180px;*/
+	/*margin: 20px auto;*/
+}
+.slide2 img{
+	border-radius: 50px;
+	height: 100px;
+}
+/*央视名栏*/
+.ysml ul li{
+width: 100%;
+clear: both;
+line-height: 22px;
+overflow: hidden;
+padding: 0px 0px 0px 5px;
+}
+.ysml ul li a img{
+height: 120px;
+width: 45%;
+border-radius: 5px;
+}
+.ysml ul li a{
+text-decoration: none;
+font-size: 15px;
+color: #383838;
+}
+.ysml ul li p{
+float: right;
+width: 50%;
+height: 120px;
+display: block;
+word-break: break-all;
+margin-right: 3%;
+color: #333;
+font-style: normal;
+font-weight: normal;
+}
+/*页脚*/
+.footer {
+width: 100%;
+height: 30px;
+background-color: #FFF;
+}
+.footer p a:hover {
+    background-color: #75B1F4;
+}
+.footer p a {
+line-height: 30px;
+height: 30px;
+width: 48%;
+color: #117BE3;
+font-size: 16px;
+text-align: center;
+display: inline-block;
+text-decoration: none;
+margin: 2px 1px 2px 0px;
+}
+</style>
+</head>
+<body>
+<!--
+滚图区 
+-->
+<div class="swiper-container swiper1">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><a href="#"><img width="100%" height="350px" src="img/1.jpg"/></a></div>
+<div class="swiper-slide"><a href="#"><img width="100%" height="350px" src="img/2.jpg"/></a></div>
+<div class="swiper-slide"><a href="#"><img width="100%" height="350px" src="img/3.jpg"/></a></div>
+<div class="swiper-slide"><a href="#"><img width="100%" height="350px" src="img/4.jpg"/></a></div>
+<div class="swiper-slide"><a href="#"><img width="100%" height="350px" src="img/5.jpg"/></a></div>
+</div>
+<div class="swiper-pagination swiper-pagination1"></div>
+</div>
+<!--
+	直播模块
+-->
+<div class="menu">
+	<div class="zb_row">
+		<img class="zb_img" src="img/7.jpg"/>
+		<a href="#" class="zb_a">正在直播：CCTV5</a>
+	</div>
+	<div class="zb_row">
+		<img class="zb_img" src="img/994.jpg"/>
+		<a href="#" class="zb_a">正在直播：五星体育</a>
+		<a class="zb_gd" href="#">更多>></a>
+	</div>
+</div>
+<!--
+	奥运热门话题
+-->
+<div>
+	<div><h2 class="o_title">奥运热门话题</h2></div>
+	<div class="oyrmht_fb">
+		<a class="oyrmht_fb_1" href="#"><p>女排奥运阵容现端倪 自由人稳固</p></a>
+		<a href="#"><p>博尔特愿还接力金牌 同情队友遭遇</p></a>
+	</div>
+	<article class="tw_containers">
+		<ul class="tw_containers_ul">
+			<li>
+				<a href="#">
+					<img src="img/tw1.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹1</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw1.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹2</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw1.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹3</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw1.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹4</a>
+				</h4>
+			</li>
+		</ul>
+	</article>
+</div>
+<!--奖牌榜-->
+<div>
+	<div class="medal_dh">
+		<h2>奖牌榜</h2>
+		<b id="now_time">当前日期：</b>
+	</div>
+	<div>
+		<table class="medal_ta">
+			<tbody class="medal_ta_tb">
+				<tr class="medal_tb_tr_one">
+					<th class="w01">排名</th>
+					<th class="w02">国家/地区</th>
+					<th class="w03">金牌</th>
+					<th class="w04">银牌</th>
+					<th class="w05">铜牌</th>
+					<th class="w06">总数</th>
+				</tr>
+			</tbody>
+			<tbody class="medal_ta_tb">
+				<tr>
+					<th class="w01">1</th>
+					<th class="w02"><img src="img/USA.png"/>&nbsp;美国</th>
+					<th class="w03">46</span></th>
+					<th class="w04">29</span></th>
+					<th class="w05">29</span></th>
+					<th class="w06">104</th>
+				</tr>
+			</tbody>
+			<tbody class="medal_ta_tb">
+				<tr>
+					<th class="w01">2</th>
+					<th class="w02"><img src="img/CHN.png"/>&nbsp;中国</th>
+					<th class="w03">38</span></th>
+					<th class="w04">27</span></th>
+					<th class="w05">23</span></th>
+					<th class="w06">88</th>
+				</tr>
+			</tbody>
+			<tbody class="medal_ta_tb">
+				<tr>
+					<th class="w01">3</th>
+					<th class="w02"><img src="img/UK.png"/>&nbsp;英国</th>
+					<th class="w03">29</span></th>
+					<th class="w04">17</span></th>
+					<th class="w05">19</span></th>
+					<th class="w06">65</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--
+	中国备战
+-->
+<div>
+	<div><h2 class="o_title">中国备战</h2></div>
+	<article class="tw_containers">
+		<ul class="tw_containers_ul">
+			<li>
+				<a href="#">
+					<img src="img/tw2.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹1</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw2.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹2</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw2.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹3</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw2.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹4</a>
+				</h4>
+			</li>
+		</ul>
+		<div class="zgbz_btn">
+			<ul>
+				<li>
+					<a>换一批</a>
+				</li>
+				<li>
+					<a>更多</a>
+				</li>
+			</ul>
+		</div>
+	</article>
+</div>
+<!--
+	诸强练兵
+-->
+<div>
+	<div><h2 class="o_title">诸强练兵</h2></div>
+	<article class="tw_containers">
+		<ul class="tw_containers_ul">
+			<li>
+				<a href="#">
+					<img src="img/tw3.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹1</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw3.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹2</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw3.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹3</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tw3.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹4</a>
+				</h4>
+			</li>
+		</ul>
+	</article>
+</div>
+<!--
+	奥运名人堂
+-->
+<div>
+	<div><h2 class="o_title">奥运名人堂</h2></div>
+	<div class="swiper-container swiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide2"><a href="#"><img width="100%" height="350px" src="img/1.jpg"/></a></div>
+			<div class="swiper-slide slide2"><a href="#"><img width="100%" height="350px" src="img/2.jpg"/></a></div>
+			<div class="swiper-slide slide2"><a href="#"><img width="100%" height="350px" src="img/3.jpg"/></a></div>
+			<div class="swiper-slide slide2"><a href="#"><img width="100%" height="350px" src="img/4.jpg"/></a></div>
+			<div class="swiper-slide slide2"><a href="#"><img width="100%" height="350px" src="img/5.jpg"/></a></div>
+        </div>
+        <!-- Add Pagination -->
+        <!--<div class="swiper-pagination2"></div>-->
+    </div>
+</div>
+<!--
+	央视名栏
+-->
+<div>
+	<div><h2 class="o_title">央视名栏</h2></div>
+	<div class="ysml">
+		<ul>
+			<li>
+				<a href="#"><img src="img/tw4.jpg"/></a>
+				<p>
+					<a href="#">图文标题1</a><br />
+					XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+				</p>
+			</li>
+			<li>
+				<a href="#"><img src="img/tw4.jpg"/></a>
+				<p>
+					<a href="#">图文标题2</a><br />
+					<em>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</em>
+				</p>
+			</li>
+			<li>
+				<a href="#"><img src="img/tw4.jpg"/></a>
+				<p>
+					<a href="#">图文标题3</a><br />
+					<em>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</em>
+				</p>
+			</li>
+			<li>
+				<a href="#"><img src="img/tw4.jpg"/></a>
+				<p>
+					<a href="#">图文标题4</a><br />
+					<em>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</em>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--
+	风土周边
+-->
+<div>
+	<div><h2 class="o_title">风土周边</h2></div>
+	<article class="tw_containers">
+		<ul class="tw_containers_ul">
+			<li>
+				<a href="#">
+					<img src="img/nrj_tp.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹1</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/nrj_tp.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹2</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/nrj_tp.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹3</a>
+				</h4>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/nrj_tp.jpg"/>
+				</a>
+				<h4>
+					<a href="#">我的校花姐妹4</a>
+				</h4>
+			</li>
+		</ul>
+	</article>
+</div>
+<!--
+	页脚
+-->
+<div class="footer">
+	<p>
+		<a class="f_icon1">进入频道首页</a>
+		<a class="f_icon2">返回首页</a>
+	</p>
+</div>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+/*获取当前时间：yyyy-MM-dd*/
+window.onload = function(){
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDate();
+	var target_time = "当前时间："+year+"年"+month+"月"+day+"日";
+	var tt = document.getElementById('now_time');
+	tt.innerHTML = target_time;
+}
+/*滚图*/
+var swiper = new Swiper('.swiper1', {
+pagination: '.swiper-pagination1',
+paginationClickable: true
+});   
+/*奥运名人堂*/
+var swiper = new Swiper('.swiper2', {
+    pagination: '.swiper-pagination2',
+    slidesPerView: 3,
+    paginationClickable: true,
+    spaceBetween: 10,
+    freeMode: true
+});
+</script>
+</body>
+</html>

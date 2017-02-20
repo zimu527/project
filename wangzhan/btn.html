@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>btn</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <style>
+/*通过css3实现按钮效果----start*/
+.btn {
+    position: relative;
+    display: block;
+    width: 215px;
+    height: 60px;
+    margin: 5px auto 0 auto;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 60px;
+    color: #333;
+    text-align: center;
+    z-index: 2;
+    background-size: 100%;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    background-image:-webkit-linear-gradient(top,#ff9c02,#ff5c00);/* Saf4+, Chrome */
+    background-image:linear-gradient(top,#ff9c02,#ff5c00);
+    -moz-box-shadow: 0 3px 8px #000;
+    -webkit-box-shadow:0 3px 8px #000;
+    opacity: 1;
+}
+.btn2 {
+    position: relative;
+    display: block;
+    width: 215px;
+    height: 60px;
+    margin: 5px auto 0 auto;
+	background:red;
+}
+/*
+.btn:active {opacity:0.2;background-color:red;}
+*/
+/*通过css3实现按钮效果----end*/
+
+    </style>
+</head>
+<body>
+<a class="btn">btn</a>
+<a class="btn2">btn2</a>
+<script>
+	//document.body.addEventListener(“touchstart",function(){},false);
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/investigate.css" type="text/css" rel="stylesheet">
+    <title>微调研</title>
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+<div class="topic_box">
+    <div class="question_box" id="question_info_1">
+        <div class="question_info">
+            <span class="queSpan">问题 <span class="question_index">1</span>：</span>
+            <input type="text" class="question_txt" name="question[0]" placeholder="请填写问题的题目">
+            <input type="checkbox" class="check_box" name="ismulti[0]" id="ismulti_0">
+            <label for="ismulti_0">允许多选</label>
+        </div>
+        <ul class="option_ul" id="1">
+            <li>
+                <span class="option_index">A</span><span>选项：</span>
+                <input type="text" class="option_txt" name="option[1][0]">
+                <a class="list_del" href="javascript:;">×</a>
+            </li>
+            <li>
+                <span class="option_index">B</span><span>选项：</span>
+                <input type="text" class="option_txt" name="option[1][1]">
+                <a class="list_del" href="javascript:;">×</a>
+            </li>
+            <li>
+                <span class="option_index">C</span><span>选项：</span>
+                <input type="text" class="option_txt" name="option[1][2]">
+                <a class="list_del" href="javascript:;">×</a>
+            </li>
+        </ul>
+        <div class="add_div">
+            <div class="option_add">
+                <img src="pic1/add.png">
+                <span>再添加一个选项</span>
+            </div>
+        </div>
+    </div>
+    <div class="question_add">
+        <img src="pic1/add.png">
+        <span>再添加一题</span>
+    </div>
+</div>
+<script>
+    var a = new Array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+
+    function rank(){
+        $('.option_ul li').each(function(){
+            $(this).find('.option_index').html(a[$(this).index()]);
+            $(this).find('.option_txt').attr('name' , 'option[' + $(this).parents('.question_box').index() + '][' + $(this).index() + ']');
+        });
+
+        $('.topic_box .question_box').each(function(){
+            $(this).find('.question_index').html($(this).index() + 1);
+        });
+
+        $('.question_box').each(function(){
+            $(this).find('.question_txt').attr('name' , 'question[' + $(this).index() + ']');
+            $(this).find('.check_box').attr('name' , 'ismulti[' + $(this).index() + ']');
+            $(this).find('.check_box').attr('id' , 'ismulti_' + $(this).index());
+            $(this).find('label').attr('for' , 'ismulti_' + $(this).index());
+            $(this).find('.option_ul').attr('id' ,  $(this).index());
+        });
+    }
+    rank();
+    //    添加选项
+    $(".option_add").live("click" , function(){
+        var op = $('<li><span class="option_index">A</span><span>选项：</span><input type="text" class="option_txt" name="option[0][0]"><a class="list_del" href="javascript:;">x</a></li>');
+        if($(this).parents('.question_box').find('ul li').size() < 26){
+            $(this).parents('.question_box').find('ul').append(op);
+            rank();
+        }else{
+            alert("您添加的数量够您用一辈子了");
+        }
+    });
+    //    删除选项
+    $('.list_del').live('click' , function(){
+       $(this).parent('li').remove();
+        rank();
+    });
+    //    添加一题
+    $('.question_add').live('click' , function(){
+        var qu = $('<div class="question_box"></div>');
+        var info = $('<div class="question_info"><span class="queSpan">问题 <span class="question_index">1</span>：</span><input type="text" class="question_txt" name="question[0]" placeholder="请填写问题的题目"><input type="checkbox" class="check_box" name="ismulti[0]" id="ismulti_0"><label for="ismulti_0">允许多选</label><a class="question_del" href="javascript:;">删除</a></div>');
+        var oUl = $('<ul class="option_ul" id="1"></ul>');
+        var oLi1 = $('<li><span class="option_index">A</span><span>选项：</span><input type="text" class="option_txt" name="option[0][0]"><a class="list_del" href="javascript:;">x</a></li>');
+        var oLi2 = $('<li><span class="option_index">B</span><span>选项：</span><input type="text" class="option_txt" name="option[0][1]"><a class="list_del" href="javascript:;">x</a></li>');
+        var oLi3 = $('<li><span class="option_index">C</span><span>选项：</span><input type="text" class="option_txt" name="option[0][2]"><a class="list_del" href="javascript:;">x</a></li>');
+        var add = $('<div class="add_div"><div class="option_add"><img src="pic1/add.png"><span>再添加一个选项</span></div></div>');
+        oUl.append(oLi1);
+        oUl.append(oLi2);
+        oUl.append(oLi3);
+        qu.append(info);
+        qu.append(oUl);
+        qu.append(add);
+
+        $(this).before(qu);
+
+        rank();
+    });
+    //    删除一题
+    $('.question_del').live('click' , function(){
+       $(this).parents('.question_box').remove();
+        rank();
+    });
+</script>
+</body>
+</html>

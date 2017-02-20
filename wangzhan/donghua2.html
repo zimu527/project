@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * { padding: 0;margin: 0; }
+        #oDiv li {
+            list-style: none;
+            position: relative;
+            height: 100px;
+            width: 200px;
+            margin-top: 20px;
+            background: yellowgreen;
+            font-size: 10px;
+            opacity:0.2;
+            filter:alpha(opacity=100);
+        }
+    </style>
+</head>
+<body>
+    <div id="oDiv">
+        <ul>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3"></li>
+        </ul>
+    </div>
+    <script>
+window.onload=(function(){
+    var aLi=document.getElementById('oDiv').getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].timer=null;
+        aLi[i].alpha=100;
+        aLi[i].onmousemove=function(){
+            var a=this;//把this赋值给变量，避免了指针混乱出现的bug
+            startMovex(a,{'width':400,'opacity':100},function(){
+                startMovex(a,{'height':400});
+            });
+            };
+        aLi[i].onmouseout=function(){
+            var a=this;
+            startMovex(a,{'width':200,'opacity':20},function(){
+                startMovex(a,{'height':200});
+            });
+        };
+
+        };
+    });
+{/*function startMovex(obj,json,fn){
+    //alert(obj.id);
+    clearInterval(obj.timer);
+    obj.timer=setInterval(function(){
+        var flag=true;
+        for(var attr in json){
+            //取当前值
+            if(attr=='opacity'){
+                var occu=Math.round(parseFloat(getStyle(obj,attr))*100);
+            }else{
+                var occu=parseInt(getStyle(obj,attr));
+            }            
+            //设置速度
+            var speed=(json[attr]-occu)/5;
+            speed=speed>0?Math.ceil(speed):Math.floor(speed);
+            //判断到达目标值
+            if(occu!=json[attr]) {
+                flag = false;
+            }
+            if(attr=='opacity'){
+                obj.style.filter='alpha(opacity:'+(occu+speed)+')';
+                obj.style[attr]=(occu+speed)/100;
+            }else{
+                obj.style[attr]=occu+speed+'px';
+                //console.log(parseInt(getStyle(obj,attr)));
+            }
+            if(flag){
+                clearInterval(obj.timer);
+                //回调函数
+                if(fn){
+                    fn();
+                }
+                //alert(1)
+            }
+        }
+    },20);
+}*/}
+function startMovex(obj,json,fn){clearInterval(obj.timer);
+obj.timer=setInterval(function(){
+
+var flag=true;//标志所有运动是否到达目标值
+for(var attr in json ){
+var curr=0;
+//判断是否为透明度
+if(attr=='opacity'){
+curr=Math.round(parseFloat(getStyle(obj,attr))*100);
+}else{
+curr=parseInt(getStyle(obj,attr));
+}
+//移动速度处理
+var speed=0;
+speed=(json[attr]-curr)/10;
+speed=speed>0?Math.ceil(speed):Math.floor(speed);
+if(curr!=json[attr]){
+flag=false;
+}
+if (attr=='opacity') {
+obj.style.filter='alpha(opacity:'+(curr+speed)+")";
+obj.style.opacity=(curr+speed)/100;
+}else{
+obj.style[attr]=curr+speed+'px';
+}
+
+}
+if(flag){
+clearInterval(obj.timer);
+if(fn){
+fn();
+}
+}
+
+
+},30);
+}
+function getStyle(obj,attr){
+    if(obj.currentStyle){//IE取样式
+        return obj.currentStyle[attr];
+    }else{
+        return getComputedStyle(obj,false)[attr];
+    }
+}
+</script>
+</body>
+</html>

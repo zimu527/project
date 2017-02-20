@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js动画效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #oDiv {
+            position: relative;
+            height: 100px;
+            width: 200px;
+            background: red;
+            left: -200px;
+            font-size: 12px;
+        }
+        #oDiv span {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            left: 200px;
+            top: 40px;
+            background: blue;
+        }
+        #div1 {
+            position: relative;
+            height: 100px;
+            width: 200px;
+            background: red;
+            opacity:0.3;
+            font-size: 12px;
+        }
+        #oDiv2 {
+            position: relative;
+            height: 100px;
+            width: 200px;
+            background: red;
+            left: -200px;
+        }
+        #oDiv2 span {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            left: 200px;
+            top: 40px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+<div id="oDiv">hhhh
+    <span></span>
+</div>
+<div id="div1">fff</div>
+<div id="oDiv2">
+    <span></span>
+</div>
+<script>
+    window.onload=function(){
+        var oDiv=document.getElementById('oDiv');//左右运动
+        oDiv.onmousemove=function() {
+            startMove(0);
+        };
+        oDiv.onmouseout=function(){
+            startMove(-200);
+        };
+        var div1=document.getElementById('div1');//透明度变化
+        div1.onmousemove=function(){
+            startChange(1);
+        };
+        div1.onmouseout=function(){
+            startChange(0.1);
+        };
+        var oDiv2=document.getElementById('oDiv2');//左右缓冲运动
+        oDiv2.onmousemove=function() {
+            startMove2(0);
+        };
+        oDiv2.onmouseout=function(){
+            startMove2(-200);
+        };
+    };
+    var timer1=null;
+    var speed1=0;
+    function startMove(iTarget){
+        clearInterval(timer1);
+        var oDiv=document.getElementById('oDiv');
+        if(oDiv.offsetLeft>iTarget){
+            speed1=-10;
+        }else{
+            speed1=10;
+        }
+        timer1=setInterval(function(){
+            if(oDiv.offsetLeft==iTarget){
+                clearInterval(timer1);
+            }else{
+                oDiv.style.left=oDiv.offsetLeft+speed1+'px';
+                oDiv.style.fontSize=parseInt(getStyle(this,'fontSize'))+1+'px';
+            }
+        },30)
+    }
+//    缓冲运动
+    function startMove2(iTarget){
+        clearInterval(timer1);
+        var oDiv2=document.getElementById('oDiv2');
+        timer1=setInterval(function(){
+            speed1=(iTarget-oDiv2.offsetLeft)/10;
+            //console.log(speed1);
+            if(oDiv2.offsetLeft==iTarget){
+                clearInterval(timer1);
+            }else{
+                speed1=speed1>0?Math.ceil(speed1):Math.floor(speed1);//向上或者向下取整，达到完整运动轨迹效果
+            }
+        },30)
+    }
+</script>
+<script>
+    var opacity=3;
+    var speed2=0;
+    var timer2=null;
+    function startChange(iTarget){
+        var div1=document.getElementById('div1');
+        clearInterval(timer2);
+        if(iTarget*10>opacity){
+            speed2=1;
+    }else {
+            speed2 = -1;
+        }
+        timer2=setInterval(function(){
+            if(opacity/10 ==iTarget){
+                clearInterval(timer2);
+            }else{
+                opacity+=speed2;
+                div1.style.opacity=opacity/10;
+            }
+        },30);
+    }
+</script>
+</body>
+</html>

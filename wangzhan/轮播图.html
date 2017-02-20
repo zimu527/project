@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>第34章 项目1-博客前端：下拉菜单</title>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+*{margin:0;padding:0;}
+li{list-style:none;}
+#box{width:160px;height:40px;margin:0 auto;overflow:hidden;position:relative;}
+ul{height:40px;width:320px;position:absolute;top:0;left:0;}
+li{background:green;float:left;height:40px;width:40px;}
+span{height:40px;line-height:40px;text-align:center;background:red;position:absolute;}
+span.right{left:780px;top:0;}span.left{left:612px;}
+</style>
+<script>
+$(function(){
+$('ul').append($('ul').html())
+$('ul').width($('li').width()*$('li').size())
+var box=$('li').width()*$('li').size()
+var speed=-2;
+
+var timer=null;
+timer=setInterval(
+function(){if(speed<0){
+if($('ul').css('left')==-box/2+'px'){$('ul').css('left','0')}
+
+$('ul').css('left','+=-2px')}
+
+if(speed>0){
+if($('ul').css('left')=='0px'){$('ul').css('left',-box/2+'px')}
+
+$('ul').css('left','+='+speed+'px')}
+
+
+},100)
+$('#box').hover(function(){
+clearInterval(timer)
+},function(){
+timer=setInterval(function(){
+if($('ul').css('left')==-box/2+'px'){$('ul').css('left','0')}
+
+$('ul').css('left','+='+speed+'px')
+
+
+
+},100)})
+
+
+$('.left').click(function(){
+speed=-2;
+
+})
+$('.right').click(function(){
+speed=2;
+
+})
+
+})
+
+
+</script>
+</head>
+<body>	
+
+<span class="left">&lt</span>
+<div id="box">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</div>
+<span class="right">&gt</span>	
+</body>
+</html>

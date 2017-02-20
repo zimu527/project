@@ -1,0 +1,45 @@
+<!--
+图片交互效果。最好要设置overflow-x: hidden; ，以免出现奇怪的效果。
+我们用两个transition-属性控制图片展示的宽度，起初都是显示一半，当鼠标悬停在某个图片上时，宽度增加。
+这里我们只使用了几个图片，但图片的个数是不受限制的。
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* structure */
+        #kwicks { width: 590px; overflow-x: hidden; }
+        #kwicks:hover li a { width: 100px; }
+        #kwicks li {
+            float: left;
+            overflow-x: hidden;
+            display: block;
+        }
+        #kwicks li:hover a { width: 285px !important; }
+
+        /* individual kwicks */
+        #kwicks li a {
+            display: block;
+            text-indent: -9999px;
+            width: 134px;
+            height: 143px;
+            transition-property: width;
+            transition-duration: 1s;
+        }
+        .john{background: url("images/ringo.gif")}
+        .paul{background: url("images/ringo.gif")}
+        .george{background: url("images/ringo.gif")}
+        .ringo{background: url("images/ringo.gif")}
+    </style>
+</head>
+<body>
+<ul id="kwicks">
+    <li><a class="john"></a></li>
+    <li><a class="paul" href="http://en.wikipedia.org/wiki/Paul_mccartney" title="Paul McCartney">Paul McCartney</a></li>
+    <li><a class="george" href="http://en.wikipedia.org/wiki/George_harrison" title="George Harrison">George Harrison</a></li>
+    <li><a class="ringo" href="http://en.wikipedia.org/wiki/Ringo_starr" title="Ringo Starr">Ringo Starr</a></li>
+</ul>
+</body>
+</html>

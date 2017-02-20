@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+ .wrap{height:300px;overflow: hidden;position: absolute;top:30;left: 100;width: 1280px}
+  p{margin:0;height: 300px;width: 100%
+  }
+  .content p{
+    position: absolute;
+  }
+  @-webkit-keyframes anim1{
+    0% {right: 0px;opacity: 1}
+    33% {right: 0px;opacity: 1}
+    45% {right: 300px ;opacity: 0}
+    95% {right: -300px ;opacity: 0}
+    100%{right:0px;opacity: 1}
+  }
+  @-webkit-keyframes anim2{
+    0%{right: -300px;opacity: 0}
+    25% {right: -300px;opacity: 0}
+    33% {right: 0px;opacity: 1}
+    66% {right: 0px;opacity: 1}
+    70% {right: 300px;opacity: 0}
+    100%{right: -300px;opacity: 0}
+  }
+  @-webkit-keyframes anim3{
+    0% {right: 0px;opacity: 1}
+    5% {right: 300px;opacity: 0}
+    60% {right: -300px;opacity: 0}
+    66% {right: 0px;opacity: 1}
+    100% {right: 0px;opacity: 1}
+  }
+
+
+  .content p:nth-child(1){background-color: red;}
+  .content p:nth-child(2){background-color: yellow;}
+  .content p:nth-child(3){background-color: green;;}
+  .content p:nth-child(1){
+
+    -webkit-animation: anim1 8s linear infinite;
+  }
+
+  .content p:nth-child(2){
+
+    -webkit-animation: anim2 8s linear infinite;
+  }
+   .content p:nth-child(3){
+
+    -webkit-animation: anim3 8s linear infinite;
+  }
+  form {
+      position:relative;top:500px
+  }
+
+		  
+		  
+		  
+.arrow {
+	top:700px;
+	position:absolute;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid red;
+    border-bottom: 50px solid transparent;
+}
+ .arrow1{
+     top:700px;
+     left: 600px;
+     position:absolute;
+     width: 0;
+     height: 0;
+     border-left: 50px solid transparent;
+     border-top: 50px solid red;
+     border-right: 50px solid transparent;
+ }
+ .arrow2{
+     top:690px;
+     left: 600px;
+     position:absolute;
+     width: 0;
+     height: 0;
+     border-left: 50px solid transparent;
+     border-top: 50px solid #fff;
+     border-right: 50px solid transparent;
+ }
+
+ .circle{
+    position: absolute;
+	left:600px;
+	background:red;
+    width: 13px;
+    height: 7px;
+    border-radius:50%;
+}
+	
+</style>
+<div class="wrap">
+    <div class="content">
+<p>第一行数据</p>
+<p>第二行数据</p>
+<p>第三行数据</p>
+    </div>
+  </div>
+  <form>
+   <input type="radio" value="中国" name="contry" checked>
+      <input type="radio" value="中国" name="contry" >
+
+   <input type="radio" value="中国" name="contry" >
+
+  </form>
+  <div class="arrow"></div>
+  <div class="circle"></div>
+  <div class="arrow1"></div>
+  <div class="arrow2"></div>
+  <div class="square"></div>
+
+
+
+  <body>
+</body>
+</html>

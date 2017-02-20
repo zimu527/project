@@ -1,0 +1,811 @@
+/*general start*/
+body,p,blockquote,figure,hr,h1,h2,h3,h4,h5,h6,ul,menu,dir,ol,dl,dd,fieldset,input[type=radio],input[type=checkbox],input[type=range],pre {
+    margin: 0;
+}/*<blockquote> 标签定义摘自另一个源的块引用；<q>标记短的引用。
+    目前所有主流浏览器都不支持 <menu> 标签。
+    dir目录列表,不赞成使用 dir 元素！
+    fieldset 元素可将表单内的相关元素分组。所有浏览器都支持 <fieldset> 标签。
+    legend 元素为 fieldset 元素定义标题（caption）。
+    <figure> 标签规定独立的流内容（图像、图表、照片、代码等等）。
+    pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。*/
+
+ul,
+menu,
+dir,
+ol,
+legend,
+fieldset,
+input,
+input[type=password],
+input[type=search],
+isindex,
+textarea,
+input[type=hidden],
+input[type=image],
+input[type=file],
+input[type=radio],
+input[type=checkbox],
+input[type=range],
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+    padding: 0;
+}
+
+input[type=search],
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    -webkit-appearance: none;/*移除iOS原生控件样式,解决下无法正常渲染按钮的问题。*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+cite,
+var,
+address,
+em {
+    font-style: normal;
+}
+
+strong {
+    font-weight: 400;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+iframe {
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+select,
+button,
+input {
+    color: inherit;
+}
+
+html {
+    -webkit-text-size-adjust: none;/*当样式表里font-size<12px时，中文版chrome浏览器里字体显示仍为12px，这时可以用 html{-webkit-text-size-adjust:none;}*/
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font: 14px/1.5 Arial, "Microsoft Yahei";
+    min-width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
+    color: #4b4b4b;
+    background-color: #efefef;
+    position: relative;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -65px;
+    -webkit-user-select: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+li,
+p {
+    margin: 0;
+}
+
+@media only all and (max-width:640px) {
+
+    /* styles for iPhone/Android landscape (and really narrow browser windows) */
+    body,
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+}
+
+em {
+    font-style: normal;
+}
+
+.clearfix {
+    zoom: 1;/*Zoom属性是IE浏览器的专有属性， 它可以设置或检索对象的缩放比例。zoom:1能够比较神奇地解决ie下比较奇葩的bug。如外边距（margin）的重叠，浮动的清除，触发ie的 haslayout属性等等。*/
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.extra {
+    position: relative;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+/* noscript start */
+
+#noscript {
+    background: #EA6201;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #cf5702;
+    padding: 5px 0px;
+}
+
+/* header start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    overflow: hidden;
+    height: .45rem;
+    line-height: .45rem;
+    padding: 0 .5rem;
+    background: url("../img/olyNavBg.png") no-repeat;
+    background-size: cover;
+}
+
+header .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: .5rem;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto .25rem;
+    text-align: center;
+    color: #0072bc;
+}
+
+header .icon-return {
+    left: 0;
+    background-image: url(../img/back.png);
+}
+
+header .icon-search {
+    background-image: url(../img/search.png);
+}
+
+header .icon-cctv{
+    width: 1.1rem;
+    background-image: url(../img/cctv.com.fw.png);
+}
+
+header h1 {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*common css*/
+.container {
+    min-height: 320px;
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+}
+
+.ao-title {
+    display: -webkit-box;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    font-size: 16px;
+    border-bottom: 2px solid #000;
+    color: #000;
+    background-image: url(../img/trophy-title.png);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: auto 60%;
+}
+
+.ao-title-topic {
+    background-image: url(../img/topic-title.png);
+}
+
+.ao-title-trophy {
+    background-image: url(../img/trophy-title.png);
+}
+
+.ao-title-childwar {
+    background-image: url(../img/child-war-title.png);
+}
+
+.ao-title-worldwar {
+    background-image: url(../img/world-war-title.png);
+}
+
+.ao-title-cctv {
+    background-image: url(../img/cctv-title.png);
+    background-size: auto;
+    padding-left: 75px;
+}
+
+.ao-title-local {
+    background-image: url(../img/local-title.png);
+}
+
+.ao-grid {
+    padding: 0 .1rem;
+}
+
+.ao-grid li {
+    float: left;
+    width: 50%;
+}
+
+.ao-grid a {
+    display: block;
+    margin: 0 .10rem;
+}
+
+.ao-grid img {
+    display: block;
+    width: 100%;
+}
+
+.ao-grid p {
+    height: .28rem;
+    line-height: .28rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ao-list .ao-list-item {
+    display: -webkit-box;
+    display: -moz-box;
+    padding-bottom: .12rem;
+}
+
+.ao-list .ao-list-thumb {
+    width: 127px;
+    margin-right: .12rem;
+}
+
+.ao-list .ao-list-thumb img {
+    display: block;
+    max-width: 127px;
+    max-height: 100%;
+}
+
+.ao-list .ao-list-info {
+    -webkit-box-flex: 1;
+-moz-box-flex: 1;
+}
+
+.ao-list .ao-list-info h3 {
+    padding-bottom: .07rem;
+    line-height: 22px;
+    font-size: 16px;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ao-list .ao-list-info p {
+    line-height: .15rem;
+    color: #606060;
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -moz-line-clamp: 3;
+}
+
+.ao-options {
+    display: -webkit-box;
+    display: flex;
+}
+
+.ao-options-item {
+    display: block;
+    width: 50%;
+    height: .34rem;
+    line-height: .34rem;
+    /*border-radius: .06rem;*/
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    font-size: 15px;
+    text-align: center;
+    color: #BE9546;
+}
+
+
+.ao-options-change {
+    background: url("../img/huan.png");
+    background-repeat: no-repeat;
+    background-position:18.5% center;
+    background-size: auto 70%;
+}
+.ao-options-more {
+    background: url("../img/icon-bottom03.png");
+    background-repeat: no-repeat;
+    background-position:26.5% center;
+    background-size: auto 70%;
+}
+
+.ao-options-item:first-child {
+    margin-right: .2rem;
+}
+
+.module {
+    overflow-y: auto;
+    height: auto;
+    margin-bottom: 10px;
+    background: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/*滚动图*/
+.home-banner img {
+    display: block;
+}
+
+.home-tip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .27rem;
+    line-height: .27rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-tip-text {
+    width: 60%;
+    padding-left: .12rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*正在直播*/
+.live {
+    display: flex;
+    display: -webkit-box;
+    padding: 5px 14px 0 5px;
+}
+
+.live-all {
+
+}
+
+.live-item {
+    display: flex;
+    display: -webkit-box;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.live-img {
+    width: .5rem;
+    height: 100%;
+    margin-right: .1rem
+}
+
+.live-img img {
+    display: block;
+    max-height: 100%;
+}
+
+.live-name {
+    border-bottom: 1px solid #fff;
+    -webkit-box-flex: 1;
+-moz-box-flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.live-more {
+    text-align: right;
+}
+
+.live-more a {
+    display: inline-block;
+    padding: 3px 0 3px 7px;
+    color: #ff1200;
+}
+
+/*奥运热门话题*/
+.topic-list {
+    padding: .08rem 0;
+}
+
+.topic-list li {
+    position: relative;
+    height: .2rem;
+    line-height: .20rem;
+    padding-left: .2rem;
+}
+
+.topic-list li:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.topic-list a {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.topic-list li:first-child a {
+    color: #ff1200;
+}
+
+.topic-list a:hover {
+    color: #ff1200;
+}
+
+.topic-grid {
+    padding: 0 10px;
+}
+
+.topic-grid li {
+    float: left;
+    width: 50%;
+}
+
+.topic-grid a {
+    display: block;
+    margin: 10px;
+}
+
+.topic-grid img {
+    width: 100%;
+}
+
+/*有奖竞猜*/
+.winner {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    background: -webkit-gradient(linear, #0073d3 0%, #00a6f0 100%);
+    background: -moz-gradient(linear, #0073d3 0%, #00a6f0 100%);
+    background: linear-gradient(to bottom, #0073d3 0%, #00a6f0 100%);
+}
+
+.winner-title-bg {
+    background-image: url(../images/winner-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+.winner-title {
+    height: .28rem;
+    line-height: .28rem;
+    padding: 0 .1rem;
+    color: #fff;
+}
+
+.winner-title span {
+    color: #ff1200;
+}
+
+.winner-content {
+    margin: 0 .1rem;
+    padding: .1rem .20rem .15rem;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.winner-country {
+    display: -webkit-box;
+    display: flex;
+    padding: .1rem 0;
+}
+
+.winner-country label {
+    margin-right: .05rem;
+    -webkit-box-flex: 1;
+-moz-box-flex: 1;
+}
+
+.winner-country label input {
+    vertical-align: middle;
+}
+
+.ao-options-winner .ao-options-view {
+    color: #5b5b5b;
+    background-color: #a6a6a6;
+}
+
+.ao-options-winner .ao-options-submit {
+    margin-right: .16rem;
+    color: #fff;
+    background-color: #ff1200;
+}
+
+/*奖牌榜*/
+.trophy-time {
+    font-size: 11px;
+}
+
+.trophy-list {
+    height: 132px;
+    overflow: hidden;
+}
+
+.trophy-list table {
+    width: 100%;
+    border-collapse: none;
+}
+
+.trophy-list table th {
+    height: .32rem;
+    line-height: .32rem;
+    padding: 0;
+    border-bottom: 1px solid #9b9b9b;
+}
+
+.trophy-list table td {
+    line-height: .32rem;
+    border-bottom: 1px solid #9b9b9b;
+    padding: 0;
+    background-color: #efeff0;
+}
+
+.trophy-list .trophy-country {
+    padding-left: .1rem;
+    text-align: left;
+}
+
+.trophy-list .trophy-country-content {
+    display: -webkit-box;
+    display: flex;
+    overflow: hidden;
+}
+
+.trophy-list .trophy-country-img {
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    width: .18rem;
+}
+
+.trophy-list .trophy-country-img img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.trophy-list .trophy-1,
+.trophy-list .trophy-2,
+.trophy-list .trophy-3 {
+    text-align: center;
+}
+
+.trophy-list .trophy-total {
+    padding-right: 25px;
+    text-align: right;
+}
+
+.trophy-options {
+    background-color: #c9cacb;
+}
+
+.trophy-options a {
+    display: block;
+    height: .32rem;
+    line-height: .32rem;
+    text-align: center;
+    color: #ff1200;
+}
+
+/*中国备战*/
+.childwar .ao-grid {
+    padding-top: .2rem;
+}
+
+.childwar .ao-options {
+    padding: 0.07rem .2rem .1rem;
+}
+
+/*诸强练兵*/
+.worldwar .ao-grid {
+    padding-top: .2rem;
+}
+
+/*奥运名人堂*/
+.star {
+    padding: .1rem 0;
+}
+
+.star-title {
+    height: 53px;
+    line-height: 43px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-image: url(../img/star-title.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+.star-list {
+    position: relative;
+    padding: 0 30px;
+}
+
+.star-list .swiper-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+}
+
+.star-avatar {
+    position: relative;
+    max-width: 54px;
+    max-height: 54px;
+    margin: 0px auto;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.swiper-slide-active .star-avatar {
+    max-width: 90px;
+    max-height: 90px;
+    margin: 0 auto;
+    border-color: #ff1200;
+}
+
+.star-avatar img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.star-avatar p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .21rem;
+    line-height: .21rem;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 18, 0, 0.8);
+}
+
+/*央视名栏*/
+.ao-list-cctv {
+    padding: .2rem .10rem 0;
+}
+
+/*风土周边*/
+.local .ao-grid {
+    padding-top: .2rem;
+    padding-bottom: .1rem;
+}
+
+/* footer start */
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    padding: 0 .3rem;
+    text-align: center;
+    color: #fff;
+    background: url("../img/olyNavBg.png") no-repeat;
+    background-size: cover;
+}
+
+footer .options {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    padding: .07rem 0;
+}
+
+footer .footer-item {
+    display: block;
+    width: 50%;
+    height: .29rem;
+    line-height: .29rem;
+    border: 1px solid #fff;
+    border-radius: .07rem;
+    -webkit-box-flex: 1;
+-moz-box-flex: 1;
+    color: #fff;
+}
+
+footer .footer-item:first-child {
+    margin-right: .2rem;
+}
+
+/*倒计时*/
+.countdown {
+    padding-top:4px;
+    text-align: center;
+    color: #fff;
+    background: url(../img/countdown.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.countdown-word span {
+    color: #fff600;
+    font-size: 1.2em;
+}
+.countdown-time {
+    font-size: 10px;
+}
+.countdown-time span{
+    font-size: 2.2em;
+    padding-left: 5px;
+}

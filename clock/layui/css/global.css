@@ -8,8 +8,10 @@
 .logo{position: absolute; left: 0; top: 18px;}
 .logo img{width: 82px; height: 31px;}
 
-.header .layui-nav{position: absolute; right: 0; top: 0; padding: 0; background: none;}
-.header .layui-nav .layui-nav-item{margin: 0 20px; line-height: 66px;}
+.header .layui-nav{position: absolute; left: 300px; top: 0; padding: 0; background: none;}
+.header .layui-nav .layui-nav-item{margin: 0 10px; line-height: 66px;}
+
+.login-btn{position: absolute; right: 40px; top: 18px;}
 
 .menu{position: absolute; right: 0; top: 0; line-height: 65px;}
 .menu a{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
@@ -20,15 +22,15 @@
 
 .header-index{background-color: #080018; border: none;}
 
-.layui-layout-admin .header-demo{border-bottom-color: #009688; background-color: #fff;}
-.header-demo .logo{left: 40px;}
-.header-demo .layui-nav{top: 0;}
-.header-demo .layui-nav .layui-nav-item{margin: 0 10px; line-height: 70px;}
-.header-demo .layui-nav .layui-nav-item a{color: #999;}
-.header-demo .layui-nav .layui-this{background-color: #f2f2f2;}
-.header-demo .layui-nav .layui-nav-item a:hover, 
-.header-demo .layui-nav .layui-this a{color: #000;}
-.header-demo .layui-nav .layui-this:after, 
+/*.layui-layout-admin .header-demo{border-bottom-color: #009688; background-color: #fff;}*/
+/*.header-demo .logo{left: 40px;}*/
+/*.header-demo .layui-nav{top: 0;}*/
+/*.header-demo .layui-nav .layui-nav-item{margin: 0 10px; line-height: 70px;}*/
+/*.header-demo .layui-nav .layui-nav-item a{color: #999;}*/
+/*.header-demo .layui-nav .layui-this{background-color: #f2f2f2;}*/
+/*.header-demo .layui-nav .layui-nav-item a:hover, */
+.header-demo .layui-nav .layui-this a{color: #5FB878;}
+.header-demo .layui-nav .layui-this:after,
 .header-demo .layui-nav-bar{background-color: #393D49;}
 .header-demo .layui-nav .layui-this a{padding: 0 30px;}
 

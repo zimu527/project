@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+	<title>奥运频道</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="swiper/swiper.min.css" />
+</head>
+<body>
+	<noscript>
+        <div id="noscript">您当前的浏览器不支持JavaScript脚本</div>
+    </noscript>
+    <header class="header">
+        <a href="#" class="icon icon-return"></a>
+        <h1>体育</h1>
+        <span class="icon icon-cctv"></span>
+       <!-- <a href="#" class="icon icon-search"></a>-->
+    </header>
+    <section class="container home">
+    	<!-- 滚动图 -->
+        <section class="module">
+    	<div class="swiper-container" id="home-swiper">
+            <div class="swiper-wrapper home-banner">
+                <div class="swiper-slide">
+                	<a href="#"><img src="img/slider/1.png" alt=""></a>
+                	<div class="home-tip">
+                		<div class="home-tip-text">话说天下大势，分久必合，合久必分</div>
+                	</div>
+                </div>
+                <div class="swiper-slide">
+                	<a href="#"><img src="img/slider/2.png" alt=""></a>
+                	<div class="home-tip">
+                		<div class="home-tip-text">周末七国分争，并入于秦。及秦灭之后，楚、汉分争，又并入于汉</div>
+                	</div>
+                </div>
+                <div class="swiper-slide">
+                	<a href="#"><img src="img/slider/3.png" alt=""></a>
+                	<div class="home-tip">
+                		<div class="home-tip-text">汉朝自高祖斩白蛇而起义，一统天下，后来光武中兴，传至献帝，遂分为三国</div>
+                	</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </section>
+        <!-- 倒计时
+        <section class="module">
+        <div class="countdown">
+            <div class="countdown-word">距<span>奥运会开幕</span>还有</div>
+            <div class="countdown-time" id="countdown-time"><span class="countdown-day"></span>天<span class="countdown-hour"></span>时<span class="countdown-minute"></span>分<span class="countdown-second"></span>秒</div>
+        </div>
+            </section>
+         -->
+    	<!-- 正在直播 -->
+        <section class="module">
+        <div class="live">
+            <div class="live-all">
+                <div class="live-item">
+                    <div class="live-img"><img src="img/resource/cctv5.png" alt=""/></div>
+                    <div class="live-name">正在直播：建宁二年四月望日，帝御温德殿。方升座，殿角狂风骤起。</div>
+                </div>
+                <div class="live-item">
+                    <div class="live-img"><img src="img/resource/cctv5.png" alt=""/></div>
+                    <div class="live-name">正在直播：时巨鹿郡有兄弟三人，一名张角，一名张宝，一名张梁。那张角本是个不第秀才</div>
+                </div>
+            </div>
+        	<div class="live-more"><a href="#">更多…</a></div>
+        </div>
+        </section>
+    	<!-- 奥运热门话题 -->
+        <section class="module">
+        <div class="topic">
+        	<div class="ao-title ao-title-topic topic-title">奥运热门话题</div>
+        	<ul class="topic-list">
+        		<li><a href="#">幽州太守刘焉，乃江夏竟陵人氏，汉鲁恭王之后也</a></li>
+        		<li><a href="#">大丈夫不与国家出力，何故长叹？</a></li>
+        	</ul>
+        	<ul class="ao-grid clearfix">
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>众贼见程远志被斩，皆倒戈而走</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>人情势利古犹今</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>谁识英雄是白身</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>朱儁引兵围住阳城攻打，一面差人打探皇甫嵩消息</p>
+        			</a>
+        		</li>
+        	</ul>
+        </div>
+        </section>
+        <!-- 有奖竞猜 -->
+        <section class="module">
+        <div class="winner">
+        	<div class="winner-title-bg">
+        		<div class="winner-title"><span>有奖竞猜：</span>里约奥运哪国/地区金牌最多？</div>
+        	</div>
+        	<div class="winner-content">
+        		<div class="winner-country">
+	        		<label><input type="radio" name="country" />中国</label>
+	        		<label><input type="radio" name="country" />美国</label>
+	        		<label><input type="radio" name="country" />俄罗斯</label>
+	        		<label><input type="radio" name="country" />其他</label>
+        		</div>
+	        	<div class="ao-options ao-options-winner">
+	        		<a class="ao-options-item ao-options-submit" href="#">提交</a>
+	        		<a class="ao-options-item ao-options-view" href="#">查看结果</a>
+	        	</div>
+        	</div>
+        </div>
+        </section>
+        <!-- 完全奖杯榜 -->
+        <section class="module">
+        <div class="trophy">
+        	<div class="ao-title ao-title-trophy">
+        		<div>完全奖杯榜：</div>
+        		<div class="trophy-time">截止北京时间：2016-05-12 19:22:33</div>
+        	</div>
+        	<div class="trophy-list">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th class="trophy-country" width="30%">排名国家</th>
+        					<th class="trophy-1">金牌</th>
+        					<th class="trophy-2">银牌</th>
+        					<th class="trophy-3">铜牌</th>
+        					<th class="trophy-total" width="30%">总数</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="trophy-country">
+        						<div class="trophy-country-content">
+	        						<div>1</div>
+	        						<div class="trophy-country-img">
+	        							<img class="country-img" src="img/resource/zh.png" />
+	        						</div>
+	        						<div>中国</div>
+        						</div>
+        					</td>
+        					<td class="trophy-1">100</td>
+        					<td class="trophy-2">200</td>
+        					<td class="trophy-3">300</td>
+        					<td class="trophy-total">600</td>
+        				</tr>
+        				<tr>
+        					<td class="trophy-country">
+        						<div class="trophy-country-content">
+	        						<div>1</div>
+	        						<div class="trophy-country-img">
+	        							<img class="country-img" src="" alt="" />
+	        						</div>
+	        						<div>中国</div>
+        						</div>
+        					</td>
+        					<td class="trophy-1">100</td>
+        					<td class="trophy-2">200</td>
+        					<td class="trophy-3">300</td>
+        					<td class="trophy-total">600</td>
+        				</tr>
+        				<tr>
+        					<td class="trophy-country">
+        						<div class="trophy-country-content">
+	        						<div>1</div>
+	        						<div class="trophy-country-img">
+	        							<img class="country-img" src="" alt="" />
+	        						</div>
+	        						<div>中国</div>
+        						</div>
+        					</td>
+        					<td class="trophy-1">100</td>
+        					<td class="trophy-2">200</td>
+        					<td class="trophy-3">300</td>
+        					<td class="trophy-total">600</td>
+        				</tr>
+        				<tr>
+        					<td class="trophy-country">
+        						<div class="trophy-country-content">
+	        						<div>1</div>
+	        						<div class="trophy-country-img">
+	        							<img class="country-img" src="" alt="" />
+	        						</div>
+	        						<div>加拿大</div>
+        						</div>
+        					</td>
+        					<td class="trophy-1">100</td>
+        					<td class="trophy-2">200</td>
+        					<td class="trophy-3">300</td>
+        					<td class="trophy-total">600</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+        	<div class="trophy-options">
+        		<a id="trophy-more" href="#">点击查看全部…</a>
+        	</div>
+        </div>
+        </section>
+        <!-- 中国备战 -->
+        <section class="module">
+        <div class="childwar">
+        	<div class="ao-title ao-title-childwar">中国备战</div>
+        	<ul class="ao-grid clearfix">
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>宦官之祸，古今皆有；但世主不当假之权宠，使至于此</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>乱天下者，必进也</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>十常侍敢待如何</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>冒烟突火，连夜奔走至北邙山</p>
+        			</a>
+        		</li>
+        	</ul>
+        	<div class="ao-options">
+                <a class="ao-options-item ao-options-more" href="#">更多</a>
+        		<a class="ao-options-item ao-options-change" href="#">换一批</a>
+        	</div>
+        </div>
+        </section>
+        <!-- 诸强练兵 -->
+        <section class="module">
+        <div class="worldwar">
+        	<div class="ao-title ao-title-worldwar">诸强练兵</div>
+        	<ul class="ao-grid clearfix">
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>车驾行不到数里，忽见旌旗蔽日</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>横行街市</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>出入宫庭，略无忌惮</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>器宇轩昂，威风凛凛</p>
+        			</a>
+        		</li>
+        	</ul>
+        </div>
+            </section>
+
+        <!-- 奥运名人堂 -->
+        <section class="module">
+        <div class="star">
+        	<div class="star-title">奥运名人堂</div>
+        	<div class="star-list">
+	        	<div class="swiper-container" id="star-swiper">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+			            	<div class="star-avatar">
+			            		<img src="img/resource/b.png" alt=""/>
+			            		<p>赵欣1</p>
+			            	</div>
+			            </div>
+			            <div class="swiper-slide">
+			            	<div class="star-avatar">
+			            		<img src="img/resource/abc.png" alt=""/>
+			            		<p>赵欣2</p>
+			            	</div>
+			            </div>
+			            <div class="swiper-slide">
+			            	<div class="star-avatar">
+			            		<img src="img/resource/e.png" alt=""/>
+			            		<p>赵欣3</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!-- Add Arrows -->
+			    </div>
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+		    </div>
+        </div>
+            </section>
+        <!-- 央视名栏 -->
+        <section class="module">
+        <div class="cctv">
+        	<div class="ao-title ao-title-cctv">央视名栏</div>
+        	<ul class="ao-list ao-list-cctv clearfix">
+    			<a class="ao-list-item" href="#">
+        			<div class="ao-list-thumb">
+        				<img src="img/a.png" alt=""/>
+        			</div>
+        			<div class="ao-list-info">
+        				<h3>时袁绍在渤海，闻知董卓弄权，乃差人赍密书来见王允</h3>
+        				<p>次日，曹操佩着宝刀，来至相府，问：“丞相何在？”从人云：“在小阁中。”操径入。见董卓坐于床上，吕布侍立于侧。卓曰：“孟德来何迟？”操曰：“马羸行迟耳。”卓顾谓布曰：“吾有西凉进来好马，奉先可亲去拣一骑赐与孟德。</p>
+        			</div>
+    			</a>
+    			<a class="ao-list-item" href="#">
+        			<div class="ao-list-thumb">
+        				<img src="img/a.png" alt=""/>
+        			</div>
+        			<div class="ao-list-info">
+        				<h3>且说曹操逃出城外，飞奔谯郡</h3>
+        				<p>路经中牟县，为守关军士所获，擒见县令。操言：“我是客商，覆姓皇甫。</p>
+        			</div>
+    			</a>
+    			<a class="ao-list-item" href="#">
+        			<div class="ao-list-thumb">
+        				<img src="img/a.png" alt=""/>
+        			</div>
+        			<div class="ao-list-info">
+        				<h3>破关兵三英战吕布</h3>
+        				<p>话题三</p>
+        			</div>
+    			</a>
+        	</ul>
+        </div>
+            </section>
+        <!-- 风土周边 -->
+        <section class="module">
+        <div class="local">
+        	<div class="ao-title ao-title-local">风土周边</div>
+        	<ul class="ao-grid clearfix">
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>遥望火焰冲天，黑烟铺地，二三百里，并无鸡犬人烟</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>天下可无洪，不可无公</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>坚唤军士点起火把，下井打捞</p>
+        			</a>
+        		</li>
+        		<li>
+        			<a href="#">
+	        			<img src="img/a.png" alt=""/>
+	        			<p>请众诸侯立列圣神位，宰太牢祀之</p>
+        			</a>
+        		</li>
+        	</ul>
+        </div>
+    </section>
+        </section>
+    <footer class="footer">
+        <div class="options">
+            <a href="#" class="footer-item">进入频道首页</a>
+            <a href="#" class="footer-item">返回首页</a>
+        </div>
+    </footer>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+</html>

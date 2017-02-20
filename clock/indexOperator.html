@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min14ed.css"/>
-		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
-		<style type="text/css">
-			.mask{
-				position: fixed;
-				top: 0;
-				left: 0;
-				z-index: 100;
-				display: none;
-				width: 100%;
-				height: 100%;
-				
-				background-color: #333; 
-				opacity: .15;
-			}
-		</style>
-	</head>
-	<body>
-		<ul class="metismenu" id="menu">
-			<li class="active">
-				<a class="has-arrow" href="#" aria-expanded="true">Menu 1</a>
-				<ul aria-expanded="true">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#" aria-expanded="false">Menu 2</a>
-				<ul aria-expanded="false">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
-			</li>
-		</ul>
-		
-		<div id="iframe">
-			<iframe src="iframe.html" width="800" height="300"></iframe>
-			
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>企业用户</title>
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<!-- 头部导航-->
+<div class="layui-layout layui-layout-admin">
+	<div class="header header-demo">
+		<div class="layui-main">
+			<a class="logo" href="/">BWRing
+				<img src="//res.layui.com/images/layui/logo-1.png" alt="">
+			</a>
+			<ul class="layui-nav" lay-filter="filter">
+				<li class="layui-nav-item layui-this">
+					<a href="javascript:;">首页</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">小样试听</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">我要录音</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">我的订单</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">订单报表</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">帮助中心</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">关于我们</a>
+				</li>
+			</ul>
+			<div class="input-search-box layui-btn-radius">
+				<input type="text" name="title" placeholder="录音师ID或昵称" autocomplete="off" class="input-search layui-input">
+				<i class="input-search-icon layui-icon">&#xe615;</i>
+			</div>
+
+			<button class="login-btn layui-btn layui-btn-radius layui-btn-primary">登录</button>
 		</div>
-		<div class="mask" id="mask"></div>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
-		<script type="text/javascript">
-//			$("#menu").metisMenu();
-		</script>
-	</body>
+	</div>
+</div>
+<iframe src="" class="iframe" id="iframe">
+
+</iframe>
+<script src="layui/layui.js"></script>
+<script src="js/new_file2.js"></script>
+<script src="js/myLayui.js"></script>
+
+</body>
 </html>
+

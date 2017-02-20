@@ -1,0 +1,30 @@
+<!--
+这是一个通过图片拼起来的很有意思的弹窗，可以根据内容多少自适应高度，注意要background-repeat: repeat-x;
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul,li{list-style: none;display: block}
+        .main{ width:390px;background-repeat: repeat-x; background: url("images/main.jpg") }
+        .top{height:40px;width:390px;background: url("images/top.png");}
+        .bottom{height:20px;width:390px;background: url("images/bottom.png");}
+        .body{padding: 20px}
+    </style>
+</head>
+<body>
+<ul>
+    <li class="top"><div class="closebutton"></div>
+
+    </li>
+    <li class="main">
+        <div class="body">  通知：xxxxxx，由此带来的不便敬请见谅！<br>通知：xxxxxx，由此带来的不便敬请见谅！
+        </div>
+    </li>
+    <li class="bottom"></li>
+</ul>
+
+</body>
+</html>

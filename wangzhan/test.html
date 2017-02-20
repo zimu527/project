@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @-webkit-keyframes anim1{
+            0% {right: 0px;opacity: 1}
+            33% {right: 0px;opacity: 1}
+            45% {right: 300px ;opacity: 0}
+            95% {right: -300px ;opacity: 0}
+            100%{right:0px;opacity: 1}
+        }
+        @-webkit-keyframes anim2{
+            0%{right: -300px;opacity: 0}
+            25% {right: -300px;opacity: 0}
+            33% {right: 0px;opacity: 1}
+            66% {right: 0px;opacity: 1}
+            70% {right: 300px;opacity: 0}
+            100%{right: -300px;opacity: 0}
+        }
+        @-webkit-keyframes anim3{
+            0% {right: 0px;opacity: 1}
+            5% {right: 300px;opacity: 0}
+            60% {right: -300px;opacity: 0}
+            66% {right: 0px;opacity: 1}
+            100% {right: 0px;opacity: 1}
+        }
+        .intro-select-circle:nth-child(1){
+
+            -webkit-animation: anim1 8s linear infinite;
+        }
+
+        .intro-select-circle:nth-child(2){
+
+            -webkit-animation: anim2 8s linear infinite;
+        }
+        .intro-select-circle:nth-child(3){
+
+            -webkit-animation: anim3 8s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="intro-select-circle">
+    <span class="circle-selected"></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="intro-cont01">
+    <img src="imgs/people.png" alt="">
+    <div class="intro-cont01-detail">
+        <span class="intro-detail-title01">新世界／</span>
+        <p>新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+        <a href="#">更多详情</a>
+    </div>
+</div>
+<div class="intro-cont01">
+    <img src="imgs/people.png" alt="">
+    <div class="intro-cont01-detail">
+        <span class="intro-detail-title01">新世界／</span>
+        <p>新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+        <a href="#">更多详情</a>
+    </div>
+</div>
+<div class="intro-cont01">
+    <img src="imgs/people.png" alt="">
+    <div class="intro-cont01-detail">
+        <span class="intro-detail-title01">新世界／</span>
+        <p>新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+        <a href="#">更多详情</a>
+    </div>
+</div>
+
+</body>
+</html>

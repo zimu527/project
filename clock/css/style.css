@@ -1,0 +1,58 @@
+.flex{
+	display: flex;
+	-webkit-display: flex;
+}
+.user{
+	height: 120px;
+	width:100%;
+	background-color:#393D49;
+}
+.header{height: 65px; border-bottom: 1px solid #404553;  background-color: #393D49; color: #fff;}
+.logo{position: absolute; left: 40px; top: 18px;color:#fff;font-size: 30px;font-weight: bold;}
+.logo img{width: 82px; height: 31px;}
+
+.header .layui-nav{position: absolute; left: 250px; top: 0; padding: 0; background: none;}
+.header .layui-nav .layui-nav-item{margin: 0 10px; line-height: 66px;}
+
+.header-demo .layui-nav .layui-this a{color: #5FB878;}
+.header-demo .layui-nav .layui-this:after,
+.header-demo .layui-nav-bar{background-color: #393D49;}
+.header-demo .layui-nav .layui-this a{padding: 0 30px;}
+
+.login-btn{position: absolute; right: 40px; top: 18px;}
+.iframe{width: 100%;height: 100%;}
+
+/*.input-search-box{position: relative; right: 240px; top: 18px; width: 200px ;height: 38px;}*/
+.input-search{position: absolute; right: 150px; top: 18px; width: 200px; border-radius:20px; color:#c2c2c2; background-color: #393D49;}
+.input-search-icon{position: absolute;right: 165px; top:30px;}
+
+/*子页面*/
+.top-bg{
+	height: 80px;
+	border-bottom: 1px solid #404553;
+	background-color: #393D49;
+	color: #fff;
+}
+.user{
+	position: absolute;
+	left: 40px;
+	top: 0;
+	height: 80px;
+	width: 200px;
+	vertical-align: middle;
+}
+.user-img{width: 50px;height: 50px;border-radius: 8px;margin-right: 15px;overflow: hidden}
+.user-img img{width: 50px;height: 50px;}
+/*左侧导航*/
+.layui-side{
+	top:80px;
+}
+.site-demo-nav{
+	background-color: #eee;
+	color: #333;
+}
+.site-demo-nav>.layui-nav-itemed>a{
+	background-color: #eee!important;
+	color: #333!important;
+
+}

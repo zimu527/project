@@ -18,23 +18,29 @@
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
-  <div class="layui-header header header-demo">
+  <div class="header header-demo">
   <div class="layui-main">
-    <a class="logo" href="/">
-      <img src="//res.layui.com/images/layui/logo-1.png" alt="layui">
+    <a class="logo" href="/">BWRing
+      <img src="//res.layui.com/images/layui/logo-1.png" alt="">
     </a>
-    <ul class="layui-nav">
-      <li class="layui-nav-item ">
-        <a href="/doc/">文档</a>
+    <ul class="layui-nav" lay-filter="filter">
+      <li class="layui-nav-item">
+        <a href="javascript:;">最新活动</a>
       </li>
       <li class="layui-nav-item layui-this">
-        <a href="/demo/">演示</a>
+        <a href="javascript:;">产品</a>
       </li>
-      
       <li class="layui-nav-item">
-        <a href="http://fly.layui.com/" target="_blank">社区</a>
+        <a href="javascript:;">大数据</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">社区</a>
       </li>
     </ul>
+    <button class="login-btn layui-btn layui-btn-radius layui-btn-primary">登录</button>
   </div>
 </div>
   <div class="layui-side layui-bg-black">
@@ -149,84 +155,6 @@
     </div>
   </div>
   <div class="layui-body site-demo">
-    <div class="layui-main">
-      
-      <blockquote class="layui-elem-quote">
-        修改下面的数据和模版，可直接呈现渲染后的结果。
-      </blockquote>
-      
-      <div class="site-demo-laytpl">
-        
-        <div>
-          <span>数据</span>
-          <span>模版</span>
-        </div>
-      
-        <textarea class="site-demo-text" id="data">
-{
-  "title": "Layui常用模块"
-  ,"list": [
-    {
-      "modname": "弹层"
-      ,"alias": "layer"
-      ,"site": "layer.layui.com"
-    }
-    ,{
-      "modname": "表单"
-      ,"alias": "form"
-    }
-    ,{
-      "modname": "分页"
-      ,"alias": "laypage"
-    }
-    ,{
-      "modname": "日期"
-      ,"alias": "laydate"
-    }
-    ,{
-      "modname": "上传"
-      ,"alias": "upload"
-    }
-  ]
-}
-        </textarea>
-      
-        <textarea class="site-demo-text" id="tpl">
-<h3>{{ d.title }}</h3>
-<ul>
-{{#  layui.each(d.list, function(index, item){ }}
-  <li>
-    <span>{{ item.modname }}</span>
-    <span>{{ item.alias }}：</span>
-    <span>{{ item.site || '' }}</span>
-  </li>
-{{#  }); }}
- 
-{{#  if(d.list.length === 0){ }}
-  无数据
-{{#  } }} 
-</ul>
-        </textarea>
-        
-        
-        
-      </div>
-      
-      <div class="site-demo-tplres">
-        <h2 class="site-demo-tplh2">视图结果</h2>
-        <div class="site-demo-tplview" id="view"></div>
-      </div>
-      
-      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-        <legend>其它</legend>
-      </fieldset>
-       <a class="layui-btn layui-btn-normal" href="/doc/modules/laytpl.html" target="_blank">laytpl文档</a>
-       
-       <div class="layui-elem-quote" style="margin-top: 20px;">
-  <p>Layui - 精心为你雕琢</p>
-</div>
-       
-    </div>
   </div>
   <div class="layui-footer footer footer-demo">
   <div class="layui-main">
@@ -246,42 +174,6 @@
 </div>
 <div class="site-mobile-shade"></div>
 <script src="//res.layui.com/layui/build/layui.js?t=1484130829910" charset="utf-8"></script>
-<script>
-layui.config({
-  base: '//res.layui.com/lay/modules/layui/'
-  ,version: '1484130829910'
-}).use('global');
- 
-window.global = {
-  preview: function(){
-    var preview = document.getElementById('LAY_preview');
-    return preview ? preview.innerHTML : '';
-  }()
-};
-</script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));</script>
-</div>
-<script>
-layui.use('laytpl', function(laytpl){
-  
-  var controller = function(){
-    try{
-      var html = laytpl(tpl.value).render(JSON.parse(data.value));
-      view.innerHTML = html;
-    } catch(e){
-      view.innerHTML = '<span style="color: #c00;">'+ e.toString() + '</span>';
-    }
-  };
-  
-  controller();
-  
-  layui.each(document.getElementsByTagName('textarea'), function(index, item){
-    item.onkeyup = function(){
-      controller();
-    }
-  });
-  
-});
-</script>
+
 </body>
 </html>

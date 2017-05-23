@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name = "format-detection" content="email = no" />
+    <meta name = "format-detection" content="email = no" />
+    <link href="css/Feedback/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link href="css/Feedback/Feedback.css" rel="stylesheet">
+    <title>留言板</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--    <script src="js/json-mini.js"></script>
+    <script src="js/bwrdfr.js"></script>
+    <script src="js/bwrdfr-i.js"></script>-->
+
+</head>
+<body>
+<!-- 滚动图 -->
+<section class="module">
+    <div class="swiper-container" id="home-swiper">
+        <div class="swiper-wrapper home-banner">
+            <div class="swiper-slide">
+                <a href="#"><img src="img/Feedback/1.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="img/Feedback/2.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="img/Feedback/3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<form name="formAttention" method="post" action="">
+    <input type="text" name="name" required placeholder="留言人(必填)">
+    <input type="tel" name="phone" placeholder="手机号（选填）">
+    <textarea name="content" placeholder="请输入您要留言内容或者建议"></textarea>
+    <p class="fs14">留言内容不超过300个字符</p>
+    <a class="js-submit-btn submit-btn btn">提交留言</a>
+</form>
+
+<script src="js/alertWeUI/alert.js"></script>
+<link rel="stylesheet" type="text/css" href="css/alertWeUI/weui.min.css">
+<!--BEGIN confirm-->
+<div class="js_dialog hide" id="confirm">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="confirmBoxTitle">弹窗标题</strong></div>
+        <div class="weui-dialog__bd" id="confirmMessageCont">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" id="confirmCancelBtn">取消</a>
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="confirmAgreeBtn">确定</a>
+        </div>
+    </div>
+</div>
+<!--END confirm-->
+<!--BEGIN popBoxAlert-->
+<div class="js_dialog hide" id="popBoxAlert">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd" id="alertMessageCont">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="alertAgreeBtn">知道了</a>
+        </div>
+    </div>
+</div>
+<!--END popBoxAlert-->
+<!--loadding-->
+<div class="hide" id="loadingToast">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
+
+<!--<script src="js/wxShare.js"></script>-->
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/Feedback/Feedback.js"></script>
+<script>
+// document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + 'px';
+</script>
+</body>
+</html>

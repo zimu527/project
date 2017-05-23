@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/marketing_case/marketing_case.css"/>
+		<title>政企营销案例</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="bank_nav_wd">
+			<h1>银行经典案例</h1>
+		</div>
+		<div class="text">
+			<p>通过客户经理了解到乌兰察布市农业银行42 个营业网点无外网接入，给工作带来了很多不便，用户有意接入运营商互联网使用，我公司与之积极联系并最终与于2016年10月为农行开通了移动专线业务，该项目共新建了42条互联网专线业务。</p>
+		</div>
+		<div class="text_01">
+			<h1>客户为什么使用无限互联网接入？</h1>
+			<div class="hr_3"></div>
+			<p>固定的公网IP地址</p>
+			<p>24小时在线</p>
+			<p>保证接入带宽独享</p>
+			<p>可靠性要求较高</p>
+		</div>
+		<div class="text_01 text_02">
+			<h1>客户安全与高性能要求保障：</h1>
+			<div class="hr_3"></div>
+			<h1 class="title_wd">安全性</h1>
+			<p>可为客户提供树形传输链路接入(独享接入设备)有源可监控设备,安全级别较高</p>
+			<h1 class="title_wd">维护性</h1>
+			<p>提供有源可监控，专用维护人员根据客户服务等级分为2小时、4小时、6小时和8小时进行故障处理</p>
+			<h1 class="title_wd">稳定性</h1>
+			<p>网络上行和网络下行，专用通道传输，上下行对称，双通道双向性上传或者下载的时候另外一方不会受影响。客户通过相对永久的通信线路接入Internet。误码率低，时延小。</p>
+		</div>
+	</body>
+</html>

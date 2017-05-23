@@ -1,0 +1,157 @@
+@charset "utf-8";
+$radius: .5rem;
+$orange:#ff3600;
+$yellow:#fff17c;
+.orange{
+  color: $orange;
+}
+body{
+  /*background-color: #f8f0d9;*/
+  min-height: 100%;
+  background-color: $yellow;
+  overflow: hidden;
+}
+.index-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  //background-color: #f8f0d9;
+  /*    background: #f8f0d9 url("../../img/chargesInquire/top.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;*/
+}
+main {
+/*  position: absolute;
+  top: 6rem;
+  left: 0;*/
+  //margin-top: 6rem;
+  width: 100%;
+  padding: 0 2.2rem 2rem 2.2rem;
+}
+.main-cont{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5rem;
+  border-radius: $radius;
+  //border-radius: .5rem;
+  background-color: #fff;
+/*  background-image: url("../../img/chargesInquire/zf0407006.png");
+  background-repeat: no-repeat;
+  background-position: -2rem -2rem;*/
+}
+.left-pic{
+  position: absolute;
+  top: -.25rem;
+  left: -.25rem;
+  width: 5rem;
+  height: 5rem;
+}
+.cont-user{
+  padding: 1rem 2rem 1rem 2rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+.cont-user img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+.charges-grade{
+  color: $orange;
+  padding: 1.8rem 0 1.6rem 0;
+  text-align: center;
+  background: url("../../img/chargesInquire/zf0407008.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.charges-detail{
+  margin-top: .2rem;
+  padding: .5rem;
+  border: 2px solid #fe8d27;
+  border-radius: $radius;
+  background-color: $yellow;
+}
+.go-to-transact{
+  display: block;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: $orange;
+  color: #fff;
+  border-radius: $radius;
+}
+.transact-detail{
+  text-align: center;
+}
+.transact-detail img{
+  width: 2.2rem;
+}
+.transact-detail-btn{
+  border-bottom: 1px solid #999;
+}
+/*更多活动规则*/
+.rule-more-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0 , 0 , 0 , 0.8);
+  overflow: hidden;
+  /*overflow-y: scroll;*/
+  border-radius: .5rem;
+}
+.rule-more-cont{
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  width: 88%;
+  border-radius: .5rem;
+  background-color: #fff;
+}
+.rule-more-cont-topImg-box{
+  width: 100%;
+  padding: .6rem;
+  border-radius: .5rem .5rem 0 0;
+  background-color: #fe8d27;
+  background: -webkit-linear-gradient(top,#feed79 0,#fd710f 100%);
+  background: -moz-linear-gradient(top,#feed79 0,#fd710f 100%);
+  background: -o-linear-gradient(top,#feed79 0,#fd710f 100%);
+  background: linear-gradient(to bottom,#feed79 0,#fd710f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#feed79,endColorstr=#fd710f,GradientType=0);
+}
+.rule-more-cont-topImg{
+  width: 60%;
+  margin-left:20%;
+  /*margin-bottom: .1rem;*/
+}
+.rule-more-cont-main{
+  max-height: 12rem;
+  overflow-y: scroll;
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+.rule-more-box .fs12{
+  font-size: 11px;
+  line-height: 18px;
+}
+.close-rule-btn{
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  margin-left: -2rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url("../../img/chargesInquire/zf0407005.png") no-repeat;
+  background-size: 100% 100%;
+}
+.close-rule-btn:active{
+  background: url("../../img/chargesInquire/zf0407005_1.png") no-repeat;
+  background-size: 100% 100%;
+}

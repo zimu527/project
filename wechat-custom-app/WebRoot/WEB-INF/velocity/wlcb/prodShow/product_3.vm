@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>和对讲</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd intercom_speak_wd">
+			<h1>和对讲</h1>
+		</div>
+		<div class="text intercom_wd">
+			<p>利用VoIP技术实现的半双工语音对讲，面向集团客户提供的类似对讲机的群组调度通信功能的业务。 该业务不受地域限制，应用场合广泛。用户只需按动手机上的一个按键即可快速发起一对多的群组通话。</p>
+		</div>
+		<div class="text_01">
+			<h1>主要功能：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>手机终端</p>
+				<p class="text_p_01">1对1通话，群组通话，呼叫ID显示，在线状态查询，联系人及群组管理，多会话处理能力，会话恢复功能，广播呼叫，图文、视频上传与下载，及时消息，发言权控制。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>企业调度平台</p>
+				<p class="text_p_01">1对1通话，群组通话，群组管理，GPS定位，并发起POC呼叫；，历史轨迹回放，消息收发，图文、视频上报下发，录音检索回放，电子围栏。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>该对讲业务优势：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p>通信距离远、安全性高、群组管理灵活、功能完善等优势。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>行业应用：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd img_015">
+				<img src="img/wlcb/product//speak_03.jpg"/>
+			</div>
+		</div>
+	</body>
+</html>

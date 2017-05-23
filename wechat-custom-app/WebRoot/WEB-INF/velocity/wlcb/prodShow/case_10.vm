@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/marketing_case/marketing_case.css"/>
+		<title>政企营销案例</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="gov_nav_wd">
+			<h1>政府经典案例</h1>
+		</div>
+		<div class="text gov_wd">
+			<p>乌兰察布法院存在干警在执法取证工程中存 在，“执法难”、“取证难”的问题，远程执行指挥只能通过电话解决，用户急需一套集实时定位、音视频回传解决方案，针对以上的具体问题和难点乌兰察布集客产品室进行分析梳理，并设计符合业务特点的解决方案。</p>
+		</div>
+		<div class="text_01">
+			<h1>客户为什么使用远程执法视频回传系统？</h1>
+			<div class="hr_3"></div>
+			<p>目的是实现从远端4G设备到防火墙再到用户服务器建立GRE隧道， 实现无线数据传输，通过无线网络将视频码流传输到监控解码设备，无线监控将接收到的数字视频信号传输给矩阵，再由矩阵输出给拼控器后显示到用户指挥中心大屏显示。</p>
+		</div>
+		<div class="text_01">
+			<h1>客户获得什么价值？</h1>
+			<div class="hr_3"></div>
+			<p>利用无线4G、流媒体等技术建成了“远程执法视频应用系统”， 为乌兰察布法院实现了统一管理、统一协调、统一指挥，同时解 决了文档和音视频同时传输的技术难题。</p>
+		</div>
+		<!-- 
+		<div class="footer_wd">
+			<a href="#">查看分享数据</a>
+		</div>
+		 -->
+	</body>
+</html>

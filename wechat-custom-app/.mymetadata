@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="wechat-custom-app"
+  id="myeclipse.1490172422987"
+  context-root="/wechat-custom-app"
+  j2ee-spec="5.0"
+  archive="wechat-custom-app.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

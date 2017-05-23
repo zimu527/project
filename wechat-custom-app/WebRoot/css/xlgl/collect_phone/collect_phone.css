@@ -1,0 +1,48 @@
+.bg{
+    min-height:100%;
+    padding: 2rem .6rem 0 .6rem;
+    overflow: hidden;
+    background:url(../../../img/xlgl/enter_phone/bg.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.green{
+	font-size:30px;
+	color:#009688;
+}
+.grey{
+    margin-top: .2rem;
+	color:#666;
+	font-size:18px;
+    text-align: center;
+}
+.main{
+}
+.submit-btn, input[type='tel']{
+    height: 1rem;
+    width: 100%;   
+    border-radius: 3px;
+}
+input[type='tel']{
+    margin-top: 1.2rem;
+    text-indent: 7px;
+    border: 1px solid #303f9f;
+}
+.submit-btn{
+    display: block;
+    margin-top: .5rem;
+    background-color: #303f9f;
+    line-height: 1rem;
+    color: #fff;
+    text-align: center;
+}
+.QR_img{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2.25rem;
+    margin-top: 1.5rem;
+}
+.footer_img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

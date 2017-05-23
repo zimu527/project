@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>企信通</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+		<style type="text/css">
+			table{
+				margin: 0 auto;
+			}
+			.table_wd{
+				padding-bottom: 0.2rem;
+			}
+			.table_wd th{
+				padding-left: 0.16rem;
+				padding-right: 0.16rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="social_security_wd enterprise_letter">
+			<h1>企信通</h1>
+		</div>
+		<div class="text enterprise_wd">
+			<p>企业用户提供方便、灵活、快捷、高效的基于短信的双向交流渠道。企业用户可通过Web浏览器、PC客户端和手机自身短信功能等多种方式发送短信，实现信息的随时随地，快捷有效传递。</p>
+		</div>
+		<div class="text_01">
+			<h1>企信通业务功能：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>短信沟通  </p>
+				<p class="text_p_01">支持快捷短信发送</p>
+				<p class="text_p_01">短信定时发送设置 </p>
+				<p class="text_p_01">短信批量文件发送</p>
+				<p class="text_p_01">手机自身短信编辑功能实现通讯录群组短信发送</p>
+				<p class="text_p_01">节日祝福设置和节日问候短信模板</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>短信交互活动</p>
+				<p class="text_p_01">调查问卷</p>
+				<p class="text_p_01">知识问答</p>
+				<p class="text_p_01">有奖问答</p>
+				<p class="text_p_01">抽奖活动</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>模板短信 </p>
+				<p class="text_p_01">调查问卷</p>
+				<p class="text_p_01">企业按需编辑并提交短信模板</p>
+				<p class="text_p_01">内蒙古移动管理人员对模板进行两级审核</p>
+				<p class="text_p_01">模板短信不启用白名单管理，在线测试调试</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>通讯录管理</p>
+				<p class="text_p_01">支持个人通讯录和企业通讯录批量导入导出</p>
+				<p class="text_p_01">通讯录支持多层组织架构</p>
+				<p class="text_p_01">通讯录支持直接使用文件上传</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>业务优点：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p ><span class="circle_02"></span>低成本、即时拥有</p>
+				<p ><span class="circle_02"></span>超强短信性能</p>
+				<p ><span class="circle_02"></span>完善的短信发送安全机制</p>
+				<p ><span class="circle_02"></span>与通讯录结合，沟通便捷</p>
+				<p ><span class="circle_02"></span>新增模板短信功能</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>企信通业务资费：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>按条模式 </p>
+				<p class="text_p_01">适合于每月无固定发送条数的用户，单价为0.07元/条 </p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>功能费套餐模式</p>
+				<p class="text_p_01">适用于每月有较固定短信发送量的客户</p>
+				<div class="hr_5"></div>
+				<div class="table_wd">
+					<table >
+						<tr>
+							<th >月功能费</th>
+							<th >赠送短信条数</th>
+							<th>套餐外单价</th>
+						</tr>
+						<tr>
+							<td>50元</td>
+							<td>1000条</td>
+							<td>0.07元/条</td>
+						</tr>
+						<tr>
+							<td>100元</td>
+							<td>2000条</td>
+							<td>0.06元/条</td>
+						</tr>
+						<tr>
+							<td>200元</td>
+							<td>4000条</td>
+							<td>0.05元/条</td>
+						</tr>
+						<tr>
+							<td>300元</td>
+							<td>6000条</td>
+							<td>0.05元/条</td>
+						</tr>
+					</table>
+			</div>
+			</div>
+	</body>
+</html>

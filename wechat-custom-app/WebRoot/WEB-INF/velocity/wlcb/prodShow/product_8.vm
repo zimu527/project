@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>政务易</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd government_easy">
+			<h1>政务易</h1>
+		</div>
+		<div class="text government_wd">
+			<p>“政务易”主要面向农村基层政府，提供信 息发布、政务办公、政府简报、干群互动、 基层党建等功能和服务，提升基层政府工作 效率和为民服务能力</p>
+		</div>
+		<div class="text_01">
+			<h1>核心功能点：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd img_013">
+				<img src="img/wlcb/product/bg_013.jpg"/>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>政务办公</p>
+				<p class="text_p_01">实现基层政府公文的电子化处理，包括公文收发、审批、转派、归档等，实现无纸化办公，并有公文办理的短信提醒。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>信息发布</p>
+				<p class="text_p_01">通过语音、短信、彩信进行信息传递，用于紧急通知、灾害预警、紧急事件指挥调度等。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>会议电话</p>
+				<p class="text_p_01">随时随地通过手机召开多方会议，不受时间、地域限制，大大降低了会议成本、提升了会议效率。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>政府简报</p>
+				<p class="text_p_01">政府可以通过此功能设计彩信模板，实现日常工作、重要会议、重大事件简报的下发，打造基层政府自己的彩信手机报。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">5</span>政务公开</p>
+				<p class="text_p_01">主要包括群众信箱、民意调查、干部评议功能，群众可以通过群众信箱以短信形式将咨询、诉求发送至政府的群众信箱号码，政府处理后通过系统用短信回复群众，加强了政府与民众的沟通互动。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">6</span>基层党建</p>
+				<p class="text_p_01">用于基层政府的党员信息管理，提供党建动态、党建学习、党员学习等内容。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>为什么要使用政务易？</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd img_014">
+				<img src="img/wlcb/product/bg_014.jpg"/>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>降低成本</p>
+				<p class="text_p_01">有效降低办公成本，提升办公效率，以信息化手段提升工作处理速度及对紧急事件的应变能力。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>政务直达</p>
+				<p class="text_p_01">电子政务直达基层，摆脱以往“县-镇-村”逐级下发的状况，实现电子政务直达基层，助力政令畅通。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>提升形象</p>
+				<p class="text_p_01">政民互动提升形象，发布政策民生信息，了解群众心声，增进沟通，增加政务公开，提升政府形象。</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>增强互动</p>
+				<p class="text_p_01">基层党建解决与本地及流动党员沟通的问题，使手机成为党员的学习机，增强干群互动。</p>
+			</div>
+			<div class="hr_5"></div>
+		</div>
+	</body>
+</html>

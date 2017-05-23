@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>社保管家</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd">
+			<h1>社保管家</h1>
+		</div>
+		<div class="text social_wd">
+			<p>社保管家是移动交互平台、提供自己的医疗、 养老、工伤、失业、生育等保险账户情况等 信息查询、服务百姓生活。</p>
+		</div>
+		<div class="text_01">
+			<h1>业务功能：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>查询功能</p>
+				<p class="text_p_01">社保具体信息查询；社保类政策法规查询</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>实时提醒功能</p>
+				<p class="text_p_01">账户变动提醒；月注入额提醒</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>个人专线功能</p>
+				<p class="text_p_01">针对个人疑难问题通过专线客服进行一对一解答</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>实时调查功能</p>
+				<p class="text_p_01">调查用户关注问题；征集政策变动意见。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>社保管家主要包括个人版本和企业版本2个：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>个人版业务</p>
+				<p class="text_p_01">主要服务内容包括：社保账户信息变动通知节假日问候</p>
+				<p class="text_p_01"><span class="circle_02"></span>社保账户信息变动通知</p>
+				<p class="text_p_01"><span class="circle_02"></span>节假日问候及重要事项通知</p>
+				<p class="text_p_01"><span class="circle_02"></span>政策法规推送通知</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>企业版业务</p>
+				<p class="text_p_01"><span class="bold_wd">企业用户预付费提醒：</span>是指参保单位将需要缴纳的社保费提前预缴到社保待转基金中，方便参保单位在下几个月核定后，社保方直接从待转基金中划账;在社保费预缴到社保待转基金时，会有短信通知。</p>
+				<div class="hr_5"></div>
+				<p class="text_p_01"><span class="bold_wd">企业用户到账提醒：</span>是指社保方在参保单位核定后，社保方将参保单位需要缴纳的社保费直接从待转基金划账时会有短信通知。</p>
+				<div class="hr_5"></div>
+			</div>
+		</div>
+	</body>
+</html>

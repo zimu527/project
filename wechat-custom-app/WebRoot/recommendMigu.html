@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <link href="css/xlgl/collect_phone/reset.css" rel="stylesheet">
+    <link href="css/xingan/recommendMigu/recommendMigu.css" rel="stylesheet">
+    <title>Title</title>
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<main class="fs14">
+    <div class="box">
+        <label for="userPhone">推荐人:</label><input type="tel" name="userPhone" class="js-user-phone" id="userPhone">
+    </div>
+    <div class="box">
+        <label for="recommendPhone">被推荐人:</label><input type="tel" name="recommendPhone" class="js-recommend-phone" id="recommendPhone">
+    </div>
+    <div class="flex space-between btn-list">
+        <a class="js-migu-video migu-video-btn btn request" href="javascript:void(0)">开始推荐咪咕音乐</a>
+        <a class="js-migu-audio migu-audio-btn btn request" href="javascript:void(0)">开始推荐咪咕视频</a>
+    </div>
+    <p class="tips fs10">分享好友下载并注册即可获得流量礼包</p>
+    <a class="js-rule-show rule-btn btn" href="javascript:void(0)">查看活动规则></a>
+</main>
+<div class="rule fs14">
+    <div class="rule-square">
+        <div><span class="close-icon"></span></div>
+        <div class="active-info" style="overflow: hidden">
+            <h2 class="fs16">活动时间</h2>
+            <p>2016年11月01日--2016年11月28日</p>
+            <h2 class="fs16">活动奖品</h2>
+            <p>奖品</p>
+            <h2 class="fs16">活动规则</h2>
+            <p>规则</p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/xingan/recommend_migu.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+</body>
+</html>

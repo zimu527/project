@@ -1,0 +1,10 @@
+/*首页*/
+header{
+    padding-top: .2rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid #333;
+}
+.list-manager{
+    margin-top: .2rem;
+    border-bottom:1px solid #d7ddde;
+}

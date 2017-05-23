@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>IDC</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd IDC_se_wd">
+			<h1>内蒙古移动IDC</h1>
+		</div>
+		<div class="text IDC_wd">
+			<p>内蒙古移动IDC机房被集团评定为二星级机房，建筑面积超过1570平米，规划机柜总 数量超过500架，装机能力达到5000台。</p>
+		</div>
+		<div class="text_01">
+			<h1>目前内蒙古移动IDC业务可提供以下4类基础服务：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>主机托管</p>
+				<p class="text_p_01">向客户提供电信级机房环境，客户将设备放置在IDC 机房，由客户对自身设备进行管理维护，数据中心为客户提供一定的“空间”和“带宽”。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>机架出租</p>
+				<p class="text_p_01">客户租用整个或数个机架存放服务器，并且租用数据中心的网络资源以及其他配套设施。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>宽带出租</p>
+				<p class="text_p_01">向客户提供不同形式的端口接入方式和不同带宽接入Internet链路的业务称为带宽出租。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>公网IP地址租用 </p>
+				<p class="text_p_01">为客户提供静态的连入互联网地址，方便客户进行远程控 制、网站建设、服务器架设等内容。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>提供4类增值业务：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_03">1</span>入侵检测 </p>
+				<p class="text_p_01">为客户提供静态的连入互联网地址，方便客户进行远程控 制、网站建设、服务器架设等内容。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_03">2</span>流量清洗 </p>
+				<p class="text_p_01">通过分光或者镜像的方式，将进入IDC的网络流量复制一份到流量清洗系统并对其中的非法攻击进行分析和清洗。在清洗后，系统将正常流量注回到受保护的客户网络中。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_03">3</span>服务器远程维护  </p>
+				<p class="text_p_01">客户利用远程管理系统可以远程登录服务器，并进行相关 操作维护工作。</p>
+			</div>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_03">4</span>硬件防火墙</p>
+				<p class="text_p_01">IDC为客户提供专业的电信级高性能的硬件防火墙设备，由IDC负责设备的硬件维护，并根据客户业务需要负责防火墙的日常配置、管理、维护。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>机房介绍：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd position_wd_01">
+				<p><span class="bold_wd position_wd_02">位置</span></p>
+				<p class="text_p_01 ">—内蒙古呼和浩特市金川开发区内蒙古移动移动二枢纽楼一层 规模——建筑面积超过1570平米</p>
+			</div>
+			<div class="one_wd position_wd_01">
+				<p><span class="bold_wd position_wd_02">规模</span></p>
+				<p class="text_p_01 ">—建筑面积超过1570平米，规划机柜总数量超过500架，装机能力达到5000台</p>
+			</div>
+			<div class="one_wd position_wd_01">
+				<p><span class="bold_wd position_wd_02">规划</span></p>
+				<p class="text_p_01 ">—规划为四个机房，包括普通IDC机房、VIP IDC机房、集团客户机房、电力电池室</p>
+			</div>
+			<div class="one_wd position_wd_01">
+				<p><span class="bold_wd position_wd_02">能力</span></p>
+				<p class="text_p_01 ">—机房：Tier3设计标准。电力：双路一类市电引入，机房总容量512kW。网络：20G互联网出口带宽。增值：完善的网络安全设备、远程维护系统</p>
+			</div>
+			<div class="core_box_wd ">
+					<div class=" box">
+						<img src="img/wlcb/product/IDC_03.jpg"/>
+						<p class="p_wd">机房</p>
+					</div>
+					<div class=" box">
+						<img  src="img/wlcb/product/IDC_05.jpg"/>
+						<p>综合布线</p>
+					</div>
+					<div class=" box">
+						<img  src="img/wlcb/product/IDC_07.jpg"/>
+						<p>机房空调</p>
+					</div>
+					<div class=" box">
+						<img  src="img/wlcb/product/IDC_12.jpg"/>
+						<p>开关电源</p>
+					</div>
+					<div class=" box">
+						<img  src="img/wlcb/product/IDC_13.jpg"/>
+						<p>输入输出</p>
+					</div>
+					<div class=" box">
+						<img  src="img/wlcb/product/IDC_14.jpg"/>
+						<p>UPS电池</p>
+					</div>
+				</div>
+		</div>
+		<!-- 
+		<div class="footer_wd">
+			<a href="#">查看分享数据</a>
+		</div>
+		 -->
+	</body>
+</html>

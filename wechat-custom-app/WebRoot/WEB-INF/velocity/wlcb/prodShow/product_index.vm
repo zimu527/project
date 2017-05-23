@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+	    <script src="js/wlcb/product/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="js/wlcb/product/product_description.js" type="text/javascript" charset="utf-8"></script>
+		<title>政企产品介绍</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="header_wd">
+			<h1>产品秀</h1>
+		</div>
+		<div class="nav_wd">
+				<a href="javascript:void(0)" name="basic_communication" class="active box_00">基础通信类</a>
+				<a href="javascript:void(0)" name="general_information" class=" box_00">通用信息化类</a>
+				<a href="javascript:void(0)" name="infrastructure_wd" class=" box_00">基础设施类</a>
+		</div>
+		<div class="container">
+			<!--基础通信类-->
+			<div class="common_wd " id="basic_communication">
+				<a class="IDC" href="wlcb_prodshow.do?op=prodDetail&prodid=1">
+					<p class="title_h1">IDC</p>
+					<p class="title_h2">提供大规模、高质量、安全可靠</p>
+				</a>
+				<a class="data_line" href="wlcb_prodshow.do?op=prodDetail&prodid=2">
+					<p class="title_h1">数据专线</p>
+					<p class="title_h2">建立安全、可靠、高速的专用数据通道</p>
+				</a>
+				<a class="intercom_wd" href="wlcb_prodshow.do?op=prodDetail&prodid=3">
+					<p class="title_h1">和对讲</p>
+					<p class="title_h2">手机实现一键多人通话，低成本、快速</p>
+				</a>
+				<a class="traffic_dispatch" href="wlcb_prodshow.do?op=prodDetail&prodid=4">
+					<p class="title_h1">流量统付</p>
+					<p class="title_h2">优惠折扣，免费上网</p>
+				</a>
+			</div>
+			<!--通用信息化类-->
+			<div class=" common_wd hide" id="general_information">
+				<a class="enterprise_letter" href="wlcb_prodshow.do?op=prodDetail&prodid=5">
+					<p class="title_h1">企信通</p>
+					<p class="title_h2">方便、灵活短信发送</p>
+				</a>
+			</div>
+			<!--基础设施类-->
+			<div class="common_wd hide" id="infrastructure_wd">
+				<a class="social_security" href="wlcb_prodshow.do?op=prodDetail&prodid=6">
+					<p class="title_h1">社保管家</p>
+					<p class="title_h2">方便查询社保缴费信息</p>
+				</a>
+				<a class="virtual_call_center" href="wlcb_prodshow.do?op=prodDetail&prodid=7">
+					<p class="title_h1">虚拟呼叫中心</p>
+					<p class="title_h2">实现语音特别号的呼入呼出功能</p>
+				</a>
+				<a class="government_easy" href="wlcb_prodshow.do?op=prodDetail&prodid=8">
+					<p class="title_h1">政务易</p>
+					<p class="title_h2">基层政府办公需求，适用于各级基层政府</p>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

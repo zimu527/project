@@ -1,0 +1,31 @@
+	<!--确认弹窗-->
+	<div id="confirm" class="openBox">
+		<div class="contTitle"><span class="titleContent">提示</span><a href="javascript:void(0)" onclick="hiddenBox(this);" class="close"></a></div>
+		<p class="confirm">草稿删除后将无法找回，您确认删除该这草稿？</p>
+		<div class="openBoxBtn"><a href="javascript:void(0);" onclick="" class="btn doSth">确认</a>　<a href="javascript:void(0);" onclick="hiddenBox(this);" class="btn btnReset">取消</a></div>
+	</div>
+	<!--成功弹窗 alert 带url-->
+	<div id="success_url_alert" class="openBox">
+		<div class="contTitle"><span class="titleContent">提示</span><a href="javascript:void(0)" onclick="hiddenBox(this);" class="close"></a></div>
+		<p class="success">保存草稿成功，您可以在短信草稿中查看已保存的草稿！</p>
+		<div class="openBoxBtn"><a href="javascript:void(0);" onclick="hiddenBox(this);" class="btn doSth">确认</a></div>
+		<a href="#" class="openBoxText">打开各种链接</a>
+	</div>
+	<!--成功操作成功后，两个按钮-->
+	<div id="success_confirm" class="openBox">
+		<div class="contTitle"><span class="titleContent">提示</span><a href="javascript:void(0)" onclick="hiddenBox(this);" class="close"></a></div>
+		<p class="success">保存草稿成功，您可以在短信草稿中查看已保存的草稿！</p>
+		<div class="openBoxBtn"><a href="javascript:void(0);" onclick="" class="btn doSth">确认</a>　<a href="javascript:void(0);" onclick="" class="btn btnReset">取消</a></div>
+	</div>
+	
+	<!--提示弹出窗口，一个按钮-->
+	<div id="popBoxAlert" class="openBox">
+		<div class="contTitle"><span class="titleContent">提示</span><a href="javascript:void(0)" onclick="hiddenBox(this);" class="close"></a></div>
+		<p class="success">保存草稿成功，您可以在短信草稿中查看已保存的草稿！</p>
+		<div class="openBoxBtn"><a href="javascript:void(0);" onclick="hiddenBox(this);" class="btn doSth">确认</a></div>
+	</div>
+	<!--加载弹窗-->
+    <div id="loading" class="openBox" style="height:120px;">
+    	<div class="contTitle">加载中</div>
+        <p class="loading">正在努力加载！<br>请稍后！</p>
+    </div>

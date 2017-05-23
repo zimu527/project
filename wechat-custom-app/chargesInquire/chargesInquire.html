@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>资费查询</title>
+<link href="css/chargesInquire/reset.css" type="text/css" rel="stylesheet">
+<link href="css/chargesInquire/chargesInquire.css" type="text/css" rel="stylesheet">
+<link href="css/swiper-3.3.1.min.css" type="text/css" rel="stylesheet">
+<div style="display:none"><img src="img/chargesInquire/shareImg.jpg"></div>
+</head>
+<body>
+<div class="index index-bg">
+	<img class="js-top-img imgWidth100" src="img/chargesInquire/top.jpg" alt="">
+	<main>
+		<div class="main-cont">
+			<img class="left-pic" src="img/chargesInquire/zf0407006.png">
+			<div class="cont-user flex">
+				<img src="img/chargesInquire/top.jpg" alt="">
+				<p class="fs14">昵称：<br><span>Jason xiaomm</span></p>
+			</div>
+			<div class="charges-grade fs16">暂无适配资费</div>
+			<div class="charges-detail fs12">套餐内容包含：<span class="orange">300分钟全国语音，100MB流量，300分钟省内</span></div>
+		</div>
+		<a class="btn go-to-transact fs16" href="http://touch.10086.cn/goods/471_471_1034008_1035245.html">立即办理</a>
+		<p class="js-transact-detail transact-detail fs14"><img src="img/chargesInquire/zf0407009.jpg" alt=""><span class="transact-detail-btn">办理赠送说明</span></p>
+	</main>
+</div>
+<div class="rule-more-box hide">
+	<div class="rule-more-cont">
+		<div class="rule-more-cont-topImg-box">
+			<img class="rule-more-cont-topImg" src="img/chargesInquire/zf0407004.png" alt="">
+		</div>
+		<div class="rule-more-cont-main fs14">
+			<p>8.此次活动最终解释权归阿拉善移动通信分公司所有，以上视频内容最终解释权归内蒙古自治区阿拉善盟旅游局所有。</p>
+			<p>8.此次活动最终解释权归阿拉善移动通信分公司所有，以上视频内容最终解释权归内蒙古自治区阿拉善盟旅游局所有。</p>
+			<p>8.此次活动最终解释权归阿拉善移动通信分公司所有，以上视频内容最终解释权归内蒙古自治区阿拉善盟旅游局所有。</p>
+		</div>
+		<a class="js-close-rule-btn btn close-rule-btn"></a>
+	</div>
+</div>
+
+<script src="js/alertWeUI/alert.js"></script>
+<link rel="stylesheet" type="text/css" href="css/alertWeUI/weui.min.css">
+<!--BEGIN confirm-->
+<div class="js_dialog hide" id="confirm">
+	<div class="weui-mask"></div>
+	<div class="weui-dialog">
+		<div class="weui-dialog__hd"><strong class="weui-dialog__title" id="confirmBoxTitle">弹窗标题</strong></div>
+		<div class="weui-dialog__bd" id="confirmMessageCont">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+		<div class="weui-dialog__ft">
+			<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" id="confirmCancelBtn">取消</a>
+			<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="confirmAgreeBtn">确定</a>
+		</div>
+	</div>
+</div>
+<!--END confirm-->
+<!--BEGIN popBoxAlert-->
+<div class="js_dialog hide" id="popBoxAlert">
+	<div class="weui-mask"></div>
+	<div class="weui-dialog">
+		<div class="weui-dialog__bd" id="alertMessageCont">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+		<div class="weui-dialog__ft">
+			<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="alertAgreeBtn">知道了</a>
+		</div>
+	</div>
+</div>
+<!--END popBoxAlert-->
+<!--loadding-->
+<div class="hide" id="loadingToast">
+	<div class="weui-mask_transparent"></div>
+	<div class="weui-toast">
+		<i class="weui-loading weui-icon_toast"></i>
+		<p class="weui-toast__content">数据加载中</p>
+	</div>
+</div>
+<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
+<!--<script src="js/bwrdfr.js"></script>-->
+<!--<script src="js/bwrdfr-i.js"></script>-->
+<!--<script src="js/json-mini.js"></script>-->
+<script src="js/jquery-3.0.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.js-close-rule-btn').on('click', function () {
+			$('.rule-more-box').hide();
+		});
+		$('.js-transact-detail').on('click', function () {
+			$('.rule-more-box').show();
+		});
+
+	});
+</script>
+</body>
+</html>

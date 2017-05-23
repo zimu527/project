@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>testOpenid.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+	<script src="js/common.js" type="text/jscript"></script>
+	<script type="text/javascript">
+
+		//写入cookie
+		function addcookie(name,value , expireHours){
+		    var cookieString = name + "=" + value;
+		    //判断是否设置过期时间
+		    if(expireHours>0){
+		        var date=new Date();
+		        date.setTime(date.getTime+expireHours*3600*1000);
+		        cookieString=cookieString+"; expire="+date.toGMTString();
+		    }
+		    document.cookie = cookieString;
+		}
+
+		// zhuzi-北纬通信
+//		addcookie("xgzqoid","o630FwT1VuwWZoI6u-CJj7pXCptI", 1);
+		// zhuzi-点易
+//		addcookie("xgzqoid","oR2tft44bqXLOoXwPm83V9gs3nz4", 1);
+		addcookie("oid8a2b294855f2d9010155f2ee7057004d","ogoIswODSbR0lXYuNM5FnSgQikwI", 1);
+	</script>
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+  </body>
+</html>

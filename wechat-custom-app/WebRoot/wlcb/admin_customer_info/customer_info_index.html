@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>集团客户信息</title>
+    <link href="../../css/wlcb/company_customer/reset.css" rel="stylesheet">
+    <link href="../../css/wlcb/company_customer/admin_customer_info.css" rel="stylesheet">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body class="bg fs14">
+<!--头部按钮-->
+<header class="fs16">
+    <a class="js-new-group btn btn-big btn-big-blue" href="javascript:void(0);">新建讨论组</a>
+    <a class="js-new-group btn btn-big btn-big-white" href="javascript:void(0);">我的讨论组</a>
+</header>
+
+<main class="padding02">
+    <!--输入框-->
+    <div class="search">
+        <input class="border input-search" type="text" placeholder="请输入关键字搜索">
+        <a class="js-btn-search btn btn-search"><img src="../../img/wlcb/icon/wl170509001.jpg" alt=""></a>
+    </div>
+
+    <!--客户经理列表-->
+    <div class="list-manager hide" id="list_manager">
+        <ul v-for="cms in csmlist">
+            <li>
+                <dl>
+                    <dt class="dt-manager" v-if="cms.name" @click="addClick($event)"><img class="avatar" :src="cms.imageurl?cms.imageurl:''" alt="">{{cms.name}}</dt>
+                    <dd class="manager-info hide">{{cms.name}} <span>{{cms.phone}}</span></dd>
+                    <dd v-if="company.name" v-for="company in cms.companylist" class="hide">
+                        <dl class="dt-company">
+                            <dt @click="addClick($event)">{{company.name}}</dt>
+                            <dd v-for="user in company.userlist" class="hide">
+                                <span v-if="user.type===1">负责人 {{user.name}} {{user.phone}}</span>
+                                <span v-if="user.type===2">联系人 {{user.name}} {{user.phone}}</span>
+                                <span v-if="user.type===3">普通成员 {{user.name}} {{user.phone}}</span>
+                            </dd>
+                        </dl>
+<!--                        <dl class="dt-company">
+                            <dt>{{company.name}}</dt>
+                            <dd>负责人 张三 189999999999</dd>
+                            <dd>负责人 张三 189999999999</dd>
+                            <dd>负责人 张三 189999999999</dd>
+                        </dl>-->
+                    </dd>
+                </dl>
+            </li>
+            <!--
+                        <li>
+                            <dl>
+                                <dt class="dt-manager"><img class="avatar" src="../../img/wlcb/icon/wl170509001.jpg" alt="">客户经理张三</dt>
+                                <dd class="manager-info">客户经理张三<span>18000000000</span></dd>
+                                <dd>
+                                    <dl class="dt-company">
+                                        <dt>乌兰察布税务局</dt>
+                                        <dd>负责人 张三 189999999999</dd>
+                                        <dd>负责人 张三 189999999999</dd>
+                                        <dd>负责人 张三 189999999999</dd>
+                                    </dl>
+                                    <dl class="dt-company">
+                                        <dt>乌兰察布教育局</dt>
+                                        <dd>负责人 张三 189999999999</dd>
+                                        <dd>负责人 张三 189999999999</dd>
+                                        <dd>负责人 张三 189999999999</dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+                        </li>
+            -->
+        </ul>
+    </div>
+
+</main>
+<script src="../../js/jquery-3.0.0.min.js"></script>
+<script src="../../js/vue.js"></script>
+<script src="../../js/wlcb/company_customer/customer_info/testData.js"></script>
+<script src="../../js/wlcb/company_customer/customer_info/customer_info.js"></script>
+</body>
+</html>

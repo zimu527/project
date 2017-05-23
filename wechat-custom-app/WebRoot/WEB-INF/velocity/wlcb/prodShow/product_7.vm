@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>虚拟呼叫中心</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd virtual_call_center">
+			<h1>虚拟呼叫中心</h1>
+		</div>
+		<div class="text virtual_wd">
+			<p>基于中国移动内蒙古公司自建的虚拟呼叫中心平台，向集团客户提供的以企业短号码、移动400号码和铁通固网号码为接入号码的呼叫中心资源出租服务。</p>
+		</div>
+		<div class="text_01">
+			<h1>核心功能点：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>语音导航功能</p>
+				<p class="text_p_01">根据集团客户的业务流程定制语音接入流程，提供语音导航、自动转人工等服务</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>人工坐席服务</p>
+				<p class="text_p_01">一种开放的业务容器，除了提供基本的呼叫接续功能外，还支持将现有的业务内嵌到座席框架内</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>个性化定制服务</p>
+				<p class="text_p_01">个性化业务定制，在线测试调试</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">4</span>报表统计功能</p>
+				<p class="text_p_01">支持资源管理、门户定制、订阅管理、资源链接多维度智能分析</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">5</span>外呼功能</p>
+				<p class="text_p_01">多渠道，全天服务</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">6</span>信息安全保障机制</p>
+				<p class="text_p_01">数据存放、处理、传输、回收全闭环</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>业务服务优势：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="circle_01">1</span>座席容量：300座席</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">2</span>系统存储能力：</p>
+				<p class="text_p_01">呼叫详细话单在线保存一年以上，录音文件在线保存6个</p>
+			</div>
+			<div class="one_wd">
+				<p><span class="circle_01">3</span>系统稳定性：</p>
+				<p class="text_p_01">核心部件支持1+1备份，负荷分担、冗余配置等可靠性设计，分布式处理，保证了产品电信级可靠性</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>资费标准：</h1>
+			<div class="hr_3"></div>
+			<div class="table_wd">
+				<table >
+					<tr>
+						<th colspan="3">收费项目</th>
+						<th class="table_02">收费标准</th>
+						<th>折扣</th>
+					</tr>
+					<tr>
+						<td rowspan="3" class="table_01"><p>功能费</p></td>
+						<td colspan="2">IVR版</td>
+						<td>160元/通道/月</td>
+						<td>2-9折</td>
+					</tr>
+					<tr>
+						<td colspan="2">标准版</td>
+						<td>700元/坐席/月</td>
+						<td>2-9折</td>
+					</tr>
+					<tr>
+						<td colspan="2">专业版</td>
+						<td>1000元/坐席/月</td>
+						<td>无</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="table_01"><p>通信费</p></td>
+						<td rowspan="2">语音通信费</td>
+						<td>主叫</td>
+						<td>长市话合一 资费：0.2元/分钟</td>
+						<td>无</td>
+					</tr>
+					<tr>
+						<td>被叫</td>
+						<td>按原有资费执行</td>
+						<td>无</td>
+					</tr>
+					<tr>
+						<td colspan="2">短信通信费</td>
+						<td>0.05元/条</td>
+						<td>无</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

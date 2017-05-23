@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/marketing_case/marketing_case.css"/>
+		<title>政企营销案例</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="header_wd">
+			<h1>经典案例</h1>
+		</div>
+		<a class="bank_case common_wd" href="wlcb_prodshow.do?op=caseDetail&caseid=9">
+			<img src="img/wlcb/marketing_case/bank.jpg"/>
+			<span>银行类经典案例</span>
+			<span class="nav_icon_wd">
+				<img src="img/wlcb/marketing_case/icon.png"/>
+			</span>
+		</a>
+		
+		<a class="government_case common_wd" href="wlcb_prodshow.do?op=caseDetail&caseid=10">
+			<img src="img/wlcb/marketing_case/gov.jpg"/>
+			<span>政府类经典案例</span>
+			<span class="nav_icon_wd" >
+				<img src="img/wlcb/marketing_case/icon.png"/>
+			</span>
+		</a>
+		
+		<a class="education_case common_wd" href="javascript:void(0)">
+			<img src="img/wlcb/marketing_case/education.jpg"/>
+			<span>教育类经典案例</span>
+			<span class="nav_icon_wd" >
+				<img src="img/wlcb/marketing_case/icon.png"/>
+			</span>
+		</a>
+	</body>
+</html>

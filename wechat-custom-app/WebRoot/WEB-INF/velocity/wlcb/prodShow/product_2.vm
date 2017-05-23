@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name = "format-detection" content="telephone = no" />
+	    <meta name = "format-detection" content="email = no" />
+	    <link rel="stylesheet" type="text/css" href="css/wlcb/product/product_description.css"/>
+		<title>数据专线</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+	</head>
+	<body>
+		<div class="social_security_wd data_line_wd">
+			<h1>数据专线</h1>
+		</div>
+		<div class="text data_wd">
+			<p>为客户提供透明的数据传输通道， 用于客 户点对点，或多点间计算机联网 ，可视电 视会议，实时图像监控等。</p>
+		</div>
+		<div class="text_01">
+			<h1>机房介绍：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p>可为用户提供点对点、点对多点透明专用传输的数据专线通道。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>传输实现方式：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p>一般采用MSTP、PTN、PON（专用），裸光纤缆接入</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>服务优点：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<p><span class="bold_wd">主要用途</span></p>
+				<p>可为用户提供点对点、点对多点透明专用传输的数据专线通道。</p>
+				<div class="hr_5"></div>
+				<p><span class="bold_wd">传输实现方式</span></p>
+				<p>一般采用MSTP、PTN、PON（专用），裸光纤缆接入</p>
+				<div class="hr_5"></div>
+				<p><span class="bold_wd">服务优点</span></p>
+				<p><span class="circle_01">1</span>安全性</p>
+				<p class="text_p_01">安全性最高的专线，可为客户提供点对点独享传输通道接入，有源可监控设备，专用安全级别较高</p>
+				<p><span class="circle_01">2</span>维护性</p>
+				<p class="text_p_01">提供有源可监控，专用维护人员根据客户服务等级分为2小时、4小时、6小时和8小时进行故障处理</p>
+				<p><span class="circle_01">2</span>传输稳定性和速率</p>
+				<p class="text_p_01">网络上行和网络下行，专用通道传输，上下行对称，双通道双向性上传或者下载的时候另外一方不会受影响，永久线路接入，误码率低，时延小。</p>
+			</div>
+		</div>
+		<div class="text_01">
+			<h1>常见应用：</h1>
+			<div class="hr_3"></div>
+			<div class="one_wd">
+				<div class="core_box_wd_01 ">
+					<div class=" box_01">
+						<img src="img/wlcb/product/line_06.jpg"/>
+						<p class="p_wd">办公OA</p>
+					</div>
+					<div class=" box_01">
+						<img  src="img/wlcb/product/line_05.jpg"/>
+						<p>视频监控</p>
+					</div>
+					<div class=" box_01">
+						<img  src="img/wlcb/product/line_09.jpg"/>
+						<p>银行业务</p>
+					</div>
+					<div class=" box_01">
+						<img  src="img/wlcb/product/line_10.jpg"/>
+						<p>电视电话会议</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
